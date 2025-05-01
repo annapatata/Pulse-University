@@ -304,3 +304,136 @@ INSERT INTO Band (band_id, band_name, form_date, website, insta, cons_years, las
 (15, 'Interpol', '1997-01-01', 'interpolnyc.com', 'interpol', 1, 2020),
 (16, 'The 1975', '2002-01-01', 'the1975.com', 'the1975', 3, 2026),
 (17, 'Queens of the Stone Age', '1996-01-01', 'qotsa.com', 'queensofthestoneage', 2, 2023);
+
+INSERT INTO Artist (artist_id, first_name, last_name, stage_name, birthDATE, website, insta, participations) VALUES
+-- The Killers members
+(1, 'Brandon', 'Flowers', 'Brandon Flowers', '1981-06-21', 'brandonflowersmusic.com', 'brandonflowers', 5),
+(2, 'Dave', 'Keuning', 'Dave Keuning', '1976-03-28', NULL, 'davekeuning', 3),
+(3, 'Mark', 'Stoermer', 'Mark Stoermer', '1977-06-28', NULL, 'markstoermer', 4),
+(4, 'Ronnie', 'Vannucci Jr.', 'Ronnie Vannucci', '1976-02-15', NULL, 'ronnievannucci', 5),
+
+-- Arctic Monkeys members
+(5, 'Alex', 'Turner', 'Alex Turner', '1986-01-06', NULL, 'alexjamesturner', 6),
+(6, 'Jamie', 'Cook', 'Jamie Cook', '1985-07-08', NULL, 'jamiecook', 6),
+(7, 'Nick', 'O\'Malley', 'Nick O\'Malley', '1985-07-05', NULL, 'nickomalley', 4),
+(8, 'Matt', 'Helders', 'Matt Helders', '1986-05-07', NULL, 'matthelders', 6),
+
+-- Foo Fighters members
+(9, 'Dave', 'Grohl', 'Dave Grohl', '1969-01-14', 'davegrohl.com', 'davegrohl', 8),
+(10, 'Nate', 'Mendel', 'Nate Mendel', '1968-12-02', NULL, 'natemendel', 7),
+(11, 'Pat', 'Smear', 'Pat Smear', '1959-08-05', NULL, 'patsmear', 5),
+(12, 'Chris', 'Shiflett', 'Chris Shiflett', '1971-05-06', 'chris-shiflett.com', 'chrispshiflett', 6),
+(13, 'Rami', 'Jaffee', 'Rami Jaffee', '1969-03-11', NULL, 'ramijaffee', 4),
+
+-- Florence + Machine members
+(14, 'Florence', 'Welch', 'Florence Welch', '1986-08-28', 'florenceandthemachine.net', 'florence', 4),
+(15, 'Isabella', 'Summers', 'Isabella Summers', '1980-12-03', NULL, 'isabellamachine', 4),
+
+-- Tame Impala members
+(16, 'Kevin', 'Parker', 'Kevin Parker', '1986-01-20', 'tameimpala.com', 'kevinparker', 5),
+(17, 'Dominic', 'Simper', 'Dominic Simper', NULL, NULL, 'dominicsimper', 3),
+(18, 'Jay', 'Watson', 'Jay Watson', '1987-06-25', NULL, 'jaywatsonmusic', 4),
+
+-- The Strokes members
+(19, 'Julian', 'Casablancas', 'Julian Casablancas', '1978-08-23', 'thevoidz.com', 'juliancasablancas', 3),
+(20, 'Nick', 'Valensi', 'Nick Valensi', '1981-01-16', NULL, 'nickvalensi', 3),
+(21, 'Albert', 'Hammond Jr.', 'Albert Hammond Jr.', '1980-04-09', 'alberthammondjr.com', 'alberthammondjr', 3),
+
+-- Red Hot Chili Peppers members
+(22, 'Anthony', 'Kiedis', 'Anthony Kiedis', '1962-11-01', NULL, 'anthonykiedis', 7),
+(23, 'Flea', 'Balzary', 'Flea', '1962-10-16', 'flea', 7),
+(24, 'Chad', 'Smith', 'Chad Smith', '1961-10-25', NULL, 'chadsmithofficial', 7),
+(25, 'John', 'Frusciante', 'John Frusciante', '1970-03-05', NULL, 'johnfrusciante', 5),
+
+-- Muse members
+(26, 'Matt', 'Bellamy', 'Matt Bellamy', '1978-06-09', NULL, 'mattbellamy', 6),
+(27, 'Chris', 'Wolstenholme', 'Chris Wolstenholme', '1978-12-02', NULL, 'wolstenholme', 6),
+(28, 'Dominic', 'Howard', 'Dominic Howard', '1977-12-07', NULL, 'domhoward', 6),
+
+-- LCD Soundsystem members
+(29, 'James', 'Murphy', 'James Murphy', '1970-02-04', 'dfa.com', 'jamesmurphydfa', 4),
+(30, 'Nancy', 'Whang', 'Nancy Whang', '1979-06-28', NULL, 'nancywhang', 3),
+(31, 'Pat', 'Mahoney', 'Pat Mahoney', '1975-07-02', NULL, 'patmahoney', 3),
+
+-- The National members
+(32, 'Matt', 'Berninger', 'Matt Berninger', '1971-07-13', NULL, 'mattberninger', 5),
+(33, 'Aaron', 'Dessner', 'Aaron Dessner', '1976-04-23', NULL, 'aarondessner', 5),
+(34, 'Bryce', 'Dessner', 'Bryce Dessner', '1976-04-23', NULL, 'brycedessner', 5),
+
+-- Vampire Weekend members
+(35, 'Ezra', 'Koenig', 'Ezra Koenig', '1984-04-08', NULL, 'ezrak', 3),
+(36, 'Chris', 'Baio', 'Chris Baio', '1984-09-29', NULL, 'cbaio', 3),
+(37, 'Chris', 'Tomson', 'Chris Tomson', '1985-05-14', NULL, 'battletomson', 3),
+
+-- Arcade Fire members
+(38, 'Win', 'Butler', 'Win Butler', '1980-04-14', NULL, 'winbutler', 4),
+(39, 'Régine', 'Chassagne', 'Régine Chassagne', '1977-08-18', NULL, 'reginechassagne', 4),
+(40, 'Richard', 'Reed Parry', 'Richard Reed Parry', '1977-10-04', NULL, 'richardreedparry', 4),
+
+-- The Black Keys members
+(41, 'Dan', 'Auerbach', 'Dan Auerbach', '1979-05-14', 'danauerbach.com', 'danauerbach', 5),
+(42, 'Patrick', 'Carney', 'Patrick Carney', '1980-04-15', NULL, 'patrickcarney', 5),
+
+-- Phoenix members
+(43, 'Thomas', 'Mars', 'Thomas Mars', '1976-09-19', NULL, 'thomas__mars', 5),
+(44, 'Christian', 'Mazzalai', 'Christian Mazzalai', '1973-12-05', NULL, 'christianmazzalai', 5),
+(45, 'Laurent', 'Brancowitz', 'Laurent Brancowitz', '1975-05-21', NULL, 'laurentbrancowitz', 5),
+
+-- Interpol members
+(46, 'Paul', 'Banks', 'Paul Banks', '1978-05-03', NULL, 'paulbanksnyc', 3),
+(47, 'Daniel', 'Kessler', 'Daniel Kessler', '1974-03-17', NULL, 'danielkessler', 3),
+(48, 'Sam', 'Fogarino', 'Sam Fogarino', '1968-06-16', NULL, 'samfogarino', 3),
+
+-- The 1975 members
+(49, 'Matty', 'Healy', 'Matty Healy', '1989-04-08', NULL, 'trumanblack', 5),
+(50, 'Adam', 'Hann', 'Adam Hann', '1986-05-20', NULL, 'adamhann', 5),
+(51, 'Ross', 'MacDonald', 'Ross MacDonald', '1988-12-21', NULL, 'rossmacdonald', 5),
+(52, 'George', 'Daniel', 'George Daniel', '1989-03-19', NULL, 'georgedaniel', 5),
+
+-- Queens of the Stone Age members
+(53, 'Josh', 'Homme', 'Josh Homme', '1973-05-17', NULL, 'joshhomme', 5),
+(54, 'Troy', 'Van Leeuwen', 'Troy Van Leeuwen', '1970-01-05', NULL, 'troyvanleeuwen', 4),
+(55, 'Michael', 'Shuman', 'Michael Shuman', '1986-05-02', NULL, 'michael_shuman', 4),
+(56, 'Dean', 'Fertita', 'Dean Fertita', '1970-05-06', NULL, 'deanfertita', 3),
+(57, 'Jon', 'Theodore', 'Jon Theodore', '1973-03-03', NULL, 'jontheodore', 3),
+
+-- Additional notable artists who collaborate with these bands
+(58, 'Jack', 'White', 'Jack White', '1975-07-09', 'jackwhiteiii.com', 'officialjackwhite', 4),
+(59, 'St. Vincent', 'Clark', 'St. Vincent', '1982-09-28', 'ilovestvincent.com', 'st_vincent', 3),
+(60, 'Thom', 'Yorke', 'Thom Yorke', '1968-10-07', 'radiohead.com', 'thomyorke', 4);-- First, let's alter the table to ensure it can accommodate more artists (if needed)
+-- (Assuming the table already exists with auto-increment)
+
+-- Now insert the additional 30 solo pop artists
+INSERT INTO Artist (artist_id, first_name, last_name, stage_name, birthDATE, website, insta, participations) VALUES
+-- Existing 60 artists would be here (1-60)
+-- New pop artists (61-90):
+(61, 'Taylor', 'Swift', 'Taylor Swift', '1989-12-13', 'taylorswift.com', 'taylorswift', 8),
+(62, 'Ariana', 'Grande', 'Ariana Grande', '1993-06-26', 'arianagrande.com', 'arianagrande', 6),
+(63, 'Billie', 'Eilish', 'Billie Eilish', '2001-12-18', 'billieeilish.com', 'billieeilish', 5),
+(64, 'Dua', 'Lipa', 'Dua Lipa', '1995-08-22', 'dualipa.com', 'dualipa', 5),
+(65, 'Harry', 'Styles', 'Harry Styles', '1994-02-01', 'hstyles.co.uk', 'harrystyles', 5),
+(66, 'Olivia', 'Rodrigo', 'Olivia Rodrigo', '2003-02-20', 'oliviarodrigo.com', 'oliviarodrigo', 3),
+(67, 'Doja', 'Cat', 'Doja Cat', '1995-10-21', 'dojacat.com', 'dojacat', 4),
+(68, 'The Weeknd', 'Tesfaye', 'The Weeknd', '1990-02-16', 'theweeknd.com', 'theweeknd', 6),
+(69, 'Post', 'Malone', 'Post Malone', '1995-07-04', 'postmalone.com', 'postmalone', 5),
+(70, 'Camila', 'Cabello', 'Camila Cabello', '1997-03-03', 'camilacabello.com', 'camila_cabello', 4),
+(71, 'Shawn', 'Mendes', 'Shawn Mendes', '1998-08-08', 'shawnmendesofficial.com', 'shawnmendes', 5),
+(72, 'Selena', 'Gomez', 'Selena Gomez', '1992-07-22', 'selenagomez.com', 'selenagomez', 5),
+(73, 'Justin', 'Bieber', 'Justin Bieber', '1994-03-01', 'justinbiebermusic.com', 'justinbieber', 7),
+(74, 'Lady', 'Gaga', 'Lady Gaga', '1986-03-28', 'ladygaga.com', 'ladygaga', 6),
+(75, 'Bruno', 'Mars', 'Bruno Mars', '1985-10-08', 'brunomars.com', 'brunomars', 6),
+(76, 'Ed', 'Sheeran', 'Ed Sheeran', '1991-02-17', 'edsheeran.com', 'teddysphotos', 7),
+(77, 'Rihanna', 'Fenty', 'Rihanna', '1988-02-20', 'rihannanow.com', 'badgalriri', 5),
+(78, 'Beyoncé', 'Knowles', 'Beyoncé', '1981-09-04', 'beyonce.com', 'beyonce', 6),
+(79, 'Katy', 'Perry', 'Katy Perry', '1984-10-25', 'katyperry.com', 'katyperry', 6),
+(80, 'Adele', 'Adkins', 'Adele', '1988-05-05', 'adele.com', 'adele', 4),
+(81, 'Miley', 'Cyrus', 'Miley Cyrus', '1992-11-23', 'mileycyrus.com', 'mileycyrus', 5),
+(82, 'Nicki', 'Minaj', 'Nicki Minaj', '1982-12-08', 'nickiminajofficial.com', 'nickiminaj', 5),
+(83, 'Drake', 'Graham', 'Drake', '1986-10-24', 'drakerelated.com', 'champagnepapi', 6),
+(84, 'Lizzo', 'Jefferson', 'Lizzo', '1988-04-27', 'lizzomusic.com', 'lizzobeeating', 4),
+(85, 'Charlie', 'Puth', 'Charlie Puth', '1991-12-02', 'charlieputh.com', 'charlieputh', 4),
+(86, 'Halsey', 'Frangipane', 'Halsey', '1994-09-29', 'iamhalsey.com', 'iamhalsey', 5),
+(87, 'Zayn', 'Malik', 'Zayn', '1993-01-12', 'zaynmalik.com', 'zayn', 4),
+(88, 'Lil', 'Nas X', 'Lil Nas X', '1999-04-09', 'lilnasx.com', 'lilnasx', 3),
+(89, 'Sam', 'Smith', 'Sam Smith', '1992-05-19', 'samsmithworld.com', 'samsmith', 5),
+(90, 'SZA', 'Rowe', 'SZA', '1989-11-08', 'szactrl.com', 'sza', 4);
