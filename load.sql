@@ -451,3 +451,329 @@ INSERT INTO Ticket_Class (ticket_type) VALUES
 ('VIP'),
 ('Premium'),
 ('Backstage');
+
+INSERT INTO PayedWith (pay_method) VALUES
+('Credit'),
+('Debit'),
+('Cash'),
+('Paypal');
+
+-- ARTIST TABLE (90 artists with images)
+INSERT INTO Artist (artist_id, first_name, last_name, stage_name, birthDATE, website, insta, participations, image, image_caption) VALUES
+-- The Killers members
+(1, 'Brandon', 'Flowers', 'Brandon Flowers', '1981-06-21', 'brandonflowersmusic.com', 'brandonflowers', 5, 'https://example.com/artists/brandon_flowers.jpg', 'Lead singer of The Killers'),
+(2, 'Dave', 'Keuning', 'Dave Keuning', '1976-03-28', NULL, 'davekeuning', 3, 'https://example.com/artists/dave_keuning.jpg', 'Guitarist for The Killers'),
+(3, 'Mark', 'Stoermer', 'Mark Stoermer', '1977-06-28', NULL, 'markstoermer', 4, 'https://example.com/artists/mark_stoermer.jpg', 'Bassist for The Killers'),
+(4, 'Ronnie', 'Vannucci Jr.', 'Ronnie Vannucci', '1976-02-15', NULL, 'ronnievannucci', 5, 'https://example.com/artists/ronnie_vannucci.jpg', 'Drummer for The Killers'),
+
+-- Arctic Monkeys members
+(5, 'Alex', 'Turner', 'Alex Turner', '1986-01-06', NULL, 'alexjamesturner', 6, 'https://example.com/artists/alex_turner.jpg', 'Lead singer of Arctic Monkeys'),
+(6, 'Jamie', 'Cook', 'Jamie Cook', '1985-07-08', NULL, 'jamiecook', 6, 'https://example.com/artists/jamie_cook.jpg', 'Guitarist for Arctic Monkeys'),
+(7, 'Nick', 'O\'Malley', 'Nick O\'Malley', '1985-07-05', NULL, 'nickomalley', 4, 'https://example.com/artists/nick_omalley.jpg', 'Bassist for Arctic Monkeys'),
+(8, 'Matt', 'Helders', 'Matt Helders', '1986-05-07', NULL, 'matthelders', 6, 'https://example.com/artists/matt_helders.jpg', 'Drummer for Arctic Monkeys'),
+
+-- Foo Fighters members
+(9, 'Dave', 'Grohl', 'Dave Grohl', '1969-01-14', 'davegrohl.com', 'davegrohl', 8, 'https://example.com/artists/dave_grohl.jpg', 'Foo Fighters frontman'),
+(10, 'Nate', 'Mendel', 'Nate Mendel', '1968-12-02', NULL, 'natemendel', 7, 'https://example.com/artists/nate_mendel.jpg', 'Foo Fighters bassist'),
+(11, 'Pat', 'Smear', 'Pat Smear', '1959-08-05', NULL, 'patsmear', 5, 'https://example.com/artists/pat_smear.jpg', 'Foo Fighters guitarist'),
+(12, 'Chris', 'Shiflett', 'Chris Shiflett', '1971-05-06', 'chris-shiflett.com', 'chrispshiflett', 6, 'https://example.com/artists/chris_shiflett.jpg', 'Foo Fighters lead guitarist'),
+(13, 'Rami', 'Jaffee', 'Rami Jaffee', '1969-03-11', NULL, 'ramijaffee', 4, 'https://example.com/artists/rami_jaffee.jpg', 'Foo Fighters keyboardist'),
+
+-- Florence + Machine members
+(14, 'Florence', 'Welch', 'Florence Welch', '1986-08-28', 'florenceandthemachine.net', 'florence', 4, 'https://example.com/artists/florence_welch.jpg', 'Florence + Machine lead singer'),
+(15, 'Isabella', 'Summers', 'Isabella Summers', '1980-12-03', NULL, 'isabellamachine', 4, 'https://example.com/artists/isabella_summers.jpg', 'Florence + Machine keyboardist'),
+
+-- Tame Impala members
+(16, 'Kevin', 'Parker', 'Kevin Parker', '1986-01-20', 'tameimpala.com', 'kevinparker', 5, 'https://example.com/artists/kevin_parker.jpg', 'Tame Impala multi-instrumentalist'),
+(17, 'Dominic', 'Simper', 'Dominic Simper', NULL, NULL, 'dominicsimper', 3, 'https://example.com/artists/dominic_simper.jpg', 'Tame Impala member'),
+(18, 'Jay', 'Watson', 'Jay Watson', '1987-06-25', NULL, 'jaywatsonmusic', 4, 'https://example.com/artists/jay_watson.jpg', 'Tame Impala multi-instrumentalist'),
+
+-- The Strokes members
+(19, 'Julian', 'Casablancas', 'Julian Casablancas', '1978-08-23', 'thevoidz.com', 'juliancasablancas', 3, 'https://example.com/artists/julian_casablancas.jpg', 'The Strokes lead singer'),
+(20, 'Nick', 'Valensi', 'Nick Valensi', '1981-01-16', NULL, 'nickvalensi', 3, 'https://example.com/artists/nick_valensi.jpg', 'The Strokes guitarist'),
+(21, 'Albert', 'Hammond Jr.', 'Albert Hammond Jr.', '1980-04-09', 'alberthammondjr.com', 'alberthammondjr', 3, 'https://example.com/artists/albert_hammond_jr.jpg', 'The Strokes guitarist'),
+
+-- Red Hot Chili Peppers members
+(22, 'Anthony', 'Kiedis', 'Anthony Kiedis', '1962-11-01', NULL, 'anthonykiedis', 7, 'https://example.com/artists/anthony_kiedis.jpg', 'RHCP lead singer'),
+(23, 'Flea', 'Balzary', 'Flea', '1962-10-16', 'flea', 7, 'https://example.com/artists/flea.jpg', 'RHCP bassist'),
+(24, 'Chad', 'Smith', 'Chad Smith', '1961-10-25', NULL, 'chadsmithofficial', 7, 'https://example.com/artists/chad_smith.jpg', 'RHCP drummer'),
+(25, 'John', 'Frusciante', 'John Frusciante', '1970-03-05', NULL, 'johnfrusciante', 5, 'https://example.com/artists/john_frusciante.jpg', 'RHCP guitarist'),
+
+-- Muse members
+(26, 'Matt', 'Bellamy', 'Matt Bellamy', '1978-06-09', NULL, 'mattbellamy', 6, 'https://example.com/artists/matt_bellamy.jpg', 'Muse lead singer'),
+(27, 'Chris', 'Wolstenholme', 'Chris Wolstenholme', '1978-12-02', NULL, 'wolstenholme', 6, 'https://example.com/artists/chris_wolstenholme.jpg', 'Muse bassist'),
+(28, 'Dominic', 'Howard', 'Dominic Howard', '1977-12-07', NULL, 'domhoward', 6, 'https://example.com/artists/dominic_howard.jpg', 'Muse drummer'),
+
+-- LCD Soundsystem members
+(29, 'James', 'Murphy', 'James Murphy', '1970-02-04', 'dfa.com', 'jamesmurphydfa', 4, 'https://example.com/artists/james_murphy.jpg', 'LCD Soundsystem frontman'),
+(30, 'Nancy', 'Whang', 'Nancy Whang', '1979-06-28', NULL, 'nancywhang', 3, 'https://example.com/artists/nancy_whang.jpg', 'LCD Soundsystem keyboardist'),
+(31, 'Pat', 'Mahoney', 'Pat Mahoney', '1975-07-02', NULL, 'patmahoney', 3, 'https://example.com/artists/pat_mahoney.jpg', 'LCD Soundsystem drummer'),
+
+-- The National members
+(32, 'Matt', 'Berninger', 'Matt Berninger', '1971-07-13', NULL, 'mattberninger', 5, 'https://example.com/artists/matt_berninger.jpg', 'The National lead singer'),
+(33, 'Aaron', 'Dessner', 'Aaron Dessner', '1976-04-23', NULL, 'aarondessner', 5, 'https://example.com/artists/aaron_dessner.jpg', 'The National guitarist'),
+(34, 'Bryce', 'Dessner', 'Bryce Dessner', '1976-04-23', NULL, 'brycedessner', 5, 'https://example.com/artists/bryce_dessner.jpg', 'The National guitarist'),
+
+-- Vampire Weekend members
+(35, 'Ezra', 'Koenig', 'Ezra Koenig', '1984-04-08', NULL, 'ezrak', 3, 'https://example.com/artists/ezra_koenig.jpg', 'Vampire Weekend lead singer'),
+(36, 'Chris', 'Baio', 'Chris Baio', '1984-09-29', NULL, 'cbaio', 3, 'https://example.com/artists/chris_baio.jpg', 'Vampire Weekend bassist'),
+(37, 'Chris', 'Tomson', 'Chris Tomson', '1985-05-14', NULL, 'battletomson', 3, 'https://example.com/artists/chris_tomson.jpg', 'Vampire Weekend drummer'),
+
+-- Arcade Fire members
+(38, 'Win', 'Butler', 'Win Butler', '1980-04-14', NULL, 'winbutler', 4, 'https://example.com/artists/win_butler.jpg', 'Arcade Fire lead singer'),
+(39, 'Régine', 'Chassagne', 'Régine Chassagne', '1977-08-18', NULL, 'reginechassagne', 4, 'https://example.com/artists/regine_chassagne.jpg', 'Arcade Fire multi-instrumentalist'),
+(40, 'Richard', 'Reed Parry', 'Richard Reed Parry', '1977-10-04', NULL, 'richardreedparry', 4, 'https://example.com/artists/richard_reed_parry.jpg', 'Arcade Fire multi-instrumentalist'),
+
+-- The Black Keys members
+(41, 'Dan', 'Auerbach', 'Dan Auerbach', '1979-05-14', 'danauerbach.com', 'danauerbach', 5, 'https://example.com/artists/dan_auerbach.jpg', 'The Black Keys guitarist'),
+(42, 'Patrick', 'Carney', 'Patrick Carney', '1980-04-15', NULL, 'patrickcarney', 5, 'https://example.com/artists/patrick_carney.jpg', 'The Black Keys drummer'),
+
+-- Phoenix members
+(43, 'Thomas', 'Mars', 'Thomas Mars', '1976-09-19', NULL, 'thomas__mars', 5, 'https://example.com/artists/thomas_mars.jpg', 'Phoenix lead singer'),
+(44, 'Christian', 'Mazzalai', 'Christian Mazzalai', '1973-12-05', NULL, 'christianmazzalai', 5, 'https://example.com/artists/christian_mazzalai.jpg', 'Phoenix guitarist'),
+(45, 'Laurent', 'Brancowitz', 'Laurent Brancowitz', '1975-05-21', NULL, 'laurentbrancowitz', 5, 'https://example.com/artists/laurent_brancowitz.jpg', 'Phoenix guitarist'),
+
+-- Interpol members
+(46, 'Paul', 'Banks', 'Paul Banks', '1978-05-03', NULL, 'paulbanksnyc', 3, 'https://example.com/artists/paul_banks.jpg', 'Interpol lead singer'),
+(47, 'Daniel', 'Kessler', 'Daniel Kessler', '1974-03-17', NULL, 'danielkessler', 3, 'https://example.com/artists/daniel_kessler.jpg', 'Interpol guitarist'),
+(48, 'Sam', 'Fogarino', 'Sam Fogarino', '1968-06-16', NULL, 'samfogarino', 3, 'https://example.com/artists/sam_fogarino.jpg', 'Interpol drummer'),
+
+-- The 1975 members
+(49, 'Matty', 'Healy', 'Matty Healy', '1989-04-08', NULL, 'trumanblack', 5, 'https://example.com/artists/matty_healy.jpg', 'The 1975 lead singer'),
+(50, 'Adam', 'Hann', 'Adam Hann', '1986-05-20', NULL, 'adamhann', 5, 'https://example.com/artists/adam_hann.jpg', 'The 1975 guitarist'),
+(51, 'Ross', 'MacDonald', 'Ross MacDonald', '1988-12-21', NULL, 'rossmacdonald', 5, 'https://example.com/artists/ross_macdonald.jpg', 'The 1975 bassist'),
+(52, 'George', 'Daniel', 'George Daniel', '1989-03-19', NULL, 'georgedaniel', 5, 'https://example.com/artists/george_daniel.jpg', 'The 1975 drummer'),
+
+-- Queens of the Stone Age members
+(53, 'Josh', 'Homme', 'Josh Homme', '1973-05-17', NULL, 'joshhomme', 5, 'https://example.com/artists/josh_homme.jpg', 'QOTSA lead singer'),
+(54, 'Troy', 'Van Leeuwen', 'Troy Van Leeuwen', '1970-01-05', NULL, 'troyvanleeuwen', 4, 'https://example.com/artists/troy_van_leeuwen.jpg', 'QOTSA guitarist'),
+(55, 'Michael', 'Shuman', 'Michael Shuman', '1986-05-02', NULL, 'michael_shuman', 4, 'https://example.com/artists/michael_shuman.jpg', 'QOTSA bassist'),
+(56, 'Dean', 'Fertita', 'Dean Fertita', '1970-05-06', NULL, 'deanfertita', 3, 'https://example.com/artists/dean_fertita.jpg', 'QOTSA keyboardist'),
+(57, 'Jon', 'Theodore', 'Jon Theodore', '1973-03-03', NULL, 'jontheodore', 3, 'https://example.com/artists/jon_theodore.jpg', 'QOTSA drummer'),
+
+-- Additional notable artists who collaborate with these bands
+(58, 'Jack', 'White', 'Jack White', '1975-07-09', 'jackwhiteiii.com', 'officialjackwhite', 4, 'https://example.com/artists/jack_white.jpg', 'The White Stripes frontman'),
+(59, 'St. Vincent', 'Clark', 'St. Vincent', '1982-09-28', 'ilovestvincent.com', 'st_vincent', 3, 'https://example.com/artists/st_vincent.jpg', 'Innovative guitarist and singer'),
+(60, 'Thom', 'Yorke', 'Thom Yorke', '1968-10-07', 'radiohead.com', 'thomyorke', 4, 'https://example.com/artists/thom_yorke.jpg', 'Radiohead lead singer'),
+
+-- Pop artists (61-90)
+(61, 'Taylor', 'Swift', 'Taylor Swift', '1989-12-13', 'taylorswift.com', 'taylorswift', 8, 'https://example.com/artists/taylor_swift.jpg', 'Global pop superstar'),
+(62, 'Ariana', 'Grande', 'Ariana Grande', '1993-06-26', 'arianagrande.com', 'arianagrande', 6, 'https://example.com/artists/ariana_grande.jpg', 'Pop and R&B sensation'),
+(63, 'Billie', 'Eilish', 'Billie Eilish', '2001-12-18', 'billieeilish.com', 'billieeilish', 5, 'https://example.com/artists/billie_eilish.jpg', 'Grammy-winning young artist'),
+(64, 'Dua', 'Lipa', 'Dua Lipa', '1995-08-22', 'dualipa.com', 'dualipa', 5, 'https://example.com/artists/dua_lipa.jpg', 'British pop superstar'),
+(65, 'Harry', 'Styles', 'Harry Styles', '1994-02-01', 'hstyles.co.uk', 'harrystyles', 5, 'https://example.com/artists/harry_styles.jpg', 'Former One Direction member'),
+(66, 'Olivia', 'Rodrigo', 'Olivia Rodrigo', '2003-02-20', 'oliviarodrigo.com', 'oliviarodrigo', 3, 'https://example.com/artists/olivia_rodrigo.jpg', 'Breakout pop artist'),
+(67, 'Doja', 'Cat', 'Doja Cat', '1995-10-21', 'dojacat.com', 'dojacat', 4, 'https://example.com/artists/doja_cat.jpg', 'Rapper and singer'),
+(68, 'The Weeknd', 'Tesfaye', 'The Weeknd', '1990-02-16', 'theweeknd.com', 'theweeknd', 6, 'https://example.com/artists/the_weeknd.jpg', 'Canadian R&B superstar'),
+(69, 'Post', 'Malone', 'Post Malone', '1995-07-04', 'postmalone.com', 'postmalone', 5, 'https://example.com/artists/post_malone.jpg', 'Rapper and singer'),
+(70, 'Camila', 'Cabello', 'Camila Cabello', '1997-03-03', 'camilacabello.com', 'camila_cabello', 4, 'https://example.com/artists/camila_cabello.jpg', 'Former Fifth Harmony member'),
+(71, 'Shawn', 'Mendes', 'Shawn Mendes', '1998-08-08', 'shawnmendesofficial.com', 'shawnmendes', 5, 'https://example.com/artists/shawn_mendes.jpg', 'Canadian pop singer'),
+(72, 'Selena', 'Gomez', 'Selena Gomez', '1992-07-22', 'selenagomez.com', 'selenagomez', 5, 'https://example.com/artists/selena_gomez.jpg', 'Actress and singer'),
+(73, 'Justin', 'Bieber', 'Justin Bieber', '1994-03-01', 'justinbiebermusic.com', 'justinbieber', 7, 'https://example.com/artists/justin_bieber.jpg', 'Pop phenomenon'),
+(74, 'Lady', 'Gaga', 'Lady Gaga', '1986-03-28', 'ladygaga.com', 'ladygaga', 6, 'https://example.com/artists/lady_gaga.jpg', 'Iconic pop artist'),
+(75, 'Bruno', 'Mars', 'Bruno Mars', '1985-10-08', 'brunomars.com', 'brunomars', 6, 'https://example.com/artists/bruno_mars.jpg', 'Funk and pop superstar'),
+(76, 'Ed', 'Sheeran', 'Ed Sheeran', '1991-02-17', 'edsheeran.com', 'teddysphotos', 7, 'https://example.com/artists/ed_sheeran.jpg', 'British singer-songwriter'),
+(77, 'Rihanna', 'Fenty', 'Rihanna', '1988-02-20', 'rihannanow.com', 'badgalriri', 5, 'https://example.com/artists/rihanna.jpg', 'Barbadian superstar'),
+(78, 'Beyoncé', 'Knowles', 'Beyoncé', '1981-09-04', 'beyonce.com', 'beyonce', 6, 'https://example.com/artists/beyonce.jpg', 'Global music icon'),
+(79, 'Katy', 'Perry', 'Katy Perry', '1984-10-25', 'katyperry.com', 'katyperry', 6, 'https://example.com/artists/katy_perry.jpg', 'Pop superstar'),
+(80, 'Adele', 'Adkins', 'Adele', '1988-05-05', 'adele.com', 'adele', 4, 'https://example.com/artists/adele.jpg', 'British soul singer'),
+(81, 'Miley', 'Cyrus', 'Miley Cyrus', '1992-11-23', 'mileycyrus.com', 'mileycyrus', 5, 'https://example.com/artists/miley_cyrus.jpg', 'Pop and country artist'),
+(82, 'Nicki', 'Minaj', 'Nicki Minaj', '1982-12-08', 'nickiminajofficial.com', 'nickiminaj', 5, 'https://example.com/artists/nicki_minaj.jpg', 'Rapper and singer'),
+(83, 'Drake', 'Graham', 'Drake', '1986-10-24', 'drakerelated.com', 'champagnepapi', 6, 'https://example.com/artists/drake.jpg', 'Canadian rapper'),
+(84, 'Lizzo', 'Jefferson', 'Lizzo', '1988-04-27', 'lizzomusic.com', 'lizzobeeating', 4, 'https://example.com/artists/lizzo.jpg', 'Singer and rapper'),
+(85, 'Charlie', 'Puth', 'Charlie Puth', '1991-12-02', 'charlieputh.com', 'charlieputh', 4, 'https://example.com/artists/charlie_puth.jpg', 'Singer and producer'),
+(86, 'Halsey', 'Frangipane', 'Halsey', '1994-09-29', 'iamhalsey.com', 'iamhalsey', 5, 'https://example.com/artists/halsey.jpg', 'Alternative pop artist'),
+(87, 'Zayn', 'Malik', 'Zayn', '1993-01-12', 'zaynmalik.com', 'zayn', 4, 'https://example.com/artists/zayn.jpg', 'Former One Direction member'),
+(88, 'Lil', 'Nas X', 'Lil Nas X', '1999-04-09', 'lilnasx.com', 'lilnasx', 3, 'https://example.com/artists/lil_nas_x.jpg', 'Rapper and singer'),
+(89, 'Sam', 'Smith', 'Sam Smith', '1992-05-19', 'samsmithworld.com', 'samsmith', 5, 'https://example.com/artists/sam_smith.jpg', 'British soul singer'),
+(90, 'SZA', 'Rowe', 'SZA', '1989-11-08', 'szactrl.com', 'sza', 4, 'https://example.com/artists/sza.jpg', 'R&B artist');
+
+-- BAND TABLE (17 bands with images)
+INSERT INTO Band (band_id, band_name, form_date, website, insta, image, image_caption) VALUES
+(1, 'The Killers', '2001-01-01', 'thekillersmusic.com', 'thekillers', 'https://example.com/bands/the_killers.jpg', 'Rock band from Las Vegas'),
+(2, 'Arctic Monkeys', '2002-06-01', 'arcticmonkeys.com', 'arcticmonkeys', 'https://example.com/bands/arctic_monkeys.jpg', 'British indie rock band'),
+(3, 'Foo Fighters', '1994-01-01', 'foofighters.com', 'foofighters', 'https://example.com/bands/foo_fighters.jpg', 'American rock band formed by Dave Grohl'),
+(4, 'Florence + Machine', '2007-07-01', 'florenceandthemachine.net', 'florenceandthemachine', 'https://example.com/bands/florence_machine.jpg', 'English indie rock band'),
+(5, 'Tame Impala', '2007-01-01', 'tameimpala.com', 'tameimpala', 'https://example.com/bands/tame_impala.jpg', 'Australian psychedelic music project'),
+(6, 'The Strokes', '1998-01-01', 'thestrokes.com', 'thestrokes', 'https://example.com/bands/the_strokes.jpg', 'American rock band from NYC'),
+(7, 'Red Hot Chili Peppers', '1983-01-01', 'redhotchilipeppers.com', 'chilipeppers', 'https://example.com/bands/rhcp.jpg', 'American funk rock band'),
+(8, 'Muse', '1994-01-01', 'muse.mu', 'muse', 'https://example.com/bands/muse.jpg', 'English rock band'),
+(9, 'LCD Soundsystem', '2002-01-01', 'lcdsoundsystem.com', 'lcdsoundsystem', 'https://example.com/bands/lcd_soundsystem.jpg', 'American dance-punk band'),
+(10, 'The National', '1999-01-01', 'americanmary.com', 'thenational', 'https://example.com/bands/the_national.jpg', 'American indie rock band'),
+(11, 'Vampire Weekend', '2006-01-01', 'vampireweekend.com', 'vampireweekend', 'https://example.com/bands/vampire_weekend.jpg', 'American indie rock band'),
+(12, 'Arcade Fire', '2001-01-01', 'arcadefire.com', 'arcadefire', 'https://example.com/bands/arcade_fire.jpg', 'Canadian indie rock band'),
+(13, 'The Black Keys', '2001-01-01', 'theblackkeys.com', 'theblackkeys', 'https://example.com/bands/the_black_keys.jpg', 'American rock duo'),
+(14, 'Phoenix', '1999-01-01', 'wearephoenix.com', 'wearephoenix', 'https://example.com/bands/phoenix.jpg', 'French indie pop band'),
+(15, 'Interpol', '1997-01-01', 'interpolnyc.com', 'interpol', 'https://example.com/bands/interpol.jpg', 'American post-punk revival band'),
+(16, 'The 1975', '2002-01-01', 'the1975.com', 'the1975', 'https://example.com/bands/the_1975.jpg', 'English pop rock band'),
+(17, 'Queens of the Stone Age', '1996-01-01', 'qotsa.com', 'queensofthestoneage', 'https://example.com/bands/qotsa.jpg', 'American rock band');
+
+-- BANDMEMBERS TABLE (all memberships)
+INSERT INTO BandMembers (band_id, artist_id, joined_in) VALUES
+-- The Killers (band_id: 1)
+(1, 1, '2001-01-01'), -- Brandon Flowers
+(1, 2, '2001-01-01'), -- Dave Keuning
+(1, 3, '2002-01-01'), -- Mark Stoermer
+(1, 4, '2002-01-01'), -- Ronnie Vannucci Jr.
+
+-- Arctic Monkeys (band_id: 2)
+(2, 5, '2002-06-01'), -- Alex Turner
+(2, 6, '2002-06-01'), -- Jamie Cook
+(2, 7, '2006-01-01'), -- Nick O'Malley
+(2, 8, '2002-06-01'), -- Matt Helders
+
+-- Foo Fighters (band_id: 3)
+(3, 9, '1994-01-01'), -- Dave Grohl
+(3, 10, '1995-01-01'), -- Nate Mendel
+(3, 11, '1995-01-01'), -- Pat Smear
+(3, 12, '1999-01-01'), -- Chris Shiflett
+(3, 13, '2017-01-01'), -- Rami Jaffee
+
+-- Florence + Machine (band_id: 4)
+(4, 14, '2007-07-01'), -- Florence Welch
+(4, 15, '2007-07-01'), -- Isabella Summers
+
+-- Tame Impala (band_id: 5)
+(5, 16, '2007-01-01'), -- Kevin Parker
+(5, 17, '2008-01-01'), -- Dominic Simper
+(5, 18, '2010-01-01'), -- Jay Watson
+
+-- The Strokes (band_id: 6)
+(6, 19, '1998-01-01'), -- Julian Casablancas
+(6, 20, '1998-01-01'), -- Nick Valensi
+(6, 21, '1998-01-01'), -- Albert Hammond Jr.
+
+-- Red Hot Chili Peppers (band_id: 7)
+(7, 22, '1983-01-01'), -- Anthony Kiedis
+(7, 23, '1983-01-01'), -- Flea
+(7, 24, '1988-01-01'), -- Chad Smith
+(7, 25, '1988-01-01'), -- John Frusciante
+
+-- Muse (band_id: 8)
+(8, 26, '1994-01-01'), -- Matt Bellamy
+(8, 27, '1994-01-01'), -- Chris Wolstenholme
+(8, 28, '1994-01-01'), -- Dominic Howard
+
+-- LCD Soundsystem (band_id: 9)
+(9, 29, '2002-01-01'), -- James Murphy
+(9, 30, '2005-01-01'), -- Nancy Whang
+(9, 31, '2002-01-01'), -- Pat Mahoney
+
+-- The National (band_id: 10)
+(10, 32, '1999-01-01'), -- Matt Berninger
+(10, 33, '1999-01-01'), -- Aaron Dessner
+(10, 34, '1999-01-01'), -- Bryce Dessner
+
+-- Vampire Weekend (band_id: 11)
+(11, 35, '2006-01-01'), -- Ezra Koenig
+(11, 36, '2006-01-01'), -- Chris Baio
+(11, 37, '2006-01-01'), -- Chris Tomson
+
+-- Arcade Fire (band_id: 12)
+(12, 38, '2001-01-01'), -- Win Butler
+(12, 39, '2001-01-01'), -- Régine Chassagne
+(12, 40, '2003-01-01'), -- Richard Reed Parry
+
+-- The Black Keys (band_id: 13)
+(13, 41, '2001-01-01'), -- Dan Auerbach
+(13, 42, '2001-01-01'), -- Patrick Carney
+
+-- Phoenix (band_id: 14)
+(14, 43, '1999-01-01'), -- Thomas Mars
+(14, 44, '1999-01-01'), -- Christian Mazzalai
+(14, 45, '1999-01-01'), -- Laurent Brancowitz
+
+-- Interpol (band_id: 15)
+(15, 46, '1997-01-01'), -- Paul Banks
+(15, 47, '1997-01-01'), -- Daniel Kessler
+(15, 48, '2000-01-01'), -- Sam Fogarino
+
+-- The 1975 (band_id: 16)
+(16, 49, '2002-01-01'), -- Matty Healy
+(16, 50, '2002-01-01'), -- Adam Hann
+(16, 51, '2002-01-01'), -- Ross MacDonald
+(16, 52, '2002-01-01'), -- George Daniel
+
+-- Queens of the Stone Age (band_id: 17)
+(17, 53, '1996-01-01'), -- Josh Homme
+(17, 54, '2002-01-01'), -- Troy Van Leeuwen
+(17, 55, '2007-01-01'), -- Michael Shuman
+(17, 56, '2007-01-01'), -- Dean Fertita
+(17, 57, '2013-01-01'); -- Jon Theodore
+
+-- PERFORMER TABLE (all performers)
+INSERT INTO Performer (performer_id, performer_name, artist_nband, artist_id, band_id) VALUES
+-- Bands (artist_nband = 0)
+(1, 'The Killers', 0, NULL, 1),
+(2, 'Arctic Monkeys', 0, NULL, 2),
+(3, 'Foo Fighters', 0, NULL, 3),
+(4, 'Florence + Machine', 0, NULL, 4),
+(5, 'Tame Impala', 0, NULL, 5),
+(6, 'The Strokes', 0, NULL, 6),
+(7, 'Red Hot Chili Peppers', 0, NULL, 7),
+(8, 'Muse', 0, NULL, 8),
+(9, 'LCD Soundsystem', 0, NULL, 9),
+(10, 'The National', 0, NULL, 10),
+(11, 'Vampire Weekend', 0, NULL, 11),
+(12, 'Arcade Fire', 0, NULL, 12),
+(13, 'The Black Keys', 0, NULL, 13),
+(14, 'Phoenix', 0, NULL, 14),
+(15, 'Interpol', 0, NULL, 15),
+(16, 'The 1975', 0, NULL, 16),
+(17, 'Queens of the Stone Age', 0, NULL, 17),
+
+-- Solo artists from bands (artist_nband = 1)
+(18, 'Brandon Flowers', 1, 1, NULL),
+(19, 'Alex Turner', 1, 5, NULL),
+(20, 'Dave Grohl', 1, 9, NULL),
+(21, 'Florence Welch', 1, 14, NULL),
+(22, 'Kevin Parker', 1, 16, NULL),
+(23, 'Julian Casablancas', 1, 19, NULL),
+(24, 'Anthony Kiedis', 1, 22, NULL),
+(25, 'Matt Bellamy', 1, 26, NULL),
+(26, 'James Murphy', 1, 29, NULL),
+(27, 'Matt Berninger', 1, 32, NULL),
+(28, 'Ezra Koenig', 1, 35, NULL),
+(29, 'Win Butler', 1, 38, NULL),
+(30, 'Dan Auerbach', 1, 41, NULL),
+(31, 'Thomas Mars', 1, 43, NULL),
+(32, 'Paul Banks', 1, 46, NULL),
+(33, 'Matty Healy', 1, 49, NULL),
+(34, 'Josh Homme', 1, 53, NULL),
+
+-- Additional collaborators
+(35, 'Jack White', 1, 58, NULL),
+(36, 'St. Vincent', 1, 59, NULL),
+(37, 'Thom Yorke', 1, 60, NULL),
+
+-- Pop artists (artist_nband = 1)
+(38, 'Taylor Swift', 1, 61, NULL),
+(39, 'Ariana Grande', 1, 62, NULL),
+(40, 'Billie Eilish', 1, 63, NULL),
+(41, 'Dua Lipa', 1, 64, NULL),
+(42, 'Harry Styles', 1, 65, NULL),
+(43, 'Olivia Rodrigo', 1, 66, NULL),
+(44, 'Doja Cat', 1, 67, NULL),
+(45, 'The Weeknd', 1, 68, NULL),
+(46, 'Post Malone', 1, 69, NULL),
+(47, 'Camila Cabello', 1, 70, NULL),
+(48, 'Shawn Mendes', 1, 71, NULL),
+(49, 'Selena Gomez', 1, 72, NULL),
+(50, 'Justin Bieber', 1, 73, NULL),
+(51, 'Lady Gaga', 1, 74, NULL),
+(52, 'Bruno Mars', 1, 75, NULL),
+(53, 'Ed Sheeran', 1, 76, NULL),
+(54, 'Rihanna', 1, 77, NULL),
+(55, 'Beyoncé', 1, 78, NULL),
+(56, 'Katy Perry', 1, 79, NULL),
+(57, 'Adele', 1, 80, NULL),
+(58, 'Miley Cyrus', 1, 81, NULL),
+(59, 'Nicki Minaj', 1, 82, NULL),
+(60, 'Drake', 1, 83, NULL),
+(61, 'Lizzo', 1, 84, NULL),
+(62, 'Charlie Puth', 1, 85, NULL),
+(63, 'Halsey', 1, 86, NULL),
+(64, 'Zayn', 1, 87, NULL),
+(65, 'Lil Nas X', 1, 88, NULL),
+(66, 'Sam Smith', 1, 89, NULL),
+(67, 'SZA', 1, 90, NULL);
