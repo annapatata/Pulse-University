@@ -214,8 +214,7 @@ CREATE TABLE Ticket (
    pay_method VARCHAR(10) NOT NULL,
    purchase_date TIMESTAMP NOT NULL,
    EAN VARCHAR(13) PRIMARY KEY,
-   activated BOOL NOT NULL DEFAULT FALSE,
-   CHECK (EAN REGEXP '^[0-9]{13}$'),
+   activated TINYINT NOT NULL DEFAULT FALSE  CHECK (EAN REGEXP '^[0-9]{13}$'),
    FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id), 
    FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type), 
@@ -233,17 +232,16 @@ CREATE TABLE Buyer (
    buyer_id INT AUTO_INCREMENT PRIMARY KEY,
    visitor_id INT NOT NULL,
    ticket_type VARCHAR(10),
-   EAN VARCHAR(13) ,
+   EAN VARCHAR(13) CHECK (
+	(EAN IS NOT NULL AND event_id IS NULL AND ticket_type IS NULL) OR
+	(EAN IS NULL AND event_id IS NOT NULL AND ticket_type IS NOT NULL) 
+),
    event_id INT,
    purchase_interest TIMESTAMP NOT NULL,
    FOREIGN KEY (EAN) REFERENCES Resale_queue(EAN) ON DELETE CASCADE,
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id),
-   FOREIGN KEY (event_id) REFERENCES Event(event_id),
-   FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type),
-   CHECK (
-	(EAN IS NOT NULL AND event_id IS NULL AND ticket_type IS NULL) OR
-	(EAN IS NULL AND event_id IS NOT NULL AND ticket_type IS NOT NULL) 
-)
+   FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
+   FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type)
 );
 
 CREATE TABLE Likert (
@@ -252,7 +250,7 @@ CREATE TABLE Likert (
 
 CREATE TABLE Review (
    EAN VARCHAR(13) NOT NULL,
-   performance_id NOT NULL,
+   performance_id int NOT NULL,
    PRIMARY KEY(EAN,performance_id),
    voice INT NOT NULL,
    light_sound INT NOT NULL ,
