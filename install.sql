@@ -338,15 +338,15 @@ CREATE INDEX idx_artist_participations ON Artist(participations); --q05/q11
 CREATE INDEX idx_artist_birthDate ON Artist(birthDate); --q05
 
 -- BandMembers indexes
--CREATE INDEX idx_bandmembers_band_id ON BandMembers(band_id);
--CREATE INDEX idx_bandmembers_artist_id ON BandMembers(artist_id);
+CREATE INDEX idx_bandmembers_band_id ON BandMembers(band_id); --used in triggers
+CREATE INDEX idx_bandmembers_artist_id ON BandMembers(artist_id); --used in trigger
 
 -- Subgenre indexes
 CREATE INDEX idx_subgenre_genre_id ON Subgenre(genre_id); --q02
 
 -- Performer indexes
--CREATE INDEX idx_performer_artist_id ON Performer(artist_id);
--CREATE INDEX idx_performer_band_id ON Performer(band_id);
+CREATE INDEX idx_performer_artist_id ON Performer(artist_id); --used in triggers
+CREATE INDEX idx_performer_band_id ON Performer(band_id); --used in triggers
 
 -- PerformerYears indexes
 CREATE INDEX idx_py_performer_id ON PerformerYears(performer_id); --q02
@@ -359,7 +359,7 @@ CREATE INDEX idx_performersubgenre_subgenre_id ON PerformerSubgenre(subgenre_id)
 -- Performance indexes
 CREATE INDEX idx_performance_event_id ON Performance(event_id); --q03/q04/q13
 CREATE INDEX idx_performance_performer_id ON Performance(performer_id); --q03/q04/q13/q15
--CREATE INDEX idx_performance_start_end_time ON Performance(start_time, end_time);
+CREATE INDEX idx_performance_start_end_time ON Performance(start_time, end_time); -- used in triggers
 
 -- Ticket indexes
 CREATE INDEX idx_ticket_event_id ON Ticket(event_id); --q04/q09
