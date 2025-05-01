@@ -33,7 +33,7 @@ CREATE TABLE Location (
 CREATE TABLE Stage (
   stage_id integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   stage_name varchar(20) NOT NULL,  
-  descript varchar(40) NOT NULL,
+  desc_id varchar(40) NOT NULL,
   capacity INT NOT NULL,
   CONSTRAINT descript FOREIGN KEY (desc_id) REFERENCES Description(desc_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
