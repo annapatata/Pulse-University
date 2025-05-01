@@ -1,160 +1,5 @@
-
-
 DELIMITER $$
-
-CREATE TRIGGER check_event_sold_out
-BEFORE INSERT ON Resale_queue
-FOR EACH ROW
-BEGIN
-	DECLARE r_event_id INT;
-	DECLARE num_sold INT;
-	DECLARE r_event_capacity INT;
-	DECLARE r_status BOOL;
-	DECLARE r_stage INT;
-	DECLARE r_time DATETIME;
-    
-	SELECT event_id, activated INTO r_event_id, r_status
-	FROM Ticket
-	WHERE EAN = NEW.EAN;
 	
-	SELECT COUNT(*) INTO num_sold
-	FROM Ticket
-	WHERE event_id = r_event_id;
-	
-	SELECT start_time, stage_id INTO r_time, r_stage
-	FROM Event_P 
-	WHERE event_id = r_event_id;
-
-	SELECT capacity INTO  r_event_capacity
-	FROM Stage
-	WHERE stage_id = r_stage;
-      
-	IF num_sold < r_event_capacity 
-	   OR r_status = TRUE
-	   OR r_time < NOW() THEN
-	   SIGNAL SQLSTATE '45000'
-	   SET MESSAGE_TEXT = 'Ticket cannot be resold.';
-	END IF;
-END$$
-
-DELIMITER ;
-
-
-
-DELIMITER $$
-
-CREATE TRIGGER remove_from_resale_if_activated
-AFTER UPDATE ON Ticket
-FOR EACH ROW
-BEGIN
-    IF NEW.activated = TRUE THEN
-        DELETE FROM Resale_queue
-        WHERE EAN = NEW.EAN;
-    END IF;
-END$$
-
-DELIMITER ;
-
-
-
-DELIMITER $$
-
-CREATE TRIGGER match_on_resale
-AFTER INSERT ON Resale_queue
-FOR EACH ROW
-BEGIN
-	DECLARE cur_b_id INT;
-	DECLARE cur_v_id INT;
-	DECLARE resale_type VARCHAR(10);
-	DECLARE resale_event INT;
-	DECLARE r_time DATETIME;
-	
-	SELECT event_id, ticket_type INTO resale_event, resale_type
-	FROM Ticket
-	WHERE EAN = NEW.EAN;
-	
-	SELECT start_time INTO r_time
-	FROM Event 
-	WHERE event_id = resale_event;
-	
-	SELECT buyer_id, visitor_id INTO cur_b_id, cur_v_id
-	FROM Buyer
-	WHERE ((EAN = NEW.EAN) OR (ticket_type = resale_type AND event_id = resale_event))
-	ORDER BY purchase_interest ASC
-	LIMIT 1;
-	
-	IF cur_b_id IS NOT NULL AND r_time > NOW() THEN
-		UPDATE Ticket SET visitor_id = cur_v_id WHERE EAN = NEW.EAN;
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-	END IF;
-	
-	IF r_time < NOW() THEN 
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-		DELETE FROM Buyer WHERE event_id = resale_event;
-	END IF;
-		
-	END$$
-	
-DELIMITER ;
-
-
-DELIMITER $$
-
-CREATE TRIGGER match_on_buyer
-AFTER INSERT ON Buyer
-FOR EACH ROW
-BEGIN
-	DECLARE d_time DATETIME;
-	DECLARE d_event INT;
-	DECLARE d_EAN INT;
-	
-	
-	IF NEW.EAN IS NOT NULL THEN	
-		SELECT event_id INTO d_event FROM Ticket WHERE EAN = NEW.EAN;
-		SELECT start_time INTO d_time FROM Event WHERE event_id = d_event;
-		IF d_time > NOW() THEN
-		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
-		END IF
-		IF d_time < NOW() THEN
-			DELETE FROM Buyer WHERE event_id = d_event;
-			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = d_event
-			);
-		END IF
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-		END IF
-	
-	ELSE
-		SELECT start_time INTO d_time FROM Event WHERE event_id = NEW.event_id;
-		
-		IF d_time < NOW() THEN
-			DELETE FROM Buyer WHERE event_id = NEW.event_id;
-			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = d_event
-			);
-		END IF
-		
-	    SELECT EAN INTO d_EAN
-		FROM Resale_queue rq
-		JOIN Ticket t ON rq.EAN = t.EAN 
-		WHERE t.event_id = NEW.event_id
-			AND t.ticket_type = NEW.ticket_type 
-		ORDER BY rq.sale_interest ASC
-		LIMIT 1;
-		
-		IF d_EAN IS NOT NULL THEN
-			UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
-			DELETE FROM Resale_queue WHERE EAN = d_EAN;
-		END IF
-	END IF	
-	
-	END$$
-	
-
-DELIMITER ;
-
-DELIMITER $$
-
 CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -615,4 +460,157 @@ BEGIN
 	END IF;
 
 END//
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE TRIGGER check_event_sold_out
+BEFORE INSERT ON Resale_queue
+FOR EACH ROW
+BEGIN
+	DECLARE r_event_id INT;
+	DECLARE num_sold INT;
+	DECLARE r_event_capacity INT;
+	DECLARE r_status BOOL;
+	DECLARE r_stage INT;
+	DECLARE r_time DATETIME;
+    
+	SELECT event_id, activated INTO r_event_id, r_status
+	FROM Ticket
+	WHERE EAN = NEW.EAN;
+	
+	SELECT COUNT(*) INTO num_sold
+	FROM Ticket
+	WHERE event_id = r_event_id;
+	
+	SELECT start_time, stage_id INTO r_time, r_stage
+	FROM Event_P 
+	WHERE event_id = r_event_id;
+
+	SELECT capacity INTO  r_event_capacity
+	FROM Stage
+	WHERE stage_id = r_stage;
+      
+	IF num_sold < r_event_capacity 
+	   OR r_status = TRUE
+	   OR r_time < NOW() THEN
+	   SIGNAL SQLSTATE '45000'
+	   SET MESSAGE_TEXT = 'Ticket cannot be resold.';
+	END IF;
+END$$
+
+DELIMITER ;
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER remove_from_resale_if_activated
+AFTER UPDATE ON Ticket
+FOR EACH ROW
+BEGIN
+    IF NEW.activated = TRUE THEN
+        DELETE FROM Resale_queue
+        WHERE EAN = NEW.EAN;
+    END IF;
+END$$
+
+DELIMITER ;
+
+
+
+DELIMITER $$
+
+CREATE TRIGGER match_on_resale
+AFTER INSERT ON Resale_queue
+FOR EACH ROW
+BEGIN
+	DECLARE cur_b_id INT;
+	DECLARE cur_v_id INT;
+	DECLARE resale_type VARCHAR(10);
+	DECLARE resale_event INT;
+	DECLARE r_time DATETIME;
+	
+	SELECT event_id, ticket_type INTO resale_event, resale_type
+	FROM Ticket
+	WHERE EAN = NEW.EAN;
+	
+	SELECT start_time INTO r_time
+	FROM Event 
+	WHERE event_id = resale_event;
+	
+	SELECT buyer_id, visitor_id INTO cur_b_id, cur_v_id
+	FROM Buyer
+	WHERE ((EAN = NEW.EAN) OR (ticket_type = resale_type AND event_id = resale_event))
+	ORDER BY purchase_interest ASC
+	LIMIT 1;
+	
+	IF cur_b_id IS NOT NULL AND r_time > NOW() THEN
+		UPDATE Ticket SET visitor_id = cur_v_id WHERE EAN = NEW.EAN;
+		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
+	END IF;
+	
+	IF r_time < NOW() THEN 
+		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
+		DELETE FROM Buyer WHERE event_id = resale_event;
+	END IF;
+		
+	END$$
+	
+DELIMITER ;
+
+
+DELIMITER $$
+
+CREATE TRIGGER match_on_buyer
+AFTER INSERT ON Buyer
+FOR EACH ROW
+BEGIN
+	DECLARE d_time DATETIME;
+	DECLARE d_event INT;
+	DECLARE d_EAN INT;
+	
+	
+	IF NEW.EAN IS NOT NULL THEN	
+		SELECT event_id INTO d_event FROM Ticket WHERE EAN = NEW.EAN;
+		SELECT start_time INTO d_time FROM Event WHERE event_id = d_event;
+		IF d_time > NOW() THEN
+		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
+		END IF
+		IF d_time < NOW() THEN
+			DELETE FROM Buyer WHERE event_id = d_event;
+			DELETE FROM Resale_queue WHERE EAN IN (
+				SELECT EAN FROM Ticket WHERE event_id = d_event
+			);
+		END IF
+		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
+		END IF
+	
+	ELSE
+		SELECT start_time INTO d_time FROM Event WHERE event_id = NEW.event_id;
+		
+		IF d_time < NOW() THEN
+			DELETE FROM Buyer WHERE event_id = NEW.event_id;
+			DELETE FROM Resale_queue WHERE EAN IN (
+				SELECT EAN FROM Ticket WHERE event_id = d_event
+			);
+		END IF
+		
+	    SELECT EAN INTO d_EAN
+		FROM Resale_queue rq
+		JOIN Ticket t ON rq.EAN = t.EAN 
+		WHERE t.event_id = NEW.event_id
+			AND t.ticket_type = NEW.ticket_type 
+		ORDER BY rq.sale_interest ASC
+		LIMIT 1;
+		
+		IF d_EAN IS NOT NULL THEN
+			UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
+			DELETE FROM Resale_queue WHERE EAN = d_EAN;
+		END IF
+	END IF	
+	
+	END$$
+	
+
 DELIMITER ;
