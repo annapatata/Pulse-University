@@ -169,7 +169,7 @@ CREATE TABLE Performer (
 CREATE TABLE PerformerSubgenre (
   performer_id INT,
   subgenre_id VARCHAR(40),
-  FOREIGN KEY (perfomer_id) REFERENCES Performer(performer_id)
+  FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
   ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (subgenre_id) REFERENCES Subgenre(subgenre_id)
   ON UPDATE CASCADE ON DELETE CASCADE
