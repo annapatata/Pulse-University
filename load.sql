@@ -1,12 +1,12 @@
 --Continents
-INSERT INTO Continent (continent_name) VALUES
-('Africa'),
-('Antarctica'),
-('Asia'),
-('Europe'),
-('North America'),
-('South America'),
-('Australia');
+INSERT INTO Continent (continent_name, image, image_caption) VALUES
+('Europe', 'https://example.com/images/europe.jpg', 'Ancient cities, diverse cultures, and music heritage'),
+('Asia', 'https://example.com/images/asia.jpg', 'Vibrant landscapes and rhythmic traditions'),
+('North America', 'https://example.com/images/north-america.jpg', 'Home of iconic music festivals and genres'),
+('South America', 'https://example.com/images/south-america.jpg', 'Passionate rhythms and colorful performances'),
+('Africa', 'https://example.com/images/africa.jpg', 'Cradle of rhythm and tribal beats'),
+('Australia', 'https://example.com/images/australia.jpg', 'Island continent with open-air festivals'),
+('Antarctica', 'https://example.com/images/antarctica.jpg', 'The coolest stage on Earth – literally!');
 
 --9 Festival
 INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_caption) VALUES
