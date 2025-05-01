@@ -13,7 +13,9 @@ CREATE TABLE Festival (
 
 CREATE TABLE Continent (
   continent_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  continent_name varchar(20) 
+  continent_name varchar(20),
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE Location (
@@ -25,6 +27,8 @@ CREATE TABLE Location (
   city varchar(40) NOT NULL,
   country varchar(40) NOT NULL,
   continent_id INT NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
   CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_continent FOREIGN KEY (continent_id) REFERENCES Continent(continent_id)
@@ -32,7 +36,9 @@ CREATE TABLE Location (
 
 CREATE TABLE Description (
   desc_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  descript varchar(40) NOT NULL UNIQUE
+  descript varchar(40) NOT NULL UNIQUE,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE Stage (
@@ -40,18 +46,24 @@ CREATE TABLE Stage (
   stage_name varchar(20) NOT NULL,  
   desc_id varchar(40) NOT NULL,
   capacity INT NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null,
   CONSTRAINT descript FOREIGN KEY (desc_id) REFERENCES Description(desc_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE Role(
   role_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  role_name varchar(20) NOT NULL 
+  role_name varchar(20) NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE Experience (
   experience_level varchar(20) UNIQUE, 
-  xp INT AUTO_INCREMENT PRIMARY KEY
+  xp INT AUTO_INCREMENT PRIMARY KEY,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 
@@ -62,6 +74,8 @@ CREATE TABLE Staff (
   age integer NOT NULL,
   experience_level varchar(20) NOT NULL,
   role_id INT NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null,
   CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES Role(role_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_experience FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
@@ -84,6 +98,8 @@ CREATE TABLE Event_P (
   start_time DATETIME NOT NULL,
   end_time DATETIME NOT NULL, 
   festival_day INT NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null,
   FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
