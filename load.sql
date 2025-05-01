@@ -20,6 +20,19 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2025, '2025-07-08', '2025-07-13', 6, 'https://example.com/img9.jpg', 'Future fest is here'),
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
+--10 descriptions
+INSERT INTO Description (descript, image, image_caption) VALUES
+('Open-Air', 'https://example.com/images/open-air.jpg', 'Fresh air and open skies set the mood'),
+('Indoor', 'https://example.com/images/indoor.jpg', 'Enclosed space with controlled acoustics'),
+('Secluded', 'https://example.com/images/secluded.jpg', 'Hidden away for an exclusive vibe'),
+('Spacious', 'https://example.com/images/spacious.jpg', 'Plenty of room to dance and explore'),
+('Underground', 'https://example.com/images/underground.jpg', 'Low-key and immersive music environment'),
+('Outdoor', 'https://example.com/images/outdoor.jpg', 'Under the sun or stars with natural surroundings'),
+('Cozy', 'https://example.com/images/cozy.jpg', 'A small and comfortable venue'),
+('Elevated', 'https://example.com/images/elevated.jpg', 'High ground for amazing views and sound'),
+('Panoramic', 'https://example.com/images/panoramic.jpg', '360-degree experience with sweeping views'),
+('Intimate', 'https://example.com/images/intimate.jpg', 'Close connections with performers and crowd');
+
 --9 locations
 INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_id,image, image_caption) VALUES
 (1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 4,'https://example.com/img1.jpg', 'The summer heat began here'),
@@ -67,20 +80,6 @@ INSERT INTO Stage (stage_name, desc_id, capacity, image, image_caption) VALUES
 ('Siren Stage', 8, 190, 'https://example.com/siren.jpg', 'Mystical soundscapes and effects'),
 ('Cloud Nine', 9, 170, 'https://example.com/cloud.jpg', 'Dreamy acts with aerial views'),
 ('The Spark', 10, 140, 'https://example.com/spark.jpg', 'Small stage for breakout artists');
-
---10 descriptions
-INSERT INTO Description (descript) VALUES
-('Open-Air'),
-('Indoor'),
-('Secluded'),
-('Spacious'),
-('Underground'),
-('Outdoor'),
-('Cozy'),
-('Elevated'),
-('Panoramic'),
-('Intimate');
-
 
 --10 equipment
 INSERT INTO Equipment (equip_id, image, image_caption) VALUES
