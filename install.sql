@@ -142,12 +142,12 @@ CREATE TABLE BandMembers (
 );
 
 CREATE TABLE Genre (
-  name VARCHAR(20) PRIMARY KEY NOT NULL
+  genre_id VARCHAR(20) PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE Subgenre (
-  name VARCHAR(20) PRIMARY KEY,
-  genre VARCHAR(20),
+  subgenre_id VARCHAR(40) PRIMARY KEY,
+  genre_id VARCHAR(20),
   CONSTRAINT fk_genre FOREIGN KEY (genre) REFERENCES Genre(name)
   ON DELETE CASCADE ON UPDATE RESTRICT4
 );
@@ -168,7 +168,7 @@ CREATE TABLE Performer (
 
 CREATE TABLE PerformerSubgenre (
   performer_id INT,
-  subgenre VARCHAR(20),
+  subgenre_id VARCHAR(40),
   CONSTRAINT fk_perfomer FOREIGN KEY (perfomer_id) REFERENCES Performer(performer_id)
   ON UPDATE CASCADE ON DELETE CASCADE,
   CONSTRAINT fk_subgenres FOREIGN KEY (subgenre) REFERENCES Subgenre(name)
