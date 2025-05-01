@@ -97,7 +97,7 @@ CREATE TABLE EventEquip (
   quantity int,
   FOREIGN KEY (equip_id) REFERENCES Equipment(equip_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (event_id) REFERENCES Event(event_id)
+  FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
