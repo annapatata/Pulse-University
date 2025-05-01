@@ -21,16 +21,18 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
 --9 locations
-INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_name,image, image_caption) VALUES
-(1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 'Europe','https://example.com/img1.jpg', 'The summer heat began here'),
-(2, 2019, -0.1276, 51.5074, '221B Baker Street', 'London', 'United Kingdom', 'Europe','https://example.com/img1.jpg', 'The summer heat began here'),
-(3, 2020, 139.6917, 35.6895, '1-1 Chiyoda', 'Tokyo', 'Japan', 'Asia','https://example.com/img1.jpg', 'The summer heat began here'),
-(4, 2021, -43.1729, -22.9068, 'Av. Atlântica', 'Rio de Janeiro', 'Brazil', 'South America','https://example.com/img1.jpg', 'The summer heat began here'),
-(5, 2023, -73.9352, 40.7306, 'Central Park West', 'New York', 'USA', 'North America','https://example.com/img1.jpg', 'The summer heat began here'),
-(6, 2025, 151.2093, -33.8688, 'Darling Harbour', 'Sydney', 'Australia', 'Australia','https://example.com/img1.jpg', 'The summer heat began here'),
-(7, 2026, 18.4241, -33.9249, 'Long Street', 'Cape Town', 'South Africa', 'Africa','https://example.com/img1.jpg', 'The summer heat began here'),
-(8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 'Asia','https://example.com/img1.jpg', 'The summer heat began here'),
-(9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 'Europe','https://example.com/img1.jpg', 'The summer heat began here');
+INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_id,image, image_caption) VALUES
+(1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 4,'https://example.com/img1.jpg', 'The summer heat began here'),
+(2, 2019, -0.1276, 51.5074, '221B Baker Street', 'London', 'United Kingdom', 4,'https://example.com/img1.jpg', 'The summer heat began here'),
+(3, 2020, 139.6917, 35.6895, '1-1 Chiyoda', 'Tokyo', 'Japan', 3,'https://example.com/img1.jpg', 'The summer heat began here'),
+(4, 2021, -43.1729, -22.9068, 'Av. Atlântica', 'Rio de Janeiro', 'Brazil', 6,'https://example.com/img1.jpg', 'The summer heat began here'),
+(5, 2023, -73.9352, 40.7306, 'Central Park West', 'New York', 'USA', 5,'https://example.com/img1.jpg', 'The summer heat began here'),
+(6, 2025, 151.2093, -33.8688, 'Darling Harbour', 'Sydney', 'Australia', 7,'https://example.com/img1.jpg', 'The summer heat began here'),
+(7, 2026, 18.4241, -33.9249, 'Long Street', 'Cape Town', 'South Africa', 1,'https://example.com/img1.jpg', 'The summer heat began here'),
+(8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 3,'https://example.com/img1.jpg', 'The summer heat began here'),
+(9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 4,'https://example.com/img1.jpg', 'The summer heat began here');
+
+
 
 
 --30 stages
