@@ -9,7 +9,7 @@ BEGIN
 
 	SELECT start_time, end_time,
 	INTO start_event, end_event
-	FROM Event 
+	FROM Event_P
 	WHERE event_id=NEW.event_id;
 
 	IF (NEW.start_time < start_event OR NEW.end_time > end_event) THEN
@@ -23,13 +23,13 @@ DELIMITER ;
 DELIMITER $$
 
 CREATE TRIGGER check_stage_overlap
-BEFORE INSERT ON Event
+BEFORE INSERT ON Event_P
 FOR EACH ROW
 BEGIN
     DECLARE overlap_count INT;
 
     SELECT COUNT(*) INTO overlap_count
-    FROM Events
+    FROM Event_P
     WHERE stage_id = NEW.stage_id
     AND NOT (NEW.end_time <= start_time OR NEW.start_time>=end_time);
 
@@ -60,7 +60,7 @@ BEGIN
     WHERE role_name = NEW.role_name AND event_id = NEW.event_id;
 
     SELECT capacity INTO event_capacity
-    FROM Event
+    FROM Event_P
     WHERE event_id = NEW.event_id;
 
     IF sec_staff_count >= 0.05*event_capacity THEN
@@ -86,8 +86,8 @@ BEGIN
 
     SELECT COUNT(*) INTO count_staff
     FROM Employment em
-    JOIN Event ev ON em.event_id = ev.event_id
-    JOIN Event ev2 ON NEW.event_id = ev2.event_id
+    JOIN Event_P ev ON em.event_id = ev.event_id
+    JOIN Event_P ev2 ON NEW.event_id = ev2.event_id
     WHERE staff_id = NEW.staff_id 
     AND DATE(ev.start_time) = DATE(ev2.start_time)
 
@@ -175,7 +175,7 @@ BEGIN
     WHERE event_id = NEW.event_id AND ticket_type = 'VIP';
 
     SELECT capacity INTO event_capacity
-    FROM Event
+    FROM Event_P
     WHERE event_id = NEW.event_id;
 
     IF vip_count >= 0.1*event_capacity THEN
@@ -349,7 +349,7 @@ BEGIN
 	DECLARE cnt INT;
 	
 	SELECT f.festival_id INTO this_year
-	FROM Event e
+	FROM Event_P e
 	JOIN Festival f ON e.festival_id = f.festival_id
 	WHERE e.event_id = NEW.event_id;
 	
