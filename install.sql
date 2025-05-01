@@ -252,7 +252,9 @@ CREATE TABLE Likert (
  );
 
 CREATE TABLE Review (
-   EAN VARCHAR(13) PRIMARY KEY,
+   EAN INT NOT NULL,
+   performance_id NOT NULL,
+   PRIMARY KEY(EAN,performance_id),
    voice INT NOT NULL,
    light_sound INT NOT NULL ,
    stage_presence INT NOT NULL,
@@ -263,7 +265,8 @@ CREATE TABLE Review (
    FOREIGN KEY (light_sound) REFERENCES Likert(scale),
    FOREIGN KEY (stage_presence) REFERENCES Likert(scale),
    FOREIGN KEY (organisation) REFERENCES Likert(scale),
-   FOREIGN KEY (overall) REFERENCES Likert(scale)
+   FOREIGN KEY (overall) REFERENCES Likert(scale),
+   FOREIGN KEY (performance_id) REFERENCES Performance(performance_id)
 );
 
 
