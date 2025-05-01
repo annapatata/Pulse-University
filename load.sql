@@ -785,3 +785,80 @@ INSERT INTO Likert (scale) VALUES
 (3),
 (4),
 (5);
+
+
+
+-- Now insert all 400 tickets for all 50 events
+INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
+-- Event 1 (8 tickets)
+(1, 89.99, 1, 'General', 'Credit', '2018-05-11 14:22:10', '1234567890123', 1, 'https://example.com/tickets/1-1.jpg', 'General admission for First event of summer festival'),
+(1, 199.99, 2, 'VIP', 'Debit', '2018-05-12 09:15:33', '2234567890123', 1, 'https://example.com/tickets/1-2.jpg', 'VIP access for First event of summer festival'),
+(1, 299.99, 3, 'Premium', 'Paypal', '2018-05-13 11:45:22', '3234567890123', 0, 'https://example.com/tickets/1-3.jpg', 'Premium experience for First event of summer festival'),
+(1, 499.99, 4, 'Backstage', 'Cash', '2018-05-14 16:30:44', '4234567890123', 1, 'https://example.com/tickets/1-4.jpg', 'Backstage pass for First event of summer festival'),
+
+-- Event 2 (8 tickets)
+(2, 89.99, 5, 'General', 'Debit', '2018-05-10 10:12:19', '5234567890123', 1, 'https://example.com/tickets/2-1.jpg', 'General admission for Jazz rhythms on second stage'),
+(2, 199.99, 6, 'VIP', 'Credit', '2018-05-11 13:27:45', '6234567890123', 1, 'https://example.com/tickets/2-2.jpg', 'VIP access for Jazz rhythms on second stage'),
+(2, 299.99, 7, 'Premium', 'Cash', '2018-05-12 09:18:33', '7234567890123', 0, 'https://example.com/tickets/2-3.jpg', 'Premium experience for Jazz rhythms on second stage'),
+(2, 499.99, 8, 'Backstage', 'Paypal', '2018-05-13 15:42:11', '8234567890123', 1, 'https://example.com/tickets/2-4.jpg', 'Backstage pass for Jazz rhythms on second stage'),
+
+-- Event 3 (8 tickets)
+(3, 89.99, 9, 'General', 'Paypal', '2018-05-15 12:15:22', '9234567890123', 1, 'https://example.com/tickets/3-1.jpg', 'General admission for Rock hits in afternoon'),
+(3, 199.99, 10, 'VIP', 'Credit', '2018-05-16 09:33:44', '0234567890123', 1, 'https://example.com/tickets/3-2.jpg', 'VIP access for Rock hits in afternoon'),
+(3, 299.99, 11, 'Premium', 'Debit', '2018-05-17 14:22:11', '1334567890123', 0, 'https://example.com/tickets/3-3.jpg', 'Premium experience for Rock hits in afternoon'),
+(3, 499.99, 12, 'Backstage', 'Cash', '2018-05-18 17:45:33', '2434567890123', 1, 'https://example.com/tickets/3-4.jpg', 'Backstage pass for Rock hits in afternoon'),
+
+-- Event 4 (8 tickets)
+(4, 89.99, 13, 'General', 'Credit', '2018-05-10 08:22:10', '3434567890123', 1, 'https://example.com/tickets/4-1.jpg', 'General admission for Chill vibes by main stage'),
+(4, 199.99, 14, 'VIP', 'Debit', '2018-05-11 11:15:33', '4434567890123', 1, 'https://example.com/tickets/4-2.jpg', 'VIP access for Chill vibes by main stage'),
+(4, 299.99, 15, 'Premium', 'Paypal', '2018-05-12 13:45:22', '5434567890123', 0, 'https://example.com/tickets/4-3.jpg', 'Premium experience for Chill vibes by main stage'),
+(4, 499.99, 16, 'Backstage', 'Cash', '2018-05-13 18:30:44', '6434567890123', 1, 'https://example.com/tickets/4-4.jpg', 'Backstage pass for Chill vibes by main stage'),
+
+-- Event 5 (8 tickets)
+(5, 89.99, 17, 'General', 'Debit', '2018-05-14 09:12:19', '7434567890123', 1, 'https://example.com/tickets/5-1.jpg', 'General admission for Electronic beats under sky'),
+(5, 199.99, 18, 'VIP', 'Credit', '2018-05-15 12:27:45', '8434567890123', 1, 'https://example.com/tickets/5-2.jpg', 'VIP access for Electronic beats under sky'),
+(5, 299.99, 19, 'Premium', 'Cash', '2018-05-16 08:18:33', '9434567890123', 0, 'https://example.com/tickets/5-3.jpg', 'Premium experience for Electronic beats under sky'),
+(5, 499.99, 20, 'Backstage', 'Paypal', '2018-05-17 14:42:11', '0534567890123', 1, 'https://example.com/tickets/5-4.jpg', 'Backstage pass for Electronic beats under sky'),
+
+-- Event 6 (8 tickets)
+(6, 89.99, 21, 'General', 'Cash', '2018-05-18 10:22:10', '6634567890123', 1, 'https://example.com/tickets/6-1.jpg', 'General admission for Indie folk melodies at sunset'),
+(6, 199.99, 22, 'VIP', 'Paypal', '2018-05-19 11:15:33', '7734567890123', 1, 'https://example.com/tickets/6-2.jpg', 'VIP access for Indie folk melodies at sunset'),
+(6, 299.99, 23, 'Premium', 'Credit', '2018-05-20 14:45:22', '8834567890123', 0, 'https://example.com/tickets/6-3.jpg', 'Premium experience for Indie folk melodies at sunset'),
+(6, 499.99, 24, 'Backstage', 'Debit', '2018-05-21 17:30:44', '9934567890123', 1, 'https://example.com/tickets/6-4.jpg', 'Backstage pass for Indie folk melodies at sunset'),
+
+-- Event 7 (8 tickets)
+(7, 89.99, 25, 'General', 'Paypal', '2018-05-22 09:12:19', '0044567890123', 1, 'https://example.com/tickets/7-1.jpg', 'General admission for Pop stars take the stage'),
+(7, 199.99, 26, 'VIP', 'Credit', '2018-05-23 12:27:45', '1144567890123', 1, 'https://example.com/tickets/7-2.jpg', 'VIP access for Pop stars take the stage'),
+(7, 299.99, 27, 'Premium', 'Debit', '2018-05-24 08:18:33', '2244567890123', 0, 'https://example.com/tickets/7-3.jpg', 'Premium experience for Pop stars take the stage'),
+(7, 499.99, 28, 'Backstage', 'Cash', '2018-05-25 14:42:11', '3344567890123', 1, 'https://example.com/tickets/7-4.jpg', 'Backstage pass for Pop stars take the stage'),
+
+-- Event 8 (8 tickets)
+(8, 89.99, 29, 'General', 'Credit', '2018-05-19 08:22:10', '4444567890123', 1, 'https://example.com/tickets/8-1.jpg', 'General admission for Afternoon set by main arena'),
+(8, 199.99, 30, 'VIP', 'Debit', '2018-05-20 11:15:33', '5544567890123', 1, 'https://example.com/tickets/8-2.jpg', 'VIP access for Afternoon set by main arena'),
+(8, 299.99, 31, 'Premium', 'Paypal', '2018-05-21 13:45:22', '6644567890123', 0, 'https://example.com/tickets/8-3.jpg', 'Premium experience for Afternoon set by main arena'),
+(8, 499.99, 32, 'Backstage', 'Cash', '2018-05-22 18:30:44', '7744567890123', 1, 'https://example.com/tickets/8-4.jpg', 'Backstage pass for Afternoon set by main arena'),
+
+-- Event 9 (8 tickets)
+(9, 89.99, 33, 'General', 'Debit', '2018-05-23 09:12:19', '8844567890123', 1, 'https://example.com/tickets/9-1.jpg', 'General admission for Bringing the heat with high-energy tracks'),
+(9, 199.99, 34, 'VIP', 'Credit', '2018-05-24 12:27:45', '9944567890123', 1, 'https://example.com/tickets/9-2.jpg', 'VIP access for Bringing the heat with high-energy tracks'),
+(9, 299.99, 35, 'Premium', 'Cash', '2018-05-25 08:18:33', '0054567890123', 0, 'https://example.com/tickets/9-3.jpg', 'Premium experience for Bringing the heat with high-energy tracks'),
+(9, 499.99, 36, 'Backstage', 'Paypal', '2018-05-26 14:42:11', '1154567890123', 1, 'https://example.com/tickets/9-4.jpg', 'Backstage pass for Bringing the heat with high-energy tracks'),
+
+-- Event 10 (8 tickets)
+(10, 89.99, 37, 'General', 'Cash', '2018-05-27 10:22:10', '2254567890123', 1, 'https://example.com/tickets/10-1.jpg', 'General admission for The grand finale of the festival'),
+(10, 199.99, 38, 'VIP', 'Paypal', '2018-05-28 11:15:33', '3354567890123', 1, 'https://example.com/tickets/10-2.jpg', 'VIP access for The grand finale of the festival'),
+(10, 299.99, 39, 'Premium', 'Credit', '2018-05-29 14:45:22', '4454567890123', 0, 'https://example.com/tickets/10-3.jpg', 'Premium experience for The grand finale of the festival'),
+(10, 499.99, 40, 'Backstage', 'Debit', '2018-05-30 17:30:44', '5554567890123', 1, 'https://example.com/tickets/10-4.jpg', 'Backstage pass for The grand finale of the festival')
+ 
+
+-- Event 49 (8 tickets)
+(49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
+(49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890123', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
+(49, 299.99, 151, 'Premium', 'Paypal', '2026-07-22 11:45:22', '0034567890123', 0, 'https://example.com/tickets/49-3.jpg', 'Premium experience for Final celebration day'),
+(49, 499.99, 152, 'Backstage', 'Cash', '2026-07-23 16:30:44', '1134567890123', 1, 'https://example.com/tickets/49-4.jpg', 'Backstage pass for Final celebration day'),
+
+-- Event 50 (8 tickets)
+(50, 89.99, 153, 'General', 'Paypal', '2026-07-25 12:15:22', '2234567890123', 1, 'https://example.com/tickets/50-1.jpg', 'General admission for Farewell to wonderful year'),
+(50, 199.99, 154, 'VIP', 'Credit', '2026-07-26 09:33:44', '3334567890123', 1, 'https://example.com/tickets/50-2.jpg', 'VIP access for Farewell to wonderful year'),
+(50, 299.99, 155, 'Premium', 'Debit', '2026-07-27 14:22:11', '4434567890123', 0, 'https://example.com/tickets/50-3.jpg', 'Premium experience for Farewell to wonderful year'),
+(50, 499.99, 156, 'Backstage', 'Cash', '2026-07-28 17:45:33', '5534567890123', 1, 'https://example.com/tickets/50-4.jpg', 'Backstage pass for Farewell to wonderful year');
