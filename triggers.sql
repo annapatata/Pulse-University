@@ -13,9 +13,9 @@ BEGIN
 	WHERE event_id=NEW.event_id;
 
 	IF (NEW.start_time < start_event OR NEW.end_time > end_event) THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
-    END IF;
+        	SIGNAL SQLSTATE '45000'
+        	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
+    	END IF;
 END $$
 
 DELIMITER ;
@@ -34,8 +34,8 @@ BEGIN
     AND NOT (NEW.end_time <= start_time OR NEW.start_time>=end_time);
 
     IF overlap_count > 0 THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = "Stage is used at that time"
+    	SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "Stage is used at that time";
     END IF;
 END $$
 
