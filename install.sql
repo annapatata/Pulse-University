@@ -36,8 +36,8 @@ CREATE TABLE Stage (
 );
 
 CREATE TABLE Role(
-  role_id INT NOT NULL AUTO_INCREMENT,
-  role_name varchar(20) PRIMARY KEY NOT NULL 
+  role_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  role_name varchar(20) NOT NULL 
 );
 
 CREATE TABLE Experience (
