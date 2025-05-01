@@ -21,50 +21,50 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
 --9 locations
-INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_name) VALUES
-(1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 'Europe'),
-(2, 2019, -0.1276, 51.5074, '221B Baker Street', 'London', 'United Kingdom', 'Europe'),
-(3, 2020, 139.6917, 35.6895, '1-1 Chiyoda', 'Tokyo', 'Japan', 'Asia'),
-(4, 2021, -43.1729, -22.9068, 'Av. Atlântica', 'Rio de Janeiro', 'Brazil', 'South America'),
-(5, 2023, -73.9352, 40.7306, 'Central Park West', 'New York', 'USA', 'North America'),
-(6, 2025, 151.2093, -33.8688, 'Darling Harbour', 'Sydney', 'Australia', 'Australia'),
-(7, 2026, 18.4241, -33.9249, 'Long Street', 'Cape Town', 'South Africa', 'Africa'),
-(8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 'Asia'),
-(9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 'Europe');
+INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_name,image, image_caption) VALUES
+(1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 'Europe','https://example.com/img1.jpg', 'The summer heat began here'),
+(2, 2019, -0.1276, 51.5074, '221B Baker Street', 'London', 'United Kingdom', 'Europe','https://example.com/img1.jpg', 'The summer heat began here'),
+(3, 2020, 139.6917, 35.6895, '1-1 Chiyoda', 'Tokyo', 'Japan', 'Asia','https://example.com/img1.jpg', 'The summer heat began here'),
+(4, 2021, -43.1729, -22.9068, 'Av. Atlântica', 'Rio de Janeiro', 'Brazil', 'South America','https://example.com/img1.jpg', 'The summer heat began here'),
+(5, 2023, -73.9352, 40.7306, 'Central Park West', 'New York', 'USA', 'North America','https://example.com/img1.jpg', 'The summer heat began here'),
+(6, 2025, 151.2093, -33.8688, 'Darling Harbour', 'Sydney', 'Australia', 'Australia','https://example.com/img1.jpg', 'The summer heat began here'),
+(7, 2026, 18.4241, -33.9249, 'Long Street', 'Cape Town', 'South Africa', 'Africa','https://example.com/img1.jpg', 'The summer heat began here'),
+(8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 'Asia','https://example.com/img1.jpg', 'The summer heat began here'),
+(9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 'Europe','https://example.com/img1.jpg', 'The summer heat began here');
 
 
 --30 stages
-INSERT INTO Stage (stage_name, descript, capacity) VALUES 
-('Echo Arena', ),
-('Sunset Stage'),
-('Main Vibe'),
-('Bass Jungle'),
-('The Dome'),
-('Sonic Bloom'),
-('Harmony Hall'),
-('Moonlight Deck'),
-('Firefly Stage'),
-('Zenith Plaza'),
-('Aurora Grounds'),
-('Electric Forest'),
-('Radiance Square'),
-('Fusion Bay'),
-('Cosmic Cove'),
-('Neon Nest'),
-('The Drop'),
-('Wavefront'),
-('Pulse Point'),
-('Nightfall Stage'),
-('Infinity Hall'),
-('Twilight Arena'),
-('Skyline Beats'),
-('Velocity Hall'),
-('Groove Garden'),
-('Tempo Terrace'),
-('Phoenix Pit'),
-('Siren Stage'),
-('Cloud Nine'),
-('The Spark');
+INSERT INTO Stage (stage_name, desc_id, capacity, image, image_caption) VALUES 
+('Echo Arena', 1, 100, 'https://example.com/echo.jpg', 'Massive indoor stage with powerful acoustics'),
+('Sunset Stage', 2, 200, 'https://example.com/sunset.jpg', 'Open-air stage ideal for golden hour performances'),
+('Main Vibe', 3, 500, 'https://example.com/mainvibe.jpg', 'Central hub for headliners'),
+('Bass Jungle', 4, 350, 'https://example.com/bassjungle.jpg', 'Underground electronic beats stage'),
+('The Dome', 5, 400, 'https://example.com/dome.jpg', 'Geodesic dome with immersive visuals'),
+('Sonic Bloom', 6, 250, 'https://example.com/sonicbloom.jpg', 'Floral-themed stage for indie acts'),
+('Harmony Hall', 7, 300, 'https://example.com/harmony.jpg', 'Classic architecture with orchestral sets'),
+('Moonlight Deck', 8, 150, 'https://example.com/moondeck.jpg', 'Chill vibe under the stars'),
+('Firefly Stage', 9, 180, 'https://example.com/firefly.jpg', 'Surrounded by glowing lanterns'),
+('Zenith Plaza', 10, 420, 'https://example.com/zenith.jpg', 'Wide open space for dancing'),
+('Aurora Grounds', 11, 275, 'https://example.com/aurora.jpg', 'Northern lights-inspired visuals'),
+('Electric Forest', 12, 360, 'https://example.com/electricforest.jpg', 'Surreal woods with LED trees'),
+('Radiance Square', 13, 310, 'https://example.com/radiance.jpg', 'Luminous atmosphere for pop acts'),
+('Fusion Bay', 14, 290, 'https://example.com/fusion.jpg', 'Mix of genres by the water'),
+('Cosmic Cove', 15, 170, 'https://example.com/cosmic.jpg', 'Galactic theme and laser shows'),
+('Neon Nest', 16, 320, 'https://example.com/neon.jpg', 'Bright lights and synth-heavy acts'),
+('The Drop', 17, 450, 'https://example.com/drop.jpg', 'Bass-heavy and high energy drops'),
+('Wavefront', 18, 240, 'https://example.com/wavefront.jpg', 'By the ocean with rhythmic performances'),
+('Pulse Point', 19, 220, 'https://example.com/pulse.jpg', 'Heart of the festival’s EDM scene'),
+('Nightfall Stage', 20, 380, 'https://example.com/nightfall.jpg', 'Twilight ambiance and mellow grooves'),
+('Infinity Hall', 21, 330, 'https://example.com/infinity.jpg', 'Loop visuals and experimental sets'),
+('Twilight Arena', 22, 200, 'https://example.com/twilight.jpg', 'Ambient lighting and soft beats'),
+('Skyline Beats', 23, 270, 'https://example.com/skyline.jpg', 'City views and rooftop vibe'),
+('Velocity Hall', 24, 310, 'https://example.com/velocity.jpg', 'Fast-paced techno and visuals'),
+('Groove Garden', 25, 180, 'https://example.com/groove.jpg', 'Relaxed groove with floral decor'),
+('Tempo Terrace', 26, 260, 'https://example.com/tempo.jpg', 'Progressive rhythms in the open air'),
+('Phoenix Pit', 27, 150, 'https://example.com/phoenix.jpg', 'Fiery theme with dramatic staging'),
+('Siren Stage', 28, 190, 'https://example.com/siren.jpg', 'Mystical soundscapes and effects'),
+('Cloud Nine', 29, 170, 'https://example.com/cloud.jpg', 'Dreamy acts with aerial views'),
+('The Spark', 30, 140, 'https://example.com/spark.jpg', 'Small stage for breakout artists');
 
 --10 descriptions
 INSERT INTO Description (descript) VALUES
