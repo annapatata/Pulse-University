@@ -48,7 +48,7 @@ CREATE TABLE Stage (
   capacity INT NOT NULL,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
-  CONSTRAINT descript FOREIGN KEY (desc_id) REFERENCES Description(desc_id)
+  FOREIGN KEY (desc_id) REFERENCES Description(desc_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -76,9 +76,9 @@ CREATE TABLE Staff (
   role_id INT NOT NULL,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
-  CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES Role(role_id)
+  FOREIGN KEY (role_id) REFERENCES Role(role_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT fk_experience FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
+  FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
   ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -123,7 +123,7 @@ CREATE TABLE Employment (
   event_id int NOT NULL,
   FOREIGN KEY (staff_id) REFERENCES Staff(staff_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
- FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
+  FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -156,7 +156,7 @@ CREATE TABLE BandMembers (
   joined_in DATE,
   FOREIGN KEY (band_id) REFERENCES Band(band_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
- FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+  FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
   ON DELETE CASCADE ON UPDATE CASCADE 
 );
 
