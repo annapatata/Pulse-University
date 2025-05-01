@@ -32,7 +32,11 @@ CREATE TABLE Location (
 
 CREATE TABLE Stage (
   stage_id integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  stage_name varchar(20) NOT NULL  
+  stage_name varchar(20) NOT NULL,  
+  descript varchar(40) NOT NULL,
+  capacity INT NOT NULL,
+  CONSTRAINT descript FOREIGN KEY (desc_id) REFERENCES Description(desc_id)
+  ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE Role(
@@ -61,8 +65,8 @@ CREATE TABLE Staff (
 
 
 CREATE TABLE Description (
-  desc_id INT NOT NULL AUTO_INCREMENT,
-  descript varchar(40) PRIMARY KEY  
+  desc_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  descript varchar(40) NOT NULL UNIQUE
 );
 
 
@@ -75,22 +79,17 @@ CREATE TABLE Equipment (
 );
 
 
-CREATE TABLE Event (
+CREATE TABLE Event_P (
   event_id integer PRIMARY KEY NOT NULL ,
   festival_id YEAR NOT NULL,
   stage_id INT NOT NULL,
-  descript varchar(40) NOT NULL,
-  capacity INT NOT NULL,
   start_time DATETIME NOT NULL,
   end_time DATETIME NOT NULL, 
   festival_day INT NOT NULL,
   CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_stage FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
-  ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT descript FOREIGN KEY (descript) REFERENCES Description(descript)
   ON DELETE RESTRICT ON UPDATE CASCADE
-  
 );
 
 
