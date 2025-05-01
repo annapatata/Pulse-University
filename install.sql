@@ -178,7 +178,7 @@ CREATE TABLE Subgenre (
 CREATE TABLE Performer (
   performer_id INT PRIMARY KEY NOT NULL,
   performer_name varchar(30) NOT NULL, 
-  artist_nband bool NOT NULL,
+  artist_nband tinyint NOT NULL,
   artist_id INT UNIQUE,
   band_id INT UNIQUE CHECK ((artist_nband = TRUE AND artist_id IS NOT NULL AND band_id IS NULL) OR
        (artist_nband = FALSE AND band_id IS NOT NULL AND artist_id IS NULL)),
