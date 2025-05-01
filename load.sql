@@ -99,3 +99,15 @@ INSERT INTO Event (event_id, festival_id, stage_id, descript, capacity, start_ti
 (18, 2019, 8, 'Elevated', 450, '2019-07-06 14:00:00', '2019-07-06 18:00:00', 2),
 (19, 2019, 9, 'Panoramic', 130, '2019-07-06 15:00:00', '2019-07-06 19:00:00', 2),
 (20, 2019, 10, 'Intimate', 120, '2019-07-06 16:00:00', '2019-07-06 20:00:00', 2)
+
+INSERT INTO Equipment (equip_id, image, image_caption) VALUES
+('EQP-001', 'https://example.com/images/drill.jpg', 'Heavy-duty power drill'),
+('EQP-002', 'https://example.com/images/saw.jpg', 'Circular saw 2000W'),
+('EQP-003', 'https://example.com/images/ladder.jpg', 'Aluminum extension ladder'),
+('EQP-004', 'https://example.com/images/generator.jpg', 'Portable diesel generator'),
+('EQP-005', 'https://example.com/images/welder.jpg', 'Arc welding machine'),
+('EQP-006', 'https://example.com/images/compressor.jpg', 'Industrial air compressor'),
+('EQP-007', 'https://example.com/images/scaffold.jpg', 'Modular scaffolding system'),
+('EQP-008', 'https://example.com/images/concrete-mixer.jpg', 'Electric concrete mixer'),
+('EQP-009', 'https://example.com/images/forklift.jpg', '3-ton forklift'),
+('EQP-010', 'https://example.com/images/crane.jpg', 'Mobile hydraulic crane');
