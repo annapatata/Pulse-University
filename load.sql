@@ -289,3 +289,21 @@ INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 ('EQP-009', 49, 1), ('EQP-010', 49, 1), ('EQP-001', 49, 2),
 ('EQP-002', 50, 1), ('EQP-003', 50, 2), ('EQP-004', 50, 1);
 
+INSERT INTO Band (band_id, band_name, form_date, website, insta, cons_years, last_year) VALUES
+(1, 'The Killers', '2001-01-01', 'thekillersmusic.com', 'thekillers', 3, 2023),
+(2, 'Arctic Monkeys', '2002-06-01', 'arcticmonkeys.com', 'arcticmonkeys', 3, 2024),
+(3, 'Foo Fighters', '1994-01-01', 'foofighters.com', 'foofighters', 3, 2025),
+(4, 'Florence + Machine', '2007-07-01', 'florenceandthemachine.net', 'florenceandthemachine', 2, 2022),
+(5, 'Tame Impala', '2007-01-01', 'tameimpala.com', 'tameimpala', 3, 2026),
+(6, 'The Strokes', '1998-01-01', 'thestrokes.com', 'thestrokes', 1, 2019),
+(7, 'Red Hot Chili Peppers', '1983-01-01', 'redhotchilipeppers.com', 'chilipeppers', 3, 2026),
+(8, 'Muse', '1994-01-01', 'muse.mu', 'muse', 3, 2025),
+(9, 'LCD Soundsystem', '2002-01-01', 'lcdsoundsystem.com', 'lcdsoundsystem', 2, 2021),
+(10, 'The National', '1999-01-01', 'americanmary.com', 'thenational', 3, 2024),
+(11, 'Vampire Weekend', '2006-01-01', 'vampireweekend.com', 'vampireweekend', 1, 2018),
+(12, 'Arcade Fire', '2001-01-01', 'arcadefire.com', 'arcadefire', 2, 2022),
+(13, 'The Black Keys', '2001-01-01', 'theblackkeys.com', 'theblackkeys', 3, 2023),
+(14, 'Phoenix', '1999-01-01', 'wearephoenix.com', 'wearephoenix', 3, 2025),
+(15, 'Interpol', '1997-01-01', 'interpolnyc.com', 'interpol', 1, 2020),
+(16, 'The 1975', '2002-01-01', 'the1975.com', 'the1975', 3, 2026),
+(17, 'Queens of the Stone Age', '1996-01-01', 'qotsa.com', 'queensofthestoneage', 2, 2023);
