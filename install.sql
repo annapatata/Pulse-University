@@ -1,7 +1,6 @@
-CREATE TABLE Continent (
-  continent_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  continent_name varchar(20) 
-);
+DROP SCHEMA if exists `pulse_music_festival`;
+CREATE SCHEMA `pulse_music_festival`;
+use pulse_music_festival;
 
 CREATE TABLE Festival (
   festival_id YEAR PRIMARY KEY,
@@ -10,6 +9,11 @@ CREATE TABLE Festival (
   duration integer,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null
+);
+
+CREATE TABLE Continent (
+  continent_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  continent_name varchar(20) 
 );
 
 CREATE TABLE Location (
