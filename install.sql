@@ -76,9 +76,10 @@ CREATE TABLE Event (
   festival_id YEAR NOT NULL,
   stage_id INT NOT NULL,
   descript varchar(40) NOT NULL,
-  capacity int NOT NULL,
+  capacity INT NOT NULL,
   start_time DATETIME NOT NULL,
   end_time DATETIME NOT NULL, 
+  festival_day INT NOT NULL,
   CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_stage FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
@@ -622,3 +623,10 @@ BEGIN
 END//
 
 DELIMITER;
+
+DELIMITER //
+
+	
+	
+
+
