@@ -150,6 +150,28 @@ DELIMITER ;
 
 DELIMITER $$
 
+CREATE TRIGGER performance_in_event
+BEFORE INSERT ON Performance
+FOR EACH ROW
+BEGIN
+ 	DECLARE start_event DATETIME;
+	DECLARE end_event DATETIME;
+
+	SELECT start_time, end_time,
+	INTO start_event, end_event
+	FROM Event 
+	WHERE event_id=NEW.event_id;
+
+	IF (NEW.start_time < start_event OR NEW.end_time > end_event) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
+    END IF;
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
 CREATE TRIGGER check_stage_overlap
 BEFORE INSERT ON Event
 FOR EACH ROW
