@@ -575,3 +575,39 @@ BEGIN
 	INSERT INTO PerformerYears (performer_id, years_id) VALUES (NEW.performer_id, this_year);
 END//
 DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER update_part
+AFTER INSERT ON Performance FOR EACH ROW
+BEGIN
+	DECLARE solo BOOL;
+	DECLARE id INT;
+
+	SELECT artist_nband INTO solo
+	FROM Performer 
+	WHERE performer_id = NEW.performer_id
+	
+	IF ( solo = TRUE )
+	THEN 
+		SELECT artist_id INTO id
+		FROM performer 
+		WHERE performer_id = NEW.performer_id;
+		
+		UPDATE Artist 
+		SET participations = participations + 1
+		WHERE artist_id = id;
+	
+	ELSE
+		SELECT band_id INTO id 
+		FROM Performer 
+		WHERE performer_id = NEW.performer_id;
+		
+		UPDATE Artist 
+		JOIN BandMembers bm ON a.artist_id = bm.artist_id 
+		SET a.participations = a.participations + 1
+		WHERE bm.band_id = id;
+	END IF;
+
+END//
+DELIMITER ;
