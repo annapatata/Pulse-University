@@ -255,7 +255,7 @@ CREATE TABLE Likert (
  );
 
 CREATE TABLE Review (
-   EAN INT NOT NULL,
+   EAN VARCHAR(13) NOT NULL,
    performance_id NOT NULL,
    PRIMARY KEY(EAN,performance_id),
    voice INT NOT NULL,
