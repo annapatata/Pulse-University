@@ -495,7 +495,7 @@ INSERT INTO Artist (artist_id, first_name, last_name, stage_name, birthDATE, web
 
 -- Red Hot Chili Peppers members
 (22, 'Anthony', 'Kiedis', 'Anthony Kiedis', '1962-11-01', NULL, 'anthonykiedis', 7, 'https://example.com/artists/anthony_kiedis.jpg', 'RHCP lead singer'),
-(23, 'Flea', 'Balzary', 'Flea', '1962-10-16', 'flea', 7, 'https://example.com/artists/flea.jpg', 'RHCP bassist'),
+(23, 'Flea', 'Balzary', 'Flea', '1962-10-16', 'flea',NULL, 7, 'https://example.com/artists/flea.jpg', 'RHCP bassist'),
 (24, 'Chad', 'Smith', 'Chad Smith', '1961-10-25', NULL, 'chadsmithofficial', 7, 'https://example.com/artists/chad_smith.jpg', 'RHCP drummer'),
 (25, 'John', 'Frusciante', 'John Frusciante', '1970-03-05', NULL, 'johnfrusciante', 5, 'https://example.com/artists/john_frusciante.jpg', 'RHCP guitarist'),
 
