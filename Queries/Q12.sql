@@ -5,7 +5,7 @@ SELECT
 	COUNT(CASE WHEN s.role_name = 'security' THEN 1 END) AS Security,
 	COUNT(CASE WHEN s.role_name = 'auxiliary' THEN 1 END) AS Auxiliary
 FROM 
-	Event e
+	Event_P e
 JOIN 
 	Employment es ON e.event_id = es.event_id
 JOIN 
