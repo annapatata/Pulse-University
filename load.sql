@@ -285,7 +285,7 @@ INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 (9, 49, 1), (10, 49, 1), (1, 49, 2),
 (2, 50, 1), (3, 50, 2), (4, 50, 1);
 
-('Jeffrey', 'Wilson', 70, '(194)892-4115');
+INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Jeffrey', 'Wilson', 70, '(194)892-4115');
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Eric', 'Mayer', 40, '688-477-9361');
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Stephanie', 'Zimmerman', 64, '(202)907-2507x49318');
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Jason', 'Richardson', 42, '+1-667-879-9368x47358');
