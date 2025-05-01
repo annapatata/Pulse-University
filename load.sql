@@ -34,8 +34,8 @@ INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, c
 
 
 --30 stages
-INSERT INTO Stage (stage_name) VALUES 
-('Echo Arena'),
+INSERT INTO Stage (stage_name, descript, capacity) VALUES 
+('Echo Arena', ),
 ('Sunset Stage'),
 ('Main Vibe'),
 ('Bass Jungle'),
