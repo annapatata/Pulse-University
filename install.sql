@@ -29,9 +29,9 @@ CREATE TABLE Location (
   continent_id INT NOT NULL,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
-  CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
+  FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT fk_continent FOREIGN KEY (continent_id) REFERENCES Continent(continent_id)
+  FOREIGN KEY (continent_id) REFERENCES Continent(continent_id)
 );
 
 CREATE TABLE Description (
