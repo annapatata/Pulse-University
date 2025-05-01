@@ -84,9 +84,9 @@ CREATE TABLE Event_P (
   start_time DATETIME NOT NULL,
   end_time DATETIME NOT NULL, 
   festival_day INT NOT NULL,
-  CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
+  FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT fk_stage FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
+  FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -95,9 +95,9 @@ CREATE TABLE EventEquip (
   equip_id varchar(20) NOT NULL,
   event_id integer NOT NULL,
   quantity int,
-  CONSTRAINT fk_equip_id FOREIGN KEY (equip_id) REFERENCES Equipment(equip_id)
+  FOREIGN KEY (equip_id) REFERENCES Equipment(equip_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES Event(event_id)
+  FOREIGN KEY (event_id) REFERENCES Event(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
