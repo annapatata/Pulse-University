@@ -122,7 +122,7 @@ CREATE TABLE Artist (
   birthDATE DATE NOT NULL,
   website VARCHAR(30),
   insta VARCHAR(30),
-  last_year YEAR NOT NULL
+  participations INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE Band (
