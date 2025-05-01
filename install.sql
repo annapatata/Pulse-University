@@ -105,9 +105,9 @@ CREATE TABLE Employment (
   contract_id int PRIMARY KEY NOT NULL,
   staff_id int NOT NULL,
   event_id int NOT NULL,
-  CONSTRAINT fk_staff_id FOREIGN KEY (staff_id) REFERENCES Staff(staff_id)
+  FOREIGN KEY (staff_id) REFERENCES Staff(staff_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES Event(event_id)
+ FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -136,9 +136,9 @@ CREATE TABLE BandMembers (
   band_id INT,
   artist_id INT,
   joined_in DATE,
-  CONSTRAINT fk_band FOREIGN KEY (band_id) REFERENCES Band(band_id)
+  FOREIGN KEY (band_id) REFERENCES Band(band_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT fk_artist FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+ FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
   ON DELETE CASCADE ON UPDATE CASCADE 
 );
 
@@ -150,7 +150,7 @@ CREATE TABLE Subgenre (
   subgenre_id VARCHAR(40) PRIMARY KEY,
   genre_id VARCHAR(20),
   CONSTRAINT fk_genre FOREIGN KEY (genre) REFERENCES Genre(name)
-  ON DELETE CASCADE ON UPDATE RESTRICT4
+  ON DELETE CASCADE ON UPDATE RESTRICT
 );
 
 CREATE TABLE Performer (
@@ -158,8 +158,7 @@ CREATE TABLE Performer (
   performer_name varchar(30) NOT NULL, 
   artist_nband bool NOT NULL,
   artist_id INT UNIQUE,
-  band_id INT UNIQUE,
-  CHECK ((artist_nband = TRUE AND artist_id IS NOT NULL AND band_id IS NULL) OR
+  band_id INT UNIQUE CHECK ((artist_nband = TRUE AND artist_id IS NOT NULL AND band_id IS NULL) OR
        (artist_nband = FALSE AND band_id IS NOT NULL AND artist_id IS NULL)),
   CONSTRAINT fk_artist FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
   ON UPDATE CASCADE ON DELETE CASCADE,
@@ -187,7 +186,7 @@ CREATE TABLE Performance(
   CHECK (duration <=180),
   CONSTRAINT pfk_performer_id FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
   ON UPDATE CASCADE,
-  CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES Event(event_id)
+  CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -217,7 +216,7 @@ CREATE TABLE Ticket (
    EAN VARCHAR(13) PRIMARY KEY,
    activated BOOL NOT NULL DEFAULT FALSE,
    CHECK (EAN REGEXP '^[0-9]{13}$'),
-   FOREIGN KEY (event_id) REFERENCES Event(event_id),
+   FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id), 
    FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type), 
    FOREIGN KEY (pay_method) REFERENCES PayedWith(pay_method)   
