@@ -61,8 +61,8 @@ CREATE TABLE Staff (
   last_name varchar(30) NOT NULL,
   age integer NOT NULL,
   experience_level varchar(20) NOT NULL,
-  role_name varchar(20) NOT NULL,
-  CONSTRAINT fk_role FOREIGN KEY (role_name) REFERENCES Role(role_name)
+  role_id INT NOT NULL,
+  CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES Role(role_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_experience FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
   ON DELETE CASCADE ON UPDATE CASCADE
