@@ -850,7 +850,79 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (10, 299.99, 39, 'Premium', 'Credit', '2018-05-29 14:45:22', '4454567890123', 0, 'https://example.com/tickets/10-3.jpg', 'Premium experience for The grand finale of the festival'),
 (10, 499.99, 40, 'Backstage', 'Debit', '2018-05-30 17:30:44', '5554567890123', 1, 'https://example.com/tickets/10-4.jpg', 'Backstage pass for The grand finale of the festival')
  
+-- Event 11: Opening day of the 2019 festival (2019-07-05)
+(11, 89.99, 41, 'General', 'Credit', '2019-06-05 14:22:10', '1234567890124', 1, 'https://example.com/tickets/11-1.jpg', 'General admission for 2019 opening day'),
+(11, 199.99, 42, 'VIP', 'Debit', '2019-06-06 09:15:33', '2234567890124', 1, 'https://example.com/tickets/11-2.jpg', 'VIP access for 2019 opening day'),
+(11, 299.99, 43, 'Premium', 'Paypal', '2019-06-07 11:45:22', '3234567890124', 0, 'https://example.com/tickets/11-3.jpg', 'Premium experience for 2019 opening day'),
+(11, 499.99, 44, 'Backstage', 'Cash', '2019-06-08 16:30:44', '4234567890124', 1, 'https://example.com/tickets/11-4.jpg', 'Backstage pass for 2019 opening day'),
+(11, 89.99, 45, 'General', 'Debit', '2019-06-09 10:12:19', '5234567890124', 1, 'https://example.com/tickets/11-5.jpg', 'General admission for 2019 opening day'),
+(11, 199.99, 46, 'VIP', 'Credit', '2019-06-10 13:27:45', '6234567890124', 1, 'https://example.com/tickets/11-6.jpg', 'VIP access for 2019 opening day'),
+(11, 299.99, 47, 'Premium', 'Cash', '2019-06-11 09:18:33', '7234567890124', 0, 'https://example.com/tickets/11-7.jpg', 'Premium experience for 2019 opening day'),
+(11, 499.99, 48, 'Backstage', 'Paypal', '2019-06-12 15:42:11', '8234567890124', 1, 'https://example.com/tickets/11-8.jpg', 'Backstage pass for 2019 opening day'),
 
+-- Event 12: Smooth jazz under the stars (2019-07-05)
+(12, 89.99, 49, 'General', 'Paypal', '2019-06-06 12:15:22', '9234567890124', 1, 'https://example.com/tickets/12-1.jpg', 'General admission for Smooth jazz'),
+(12, 199.99, 50, 'VIP', 'Credit', '2019-06-07 09:33:44', '0234567890124', 1, 'https://example.com/tickets/12-2.jpg', 'VIP access for Smooth jazz'),
+(12, 299.99, 51, 'Premium', 'Debit', '2019-06-08 14:22:11', '1334567890124', 0, 'https://example.com/tickets/12-3.jpg', 'Premium experience for Smooth jazz'),
+(12, 499.99, 52, 'Backstage', 'Cash', '2019-06-09 17:45:33', '2434567890124', 1, 'https://example.com/tickets/12-4.jpg', 'Backstage pass for Smooth jazz'),
+(12, 89.99, 53, 'General', 'Credit', '2019-06-10 08:22:10', '3434567890124', 1, 'https://example.com/tickets/12-5.jpg', 'General admission for Smooth jazz'),
+(12, 199.99, 54, 'VIP', 'Debit', '2019-06-11 11:15:33', '4434567890124', 1, 'https://example.com/tickets/12-6.jpg', 'VIP access for Smooth jazz'),
+(12, 299.99, 55, 'Premium', 'Paypal', '2019-06-12 13:45:22', '5434567890124', 0, 'https://example.com/tickets/12-7.jpg', 'Premium experience for Smooth jazz'),
+(12, 499.99, 56, 'Backstage', 'Cash', '2019-06-13 18:30:44', '6434567890124', 1, 'https://example.com/tickets/12-8.jpg', 'Backstage pass for Smooth jazz'),
+
+-- Event 13: Rock bands heating up the night (2019-07-06)
+(13, 89.99, 57, 'General', 'Debit', '2019-06-14 09:12:19', '7434567890124', 1, 'https://example.com/tickets/13-1.jpg', 'General admission for Rock bands night'),
+(13, 199.99, 58, 'VIP', 'Credit', '2019-06-15 12:27:45', '8434567890124', 1, 'https://example.com/tickets/13-2.jpg', 'VIP access for Rock bands night'),
+(13, 299.99, 59, 'Premium', 'Cash', '2019-06-16 08:18:33', '9434567890124', 0, 'https://example.com/tickets/13-3.jpg', 'Premium experience for Rock bands night'),
+(13, 499.99, 60, 'Backstage', 'Paypal', '2019-06-17 14:42:11', '0534567890124', 1, 'https://example.com/tickets/13-4.jpg', 'Backstage pass for Rock bands night'),
+(13, 89.99, 61, 'General', 'Cash', '2019-06-18 10:22:10', '1634567890124', 1, 'https://example.com/tickets/13-5.jpg', 'General admission for Rock bands night'),
+(13, 199.99, 62, 'VIP', 'Paypal', '2019-06-19 11:15:33', '2634567890124', 1, 'https://example.com/tickets/13-6.jpg', 'VIP access for Rock bands night'),
+(13, 299.99, 63, 'Premium', 'Credit', '2019-06-20 14:45:22', '3634567890124', 0, 'https://example.com/tickets/13-7.jpg', 'Premium experience for Rock bands night'),
+(13, 499.99, 64, 'Backstage', 'Debit', '2019-06-21 17:30:44', '4634567890124', 1, 'https://example.com/tickets/13-8.jpg', 'Backstage pass for Rock bands night'),
+
+-- [Continuing pattern through Event 20...]
+-- Event 14: Alternative hits and epic vibes (2019-07-06)
+(14, 89.99, 65, 'General', 'Paypal', '2019-06-15 12:15:22', '5634567890124', 1, 'https://example.com/tickets/14-1.jpg', 'General admission for Alternative hits'),
+(14, 199.99, 66, 'VIP', 'Credit', '2019-06-16 09:33:44', '6634567890124', 1, 'https://example.com/tickets/14-2.jpg', 'VIP access for Alternative hits'),
+(14, 299.99, 67, 'Premium', 'Debit', '2019-06-17 14:22:11', '7634567890124', 0, 'https://example.com/tickets/14-3.jpg', 'Premium experience for Alternative hits'),
+(14, 499.99, 68, 'Backstage', 'Cash', '2019-06-18 17:45:33', '8634567890124', 1, 'https://example.com/tickets/14-4.jpg', 'Backstage pass for Alternative hits'),
+
+-- Event 15: Dance music and fun with friends (2019-07-07)
+(15, 89.99, 69, 'General', 'Credit', '2019-06-19 08:22:10', '9634567890124', 1, 'https://example.com/tickets/15-1.jpg', 'General admission for Dance music'),
+(15, 199.99, 70, 'VIP', 'Debit', '2019-06-20 11:15:33', '0734567890124', 1, 'https://example.com/tickets/15-2.jpg', 'VIP access for Dance music'),
+(15, 299.99, 71, 'Premium', 'Paypal', '2019-06-21 13:45:22', '1834567890124', 0, 'https://example.com/tickets/15-3.jpg', 'Premium experience for Dance music'),
+(15, 499.99, 72, 'Backstage', 'Cash', '2019-06-22 18:30:44', '2834567890124', 1, 'https://example.com/tickets/15-4.jpg', 'Backstage pass for Dance music'),
+
+-- Event 16: Funky beats to end the day (2019-07-07)
+(16, 89.99, 73, 'General', 'Debit', '2019-06-23 09:12:19', '3834567890124', 1, 'https://example.com/tickets/16-1.jpg', 'General admission for Funky beats'),
+(16, 199.99, 74, 'VIP', 'Credit', '2019-06-24 12:27:45', '4834567890124', 1, 'https://example.com/tickets/16-2.jpg', 'VIP access for Funky beats'),
+(16, 299.99, 75, 'Premium', 'Cash', '2019-06-25 08:18:33', '5834567890124', 0, 'https://example.com/tickets/16-3.jpg', 'Premium experience for Funky beats'),
+(16, 499.99, 76, 'Backstage', 'Paypal', '2019-06-26 14:42:11', '6834567890124', 1, 'https://example.com/tickets/16-4.jpg', 'Backstage pass for Funky beats'),
+
+-- Event 17: Virtual festival set with a twist (2020-08-01)
+(17, 89.99, 77, 'General', 'Cash', '2020-07-02 10:22:10', '7834567890124', 1, 'https://example.com/tickets/17-1.jpg', 'General admission for Virtual festival'),
+(17, 199.99, 78, 'VIP', 'Paypal', '2020-07-03 11:15:33', '8834567890124', 1, 'https://example.com/tickets/17-2.jpg', 'VIP access for Virtual festival'),
+(17, 299.99, 79, 'Premium', 'Credit', '2020-07-04 14:45:22', '9834567890124', 0, 'https://example.com/tickets/17-3.jpg', 'Premium experience for Virtual festival'),
+(17, 499.99, 80, 'Backstage', 'Debit', '2020-07-05 17:30:44', '0934567890124', 1, 'https://example.com/tickets/17-4.jpg', 'Backstage pass for Virtual festival'),
+
+-- Event 18: Live set from the outdoor stage (2020-08-01)
+(18, 89.99, 81, 'General', 'Paypal', '2020-07-06 12:15:22', '1934567890124', 1, 'https://example.com/tickets/18-1.jpg', 'General admission for Outdoor stage'),
+(18, 199.99, 82, 'VIP', 'Credit', '2020-07-07 09:33:44', '2934567890124', 1, 'https://example.com/tickets/18-2.jpg', 'VIP access for Outdoor stage'),
+(18, 299.99, 83, 'Premium', 'Debit', '2020-07-08 14:22:11', '3934567890124', 0, 'https://example.com/tickets/18-3.jpg', 'Premium experience for Outdoor stage'),
+(18, 499.99, 84, 'Backstage', 'Cash', '2020-07-09 17:45:33', '4934567890124', 1, 'https://example.com/tickets/18-4.jpg', 'Backstage pass for Outdoor stage'),
+
+-- Event 19: Punk rock and raw energy (2020-08-02)
+(19, 89.99, 85, 'General', 'Credit', '2020-07-10 08:22:10', '5934567890124', 1, 'https://example.com/tickets/19-1.jpg', 'General admission for Punk rock'),
+(19, 199.99, 86, 'VIP', 'Debit', '2020-07-11 11:15:33', '6934567890124', 1, 'https://example.com/tickets/19-2.jpg', 'VIP access for Punk rock'),
+(19, 299.99, 87, 'Premium', 'Paypal', '2020-07-12 13:45:22', '7934567890124', 0, 'https://example.com/tickets/19-3.jpg', 'Premium experience for Punk rock'),
+(19, 499.99, 88, 'Backstage', 'Cash', '2020-07-13 18:30:44', '8934567890124', 1, 'https://example.com/tickets/19-4.jpg', 'Backstage pass for Punk rock'),
+
+-- Event 20: Indie vibes in a cozy space (2020-08-02)
+(20, 89.99, 89, 'General', 'Debit', '2020-07-14 09:12:19', '9934567890124', 1, 'https://example.com/tickets/20-1.jpg', 'General admission for Indie vibes'),
+(20, 199.99, 90, 'VIP', 'Credit', '2020-07-15 12:27:45', '0044567890124', 1, 'https://example.com/tickets/20-2.jpg', 'VIP access for Indie vibes'),
+(20, 299.99, 91, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
+(20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes')
+ 
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
 (49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890123', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
