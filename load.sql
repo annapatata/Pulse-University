@@ -100,6 +100,7 @@ INSERT INTO Event (event_id, festival_id, stage_id, descript, capacity, start_ti
 (19, 2019, 9, 'Panoramic', 130, '2019-07-06 15:00:00', '2019-07-06 19:00:00', 2),
 (20, 2019, 10, 'Intimate', 120, '2019-07-06 16:00:00', '2019-07-06 20:00:00', 2)
 
+--
 INSERT INTO Equipment (equip_id, image, image_caption) VALUES
 ('EQP-001', 'https://example.com/images/drill.jpg', 'Heavy-duty power drill'),
 ('EQP-002', 'https://example.com/images/saw.jpg', 'Circular saw 2000W'),
@@ -111,7 +112,8 @@ INSERT INTO Equipment (equip_id, image, image_caption) VALUES
 ('EQP-008', 'https://example.com/images/concrete-mixer.jpg', 'Electric concrete mixer'),
 ('EQP-009', 'https://example.com/images/forklift.jpg', '3-ton forklift'),
 ('EQP-010', 'https://example.com/images/crane.jpg', 'Mobile hydraulic crane');
-
+ 
+--50 events
 INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, festival_day) VALUES
 (1, 2018, 1, '2018-06-10 12:00:00', '2018-06-10 16:00:00', 1),
 (2, 2018, 2, '2018-06-10 13:30:00', '2018-06-10 17:30:00', 1),
