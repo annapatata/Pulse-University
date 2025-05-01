@@ -44,7 +44,7 @@ CREATE TABLE Description (
 CREATE TABLE Stage (
   stage_id integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   stage_name varchar(20) NOT NULL,  
-  desc_id varchar(40) NOT NULL,
+  desc_id int NOT NULL,
   capacity INT NOT NULL,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
