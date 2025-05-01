@@ -445,3 +445,9 @@ INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Molly', 'Rivers
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Joel', 'Morrow', 38, '(266)237-5825x7173');
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Joanna', 'Garrison', 21, '001-845-670-8869x774');
 INSERT INTO Visitor (first_name, last_name, age, phone) VALUES ('Christopher', 'Reynolds', 36, '904-432-9431');
+
+INSERT INTO Ticket_Class (ticket_type) VALUES
+('General'),
+('VIP'),
+('Premium'),
+('Backstage');
