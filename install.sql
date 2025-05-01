@@ -118,7 +118,6 @@ CREATE TABLE Artist (
   birthDATE DATE NOT NULL,
   website VARCHAR(30),
   insta VARCHAR(30),
-  cons_years INT NOT NULL CHECK(cons_years BETWEEN 0 AND 3), 
   last_year YEAR NOT NULL
 );
 
