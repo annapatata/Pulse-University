@@ -135,7 +135,9 @@ CREATE TABLE Artist (
   birthDATE DATE NOT NULL,
   website VARCHAR(30),
   insta VARCHAR(30),
-  participations INT NOT NULL DEFAULT 0
+  participations INT NOT NULL DEFAULT 0,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE Band (
@@ -144,8 +146,8 @@ CREATE TABLE Band (
   form_date DATE NOT NULL,
   website VARCHAR(30),
   insta VARCHAR(30),
-  cons_years INT NOT NULL CHECK(cons_years BETWEEN 0 AND 3), 
-  last_year YEAR NOT NULL
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE BandMembers (
@@ -159,12 +161,16 @@ CREATE TABLE BandMembers (
 );
 
 CREATE TABLE Genre (
-  genre_id VARCHAR(20) PRIMARY KEY NOT NULL
+  genre_id VARCHAR(20) PRIMARY KEY NOT NULL,
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null
 );
 
 CREATE TABLE Subgenre (
   subgenre_id VARCHAR(40) PRIMARY KEY,
   genre_id VARCHAR(20),
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null,
   FOREIGN KEY (genre_id) REFERENCES Genre(genre_id)
   ON DELETE CASCADE ON UPDATE RESTRICT
 );
@@ -200,6 +206,8 @@ CREATE TABLE Performance(
   end_time time NOT NULL,
   duration int GENERATED ALWAYS AS (TIMESTAMPDIFF(MINUTE,start_time,end_time)) STORED
   CHECK (duration <=180),
+  image varchar(100) not null check (image like 'https://%'),
+  image_caption varchar(100) not null,
   FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
   ON UPDATE CASCADE,
   FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
@@ -231,6 +239,8 @@ CREATE TABLE Ticket (
    purchase_date TIMESTAMP NOT NULL,
    EAN VARCHAR(13) PRIMARY KEY,
    activated TINYINT NOT NULL DEFAULT FALSE  CHECK (EAN REGEXP '^[0-9]{13}$'),
+   image varchar(100) not null check (image like 'https://%'),
+   image_caption varchar(100) not null,
    FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id), 
    FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type), 
