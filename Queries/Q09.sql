@@ -7,7 +7,7 @@ FROM(
 	FROM
 		Ticket t
 	JOIN
-		Event e ON t.event_id = e.event_id
+		Event_P e ON t.event_id = e.event_id
 	WHERE 
 		e.start_time BETWEEN DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND CURDATE()
 	GROUP BY
