@@ -1021,6 +1021,106 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (30, 199.99, 10, 'VIP', 'Credit', '2022-06-19 12:27:45', '0025567890124', 1, 'https://example.com/tickets/30-6.jpg', 'VIP access for Main stage acts'),
 (30, 299.99, 11, 'Premium', 'Cash', '2022-06-20 08:18:33', '1125567890124', 0, 'https://example.com/tickets/30-7.jpg', 'Premium experience for Main stage acts'),
 (30, 499.99, 12, 'Backstage', 'Paypal', '2022-06-21 14:42:11', '2225567890124', 1, 'https://example.com/tickets/30-8.jpg', 'Backstage pass for Main stage acts')
+
+ -- Event 31: Rock band kicks off the final day (2022-07-13)
+(31, 89.99, 13, 'General', 'Cash', '2022-06-15 10:22:10', '3325567890124', 1, 'https://example.com/tickets/31-1.jpg', 'General admission for Rock band final day'),
+(31, 199.99, 14, 'VIP', 'Paypal', '2022-06-16 11:15:33', '4425567890124', 1, 'https://example.com/tickets/31-2.jpg', 'VIP access for Rock band final day'),
+(31, 299.99, 15, 'Premium', 'Credit', '2022-06-17 14:45:22', '5525567890124', 0, 'https://example.com/tickets/31-3.jpg', 'Premium experience for Rock band final day'),
+(31, 499.99, 16, 'Backstage', 'Debit', '2022-06-18 17:30:44', '6625567890124', 1, 'https://example.com/tickets/31-4.jpg', 'Backstage pass for Rock band final day'),
+(31, 89.99, 17, 'General', 'Paypal', '2022-06-19 09:12:19', '7725567890124', 1, 'https://example.com/tickets/31-5.jpg', 'General admission for Rock band final day'),
+(31, 199.99, 18, 'VIP', 'Credit', '2022-06-20 12:27:45', '8825567890124', 1, 'https://example.com/tickets/31-6.jpg', 'VIP access for Rock band final day'),
+(31, 299.99, 19, 'Premium', 'Debit', '2022-06-21 08:18:33', '9925567890124', 0, 'https://example.com/tickets/31-7.jpg', 'Premium experience for Rock band final day'),
+(31, 499.99, 20, 'Backstage', 'Cash', '2022-06-22 14:42:11', '0035567890124', 1, 'https://example.com/tickets/31-8.jpg', 'Backstage pass for Rock band final day'),
+
+-- Event 32: Classical set in the open-air theater (2022-07-13)
+(32, 89.99, 21, 'General', 'Credit', '2022-06-16 08:22:10', '1135567890124', 1, 'https://example.com/tickets/32-1.jpg', 'General admission for Classical open-air'),
+(32, 199.99, 22, 'VIP', 'Debit', '2022-06-17 11:15:33', '2235567890124', 1, 'https://example.com/tickets/32-2.jpg', 'VIP access for Classical open-air'),
+(32, 299.99, 23, 'Premium', 'Paypal', '2022-06-18 13:45:22', '3335567890124', 0, 'https://example.com/tickets/32-3.jpg', 'Premium experience for Classical open-air'),
+(32, 499.99, 24, 'Backstage', 'Cash', '2022-06-19 18:30:44', '4435567890124', 1, 'https://example.com/tickets/32-4.jpg', 'Backstage pass for Classical open-air'),
+(32, 89.99, 25, 'General', 'Debit', '2022-06-20 09:12:19', '5535567890124', 1, 'https://example.com/tickets/32-5.jpg', 'General admission for Classical open-air'),
+(32, 199.99, 26, 'VIP', 'Credit', '2022-06-21 12:27:45', '6635567890124', 1, 'https://example.com/tickets/32-6.jpg', 'VIP access for Classical open-air'),
+(32, 299.99, 27, 'Premium', 'Cash', '2022-06-22 08:18:33', '7735567890124', 0, 'https://example.com/tickets/32-7.jpg', 'Premium experience for Classical open-air'),
+(32, 499.99, 28, 'Backstage', 'Paypal', '2022-06-23 14:42:11', '8835567890124', 1, 'https://example.com/tickets/32-8.jpg', 'Backstage pass for Classical open-air'),
+
+-- Event 33: Amazing vibes from all genres (2023-05-15)
+(33, 89.99, 29, 'General', 'Cash', '2023-04-15 10:22:10', '9935567890124', 1, 'https://example.com/tickets/33-1.jpg', 'General admission for Amazing vibes'),
+(33, 199.99, 30, 'VIP', 'Paypal', '2023-04-16 11:15:33', '0045567890124', 1, 'https://example.com/tickets/33-2.jpg', 'VIP access for Amazing vibes'),
+(33, 299.99, 31, 'Premium', 'Credit', '2023-04-17 14:45:22', '1145567890124', 0, 'https://example.com/tickets/33-3.jpg', 'Premium experience for Amazing vibes'),
+(33, 499.99, 32, 'Backstage', 'Debit', '2023-04-18 17:30:44', '2245567890124', 1, 'https://example.com/tickets/33-4.jpg', 'Backstage pass for Amazing vibes'),
+(33, 89.99, 33, 'General', 'Paypal', '2023-04-19 09:12:19', '3345567890124', 1, 'https://example.com/tickets/33-5.jpg', 'General admission for Amazing vibes'),
+(33, 199.99, 34, 'VIP', 'Credit', '2023-04-20 12:27:45', '4445567890124', 1, 'https://example.com/tickets/33-6.jpg', 'VIP access for Amazing vibes'),
+(33, 299.99, 35, 'Premium', 'Debit', '2023-04-21 08:18:33', '5545567890124', 0, 'https://example.com/tickets/33-7.jpg', 'Premium experience for Amazing vibes'),
+(33, 499.99, 36, 'Backstage', 'Cash', '2023-04-22 14:42:11', '6645567890124', 1, 'https://example.com/tickets/33-8.jpg', 'Backstage pass for Amazing vibes'),
+
+-- Event 34: Indie beats and cozy moments (2023-05-15)
+(34, 89.99, 37, 'General', 'Credit', '2023-04-16 08:22:10', '7745567890124', 1, 'https://example.com/tickets/34-1.jpg', 'General admission for Indie beats'),
+(34, 199.99, 38, 'VIP', 'Debit', '2023-04-17 11:15:33', '8845567890124', 1, 'https://example.com/tickets/34-2.jpg', 'VIP access for Indie beats'),
+(34, 299.99, 39, 'Premium', 'Paypal', '2023-04-18 13:45:22', '9945567890124', 0, 'https://example.com/tickets/34-3.jpg', 'Premium experience for Indie beats'),
+(34, 499.99, 40, 'Backstage', 'Cash', '2023-04-19 18:30:44', '0055567890124', 1, 'https://example.com/tickets/34-4.jpg', 'Backstage pass for Indie beats'),
+(34, 89.99, 41, 'General', 'Debit', '2023-04-20 09:12:19', '1155567890124', 1, 'https://example.com/tickets/34-5.jpg', 'General admission for Indie beats'),
+(34, 199.99, 42, 'VIP', 'Credit', '2023-04-21 12:27:45', '2255567890124', 1, 'https://example.com/tickets/34-6.jpg', 'VIP access for Indie beats'),
+(34, 299.99, 43, 'Premium', 'Cash', '2023-04-22 08:18:33', '3355567890124', 0, 'https://example.com/tickets/34-7.jpg', 'Premium experience for Indie beats'),
+(34, 499.99, 44, 'Backstage', 'Paypal', '2023-04-23 14:42:11', '4455567890124', 1, 'https://example.com/tickets/34-8.jpg', 'Backstage pass for Indie beats'),
+
+-- Event 35: Dance music all night long (2023-05-16)
+(35, 89.99, 45, 'General', 'Cash', '2023-04-17 10:22:10', '5555567890124', 1, 'https://example.com/tickets/35-1.jpg', 'General admission for Dance music night'),
+(35, 199.99, 46, 'VIP', 'Paypal', '2023-04-18 11:15:33', '6655567890124', 1, 'https://example.com/tickets/35-2.jpg', 'VIP access for Dance music night'),
+(35, 299.99, 47, 'Premium', 'Credit', '2023-04-19 14:45:22', '7755567890124', 0, 'https://example.com/tickets/35-3.jpg', 'Premium experience for Dance music night'),
+(35, 499.99, 48, 'Backstage', 'Debit', '2023-04-20 17:30:44', '8855567890124', 1, 'https://example.com/tickets/35-4.jpg', 'Backstage pass for Dance music night'),
+(35, 89.99, 49, 'General', 'Paypal', '2023-04-21 09:12:19', '9955567890124', 1, 'https://example.com/tickets/35-5.jpg', 'General admission for Dance music night'),
+(35, 199.99, 50, 'VIP', 'Credit', '2023-04-22 12:27:45', '0065567890124', 1, 'https://example.com/tickets/35-6.jpg', 'VIP access for Dance music night'),
+(35, 299.99, 51, 'Premium', 'Debit', '2023-04-23 08:18:33', '1165567890124', 0, 'https://example.com/tickets/35-7.jpg', 'Premium experience for Dance music night'),
+(35, 499.99, 52, 'Backstage', 'Cash', '2023-04-24 14:42:11', '2265567890124', 1, 'https://example.com/tickets/35-8.jpg', 'Backstage pass for Dance music night'),
+
+-- Event 36: Rock anthems playing into the night (2023-05-16)
+(36, 89.99, 53, 'General', 'Credit', '2023-04-18 08:22:10', '3365567890124', 1, 'https://example.com/tickets/36-1.jpg', 'General admission for Rock anthems night'),
+(36, 199.99, 54, 'VIP', 'Debit', '2023-04-19 11:15:33', '4465567890124', 1, 'https://example.com/tickets/36-2.jpg', 'VIP access for Rock anthems night'),
+(36, 299.99, 55, 'Premium', 'Paypal', '2023-04-20 13:45:22', '5565567890124', 0, 'https://example.com/tickets/36-3.jpg', 'Premium experience for Rock anthems night'),
+(36, 499.99, 56, 'Backstage', 'Cash', '2023-04-21 18:30:44', '6665567890124', 1, 'https://example.com/tickets/36-4.jpg', 'Backstage pass for Rock anthems night'),
+(36, 89.99, 57, 'General', 'Debit', '2023-04-22 09:12:19', '7765567890124', 1, 'https://example.com/tickets/36-5.jpg', 'General admission for Rock anthems night'),
+(36, 199.99, 58, 'VIP', 'Credit', '2023-04-23 12:27:45', '8865567890124', 1, 'https://example.com/tickets/36-6.jpg', 'VIP access for Rock anthems night'),
+(36, 299.99, 59, 'Premium', 'Cash', '2023-04-24 08:18:33', '9965567890124', 0, 'https://example.com/tickets/36-7.jpg', 'Premium experience for Rock anthems night'),
+(36, 499.99, 60, 'Backstage', 'Paypal', '2023-04-25 14:42:11', '0075567890124', 1, 'https://example.com/tickets/36-8.jpg', 'Backstage pass for Rock anthems night'),
+
+-- Event 37: Electronic set to start the fest (2024-06-12)
+(37, 89.99, 61, 'General', 'Cash', '2024-05-13 10:22:10', '1175567890124', 1, 'https://example.com/tickets/37-1.jpg', 'General admission for Electronic set'),
+(37, 199.99, 62, 'VIP', 'Paypal', '2024-05-14 11:15:33', '2275567890124', 1, 'https://example.com/tickets/37-2.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 63, 'Premium', 'Credit', '2024-05-15 14:45:22', '3375567890124', 0, 'https://example.com/tickets/37-3.jpg', 'Premium experience for Electronic set'),
+(37, 499.99, 64, 'Backstage', 'Debit', '2024-05-16 17:30:44', '4475567890124', 1, 'https://example.com/tickets/37-4.jpg', 'Backstage pass for Electronic set'),
+(37, 89.99, 65, 'General', 'Paypal', '2024-05-17 09:12:19', '5575567890124', 1, 'https://example.com/tickets/37-5.jpg', 'General admission for Electronic set'),
+(37, 199.99, 66, 'VIP', 'Credit', '2024-05-18 12:27:45', '6675567890124', 1, 'https://example.com/tickets/37-6.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 67, 'Premium', 'Debit', '2024-05-19 08:18:33', '7775567890124', 0, 'https://example.com/tickets/37-7.jpg', 'Premium experience for Electronic set'),
+(37, 499.99, 68, 'Backstage', 'Cash', '2024-05-20 14:42:11', '8875567890124', 1, 'https://example.com/tickets/37-8.jpg', 'Backstage pass for Electronic set'),
+
+-- Event 38: Pop music with a twist (2024-06-12)
+(38, 89.99, 69, 'General', 'Credit', '2024-05-14 08:22:10', '9975567890124', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
+(38, 199.99, 70, 'VIP', 'Debit', '2024-05-15 11:15:33', '0085567890124', 1, 'https://example.com/tickets/38-2.jpg', 'VIP access for Pop music twist'),
+(38, 299.99, 71, 'Premium', 'Paypal', '2024-05-16 13:45:22', '1185567890124', 0, 'https://example.com/tickets/38-3.jpg', 'Premium experience for Pop music twist'),
+(38, 499.99, 72, 'Backstage', 'Cash', '2024-05-17 18:30:44', '2285567890124', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
+(38, 89.99, 73, 'General', 'Debit', '2024-05-18 09:12:19', '3385567890124', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
+(38, 199.99, 74, 'VIP', 'Credit', '2024-05-19 12:27:45', '4485567890124', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
+(38, 299.99, 75, 'Premium', 'Cash', '2024-05-20 08:18:33', '5585567890124', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
+(38, 499.99, 76, 'Backstage', 'Paypal', '2024-05-21 14:42:11', '6685567890124', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
+
+-- Event 39: Alt rock is the vibe (2025-07-08)
+(39, 89.99, 77, 'General', 'Cash', '2025-06-08 10:22:10', '7785567890124', 1, 'https://example.com/tickets/39-1.jpg', 'General admission for Alt rock vibe'),
+(39, 199.99, 78, 'VIP', 'Paypal', '2025-06-09 11:15:33', '8885567890124', 1, 'https://example.com/tickets/39-2.jpg', 'VIP access for Alt rock vibe'),
+(39, 299.99, 79, 'Premium', 'Credit', '2025-06-10 14:45:22', '9985567890124', 0, 'https://example.com/tickets/39-3.jpg', 'Premium experience for Alt rock vibe'),
+(39, 499.99, 80, 'Backstage', 'Debit', '2025-06-11 17:30:44', '0095567890124', 1, 'https://example.com/tickets/39-4.jpg', 'Backstage pass for Alt rock vibe'),
+(39, 89.99, 81, 'General', 'Paypal', '2025-06-12 09:12:19', '1195567890124', 1, 'https://example.com/tickets/39-5.jpg', 'General admission for Alt rock vibe'),
+(39, 199.99, 82, 'VIP', 'Credit', '2025-06-13 12:27:45', '2295567890124', 1, 'https://example.com/tickets/39-6.jpg', 'VIP access for Alt rock vibe'),
+(39, 299.99, 83, 'Premium', 'Debit', '2025-06-14 08:18:33', '3395567890124', 0, 'https://example.com/tickets/39-7.jpg', 'Premium experience for Alt rock vibe'),
+(39, 499.99, 84, 'Backstage', 'Cash', '2025-06-15 14:42:11', '4495567890124', 1, 'https://example.com/tickets/39-8.jpg', 'Backstage pass for Alt rock vibe'),
+
+-- Event 40: Indie and electro mix for an amazing night (2025-07-08)
+(40, 89.99, 85, 'General', 'Credit', '2025-06-09 08:22:10', '5595567890124', 1, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
+(40, 199.99, 86, 'VIP', 'Debit', '2025-06-10 11:15:33', '6695567890124', 1, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
+(40, 299.99, 87, 'Premium', 'Paypal', '2025-06-11 13:45:22', '7795567890124', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
+(40, 499.99, 88, 'Backstage', 'Cash', '2025-06-12 18:30:44', '8895567890124', 1, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
+(40, 89.99, 89, 'General', 'Debit', '2025-06-13 09:12:19', '9995567890124', 1, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
+(40, 199.99, 90, 'VIP', 'Credit', '2025-06-14 12:27:45', '0105567890124', 1, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
+(40, 299.99, 91, 'Premium', 'Cash', '2025-06-15 08:18:33', '1205567890124', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
+(40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 1, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix')
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
 (49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890123', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
@@ -1130,3 +1230,45 @@ INSERT INTO PerformerSubgenre (performer_id, subgenre_id) VALUES
 (65, 'Bubblegum Pop'),
 (66, 'Thrash Metal'),
 (67, 'Gothic Metal');
+
+INSERT INTO Subgenre (subgenre_id, genre_id, image, image_caption) VALUES
+('Alt Pop', 'Pop', 'https://example.com/altpop.jpg', 'Alternative Pop vibes'),
+('Alternative Rock', 'Rock', 'https://example.com/altrock.jpg', 'Alternative Rock power'),
+('Americana', 'Country', 'https://example.com/americana.jpg', 'Classic Americana tunes'),
+('Art Pop', 'Pop', 'https://example.com/artpop.jpg', 'Experimental pop artistry'),
+('Avant-garde Jazz', 'Jazz', 'https://example.com/avantjazz.jpg', 'Boundary-pushing jazz'),
+('Bebop', 'Jazz', 'https://example.com/bebop.jpg', 'Fast-paced bebop jazz'),
+('Blues Gospel', 'Blues', 'https://example.com/bluesgospel.jpg', 'Spiritual blues fusion'),
+('Blues Rock', 'Rock', 'https://example.com/bluesrock.jpg', 'Blues with a rock edge'),
+('Bubblegum Pop', 'Pop', 'https://example.com/bubblegumpop.jpg', 'Catchy and sweet pop'),
+('Chillwave', 'Electronic', 'https://example.com/chillwave.jpg', 'Lo-fi chillwave tones'),
+('City Pop', 'Pop', 'https://example.com/citypop.jpg', 'Japanese 80s pop'),
+('Dance-Punk', 'Rock', 'https://example.com/dancepunk.jpg', 'Dance and punk collision'),
+('Disco Pop', 'Pop', 'https://example.com/discopop.jpg', 'Groovy disco-infused pop'),
+('Electro', 'Electronic', 'https://example.com/electro.jpg', 'Classic electro beats'),
+('Fresh Jazz', 'Jazz', 'https://example.com/freshjazz.jpg', 'New wave jazz fusion'),
+('Funk Rock', 'Rock', 'https://example.com/funkrock.jpg', 'Funky rock rhythms'),
+('Garage Rock', 'Rock', 'https://example.com/garagerock.jpg', 'Raw garage rock energy'),
+('Glam Pop', 'Pop', 'https://example.com/glampop.jpg', 'Glamorous pop hits'),
+('Gothic Metal', 'Metal', 'https://example.com/gothicmetal.jpg', 'Dark, melodic metal'),
+('Gypsy Jazz', 'Jazz', 'https://example.com/gypsyjazz.jpg', 'Django-style jazz vibes'),
+('Hip Hop Old School', 'HipHop', 'https://example.com/oldschoolhiphop.jpg', 'Old-school hip hop'),
+('Honky Tonk', 'Country', 'https://example.com/honkytonk.jpg', 'Honky tonk classics'),
+('Horrorcore', 'HipHop', 'https://example.com/horrorcore.jpg', 'Dark horror-themed rap'),
+('Indie Pop', 'Pop', 'https://example.com/indiepop.jpg', 'Indie-style pop songs'),
+('Indie Rock', 'Rock', 'https://example.com/indierock.jpg', 'Independent rock spirit'),
+('Jazz Rap', 'HipHop', 'https://example.com/jazzrap.jpg', 'Smooth jazz meets rap'),
+('Jump Blues', 'Blues', 'https://example.com/jumpblues.jpg', 'Upbeat swing-influenced blues'),
+('Math Rock', 'Rock', 'https://example.com/mathrock.jpg', 'Rhythmically complex rock'),
+('Outlaw Country', 'Country', 'https://example.com/outlawcountry.jpg', 'Rebellious country sound'),
+('Post-Punk', 'Rock', 'https://example.com/postpunk.jpg', 'Dark, edgy post-punk'),
+('Psychedelic Rock', 'Rock', 'https://example.com/psyrock.jpg', 'Trippy psychedelic rock'),
+('Shoegaze', 'Rock', 'https://example.com/shoegaze.jpg', 'Dreamy shoegaze tones'),
+('Soft Pop', 'Pop', 'https://example.com/softpop.jpg', 'Gentle pop melodies'),
+('Stoner Rock', 'Rock', 'https://example.com/stonerrock.jpg', 'Heavy, groovy stoner rock'),
+('Swing', 'Jazz', 'https://example.com/swing.jpg', 'Big band swing jazz'),
+('Thrash Metal', 'Metal', 'https://example.com/thrashmetal.jpg', 'Fast and aggressive metal'),
+('Traditional Country', 'Country', 'https://example.com/traditionalcountry.jpg', 'Classic country style'),
+('Trance', 'Electronic', 'https://example.com/trance.jpg', 'Hypnotic trance music'),
+('Vaporwave', 'Electronic', 'https://example.com/vaporwave.jpg', 'Retro-futurist vaporwave');
+
