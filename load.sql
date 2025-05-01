@@ -922,7 +922,105 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (20, 199.99, 90, 'VIP', 'Credit', '2020-07-15 12:27:45', '0044567890124', 1, 'https://example.com/tickets/20-2.jpg', 'VIP access for Indie vibes'),
 (20, 299.99, 91, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
 (20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes')
- 
+ -- Event 21: Classical music fills the air (2020-08-03)
+(21, 89.99, 93, 'General', 'Cash', '2020-07-18 10:22:10', '3344567890124', 1, 'https://example.com/tickets/21-1.jpg', 'General admission for Classical music'),
+(21, 199.99, 94, 'VIP', 'Paypal', '2020-07-19 11:15:33', '4444567890124', 1, 'https://example.com/tickets/21-2.jpg', 'VIP access for Classical music'),
+(21, 299.99, 95, 'Premium', 'Credit', '2020-07-20 14:45:22', '5544567890124', 0, 'https://example.com/tickets/21-3.jpg', 'Premium experience for Classical music'),
+(21, 499.99, 96, 'Backstage', 'Debit', '2020-07-21 17:30:44', '6644567890124', 1, 'https://example.com/tickets/21-4.jpg', 'Backstage pass for Classical music'),
+(21, 89.99, 97, 'General', 'Paypal', '2020-07-22 09:12:19', '7744567890124', 1, 'https://example.com/tickets/21-5.jpg', 'General admission for Classical music'),
+(21, 199.99, 98, 'VIP', 'Credit', '2020-07-23 12:27:45', '8844567890124', 1, 'https://example.com/tickets/21-6.jpg', 'VIP access for Classical music'),
+(21, 299.99, 99, 'Premium', 'Debit', '2020-07-24 08:18:33', '9944567890124', 0, 'https://example.com/tickets/21-7.jpg', 'Premium experience for Classical music'),
+(21, 499.99, 100, 'Backstage', 'Cash', '2020-07-25 14:42:11', '0054567890124', 1, 'https://example.com/tickets/21-8.jpg', 'Backstage pass for Classical music'),
+
+-- Event 22: Ambient soundscapes from talented DJs (2020-08-03)
+(22, 89.99, 101, 'General', 'Credit', '2020-07-19 08:22:10', '1154567890124', 1, 'https://example.com/tickets/22-1.jpg', 'General admission for Ambient soundscapes'),
+(22, 199.99, 102, 'VIP', 'Debit', '2020-07-20 11:15:33', '2254567890124', 1, 'https://example.com/tickets/22-2.jpg', 'VIP access for Ambient soundscapes'),
+(22, 299.99, 103, 'Premium', 'Paypal', '2020-07-21 13:45:22', '3354567890124', 0, 'https://example.com/tickets/22-3.jpg', 'Premium experience for Ambient soundscapes'),
+(22, 499.99, 104, 'Backstage', 'Cash', '2020-07-22 18:30:44', '4454567890124', 1, 'https://example.com/tickets/22-4.jpg', 'Backstage pass for Ambient soundscapes'),
+(22, 89.99, 105, 'General', 'Debit', '2020-07-23 09:12:19', '5554567890124', 1, 'https://example.com/tickets/22-5.jpg', 'General admission for Ambient soundscapes'),
+(22, 199.99, 106, 'VIP', 'Credit', '2020-07-24 12:27:45', '6654567890124', 1, 'https://example.com/tickets/22-6.jpg', 'VIP access for Ambient soundscapes'),
+(22, 299.99, 107, 'Premium', 'Cash', '2020-07-25 08:18:33', '7754567890124', 0, 'https://example.com/tickets/22-7.jpg', 'Premium experience for Ambient soundscapes'),
+(22, 499.99, 108, 'Backstage', 'Paypal', '2020-07-26 14:42:11', '8854567890124', 1, 'https://example.com/tickets/22-8.jpg', 'Backstage pass for Ambient soundscapes'),
+
+-- Event 23: New beginnings after lockdown (2021-06-20)
+(23, 89.99, 109, 'General', 'Cash', '2021-05-21 10:22:10', '9954567890124', 1, 'https://example.com/tickets/23-1.jpg', 'General admission for New beginnings'),
+(23, 199.99, 110, 'VIP', 'Paypal', '2021-05-22 11:15:33', '0064567890124', 1, 'https://example.com/tickets/23-2.jpg', 'VIP access for New beginnings'),
+(23, 299.99, 111, 'Premium', 'Credit', '2021-05-23 14:45:22', '1164567890124', 0, 'https://example.com/tickets/23-3.jpg', 'Premium experience for New beginnings'),
+(23, 499.99, 112, 'Backstage', 'Debit', '2021-05-24 17:30:44', '2264567890124', 1, 'https://example.com/tickets/23-4.jpg', 'Backstage pass for New beginnings'),
+(23, 89.99, 113, 'General', 'Paypal', '2021-05-25 09:12:19', '3364567890124', 1, 'https://example.com/tickets/23-5.jpg', 'General admission for New beginnings'),
+(23, 199.99, 114, 'VIP', 'Credit', '2021-05-26 12:27:45', '4464567890124', 1, 'https://example.com/tickets/23-6.jpg', 'VIP access for New beginnings'),
+(23, 299.99, 115, 'Premium', 'Debit', '2021-05-27 08:18:33', '5564567890124', 0, 'https://example.com/tickets/23-7.jpg', 'Premium experience for New beginnings'),
+(23, 499.99, 116, 'Backstage', 'Cash', '2021-05-28 14:42:11', '6664567890124', 1, 'https://example.com/tickets/23-8.jpg', 'Backstage pass for New beginnings'),
+
+-- Event 24: Live bands and local artists perform (2021-06-20)
+(24, 89.99, 117, 'General', 'Credit', '2021-05-22 08:22:10', '7764567890124', 1, 'https://example.com/tickets/24-1.jpg', 'General admission for Live bands'),
+(24, 199.99, 118, 'VIP', 'Debit', '2021-05-23 11:15:33', '8864567890124', 1, 'https://example.com/tickets/24-2.jpg', 'VIP access for Live bands'),
+(24, 299.99, 119, 'Premium', 'Paypal', '2021-05-24 13:45:22', '9964567890124', 0, 'https://example.com/tickets/24-3.jpg', 'Premium experience for Live bands'),
+(24, 499.99, 120, 'Backstage', 'Cash', '2021-05-25 18:30:44', '0074567890124', 1, 'https://example.com/tickets/24-4.jpg', 'Backstage pass for Live bands'),
+(24, 89.99, 121, 'General', 'Debit', '2021-05-26 09:12:19', '1174567890124', 1, 'https://example.com/tickets/24-5.jpg', 'General admission for Live bands'),
+(24, 199.99, 122, 'VIP', 'Credit', '2021-05-27 12:27:45', '2274567890124', 1, 'https://example.com/tickets/24-6.jpg', 'VIP access for Live bands'),
+(24, 299.99, 123, 'Premium', 'Cash', '2021-05-28 08:18:33', '3374567890124', 0, 'https://example.com/tickets/24-7.jpg', 'Premium experience for Live bands'),
+(24, 499.99, 124, 'Backstage', 'Paypal', '2021-05-29 14:42:11', '4474567890124', 1, 'https://example.com/tickets/24-8.jpg', 'Backstage pass for Live bands'),
+
+-- Event 25: Pop and rock performances on the second day (2021-06-21)
+(25, 89.99, 125, 'General', 'Cash', '2021-05-23 10:22:10', '5574567890124', 1, 'https://example.com/tickets/25-1.jpg', 'General admission for Pop and rock'),
+(25, 199.99, 126, 'VIP', 'Paypal', '2021-05-24 11:15:33', '6674567890124', 1, 'https://example.com/tickets/25-2.jpg', 'VIP access for Pop and rock'),
+(25, 299.99, 127, 'Premium', 'Credit', '2021-05-25 14:45:22', '7774567890124', 0, 'https://example.com/tickets/25-3.jpg', 'Premium experience for Pop and rock'),
+(25, 499.99, 128, 'Backstage', 'Debit', '2021-05-26 17:30:44', '8874567890124', 1, 'https://example.com/tickets/25-4.jpg', 'Backstage pass for Pop and rock'),
+(25, 89.99, 129, 'General', 'Paypal', '2021-05-27 09:12:19', '9974567890124', 1, 'https://example.com/tickets/25-5.jpg', 'General admission for Pop and rock'),
+(25, 199.99, 130, 'VIP', 'Credit', '2021-05-28 12:27:45', '0084567890124', 1, 'https://example.com/tickets/25-6.jpg', 'VIP access for Pop and rock'),
+(25, 299.99, 131, 'Premium', 'Debit', '2021-05-29 08:18:33', '1184567890124', 0, 'https://example.com/tickets/25-7.jpg', 'Premium experience for Pop and rock'),
+(25, 499.99, 132, 'Backstage', 'Cash', '2021-05-30 14:42:11', '2284567890124', 1, 'https://example.com/tickets/25-8.jpg', 'Backstage pass for Pop and rock'),
+
+-- Event 26: Electronic beats under the stars (2021-06-21)
+(26, 89.99, 133, 'General', 'Credit', '2021-05-24 08:22:10', '3384567890124', 1, 'https://example.com/tickets/26-1.jpg', 'General admission for Electronic beats'),
+(26, 199.99, 134, 'VIP', 'Debit', '2021-05-25 11:15:33', '4484567890124', 1, 'https://example.com/tickets/26-2.jpg', 'VIP access for Electronic beats'),
+(26, 299.99, 135, 'Premium', 'Paypal', '2021-05-26 13:45:22', '5584567890124', 0, 'https://example.com/tickets/26-3.jpg', 'Premium experience for Electronic beats'),
+(26, 499.99, 136, 'Backstage', 'Cash', '2021-05-27 18:30:44', '6684567890124', 1, 'https://example.com/tickets/26-4.jpg', 'Backstage pass for Electronic beats'),
+(26, 89.99, 137, 'General', 'Debit', '2021-05-28 09:12:19', '7784567890124', 1, 'https://example.com/tickets/26-5.jpg', 'General admission for Electronic beats'),
+(26, 199.99, 138, 'VIP', 'Credit', '2021-05-29 12:27:45', '8884567890124', 1, 'https://example.com/tickets/26-6.jpg', 'VIP access for Electronic beats'),
+(26, 299.99, 139, 'Premium', 'Cash', '2021-05-30 08:18:33', '9984567890124', 0, 'https://example.com/tickets/26-7.jpg', 'Premium experience for Electronic beats'),
+(26, 499.99, 140, 'Backstage', 'Paypal', '2021-05-31 14:42:11', '0094567890124', 1, 'https://example.com/tickets/26-8.jpg', 'Backstage pass for Electronic beats'),
+
+-- Event 27: High-energy day of performances (2022-07-11)
+(27, 89.99, 141, 'General', 'Cash', '2022-06-11 10:22:10', '1194567890124', 1, 'https://example.com/tickets/27-1.jpg', 'General admission for High-energy day'),
+(27, 199.99, 142, 'VIP', 'Paypal', '2022-06-12 11:15:33', '2294567890124', 1, 'https://example.com/tickets/27-2.jpg', 'VIP access for High-energy day'),
+(27, 299.99, 143, 'Premium', 'Credit', '2022-06-13 14:45:22', '3394567890124', 0, 'https://example.com/tickets/27-3.jpg', 'Premium experience for High-energy day'),
+(27, 499.99, 144, 'Backstage', 'Debit', '2022-06-14 17:30:44', '4494567890124', 1, 'https://example.com/tickets/27-4.jpg', 'Backstage pass for High-energy day'),
+(27, 89.99, 145, 'General', 'Paypal', '2022-06-15 09:12:19', '5594567890124', 1, 'https://example.com/tickets/27-5.jpg', 'General admission for High-energy day'),
+(27, 199.99, 146, 'VIP', 'Credit', '2022-06-16 12:27:45', '6694567890124', 1, 'https://example.com/tickets/27-6.jpg', 'VIP access for High-energy day'),
+(27, 299.99, 147, 'Premium', 'Debit', '2022-06-17 08:18:33', '7794567890124', 0, 'https://example.com/tickets/27-7.jpg', 'Premium experience for High-energy day'),
+(27, 499.99, 148, 'Backstage', 'Cash', '2022-06-18 14:42:11', '8894567890124', 1, 'https://example.com/tickets/27-8.jpg', 'Backstage pass for High-energy day'),
+
+-- Event 28: Incredible jazz fusion by local musicians (2022-07-11)
+(28, 89.99, 149, 'General', 'Credit', '2022-06-12 08:22:10', '9994567890124', 1, 'https://example.com/tickets/28-1.jpg', 'General admission for Jazz fusion'),
+(28, 199.99, 150, 'VIP', 'Debit', '2022-06-13 11:15:33', '0005567890124', 1, 'https://example.com/tickets/28-2.jpg', 'VIP access for Jazz fusion'),
+(28, 299.99, 151, 'Premium', 'Paypal', '2022-06-14 13:45:22', '1105567890124', 0, 'https://example.com/tickets/28-3.jpg', 'Premium experience for Jazz fusion'),
+(28, 499.99, 152, 'Backstage', 'Cash', '2022-06-15 18:30:44', '2205567890124', 1, 'https://example.com/tickets/28-4.jpg', 'Backstage pass for Jazz fusion'),
+(28, 89.99, 153, 'General', 'Debit', '2022-06-16 09:12:19', '3305567890124', 1, 'https://example.com/tickets/28-5.jpg', 'General admission for Jazz fusion'),
+(28, 199.99, 154, 'VIP', 'Credit', '2022-06-17 12:27:45', '4405567890124', 1, 'https://example.com/tickets/28-6.jpg', 'VIP access for Jazz fusion'),
+(28, 299.99, 155, 'Premium', 'Cash', '2022-06-18 08:18:33', '5505567890124', 0, 'https://example.com/tickets/28-7.jpg', 'Premium experience for Jazz fusion'),
+(28, 499.99, 156, 'Backstage', 'Paypal', '2022-06-19 14:42:11', '6605567890124', 1, 'https://example.com/tickets/28-8.jpg', 'Backstage pass for Jazz fusion'),
+
+-- Event 29: Acoustic music and indie performances (2022-07-12)
+(29, 89.99, 157, 'General', 'Cash', '2022-06-13 10:22:10', '7705567890124', 1, 'https://example.com/tickets/29-1.jpg', 'General admission for Acoustic music'),
+(29, 199.99, 158, 'VIP', 'Paypal', '2022-06-14 11:15:33', '8805567890124', 1, 'https://example.com/tickets/29-2.jpg', 'VIP access for Acoustic music'),
+(29, 299.99, 159, 'Premium', 'Credit', '2022-06-15 14:45:22', '9905567890124', 0, 'https://example.com/tickets/29-3.jpg', 'Premium experience for Acoustic music'),
+(29, 499.99, 160, 'Backstage', 'Debit', '2022-06-16 17:30:44', '0015567890124', 1, 'https://example.com/tickets/29-4.jpg', 'Backstage pass for Acoustic music'),
+(29, 89.99, 1, 'General', 'Paypal', '2022-06-17 09:12:19', '1115567890124', 1, 'https://example.com/tickets/29-5.jpg', 'General admission for Acoustic music'),
+(29, 199.99, 2, 'VIP', 'Credit', '2022-06-18 12:27:45', '2215567890124', 1, 'https://example.com/tickets/29-6.jpg', 'VIP access for Acoustic music'),
+(29, 299.99, 3, 'Premium', 'Debit', '2022-06-19 08:18:33', '3315567890124', 0, 'https://example.com/tickets/29-7.jpg', 'Premium experience for Acoustic music'),
+(29, 499.99, 4, 'Backstage', 'Cash', '2022-06-20 14:42:11', '4415567890124', 1, 'https://example.com/tickets/29-8.jpg', 'Backstage pass for Acoustic music'),
+
+-- Event 30: Main stage acts and thrilling crowds (2022-07-12)
+(30, 89.99, 5, 'General', 'Credit', '2022-06-14 08:22:10', '5515567890124', 1, 'https://example.com/tickets/30-1.jpg', 'General admission for Main stage acts'),
+(30, 199.99, 6, 'VIP', 'Debit', '2022-06-15 11:15:33', '6615567890124', 1, 'https://example.com/tickets/30-2.jpg', 'VIP access for Main stage acts'),
+(30, 299.99, 7, 'Premium', 'Paypal', '2022-06-16 13:45:22', '7715567890124', 0, 'https://example.com/tickets/30-3.jpg', 'Premium experience for Main stage acts'),
+(30, 499.99, 8, 'Backstage', 'Cash', '2022-06-17 18:30:44', '8815567890124', 1, 'https://example.com/tickets/30-4.jpg', 'Backstage pass for Main stage acts'),
+(30, 89.99, 9, 'General', 'Debit', '2022-06-18 09:12:19', '9915567890124', 1, 'https://example.com/tickets/30-5.jpg', 'General admission for Main stage acts'),
+(30, 199.99, 10, 'VIP', 'Credit', '2022-06-19 12:27:45', '0025567890124', 1, 'https://example.com/tickets/30-6.jpg', 'VIP access for Main stage acts'),
+(30, 299.99, 11, 'Premium', 'Cash', '2022-06-20 08:18:33', '1125567890124', 0, 'https://example.com/tickets/30-7.jpg', 'Premium experience for Main stage acts'),
+(30, 499.99, 12, 'Backstage', 'Paypal', '2022-06-21 14:42:11', '2225567890124', 1, 'https://example.com/tickets/30-8.jpg', 'Backstage pass for Main stage acts')
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
 (49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890123', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
