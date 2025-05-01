@@ -84,8 +84,8 @@ CREATE TABLE Staff (
 
 
 CREATE TABLE Equipment (
-  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  equip_id varchar(20) NOT NULL UNIQUE,
+  equip_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  equip_name varchar(20) NOT NULL UNIQUE,
   image varchar(100) NOT NULL CHECK (image like 'https://%'),
   image_caption varchar(100) NOT NULL
 );
@@ -108,7 +108,7 @@ CREATE TABLE Event_P (
 
 
 CREATE TABLE EventEquip (
-  equip_id varchar(20) NOT NULL,
+  equip_id int NOT NULL,
   event_id integer NOT NULL,
   quantity int,
   FOREIGN KEY (equip_id) REFERENCES Equipment(equip_id)
