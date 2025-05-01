@@ -83,7 +83,7 @@ CREATE TABLE Event (
   CONSTRAINT fk_festival FOREIGN KEY (festival_id) REFERENCES Festival(festival_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT fk_stage FOREIGN KEY (stage_id) REFERENCES Stage(stage_id)
-  ON DELETE RESTRICT ON UPDATE CASCADE
+  ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT descript FOREIGN KEY (descript) REFERENCES Description(descript)
   ON DELETE RESTRICT ON UPDATE CASCADE
   
@@ -185,7 +185,7 @@ CREATE TABLE Performance(
   duration int GENERATED ALWAYS AS (TIMESTAMPDIFF(MINUTE,start_time,end_time)) STORED
   CHECK (duration <=180),
   CONSTRAINT pfk_performer_id FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
-  ON UPDATE CASCADE
+  ON UPDATE CASCADE,
   CONSTRAINT fk_event_id FOREIGN KEY (event_id) REFERENCES Event(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
 );
