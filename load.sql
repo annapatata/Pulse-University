@@ -45,9 +45,6 @@ INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, c
 (8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 3,'https://example.com/img1.jpg', 'The summer heat began here'),
 (9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 4,'https://example.com/img1.jpg', 'The summer heat began here');
 
-
-
-
 --30 stages
 INSERT INTO Stage (stage_name, desc_id, capacity, image, image_caption) VALUES 
 ('Echo Arena', 1, 100, 'https://example.com/echo.jpg', 'Massive indoor stage with powerful acoustics'),
@@ -82,17 +79,17 @@ INSERT INTO Stage (stage_name, desc_id, capacity, image, image_caption) VALUES
 ('The Spark', 10, 140, 'https://example.com/spark.jpg', 'Small stage for breakout artists');
 
 --10 equipment
-INSERT INTO Equipment (equip_id, image, image_caption) VALUES
-('EQP-001', 'https://example.com/images/drill.jpg', 'Heavy-duty power drill'),
-('EQP-002', 'https://example.com/images/saw.jpg', 'Circular saw 2000W'),
-('EQP-003', 'https://example.com/images/ladder.jpg', 'Aluminum extension ladder'),
-('EQP-004', 'https://example.com/images/generator.jpg', 'Portable diesel generator'),
-('EQP-005', 'https://example.com/images/welder.jpg', 'Arc welding machine'),
-('EQP-006', 'https://example.com/images/compressor.jpg', 'Industrial air compressor'),
-('EQP-007', 'https://example.com/images/scaffold.jpg', 'Modular scaffolding system'),
-('EQP-008', 'https://example.com/images/concrete-mixer.jpg', 'Electric concrete mixer'),
-('EQP-009', 'https://example.com/images/forklift.jpg', '3-ton forklift'),
-('EQP-010', 'https://example.com/images/crane.jpg', 'Mobile hydraulic crane');
+INSERT INTO Equipment (equip_name, image, image_caption) VALUES 
+('Audio Mixer X32', 'https://example.com/images/audio-mixer.jpg', '32-channel digital audio mixer for live sound'),
+('Stage Light Beam 200', 'https://example.com/images/stage-light.jpg', 'High-intensity moving head beam light'),
+('Wireless Mic Kit', 'https://example.com/images/wireless-mic.jpg', 'Complete wireless microphone set with receiver'),
+('Smoke Machine FX1000', 'https://example.com/images/smoke-machine.jpg', 'Professional smoke machine for visual effects'),
+('LED Wall Panel', 'https://example.com/images/led-wall.jpg', 'Modular LED video panel for visual displays'),
+('Stage Truss System', 'https://example.com/images/stage-truss.jpg', 'Aluminum truss for lighting and rigging'),
+('Bass Amplifier 800W', 'https://example.com/images/bass-amp.jpg', 'High-powered bass amp for live performance'),
+('Monitor Speaker Pro', 'https://example.com/images/monitor-speaker.jpg', 'Stage monitor for musician feedback'),
+('Power Generator 30kW', 'https://example.com/images/power-generator.jpg', 'Backup power generator for uninterrupted performance'),
+('Cable Snake 32-Channel', 'https://example.com/images/cable-snake.jpg', 'Audio multicore cable for connecting stage gear');
  
 --50 events
 INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, festival_day) VALUES
