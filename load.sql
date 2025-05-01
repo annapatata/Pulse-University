@@ -147,15 +147,15 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (50, 2026, 26, '2026-08-24 13:30:00', '2026-08-24 17:30:00', 5);
 
 -- 3 roles
-INSERT INTO Role (role_name) VALUES
-('Technician'),
-('Security'),
-('Auxiliary');
+INSERT INTO Role (role_name, image, image_caption) VALUES
+('Auxiliary', 'https://example.com/auxiliary.jpg', 'Supporting the team in various roles'),
+('Technician', 'https://example.com/technician.jpg', 'Handling technical equipment and setups'),
+('Security', 'https://example.com/security.jpg', 'Ensuring the safety and security of the event');
 
 -- 5 levels of expirience
-INSERT INTO Experience (experience_level) VALUES
-('Beginner'),
-('Intermediate'),
-('Advanced'),
-('Expert'),
-('Master');
+INSERT INTO Experience (experience_level, xp, image, image_caption) VALUES
+('Beginner', 1, 'https://example.com/img1.jpg', 'Just starting out'),
+('Intermediate', 2, 'https://example.com/img2.jpg', 'Gaining more skills'),
+('Advanced', 3, 'https://example.com/img3.jpg', 'Mastering the craft'),
+('Expert', 4, 'https://example.com/img4.jpg', 'Top-tier professional'),
+('Veteran', 5, 'https://example.com/img5.jpg', 'Years of experience');
