@@ -777,3 +777,11 @@ INSERT INTO Performer (performer_id, performer_name, artist_nband, artist_id, ba
 (65, 'Lil Nas X', 1, 88, NULL),
 (66, 'Sam Smith', 1, 89, NULL),
 (67, 'SZA', 1, 90, NULL);
+
+
+INSERT INTO Likert (scale) VALUES
+(1),
+(2),
+(3),
+(4),
+(5);
