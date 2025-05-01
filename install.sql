@@ -625,7 +625,23 @@ END//
 DELIMITER;
 
 DELIMITER //
-
+CREATE TRIGGER correct_day
+BEFORE INSERT ON Event 
+FOR EACH ROW 
+BEGIN
+    DECLARE s_start_day DATE;
+	SELECT start_day INTO s_start_day
+	FROM Festival 
+	WHERE festival_id = NEW.festival_id;
+	
+	IF DATE(NEW.start_time) <> DATE_ADD(s_start_day, INTERVAL (NEW.festival_day-1) DAY) THEN
+		SIGNAL SQLSTATE '45000'
+	    SET MESSAGE_TEXT = 'Wrong day';
+	END IF;
+END //
+	
+DELIMITER;
+	
 	
 	
 
