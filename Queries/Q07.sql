@@ -3,7 +3,7 @@
 SELECT festival_id FROM (
 SELECT festival_id,AVG(xp) AS average_xp
 FROM Festival f
-JOIN Event e ON e.festival_id = f.festival_id
+JOIN Event_P e ON e.festival_id = f.festival_id
 JOIN Employment em ON em.event_id = e.event_id
 JOIN Staff s ON s.staff_id = em.staff_id 
 where s.role_name = 'Technical'
