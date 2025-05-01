@@ -30,6 +30,11 @@ CREATE TABLE Location (
   CONSTRAINT fk_continent FOREIGN KEY (continent_id) REFERENCES Continent(continent_id)
 );
 
+CREATE TABLE Description (
+  desc_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  descript varchar(40) NOT NULL UNIQUE
+);
+
 CREATE TABLE Stage (
   stage_id integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   stage_name varchar(20) NOT NULL,  
@@ -62,13 +67,6 @@ CREATE TABLE Staff (
   CONSTRAINT fk_experience FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
   ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
-CREATE TABLE Description (
-  desc_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  descript varchar(40) NOT NULL UNIQUE
-);
-
 
 
 CREATE TABLE Equipment (
