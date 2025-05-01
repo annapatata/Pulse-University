@@ -467,3 +467,89 @@ END;/
 	
 DELIMITER ;
 
+
+DELIMITER //
+
+CREATE TRIGGER check_consecutive_years
+BEFORE INSERT ON Performance FOR EACH ROW
+BEGIN
+	DECLARE this_year YEAR;
+	DECLARE cnt INT;
+	
+	SELECT f.festival_id INTO this_year
+	FROM Event e
+	JOIN Festival f ON e.festival_id = f.festival_id
+	WHERE e.event_id = NEW.event_id;
+	
+    SELECT COUNT(py.year_id) INTO cnt
+    FROM PerformerYears py
+    WHERE py.performer_id = performer_id
+      AND py.year_id BETWEEN this_year - 3 AND this_year;
+	
+	IF cnt = 3 
+	THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+	END IF;
+
+    SELECT COUNT(py.year_id) INTO cnt
+    FROM PerformerYears py
+    WHERE py.performer_id = performer_id
+      AND py.year_id BETWEEN this_year - 2 AND this_year + 1;
+	
+	IF cnt = 3 
+	THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+	END IF;
+	
+    SELECT COUNT(py.year_id) INTO cnt
+    FROM PerformerYears py
+    WHERE py.performer_id = performer_id
+      AND py.year_id BETWEEN this_year - 1 AND this_year + 2;
+	
+	IF cnt = 3 
+	THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+	END IF;
+	
+    SELECT COUNT(py.year_id) INTO cnt
+    FROM PerformerYears py
+    WHERE py.performer_id = performer_id
+      AND py.year_id BETWEEN this_year AND this_year + 3;
+	
+	IF cnt = 3 
+	THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+	END IF;
+	
+END//
+DELIMITER ;
+
+DELIMITER //
+
+CREATE TRIGGER update_years
+AFTER INSERT ON Festival FOR EACH ROW 
+BEGIN
+	INSERT INTO Years (years_id) VALUES NEW.festival_id;
+END//
+DELIMITER ;
+
+
+DELIMITER //
+
+CREATE TRIGGER update_perf_years
+AFTER INSERT ON Performance FOR EACH ROW 
+BEGIN 
+	DECLARE this_year YEAR
+	
+	SELECT f.festival_id INTO this_year
+	FROM Event e
+	JOIN Festival f ON e.festival_id = f.festival_id
+	WHERE e.event_id = NEW.event_id;
+	
+	INSERT INTO PerformerYears (performer_id, years_id) VALUES (NEW.performer_id, this_year);
+END//
+DELIMITER ;
