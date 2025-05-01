@@ -66,6 +66,7 @@ INSERT INTO Stage (stage_name, descript, capacity) VALUES
 ('Cloud Nine'),
 ('The Spark');
 
+--10 descriptions
 INSERT INTO Description (descript) VALUES
 ('Open-Air'),
 ('Indoor'),
@@ -78,29 +79,8 @@ INSERT INTO Description (descript) VALUES
 ('Panoramic'),
 ('Intimate');
 
-INSERT INTO Event (event_id, festival_id, stage_id, descript, capacity, start_time, end_time, festival_day) VALUES
-(1, 2018, 1, 'Open-Air', 50, '2018-06-10 12:00:00', '2018-06-10 16:00:00', 1),
-(2, 2018, 12, 'Indoor', 300, '2018-06-10 13:00:00', '2018-06-10 17:00:00', 1),
-(3, 2018, 13, 'Secluded', 150, '2018-06-10 14:00:00', '2018-06-10 18:00:00', 1),
-(4, 2018, 14, 'Spacious', 100, '2018-06-10 15:00:00', '2018-06-10 19:00:00', 1),
-(5, 2018, 5, 'Underground', 80, '2018-06-10 16:00:00', '2018-06-10 20:00:00', 1),
-(6, 2018, 16, 'Outdoor', 70, '2018-06-11 12:00:00', '2018-06-11 16:00:00', 2),
-(7, 2018, 7, 'Cozy', 200, '2018-06-11 13:00:00', '2018-06-11 17:00:00', 2),
-(8, 2018, 8, 'Elevated', 400, '2018-06-11 14:00:00', '2018-06-11 18:00:00', 2),
-(9, 2018, 9, 'Panoramic', 120, '2018-06-11 15:00:00', '2018-06-11 19:00:00', 2),
-(10, 2018, 10, 'Intimate', 100, '2018-06-11 16:00:00', '2018-06-11 20:00:00', 2),
-(11, 2019, 1, 'Open-Air', 600, '2019-07-05 12:00:00', '2019-07-05 16:00:00', 1),
-(12, 2019, 22, 'Indoor', 350, '2019-07-05 13:00:00', '2019-07-05 17:00:00', 1),
-(13, 2019, 23, 'Secluded', 180, '2019-07-05 14:00:00', '2019-07-05 18:00:00', 1),
-(14, 2019, 14, 'Spacious', 110, '2019-07-05 15:00:00', '2019-07-05 19:00:00', 1),
-(15, 2019, 5, 'Underground', 100, '2019-07-05 16:00:00', '2019-07-05 20:00:00', 1),
-(16, 2019, 6, 'Outdoor', 750, '2019-07-06 12:00:00', '2019-07-06 16:00:00', 2),
-(17, 2019, 7, 'Cozy', 250, '2019-07-06 13:00:00', '2019-07-06 17:00:00', 2),
-(18, 2019, 8, 'Elevated', 450, '2019-07-06 14:00:00', '2019-07-06 18:00:00', 2),
-(19, 2019, 9, 'Panoramic', 130, '2019-07-06 15:00:00', '2019-07-06 19:00:00', 2),
-(20, 2019, 10, 'Intimate', 120, '2019-07-06 16:00:00', '2019-07-06 20:00:00', 2)
 
---
+--10 equipment
 INSERT INTO Equipment (equip_id, image, image_caption) VALUES
 ('EQP-001', 'https://example.com/images/drill.jpg', 'Heavy-duty power drill'),
 ('EQP-002', 'https://example.com/images/saw.jpg', 'Circular saw 2000W'),
@@ -166,12 +146,13 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (49, 2026, 25, '2026-08-24 12:00:00', '2026-08-24 16:00:00', 5),
 (50, 2026, 26, '2026-08-24 13:30:00', '2026-08-24 17:30:00', 5);
 
-
+-- 3 roles
 INSERT INTO Role (role_name) VALUES
 ('Technician'),
 ('Security'),
 ('Auxiliary');
 
+-- 5 levels of expirience
 INSERT INTO Experience (experience_level) VALUES
 ('Beginner'),
 ('Intermediate'),
