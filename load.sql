@@ -171,3 +171,10 @@ INSERT INTO Role (role_name) VALUES
 ('Technician'),
 ('Security'),
 ('Auxiliary');
+
+INSERT INTO Experience (experience_level) VALUES
+('Beginner'),
+('Intermediate'),
+('Advanced'),
+('Expert'),
+('Master');
