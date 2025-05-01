@@ -66,3 +66,14 @@ INSERT INTO Stage (stage_name) VALUES
 ('Cloud Nine'),
 ('The Spark');
 
+INSERT INTO Description (descript) VALUES
+('Open-Air'),
+('Indoor'),
+('Secluded'),
+('Spacious'),
+('Underground'),
+('Outdoor'),
+('Cozy'),
+('Elevated'),
+('Panoramic'),
+('Intimate');
