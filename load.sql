@@ -1272,3 +1272,14 @@ INSERT INTO Subgenre (subgenre_id, genre_id, image, image_caption) VALUES
 ('Trance', 'Electronic', 'https://example.com/trance.jpg', 'Hypnotic trance music'),
 ('Vaporwave', 'Electronic', 'https://example.com/vaporwave.jpg', 'Retro-futurist vaporwave');
 
+INSERT INTO Genre (genre_id, image, image_caption) VALUES
+('Pop', 'https://example.com/pop.jpg', 'Popular mainstream sound'),
+('Rock', 'https://example.com/rock.jpg', 'Guitar-driven rock music'),
+('Jazz', 'https://example.com/jazz.jpg', 'Smooth and improvisational jazz'),
+('HipHop', 'https://example.com/hiphop.jpg', 'Beats and lyrical flow of hip hop'),
+('Electronic', 'https://example.com/electronic.jpg', 'Synth-heavy electronic music'),
+('Country', 'https://example.com/country.jpg', 'Southern twang and storytelling'),
+('Metal', 'https://example.com/metal.jpg', 'Heavy and aggressive metal sounds'),
+('Blues', 'https://example.com/blues.jpg', 'Soulful blues tradition');
+
+
