@@ -165,3 +165,9 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (48, 2026, 24, '2026-08-23 15:00:00', '2026-08-23 19:00:00', 4),
 (49, 2026, 25, '2026-08-24 12:00:00', '2026-08-24 16:00:00', 5),
 (50, 2026, 26, '2026-08-24 13:30:00', '2026-08-24 17:30:00', 5);
+
+
+INSERT INTO Role (role_name) VALUES
+('Technician'),
+('Security'),
+('Auxiliary');
