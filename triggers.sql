@@ -10,6 +10,7 @@ BEGIN
 	DECLARE num_sold INT;
 	DECLARE r_event_capacity INT;
 	DECLARE r_status BOOL;
+	DECLARE r_stage INT;
 	DECLARE r_time DATETIME;
     
 	SELECT event_id, activated INTO r_event_id, r_status
@@ -20,10 +21,14 @@ BEGIN
 	FROM Ticket
 	WHERE event_id = r_event_id;
 	
-	SELECT capacity, start_time INTO r_event_capacity, r_time
-	FROM Event 
+	SELECT start_time, stage_id INTO r_time, r_stage
+	FROM Event_P 
 	WHERE event_id = r_event_id;
-	
+
+	SELECT capacity INTO  r_event_capacity
+	FROM Stage
+	WHERE stage_id = r_stage;
+      
 	IF num_sold < r_event_capacity 
 	   OR r_status = TRUE
 	   OR r_time < NOW() THEN
