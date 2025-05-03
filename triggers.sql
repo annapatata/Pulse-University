@@ -635,9 +635,9 @@ BEGIN
 	FROM Performance p
 	WHERE p.performance_id= NEW.performance_id;
 
-	IF event_perf IS NOT event_ticket THEN
+	IF event_perf != event_ticket THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+		SET MESSAGE_TEXT = 'Performance does not match ticket';
 	END IF;
 
 END $$
