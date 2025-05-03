@@ -140,7 +140,7 @@ BEGIN
     WHERE start_time >=NEW.end_time AND event_id = NEW.event_id;
 
     IF prev_end IS NOT NULL THEN
-        IF TIMESTAMPDIFF(MINUTE,NEW.end_time,next_start) NOT BETWEEN 5 AND 30 
+        IF TIMESTAMPDIFF(MINUTE,NEW.end_time,next_start) NOT BETWEEN 5 AND 30 THEN
             SIGNAL SQLSTATE '45000'
             SET MESSAGE_TEXT = 'There must be a break between performances of at least 5 and at most 30 minutes';
         END IF;
