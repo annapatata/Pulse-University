@@ -197,7 +197,7 @@ CREATE TABLE PerformerSubgenre (
 );
 
 CREATE TABLE Years (
-	year_id YEAR PRIMARY KEY NOT NULL
+	years_id YEAR PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE PerformerYears (
