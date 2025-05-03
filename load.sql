@@ -159,7 +159,7 @@ INSERT INTO Experience (experience_level, xp, image, image_caption) VALUES
 ('Veteran', 5, 'https://example.com/img5.jpg', 'Years of experience');
 
 
-INSERT INTO Staff (first_name, last_name, age, experience_level, role_id, image, image_caption) VALUES
+INSERT INTO Staff (first_name, last_name, age, xp, role_id, image, image_caption) VALUES
 ('John', 'Doe', 25, 1, 1, 'https://example.com/john_doe.jpg', 'A dedicated auxiliary staff member'),
 ('Jane', 'Smith', 30, 2, 2, 'https://example.com/jane_smith.jpg', 'A skilled technician with years of experience'),
 ('Alice', 'Johnson', 28, 3, 3, 'https://example.com/alice_johnson.jpg', 'Security team lead with advanced expertise'),
