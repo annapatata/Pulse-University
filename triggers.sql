@@ -26,7 +26,7 @@ BEGIN
 	FROM Event_P
 	WHERE event_id=NEW.event_id;
 
-	IF (NEW.start_time <= start_event OR NEW.end_time >= end_event) THEN
+	IF (NEW.start_time <= end_event OR NEW.end_time >= start_event) THEN
         	SIGNAL SQLSTATE '45000'
         	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
     	END IF;
