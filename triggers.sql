@@ -64,36 +64,30 @@ BEGIN
     DECLARE sec_staff_count INT;
     DECLARE event_capacity INT;
     DECLARE help_staff_count INT;
-    DECLARE staff_role_id INT;
-    
-    SELECT role_id INTO staff_role_id
-    FROM Staff
-    WHERE staff_id = NEW.staff_id;
-    
+
     SELECT s.capacity INTO event_capacity
-    FROM Event_P e JOIN Stage s ON e.stage_id = s.stage_id
+    FROM Event_P e 
+    JOIN Stage s ON e.stage_id = s.stage_id
     WHERE event_id = NEW.event_id;
     
-    IF staff_role_id = 3 THEN
-    	SELECT COUNT(*) INTO sec_staff_count
-    	FROM Employment e JOIN Staff s ON e.staff_id=s.staff_id
-    	WHERE  s.role_id=3  AND e.event_id = NEW.event_id;
-     	IF sec_staff_count < 0.05*event_capacity THEN
-        	SIGNAL SQLSTATE '45000'
-        	SET MESSAGE_TEXT = 'Too few security staff in this event';
-        END IF;
-	END IF;
-    
-	IF staff_role_id = 1 THEN
-    	SELECT COUNT(*) INTO help_staff_count
-    	FROM Employment e JOIN Staff s ON e.staff_id = s.staff_id
-    	WHERE s.role_id=1 AND e.event_id = NEW.event_id;
-
-    	IF help_staff_count < 0.02*event_capacity THEN
-        	SIGNAL SQLSTATE '45000'
-        	SET MESSAGE_TEXT = 'Too few help staff in this event';
-    	END IF;
+    SELECT COUNT(*) INTO sec_staff_count
+    FROM Employment e JOIN Staff s ON e.staff_id=s.staff_id
+    WHERE  s.role_id=3  AND e.event_id = NEW.event_id;
+    IF sec_staff_count < 0.05*event_capacity THEN
+	SIGNAL SQLSTATE '45000'
+	SET MESSAGE_TEXT = 'Too few security staff in this event';
     END IF;
+    
+
+    SELECT COUNT(*) INTO help_staff_count
+    FROM Employment e JOIN Staff s ON e.staff_id = s.staff_id
+    WHERE s.role_id=1 AND e.event_id = NEW.event_id;
+
+    IF help_staff_count < 0.02*event_capacity THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Too few help staff in this event';
+    END IF;
+  
 END$$
 DELIMITER ;
 
