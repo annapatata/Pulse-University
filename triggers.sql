@@ -7,7 +7,7 @@ BEGIN
  	DECLARE start_event DATETIME;
 	DECLARE end_event DATETIME;
 
-	SELECT start_time, end_time,
+	SELECT start_time, end_time
 	INTO start_event, end_event
 	FROM Event_P
 	WHERE event_id=NEW.event_id;
