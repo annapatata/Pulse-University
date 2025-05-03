@@ -13,7 +13,7 @@ CREATE TABLE Festival (
 
 CREATE TABLE Continent (
   continent_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  continent_name varchar(20),
+  continent_name varchar(20) UNIQUE,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null
 );
