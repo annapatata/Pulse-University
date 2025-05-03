@@ -276,12 +276,13 @@ CREATE TABLE Buyer (
    buyer_id INT AUTO_INCREMENT PRIMARY KEY,
    visitor_id INT NOT NULL,
    ticket_type VARCHAR(10),
-   EAN VARCHAR(13) CHECK (
-	(EAN IS NOT NULL AND event_id IS NULL AND ticket_type IS NULL) OR
-	(EAN IS NULL AND event_id IS NOT NULL AND ticket_type IS NOT NULL) 
-),
+   EAN VARCHAR(13),
    event_id INT,
    purchase_interest TIMESTAMP NOT NULL,
+   CHECK (
+	(EAN IS NOT NULL AND event_id IS NULL AND ticket_type IS NULL) OR
+	(EAN IS NULL AND event_id IS NOT NULL AND ticket_type IS NOT NULL) 
+   ),
    FOREIGN KEY (EAN) REFERENCES Resale_queue(EAN) ON DELETE CASCADE,
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id),
    FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
