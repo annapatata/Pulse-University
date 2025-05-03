@@ -379,7 +379,7 @@ BEGIN
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
 	END IF;
 
     SELECT COUNT(py.years_id) INTO cnt
@@ -390,7 +390,7 @@ BEGIN
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
 	END IF;
 	
     SELECT COUNT(py.years_id) INTO cnt
@@ -401,7 +401,7 @@ BEGIN
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
 	END IF;
 	
     SELECT COUNT(py.years_id) INTO cnt
@@ -412,7 +412,7 @@ BEGIN
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
 	END IF;
 END//
 DELIMITER ;
