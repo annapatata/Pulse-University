@@ -209,6 +209,9 @@ CREATE TABLE PerformerYears (
 	ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
+CREATE TABLE PerformanceTypes (
+	type_id VARCHAR(30) PRIMARY KEY
+);
 
 CREATE TABLE Performance(
   performance_id int PRIMARY KEY NOT NULL,
@@ -227,10 +230,6 @@ CREATE TABLE Performance(
   ON DELETE RESTRICT ON UPDATE CASCADE,
   FOREIGN KEY (type_id) REFERENCES PerformanceTypes(type_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
-);
-
-CREATE TABLE PerformanceTypes (
-	type_id VARCHAR(30) PRIMARY KEY
 );
 
 CREATE TABLE Visitor (
