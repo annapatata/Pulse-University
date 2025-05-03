@@ -236,7 +236,7 @@ FOR EACH ROW
 BEGIN
     DECLARE cnt INT;
 
-    SELECT COUNT(*)  cnt FROM Performance
+    SELECT COUNT(*) INTO cnt FROM Performance
     WHERE performer_id = OLD.performer_id
     AND start_time > CURRENT_TIME;
 
