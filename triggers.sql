@@ -243,7 +243,7 @@ BEGIN
         SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform";
     END IF;
 END//
-DELIMITER;
+DELIMITER ;
 
 
 -- prevent an artist from performing in two stages at once
@@ -428,8 +428,8 @@ END//
 DELIMITER ;
 
 
+DROP TRIGGER IF EXISTS update_perf_years;
 DELIMITER //
-
 CREATE TRIGGER update_perf_years
 AFTER INSERT ON Performance FOR EACH ROW 
 BEGIN 
