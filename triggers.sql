@@ -71,7 +71,7 @@ BEGIN
     WHERE staff_id = NEW.staff_id;
     
     SELECT capacity INTO event_capacity
-    FROM Event_P
+    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
     WHERE event_id = NEW.event_id;
     
     IF staff_role_id = 3 THEN
@@ -170,9 +170,9 @@ BEGIN
     FROM Ticket t
     WHERE t.event_id=NEW.event_id;
 
-    SELECT capacity AS cap
-    FROM Event e
-    WHERE e.event_id = NEW.event_id;
+    SELECT capacity INTO event_capacity
+    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
+    WHERE event_id = NEW.event_id;
 
     IF (ticket_count>cap) THEN 
         SIGNAL SQLSTATE '45000'
