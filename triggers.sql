@@ -10,11 +10,10 @@ BEGIN
     		SET MESSAGE_TEXT = 'Invalid performer: must have either artist_id or band_id depending on artist_nband';
 	END IF;
 END//
-
 DELIMITER ;
 
-DELIMITER $$
-	
+DROP TRIGGER IF EXISTS performance_in_event;
+DELIMITER $$	
 CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -32,11 +31,11 @@ BEGIN
         	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
     	END IF;
 END $$
-
 DELIMITER ;
 
-DELIMITER $$
 
+DROP TRIGGER IF EXISTS check_stage_overlap;
+DELIMITER $$
 CREATE TRIGGER check_stage_overlap
 BEFORE INSERT ON Event_P
 FOR EACH ROW
@@ -53,11 +52,11 @@ BEGIN
         SET MESSAGE_TEXT = "Stage is used at that time";
     END IF;
 END $$
-
 DELIMITER ;
 
-DELIMITER $$ 
 
+DROP TRIGGER IF EXISTS performer_before_insert;
+DELIMITER $$ 
 BEGIN
     DECLARE sec_staff_count INT;
     DECLARE event_capacity INT;
@@ -97,33 +96,31 @@ END
 
 DELIMITER ;
 
+
+DROP TRIGGER IF EXISTS staff_overlap;
 DELIMITER $$ 
+CREATE TRIGGER staff_overlap
+BEFORE INSERT ON Employment
+FOR EACH ROW
 BEGIN
     DECLARE count_staff INT;
-	DECLARE new_start DATETIME;
-    DECLARE new_end DATETIME;
-    
-    SELECT start_time, end_time INTO new_start,new_end
-    FROM Event_P
-    WHERE event_id = NEW.event_id;
-    
+
     SELECT COUNT(*) INTO count_staff
     FROM Employment em
     JOIN Event_P ev ON em.event_id = ev.event_id
-    WHERE em.staff_id = NEW.staff_id 
-    AND (new_end > ev.start_time OR new_start <ev.end_time);
+    JOIN Event_P ev2 ON NEW.event_id = ev2.event_id
+    WHERE staff_id = NEW.staff_id 
+    AND DATE(ev.start_time) = DATE(ev2.start_time);
 
-    IF (count_staff>0) THEN
+    IF (count_staff>1) THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Overlapping Staff';
     END IF;
 END$$
-
 DELIMITER ;
 
+DROP TRIGGER IF EXISTS break;
 DELIMITER $$ 
-
-
 CREATE TRIGGER break
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -154,12 +151,11 @@ BEGIN
     END IF;
 
 END$$
-
 DELIMITER ;
 
+
+DROP TRIGGER IF EXISTS check_ticket_count;
 DELIMITER $$ 
-
-
 CREATE TRIGGER check_ticket_count
 BEFORE INSERT ON Ticket
 FOR EACH ROW
@@ -180,11 +176,12 @@ BEGIN
         SET MESSAGE_TEXT = 'Tickets are sold out';
     END IF;
 END$$
-
 DELIMITER ;
 
-DELIMITER $$ 
 
+
+DROP TRIGGER IF EXISTS check_vip_tickets;
+DELIMITER $$ 
 CREATE TRIGGER check_vip_tickets
 BEFORE INSERT ON Ticket
 FOR EACH ROW
@@ -205,11 +202,11 @@ BEGIN
         SET MESSAGE_TEXT = 'VIP section is sold out';
     END IF;
 END$$
-
 DELIMITER ;
 
-DELIMITER $$ 
 
+DROP TRIGGER IF EXISTS check_activated_review;
+DELIMITER $$ 
 CREATE TRIGGER check_activated_review
 BEFORE INSERT ON Review
 FOR EACH ROW
@@ -225,11 +222,11 @@ BEGIN
         SET MESSAGE_TEXT = 'Non-activated tickets are not eligible for reviews';
     END IF;
 END$$
-
 DELIMITER ;
 
-DELIMITER //
 
+DROP TRIGGER IF EXISTS delete_future_performances;
+DELIMITER //
 CREATE TRIGGER delete_future_performances
 BEFORE DELETE ON Performer
 FOR EACH ROW
@@ -245,13 +242,12 @@ BEGIN
         SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform"
     END IF;
 END//
-
 DELIMITER;
 
 
 -- prevent an artist from performing in two stages at once
+DROP TRIGGER IF EXISTS check_double_perform;
 DELIMITER //
-
 CREATE TRIGGER check_double_perform
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -314,12 +310,13 @@ BEGIN
         SET MESSAGE_TEXT = 'An artist cannot be at two places at once.';
     END IF;
 END//
-	
 DELIMITER ;
 
--- update the id on the Performer table when a performer is added by name
-DELIMITER //
 
+
+-- update the id on the Performer table when a performer is added by name
+DROP TRIGGER IF EXISTS update_ids;
+DELIMITER //
 CREATE TRIGGER update_ids
 AFTER INSERT ON Performer FOR EACH ROW 
 BEGIN 
@@ -357,13 +354,12 @@ BEGIN
 			SET band_id = id
 		WHERE performer_id = NEW.performer_id		
 	END IF;
-END;/
-	
+END//
 DELIMITER ;
 
 
+DROP TRIGGER IF EXISTS check_consecutive_years;
 DELIMITER //
-
 CREATE TRIGGER check_consecutive_years
 BEFORE INSERT ON Performance FOR EACH ROW
 BEGIN
@@ -418,12 +414,12 @@ BEGIN
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
-	
 END//
 DELIMITER ;
 
-DELIMITER //
 
+DROP TRIGGER IF EXISTS update_years;
+DELIMITER //
 CREATE TRIGGER update_years
 AFTER INSERT ON Festival FOR EACH ROW 
 BEGIN
@@ -448,8 +444,9 @@ BEGIN
 END//
 DELIMITER ;
 
-DELIMITER //
 
+DROP TRIGGER IF EXISTS update_part;
+DELIMITER //
 CREATE TRIGGER update_part
 AFTER INSERT ON Performance FOR EACH ROW
 BEGIN
@@ -480,12 +477,12 @@ BEGIN
 		SET a.participations = a.participations + 1
 		WHERE bm.band_id = id;
 	END IF;
-
 END//
 DELIMITER ;
 
-DELIMITER $$
 
+DROP TRIGGER IF EXISTS check_event_sold_out;
+DELIMITER $$
 CREATE TRIGGER check_event_sold_out
 BEFORE INSERT ON Resale_queue
 FOR EACH ROW
@@ -520,13 +517,11 @@ BEGIN
 	   SET MESSAGE_TEXT = 'Ticket cannot be resold.';
 	END IF;
 END$$
-
 DELIMITER ;
 
 
-
+DROP TRIGGER IF EXISTS remove_from_resale_if_activated;
 DELIMITER $$
-
 CREATE TRIGGER remove_from_resale_if_activated
 AFTER UPDATE ON Ticket
 FOR EACH ROW
@@ -536,13 +531,11 @@ BEGIN
         WHERE EAN = NEW.EAN;
     END IF;
 END$$
-
 DELIMITER ;
 
 
-
+DROP TRIGGER IF EXISTS match_on_resale;
 DELIMITER $$
-
 CREATE TRIGGER match_on_resale
 AFTER INSERT ON Resale_queue
 FOR EACH ROW
@@ -578,12 +571,11 @@ BEGIN
 	END IF;
 		
 	END$$
-	
 DELIMITER ;
 
 
+DROP TRIGGER IF EXISTS match_on_buyer;
 DELIMITER $$
-
 CREATE TRIGGER match_on_buyer
 AFTER INSERT ON Buyer
 FOR EACH ROW
@@ -633,6 +625,4 @@ BEGIN
 	END IF	
 	
 	END$$
-	
-
 DELIMITER ;
