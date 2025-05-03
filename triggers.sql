@@ -234,15 +234,15 @@ CREATE TRIGGER delete_future_performances
 BEFORE DELETE ON Performer
 FOR EACH ROW
 BEGIN
-    DECLARE count INT;
+    DECLARE cnt INT;
 
-    SELECT COUNT() AS count FROM Performance
+    SELECT COUNT(*)  cnt FROM Performance
     WHERE performer_id = OLD.performer_id
     AND start_time > CURRENT_TIME;
 
-    IF COUNT()>0 THEN 
+    IF cnt>0 THEN 
     SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform"
+        SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform";
     END IF;
 END//
 DELIMITER;
@@ -262,14 +262,14 @@ BEGIN
     FROM Performer
     WHERE performer_id = NEW.performer_id;
 
-	--if it s a solo performance
+	-- if it s a solo performance
     IF solo THEN
-		--find the new artist
+		-- find the new artist
 		DECLARE artist VARCHAR(30);
 		SELECT artist_id INTO artist
 		FROM Performer 
 		WHERE performer_id = NEW.performer_id
-		--find all the artists that perfom (solo or with band) and check if the new artist has overlaps in time with himself
+		-- find all the artists that perfom (solo or with band) and check if the new artist has overlaps in time with himself
         SELECT COUNT(*) INTO cnt
         FROM Performance p
         JOIN Performer perf ON p.performer_id = perf.performer_id
@@ -285,21 +285,21 @@ BEGIN
             (p.start_time BETWEEN NEW.start_time AND NEW.end_time)
         );
 
-	--if it s a band performance
+	-- if it s a band performance
     ELSE
 		SELECT COUNT(*) INTO cnt
 		FROM (
 			SELECT P.performer_id, p.start_time, p.end_time, perf.artist_nband, perf.artist_id, perf.band_id
 			FROM Performance p JOIN Performer perf ON p.performer_id = perf.performer_id
-		) AS double_perf --all the performances asociated with their performers
+		) AS double_perf -- all the performances asociated with their performers
 		JOIN BandMembers bm
 		ON (
 			(double_perf.artist_nband = TRUE AND bm.artist_id = double_perf.artist_id) --all the artists that perform and belong to a band 
 			OR (double_perf.artist_nband = FALSE AND bm.artist_id = (
 				SELECT artist_id FROM BandMembers WHERE band_id = double_perf.band_id
 				)
-			) --all the artists whose band performs
-		) --all the performing artists
+			) -- all the artists whose band performs
+		) -- all the performing artists
 		WHERE bm.band_id = (SELECT band_if FROM Performer WHERE Performer_id = NEW.performer_id)
 		AND (
 		    (NEW.start_time BETWEEN double_perf.start_time AND double_perf.end_time) OR
