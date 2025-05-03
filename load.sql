@@ -1365,7 +1365,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 48
 (48, 89.99, 159, 'General', 'Debit', '2026-08-28 09:12:19', '9044567890428', 1, 'https://example.com/tickets/48-19.jpg', 'General admission for Special performances'),
-(48, 199.99, 160, 'VIP', 'Credit', '2026-08-29 12:27:45', '0154567890428', 1, 'https://example.com/tickets/48-20.jpg', 'VIP access for Special performances');
+(48, 199.99, 160, 'VIP', 'Credit', '2026-08-29 12:27:45', '0154567890428', 1, 'https://example.com/tickets/48-20.jpg', 'VIP access for Special performances')
 
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
