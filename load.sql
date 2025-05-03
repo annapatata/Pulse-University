@@ -921,7 +921,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (20, 89.99, 89, 'General', 'Debit', '2020-07-14 09:12:19', '9934567890124', 1, 'https://example.com/tickets/20-1.jpg', 'General admission for Indie vibes'),
 (20, 199.99, 90, 'VIP', 'Credit', '2020-07-15 12:27:45', '0044567890124', 1, 'https://example.com/tickets/20-2.jpg', 'VIP access for Indie vibes'),
 (20, 299.99, 91, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
-(20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes')
+(20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes'),
  -- Event 21: Classical music fills the air (2020-08-03)
 (21, 89.99, 93, 'General', 'Cash', '2020-07-18 10:22:10', '3344567890124', 1, 'https://example.com/tickets/21-1.jpg', 'General admission for Classical music'),
 (21, 199.99, 94, 'VIP', 'Paypal', '2020-07-19 11:15:33', '4444567890124', 1, 'https://example.com/tickets/21-2.jpg', 'VIP access for Classical music'),
