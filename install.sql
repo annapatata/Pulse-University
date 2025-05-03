@@ -202,10 +202,10 @@ CREATE TABLE Years (
 
 CREATE TABLE PerformerYears (
 	performer_id INT NOT NULL,
-	year_id YEAR NOT NULL,
+	years_id YEAR NOT NULL,
 	FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
 	ON DELETE CASCADE ON UPDATE RESTRICT,
-	FOREIGN KEY (year_id) REFERENCES Years(year_id)
+	FOREIGN KEY (years_id) REFERENCES Years(years_id)
 	ON DELETE RESTRICT ON UPDATE RESTRICT
 );
 
@@ -355,7 +355,7 @@ CREATE INDEX idx_performer_band_id ON Performer(band_id); -- used in triggers
 
 -- PerformerYears indexes
 CREATE INDEX idx_py_performer_id ON PerformerYears(performer_id); -- q02
-CREATE INDEX idx_py_year_id ON PerformerYears(year_id); -- q02
+CREATE INDEX idx_py_years_id ON PerformerYears(years_id); -- q02
 
 -- PerformerSubgenre indexes
 CREATE INDEX idx_performersubgenre_performer_id ON PerformerSubgenre(performer_id); -- q02
