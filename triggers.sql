@@ -57,35 +57,42 @@ DELIMITER ;
 
 DELIMITER $$ 
 
-CREATE TRIGGER check_security_help_staff
-BEFORE INSERT ON Employment
-FOR EACH ROW
 BEGIN
     DECLARE sec_staff_count INT;
     DECLARE event_capacity INT;
     DECLARE help_staff_count INT;
-
-    SELECT COUNT(*) INTO sec_staff_count
-    FROM Employment 
-    WHERE role_name = NEW.role_name AND event_id = NEW.event_id;
-
-    SELECT COUNT(*) INTO help_staff_count
-    FROM Employment 
-    WHERE role_name = NEW.role_name AND event_id = NEW.event_id;
-
+    DECLARE staff_role_name VARCHAR(50);
+    
+    SELECT role_name INTO staff_role_name
+    FROM Staff
+    WHERE staff_id = NEW.staff_id;
+    
     SELECT capacity INTO event_capacity
     FROM Event_P
     WHERE event_id = NEW.event_id;
+    
+    IF staff_role_name = 'Security' THEN
+    	SELECT COUNT(*) INTO sec_staff_count
+    	FROM Employment e JOIN Staff s ON e.staff_id=s.staff_id
+    	WHERE  s.role_name='Security'  AND e.event_id = NEW.event_id;
+     	IF sec_staff_count >= 0.05*event_capacity THEN
+        	SIGNAL SQLSTATE '45000'
+        	SET MESSAGE_TEXT = 'Too many security staff in this event';
+        END IF;
+	END IF;
+    
+	IF staff_role_name = 'Auxiliary' THEN
+    	SELECT COUNT(*) INTO help_staff_count
+    	FROM Employment e JOIN Staff s ON e.staff_id = s.staff_id
+    	WHERE s.role_name='Auxiliary' AND e.event_id = NEW.event_id;
 
-    IF sec_staff_count >= 0.05*event_capacity THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Too many security staff in this event';
+    	IF help_staff_count >= 0.02*event_capacity THEN
+        	SIGNAL SQLSTATE '45000'
+        	SET MESSAGE_TEXT = 'Too many help staff in this event';
+    	END IF;
     END IF;
-    IF help_staff_count >= 0.02*event_capacity THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Too many help staff in this event';
-    END IF;
-END $$
+    
+END
 
 DELIMITER ;
 
