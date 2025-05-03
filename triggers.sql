@@ -298,7 +298,7 @@ BEGIN
 				)
 			) -- all the artists whose band performs
 		) -- all the performing artists
-		WHERE bm.band_id = (SELECT band_if FROM Performer WHERE Performer_id = NEW.performer_id)
+		WHERE bm.band_id = (SELECT band_id FROM Performer WHERE Performer_id = NEW.performer_id)
 		AND (
 		    (NEW.start_time BETWEEN double_perf.start_time AND double_perf.end_time) OR
             (NEW.end_time BETWEEN double_perf.start_time AND double_perf.end_time) OR
