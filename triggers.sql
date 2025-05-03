@@ -1,3 +1,17 @@
+DELIMITER //
+
+CREATE TRIGGER performer_before_insert
+BEFORE INSERT ON Performer FOR EACH ROW
+BEGIN
+  	IF (NEW.artist_nband = 1 AND (NEW.artist_id IS NULL OR NEW.band_id IS NOT NULL)) OR
+     	(NEW.artist_nband = 0 AND (NEW.band_id IS NULL OR NEW.artist_id IS NOT NULL)) 
+  	THEN
+    		SIGNAL SQLSTATE '45000' 
+    		SET MESSAGE_TEXT = 'Invalid performer: must have either artist_id or band_id depending on artist_nband';
+	END IF;
+END;
+//
+
 DELIMITER $$
 	
 CREATE TRIGGER performance_in_event
