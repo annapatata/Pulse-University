@@ -616,3 +616,33 @@ BEGIN
 	
 	END$$
 DELIMITER ;
+
+
+DROP TRIGGER IF EXISTS review_attended_performance;
+DELIMITER $$
+CREATE TRIGGER review_attended_performance
+AFTER INSERT ON Review
+FOR EACH ROW
+BEGIN
+	DECLARE event_ticket INT;
+	DECLARE event_perf INT;
+
+	SELECT event_id INTO event_ticket
+	FROM Ticket t
+	WHERE NEW.EAN = t.EAN;
+
+	SELECT event_id INTO event_perf
+	FROM Performance p
+	WHERE p.performance_id= NEW.performance_id;
+
+	IF event_perf IS NOT event_ticket THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
+	END IF;
+
+END $$
+DELIMITER ;
+	
+
+
+
