@@ -1443,7 +1443,7 @@ INSERT INTO PerformerSubgenre (performer_id, subgenre_id) VALUES
 (41, 'Art Pop'),
 (42, 'Blues Gospel'),
 (43, 'Soft Pop'),
-(43, 'Pop Punk'),
+(43, 'Post-Punk'),
 (44, 'Americana'),
 (45, 'Bebop'),
 (46, 'Bebop'),
