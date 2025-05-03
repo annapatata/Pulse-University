@@ -9,8 +9,9 @@ BEGIN
     		SIGNAL SQLSTATE '45000' 
     		SET MESSAGE_TEXT = 'Invalid performer: must have either artist_id or band_id depending on artist_nband';
 	END IF;
-END;
-//
+END//
+
+DELIMITER ;
 
 DELIMITER $$
 	
