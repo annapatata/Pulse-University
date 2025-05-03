@@ -485,7 +485,7 @@ INSERT INTO Artist (artist_id, first_name, last_name, stage_name, birthDATE, web
 
 -- Tame Impala members
 (16, 'Kevin', 'Parker', 'Kevin Parker', '1986-01-20', 'tameimpala.com', 'kevinparker', 5, 'https://example.com/artists/kevin_parker.jpg', 'Tame Impala multi-instrumentalist'),
-(17, 'Dominic', 'Simper', 'Dominic Simper', NULL, NULL, 'dominicsimper', 3, 'https://example.com/artists/dominic_simper.jpg', 'Tame Impala member'),
+(17, 'Dominic', 'Simper', 'Dominic Simper', '1986-01-20', NULL, 'dominicsimper', 3, 'https://example.com/artists/dominic_simper.jpg', 'Tame Impala member'),
 (18, 'Jay', 'Watson', 'Jay Watson', '1987-06-25', NULL, 'jaywatsonmusic', 4, 'https://example.com/artists/jay_watson.jpg', 'Tame Impala multi-instrumentalist'),
 
 -- The Strokes members
