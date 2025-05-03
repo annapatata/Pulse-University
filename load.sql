@@ -2309,3 +2309,15 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (148, 4, 50, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance148.jpg', 'Florence + Machine warming up'),
 (149, 5, 50, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance149.jpg', 'Tame Impala acoustic'),
 (150, 6, 50, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance150.jpg', 'The Strokes closing the festival');
+
+
+INSERT INTO Buyer (visitor_id, EAN, event_id, ticket_type, purchase_interest) VALUES
+(1, '3934567890426', NULL, NULL, '2026-07-11 10:00:00'),
+(2, '1144567890427', NULL, NULL, '2026-07-16 12:00:00'),
+(3, '9944567890428', NULL, NULL, '2026-07-19 09:30:00');
+
+-- Inserts for buyers buying directly (not from resale)
+INSERT INTO Buyer (visitor_id, EAN, event_id, ticket_type, purchase_interest) VALUES
+(4, NULL, 46, 'Premium', '2026-07-05 11:00:00'),
+(5, NULL, 47, 'VIP', '2026-07-07 15:45:00'),
+(6, NULL, 48, 'General', '2026-07-08 14:00:00');
