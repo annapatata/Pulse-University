@@ -70,7 +70,7 @@ BEGIN
     FROM Staff
     WHERE staff_id = NEW.staff_id;
     
-    SELECT capacity INTO event_capacity
+    SELECT s.capacity INTO event_capacity
     FROM Event_P e JOIN Stage s ON e.stage_id = s.stage_id
     WHERE event_id = NEW.event_id;
     
