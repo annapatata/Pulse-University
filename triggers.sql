@@ -71,7 +71,7 @@ BEGIN
     WHERE staff_id = NEW.staff_id;
     
     SELECT capacity INTO event_capacity
-    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
+    FROM Event_P
     WHERE event_id = NEW.event_id;
     
     IF staff_role_id = 3 THEN
@@ -170,9 +170,9 @@ BEGIN
     FROM Ticket t
     WHERE t.event_id=NEW.event_id;
 
-    SELECT capacity INTO cap
-    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
-    WHERE event_id = NEW.event_id;
+    SELECT capacity AS cap
+    FROM Event e
+    WHERE e.event_id = NEW.event_id;
 
     IF (ticket_count>cap) THEN 
         SIGNAL SQLSTATE '45000'
@@ -257,6 +257,7 @@ FOR EACH ROW
 BEGIN
     DECLARE cnt INT ;
     DECLARE solo BOOL;
+    DECLARE artist VARCHAR(30);
 
     SELECT artist_nband INTO solo
     FROM Performer
@@ -265,10 +266,9 @@ BEGIN
 	-- if it s a solo performance
     IF solo THEN
 		-- find the new artist
-		DECLARE artist VARCHAR(30);
 		SELECT artist_id INTO artist
 		FROM Performer 
-		WHERE performer_id = NEW.performer_id
+		WHERE performer_id = NEW.performer_id;
 		-- find all the artists that perfom (solo or with band) and check if the new artist has overlaps in time with himself
         SELECT COUNT(*) INTO cnt
         FROM Performance p
@@ -294,7 +294,7 @@ BEGIN
 		) AS double_perf -- all the performances asociated with their performers
 		JOIN BandMembers bm
 		ON (
-			(double_perf.artist_nband = TRUE AND bm.artist_id = double_perf.artist_id) --all the artists that perform and belong to a band 
+			(double_perf.artist_nband = TRUE AND bm.artist_id = double_perf.artist_id) -- all the artists that perform and belong to a band 
 			OR (double_perf.artist_nband = FALSE AND bm.artist_id = (
 				SELECT artist_id FROM BandMembers WHERE band_id = double_perf.band_id
 				)
@@ -323,13 +323,13 @@ DELIMITER //
 CREATE TRIGGER update_ids
 AFTER INSERT ON Performer FOR EACH ROW 
 BEGIN 
-	DECLARE id INT DEFAULT -1
+	DECLARE id INT DEFAULT -1;
 	
 	IF ( NEW.artist_nband = TRUE)
 	THEN
 		SELECT a.artist_id INTO id
 		FROM Artist a 
-		WHERE a.artist_name = NEW.performer_name
+		WHERE a.artist_name = NEW.performer_name;
 		
 		IF ( id = -1 ) 
 		THEN
@@ -339,13 +339,12 @@ BEGIN
 		
 		UPDATE Performer
 			SET artist_id = id
-		WHERE performer_id = NEW.performer_id
-	END IF;
+		WHERE performer_id = NEW.performer_id;
 	
 	ELSE 
 		SELECT a.band_id INTO id
 		FROM Band b 
-		WHERE b.band_name = NEW.performer_name
+		WHERE b.band_name = NEW.performer_name;
 
 		IF ( id = -1 ) 
 		THEN
@@ -355,7 +354,7 @@ BEGIN
 
 		UPDATE Performer
 			SET band_id = id
-		WHERE performer_id = NEW.performer_id		
+		WHERE performer_id = NEW.performer_id;	
 	END IF;
 END//
 DELIMITER ;
@@ -426,7 +425,7 @@ DELIMITER //
 CREATE TRIGGER update_years
 AFTER INSERT ON Festival FOR EACH ROW 
 BEGIN
-	INSERT INTO Years (years_id) VALUES NEW.festival_id;
+	INSERT INTO Years (years_id) VALUES (NEW.festival_id);
 END//
 DELIMITER ;
 
@@ -436,7 +435,7 @@ DELIMITER //
 CREATE TRIGGER update_perf_years
 AFTER INSERT ON Performance FOR EACH ROW 
 BEGIN 
-	DECLARE this_year YEAR
+	DECLARE this_year YEAR;
 	
 	SELECT f.festival_id INTO this_year
 	FROM Event e
@@ -458,7 +457,7 @@ BEGIN
 
 	SELECT artist_nband INTO solo
 	FROM Performer 
-	WHERE performer_id = NEW.performer_id
+	WHERE performer_id = NEW.performer_id;
 	
 	IF ( solo = TRUE )
 	THEN 
@@ -593,15 +592,15 @@ BEGIN
 		SELECT start_time INTO d_time FROM Event WHERE event_id = d_event;
 		IF d_time > NOW() THEN
 		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
-		END IF
+		END IF;
 		IF d_time < NOW() THEN
 			DELETE FROM Buyer WHERE event_id = d_event;
 			DELETE FROM Resale_queue WHERE EAN IN (
 				SELECT EAN FROM Ticket WHERE event_id = d_event
 			);
-		END IF
+		END IF;
 		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-		END IF
+
 	
 	ELSE
 		SELECT start_time INTO d_time FROM Event WHERE event_id = NEW.event_id;
@@ -611,7 +610,7 @@ BEGIN
 			DELETE FROM Resale_queue WHERE EAN IN (
 				SELECT EAN FROM Ticket WHERE event_id = d_event
 			);
-		END IF
+		END IF;
 		
 	    SELECT EAN INTO d_EAN
 		FROM Resale_queue rq
@@ -624,8 +623,8 @@ BEGIN
 		IF d_EAN IS NOT NULL THEN
 			UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
 			DELETE FROM Resale_queue WHERE EAN = d_EAN;
-		END IF
-	END IF	
+		END IF;
+	END IF	;
 	
 	END$$
 DELIMITER ;
