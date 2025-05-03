@@ -72,13 +72,13 @@ CREATE TABLE Staff (
   first_name varchar(20) NOT NULL,
   last_name varchar(30) NOT NULL,
   age integer NOT NULL,
-  experience_level varchar(20) NOT NULL,
+  xp INT NOT NULL,
   role_id INT NOT NULL,
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
   FOREIGN KEY (role_id) REFERENCES Role(role_id)
   ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (experience_level) REFERENCES Experience(experience_level)
+  FOREIGN KEY (xp) REFERENCES Experience(xp)
   ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -132,7 +132,7 @@ CREATE TABLE Artist (
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   stage_name VARCHAR(30) NOT NULL,
-  birthDATE DATE NOT NULL,
+  birthdate DATE NOT NULL,
   website VARCHAR(30),
   insta VARCHAR(30),
   participations INT NOT NULL DEFAULT 0,
