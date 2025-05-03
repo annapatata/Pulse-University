@@ -1379,6 +1379,60 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (50, 299.99, 155, 'Premium', 'Debit', '2026-07-27 14:22:11', '4434567890125', 0, 'https://example.com/tickets/50-3.jpg', 'Premium experience for Farewell to wonderful year'),
 (50, 499.99, 156, 'Backstage', 'Cash', '2026-07-28 17:45:33', '5534567890123', 1, 'https://example.com/tickets/50-4.jpg', 'Backstage pass for Farewell to wonderful year');
 
+
+INSERT INTO Genre (genre_id, image, image_caption) VALUES
+('Pop', 'https://example.com/pop.jpg', 'Popular mainstream sound'),
+('Rock', 'https://example.com/rock.jpg', 'Guitar-driven rock music'),
+('Jazz', 'https://example.com/jazz.jpg', 'Smooth and improvisational jazz'),
+('HipHop', 'https://example.com/hiphop.jpg', 'Beats and lyrical flow of hip hop'),
+('Electronic', 'https://example.com/electronic.jpg', 'Synth-heavy electronic music'),
+('Country', 'https://example.com/country.jpg', 'Southern twang and storytelling'),
+('Metal', 'https://example.com/metal.jpg', 'Heavy and aggressive metal sounds'),
+('Blues', 'https://example.com/blues.jpg', 'Soulful blues tradition');
+
+INSERT INTO Subgenre (subgenre_id, genre_id, image, image_caption) VALUES
+('Alt Pop', 'Pop', 'https://example.com/altpop.jpg', 'Alternative Pop vibes'),
+('Alternative Rock', 'Rock', 'https://example.com/altrock.jpg', 'Alternative Rock power'),
+('Americana', 'Country', 'https://example.com/americana.jpg', 'Classic Americana tunes'),
+('Art Pop', 'Pop', 'https://example.com/artpop.jpg', 'Experimental pop artistry'),
+('Avant-garde Jazz', 'Jazz', 'https://example.com/avantjazz.jpg', 'Boundary-pushing jazz'),
+('Bebop', 'Jazz', 'https://example.com/bebop.jpg', 'Fast-paced bebop jazz'),
+('Blues Gospel', 'Blues', 'https://example.com/bluesgospel.jpg', 'Spiritual blues fusion'),
+('Blues Rock', 'Rock', 'https://example.com/bluesrock.jpg', 'Blues with a rock edge'),
+('Bubblegum Pop', 'Pop', 'https://example.com/bubblegumpop.jpg', 'Catchy and sweet pop'),
+('Chillwave', 'Electronic', 'https://example.com/chillwave.jpg', 'Lo-fi chillwave tones'),
+('City Pop', 'Pop', 'https://example.com/citypop.jpg', 'Japanese 80s pop'),
+('Dance-Punk', 'Rock', 'https://example.com/dancepunk.jpg', 'Dance and punk collision'),
+('Disco Pop', 'Pop', 'https://example.com/discopop.jpg', 'Groovy disco-infused pop'),
+('Electro', 'Electronic', 'https://example.com/electro.jpg', 'Classic electro beats'),
+('Fresh Jazz', 'Jazz', 'https://example.com/freshjazz.jpg', 'New wave jazz fusion'),
+('Funk Rock', 'Rock', 'https://example.com/funkrock.jpg', 'Funky rock rhythms'),
+('Garage Rock', 'Rock', 'https://example.com/garagerock.jpg', 'Raw garage rock energy'),
+('Glam Pop', 'Pop', 'https://example.com/glampop.jpg', 'Glamorous pop hits'),
+('Gothic Metal', 'Metal', 'https://example.com/gothicmetal.jpg', 'Dark, melodic metal'),
+('Gypsy Jazz', 'Jazz', 'https://example.com/gypsyjazz.jpg', 'Django-style jazz vibes'),
+('Hip Hop Old School', 'HipHop', 'https://example.com/oldschoolhiphop.jpg', 'Old-school hip hop'),
+('Honky Tonk', 'Country', 'https://example.com/honkytonk.jpg', 'Honky tonk classics'),
+('Horrorcore', 'HipHop', 'https://example.com/horrorcore.jpg', 'Dark horror-themed rap'),
+('Indie Pop', 'Pop', 'https://example.com/indiepop.jpg', 'Indie-style pop songs'),
+('Indie Rock', 'Rock', 'https://example.com/indierock.jpg', 'Independent rock spirit'),
+('Jazz Rap', 'HipHop', 'https://example.com/jazzrap.jpg', 'Smooth jazz meets rap'),
+('Jump Blues', 'Blues', 'https://example.com/jumpblues.jpg', 'Upbeat swing-influenced blues'),
+('Math Rock', 'Rock', 'https://example.com/mathrock.jpg', 'Rhythmically complex rock'),
+('Outlaw Country', 'Country', 'https://example.com/outlawcountry.jpg', 'Rebellious country sound'),
+('Post-Punk', 'Rock', 'https://example.com/postpunk.jpg', 'Dark, edgy post-punk'),
+('Psychedelic Rock', 'Rock', 'https://example.com/psyrock.jpg', 'Trippy psychedelic rock'),
+('Shoegaze', 'Rock', 'https://example.com/shoegaze.jpg', 'Dreamy shoegaze tones'),
+('Soft Pop', 'Pop', 'https://example.com/softpop.jpg', 'Gentle pop melodies'),
+('Stoner Rock', 'Rock', 'https://example.com/stonerrock.jpg', 'Heavy, groovy stoner rock'),
+('Swing', 'Jazz', 'https://example.com/swing.jpg', 'Big band swing jazz'),
+('Thrash Metal', 'Metal', 'https://example.com/thrashmetal.jpg', 'Fast and aggressive metal'),
+('Traditional Country', 'Country', 'https://example.com/traditionalcountry.jpg', 'Classic country style'),
+('Trance', 'Electronic', 'https://example.com/trance.jpg', 'Hypnotic trance music'),
+('Vaporwave', 'Electronic', 'https://example.com/vaporwave.jpg', 'Retro-futurist vaporwave');
+
+
+
 -- Populating the PerformerSubgenre table with performers and their respective subgenres
 INSERT INTO PerformerSubgenre (performer_id, subgenre_id) VALUES
 (1, 'Indie Rock'),
@@ -1476,57 +1530,6 @@ INSERT INTO PerformerSubgenre (performer_id, subgenre_id) VALUES
 (65, 'Bubblegum Pop'),
 (66, 'Thrash Metal'),
 (67, 'Gothic Metal');
-
-INSERT INTO Subgenre (subgenre_id, genre_id, image, image_caption) VALUES
-('Alt Pop', 'Pop', 'https://example.com/altpop.jpg', 'Alternative Pop vibes'),
-('Alternative Rock', 'Rock', 'https://example.com/altrock.jpg', 'Alternative Rock power'),
-('Americana', 'Country', 'https://example.com/americana.jpg', 'Classic Americana tunes'),
-('Art Pop', 'Pop', 'https://example.com/artpop.jpg', 'Experimental pop artistry'),
-('Avant-garde Jazz', 'Jazz', 'https://example.com/avantjazz.jpg', 'Boundary-pushing jazz'),
-('Bebop', 'Jazz', 'https://example.com/bebop.jpg', 'Fast-paced bebop jazz'),
-('Blues Gospel', 'Blues', 'https://example.com/bluesgospel.jpg', 'Spiritual blues fusion'),
-('Blues Rock', 'Rock', 'https://example.com/bluesrock.jpg', 'Blues with a rock edge'),
-('Bubblegum Pop', 'Pop', 'https://example.com/bubblegumpop.jpg', 'Catchy and sweet pop'),
-('Chillwave', 'Electronic', 'https://example.com/chillwave.jpg', 'Lo-fi chillwave tones'),
-('City Pop', 'Pop', 'https://example.com/citypop.jpg', 'Japanese 80s pop'),
-('Dance-Punk', 'Rock', 'https://example.com/dancepunk.jpg', 'Dance and punk collision'),
-('Disco Pop', 'Pop', 'https://example.com/discopop.jpg', 'Groovy disco-infused pop'),
-('Electro', 'Electronic', 'https://example.com/electro.jpg', 'Classic electro beats'),
-('Fresh Jazz', 'Jazz', 'https://example.com/freshjazz.jpg', 'New wave jazz fusion'),
-('Funk Rock', 'Rock', 'https://example.com/funkrock.jpg', 'Funky rock rhythms'),
-('Garage Rock', 'Rock', 'https://example.com/garagerock.jpg', 'Raw garage rock energy'),
-('Glam Pop', 'Pop', 'https://example.com/glampop.jpg', 'Glamorous pop hits'),
-('Gothic Metal', 'Metal', 'https://example.com/gothicmetal.jpg', 'Dark, melodic metal'),
-('Gypsy Jazz', 'Jazz', 'https://example.com/gypsyjazz.jpg', 'Django-style jazz vibes'),
-('Hip Hop Old School', 'HipHop', 'https://example.com/oldschoolhiphop.jpg', 'Old-school hip hop'),
-('Honky Tonk', 'Country', 'https://example.com/honkytonk.jpg', 'Honky tonk classics'),
-('Horrorcore', 'HipHop', 'https://example.com/horrorcore.jpg', 'Dark horror-themed rap'),
-('Indie Pop', 'Pop', 'https://example.com/indiepop.jpg', 'Indie-style pop songs'),
-('Indie Rock', 'Rock', 'https://example.com/indierock.jpg', 'Independent rock spirit'),
-('Jazz Rap', 'HipHop', 'https://example.com/jazzrap.jpg', 'Smooth jazz meets rap'),
-('Jump Blues', 'Blues', 'https://example.com/jumpblues.jpg', 'Upbeat swing-influenced blues'),
-('Math Rock', 'Rock', 'https://example.com/mathrock.jpg', 'Rhythmically complex rock'),
-('Outlaw Country', 'Country', 'https://example.com/outlawcountry.jpg', 'Rebellious country sound'),
-('Post-Punk', 'Rock', 'https://example.com/postpunk.jpg', 'Dark, edgy post-punk'),
-('Psychedelic Rock', 'Rock', 'https://example.com/psyrock.jpg', 'Trippy psychedelic rock'),
-('Shoegaze', 'Rock', 'https://example.com/shoegaze.jpg', 'Dreamy shoegaze tones'),
-('Soft Pop', 'Pop', 'https://example.com/softpop.jpg', 'Gentle pop melodies'),
-('Stoner Rock', 'Rock', 'https://example.com/stonerrock.jpg', 'Heavy, groovy stoner rock'),
-('Swing', 'Jazz', 'https://example.com/swing.jpg', 'Big band swing jazz'),
-('Thrash Metal', 'Metal', 'https://example.com/thrashmetal.jpg', 'Fast and aggressive metal'),
-('Traditional Country', 'Country', 'https://example.com/traditionalcountry.jpg', 'Classic country style'),
-('Trance', 'Electronic', 'https://example.com/trance.jpg', 'Hypnotic trance music'),
-('Vaporwave', 'Electronic', 'https://example.com/vaporwave.jpg', 'Retro-futurist vaporwave');
-
-INSERT INTO Genre (genre_id, image, image_caption) VALUES
-('Pop', 'https://example.com/pop.jpg', 'Popular mainstream sound'),
-('Rock', 'https://example.com/rock.jpg', 'Guitar-driven rock music'),
-('Jazz', 'https://example.com/jazz.jpg', 'Smooth and improvisational jazz'),
-('HipHop', 'https://example.com/hiphop.jpg', 'Beats and lyrical flow of hip hop'),
-('Electronic', 'https://example.com/electronic.jpg', 'Synth-heavy electronic music'),
-('Country', 'https://example.com/country.jpg', 'Southern twang and storytelling'),
-('Metal', 'https://example.com/metal.jpg', 'Heavy and aggressive metal sounds'),
-('Blues', 'https://example.com/blues.jpg', 'Soulful blues tradition');
 
 -- Employment table population script
 
