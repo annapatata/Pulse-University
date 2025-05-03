@@ -231,7 +231,7 @@ CREATE TABLE Performance(
 );
 
 CREATE TABLE PerformanceTypes (
-	type_id VARCHAR(10) PRIMARY KEY
+	type_id VARCHAR(30) PRIMARY KEY
 );
 
 CREATE TABLE Visitor (
