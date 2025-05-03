@@ -214,8 +214,8 @@ CREATE TABLE PerformerYears (
 CREATE TABLE Performance(
   performance_id int PRIMARY KEY NOT NULL,
   performer_id int NOT NULL,
-  event_id int,
-  type_id varchar(40),
+  event_id int NOT NULL,
+  type_id varchar(40) NOT NULL,
   start_time time NOT NULL,
   end_time time NOT NULL,
   duration int GENERATED ALWAYS AS (TIMESTAMPDIFF(MINUTE,start_time,end_time)) STORED
@@ -226,6 +226,12 @@ CREATE TABLE Performance(
   ON UPDATE CASCADE,
   FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE
+  FOREIGN KEY (type_id) REFERENCES PerformanceTypes(type_id)
+  ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+CREATE TABLE PerformanceTypes (
+	type_id VARCHAR(10) PRIMARY KEY
 );
 
 CREATE TABLE Visitor (
