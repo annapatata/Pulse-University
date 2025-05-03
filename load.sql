@@ -1178,7 +1178,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (46, 299.99, 43, 'Premium', 'Debit', '2026-07-27 14:22:11', '3934567890426', 0, 'https://example.com/tickets/46-3.jpg', 'Premium experience for Orchestral music'),
 (46, 499.99, 44, 'Backstage', 'Cash', '2026-07-28 17:45:33', '4934567890426', 1, 'https://example.com/tickets/46-4.jpg', 'Backstage pass for Orchestral music'),
 (46, 89.99, 45, 'General', 'Credit', '2026-07-29 08:22:10', '5934567890426', 1, 'https://example.com/tickets/46-5.jpg', 'General admission for Orchestral music'),
-(46, 199.99, 46, 'VIP', 'Debit', '2026-07-30 11:15:33', '6934567890426', 1, 'https://example.com/tickets/46-6.jpg', 'VIP access for Orchestral music'),
+(46, 199.99, 46, 'General', 'Debit', '2026-07-30 11:15:33', '6934567890426', 1, 'https://example.com/tickets/46-6.jpg', 'VIP access for Orchestral music'),
 (46, 299.99, 47, 'Premium', 'Paypal', '2026-07-31 13:45:22', '7934567890426', 0, 'https://example.com/tickets/46-7.jpg', 'Premium experience for Orchestral music'),
 (46, 499.99, 48, 'Backstage', 'Cash', '2026-08-01 18:30:44', '8934567890426', 1, 'https://example.com/tickets/46-8.jpg', 'Backstage pass for Orchestral music'),
 
@@ -1188,7 +1188,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (47, 299.99, 51, 'Premium', 'Paypal', '2026-07-28 13:45:22', '1144567890427', 0, 'https://example.com/tickets/47-3.jpg', 'Premium experience for Closing set'),
 (47, 499.99, 52, 'Backstage', 'Cash', '2026-07-29 18:30:44', '2244567890427', 1, 'https://example.com/tickets/47-4.jpg', 'Backstage pass for Closing set'),
 (47, 89.99, 53, 'General', 'Debit', '2026-07-30 09:12:19', '3344567890427', 1, 'https://example.com/tickets/47-5.jpg', 'General admission for Closing set'),
-(47, 199.99, 54, 'VIP', 'Credit', '2026-07-31 12:27:45', '4444567890427', 1, 'https://example.com/tickets/47-6.jpg', 'VIP access for Closing set'),
+(47, 199.99, 54, 'General', 'Credit', '2026-07-31 12:27:45', '4444567890427', 1, 'https://example.com/tickets/47-6.jpg', 'VIP access for Closing set'),
 (47, 299.99, 55, 'Premium', 'Cash', '2026-08-01 08:18:33', '5544567890427', 0, 'https://example.com/tickets/47-7.jpg', 'Premium experience for Closing set'),
 (47, 499.99, 56, 'Backstage', 'Paypal', '2026-08-02 14:42:11', '6644567890427', 1, 'https://example.com/tickets/47-8.jpg', 'Backstage pass for Closing set'),
 
@@ -1198,7 +1198,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (48, 299.99, 59, 'Premium', 'Credit', '2026-07-29 14:45:22', '9944567890428', 0, 'https://example.com/tickets/48-3.jpg', 'Premium experience for Special performances'),
 (48, 499.99, 60, 'Backstage', 'Debit', '2026-07-30 17:30:44', '0054567890428', 1, 'https://example.com/tickets/48-4.jpg', 'Backstage pass for Special performances'),
 (48, 89.99, 61, 'General', 'Paypal', '2026-07-31 09:12:19', '1154567890428', 1, 'https://example.com/tickets/48-5.jpg', 'General admission for Special performances'),
-(48, 199.99, 62, 'VIP', 'Credit', '2026-08-01 12:27:45', '2254567890428', 1, 'https://example.com/tickets/48-6.jpg', 'VIP access for Special performances'),
+(48, 199.99, 62, 'General', 'Credit', '2026-08-01 12:27:45', '2254567890428', 1, 'https://example.com/tickets/48-6.jpg', 'VIP access for Special performances'),
 (48, 299.99, 63, 'Premium', 'Debit', '2026-08-02 08:18:33', '3354567890428', 0, 'https://example.com/tickets/48-7.jpg', 'Premium experience for Special performances'),
 (48, 499.99, 64, 'Backstage', 'Cash', '2026-08-03 14:42:11', '4454567890428', 1, 'https://example.com/tickets/48-8.jpg', 'Backstage pass for Special performances'),
 
@@ -1235,19 +1235,19 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 46 additional tickets
 (46, 89.99, 85, 'General', 'Credit', '2026-08-02 08:22:10', '5574567890426', 1, 'https://example.com/tickets/46-9.jpg', 'General admission for Orchestral music'),
-(46, 199.99, 86, 'VIP', 'Debit', '2026-08-03 11:15:33', '6674567890426', 1, 'https://example.com/tickets/46-10.jpg', 'VIP access for Orchestral music'),
+(46, 199.99, 86, 'General', 'Debit', '2026-08-03 11:15:33', '6674567890426', 1, 'https://example.com/tickets/46-10.jpg', 'VIP access for Orchestral music'),
 (46, 299.99, 87, 'Premium', 'Paypal', '2026-08-04 13:45:22', '7774567890426', 0, 'https://example.com/tickets/46-11.jpg', 'Premium experience for Orchestral music'),
 (46, 499.99, 88, 'Backstage', 'Cash', '2026-08-05 18:30:44', '8874567890426', 1, 'https://example.com/tickets/46-12.jpg', 'Backstage pass for Orchestral music'),
 
 -- Event 47 additional tickets
 (47, 89.99, 89, 'General', 'Paypal', '2026-08-03 12:15:22', '9974567890427', 1, 'https://example.com/tickets/47-9.jpg', 'General admission for Closing set'),
-(47, 199.99, 90, 'VIP', 'Credit', '2026-08-04 09:33:44', '0084567890427', 1, 'https://example.com/tickets/47-10.jpg', 'VIP access for Closing set'),
+(47, 199.99, 90, 'General', 'Credit', '2026-08-04 09:33:44', '0084567890427', 1, 'https://example.com/tickets/47-10.jpg', 'VIP access for Closing set'),
 (47, 299.99, 91, 'Premium', 'Debit', '2026-08-05 14:22:11', '1184567890427', 0, 'https://example.com/tickets/47-11.jpg', 'Premium experience for Closing set'),
 (47, 499.99, 92, 'Backstage', 'Cash', '2026-08-06 17:45:33', '2284567890427', 1, 'https://example.com/tickets/47-12.jpg', 'Backstage pass for Closing set'),
 
 -- Event 48 additional tickets
 (48, 89.99, 93, 'General', 'Debit', '2026-08-04 09:12:19', '3384567890428', 1, 'https://example.com/tickets/48-9.jpg', 'General admission for Special performances'),
-(48, 199.99, 94, 'VIP', 'Credit', '2026-08-05 12:27:45', '4484567890428', 1, 'https://example.com/tickets/48-10.jpg', 'VIP access for Special performances'),
+(48, 199.99, 94, 'General', 'Credit', '2026-08-05 12:27:45', '4484567890428', 1, 'https://example.com/tickets/48-10.jpg', 'VIP access for Special performances'),
 (48, 299.99, 95, 'Premium', 'Cash', '2026-08-06 08:18:33', '5584567890428', 0, 'https://example.com/tickets/48-11.jpg', 'Premium experience for Special performances'),
 (48, 499.99, 96, 'Backstage', 'Paypal', '2026-08-07 14:42:11', '6684567890428', 1, 'https://example.com/tickets/48-12.jpg', 'Backstage pass for Special performances'),
 
@@ -1284,19 +1284,19 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 46
 (46, 89.99, 117, 'General', 'Cash', '2026-08-10 10:22:10', '7804567890426', 1, 'https://example.com/tickets/46-13.jpg', 'General admission for Orchestral music'),
-(46, 199.99, 118, 'VIP', 'Paypal', '2026-08-11 11:15:33', '8904567890426', 1, 'https://example.com/tickets/46-14.jpg', 'VIP access for Orchestral music'),
+(46, 199.99, 118, 'General', 'Paypal', '2026-08-11 11:15:33', '8904567890426', 1, 'https://example.com/tickets/46-14.jpg', 'VIP access for Orchestral music'),
 (46, 299.99, 119, 'Premium', 'Credit', '2026-08-12 14:45:22', '9004567890426', 0, 'https://example.com/tickets/46-15.jpg', 'Premium experience for Orchestral music'),
 (46, 499.99, 120, 'Backstage', 'Debit', '2026-08-13 17:30:44', '0114567890426', 1, 'https://example.com/tickets/46-16.jpg', 'Backstage pass for Orchestral music'),
 
 -- Event 47
 (47, 89.99, 121, 'General', 'Paypal', '2026-08-11 12:15:22', '1214567890427', 1, 'https://example.com/tickets/47-13.jpg', 'General admission for Closing set'),
-(47, 199.99, 122, 'VIP', 'Credit', '2026-08-12 09:33:44', '2314567890427', 1, 'https://example.com/tickets/47-14.jpg', 'VIP access for Closing set'),
+(47, 199.99, 122, 'General', 'Credit', '2026-08-12 09:33:44', '2314567890427', 1, 'https://example.com/tickets/47-14.jpg', 'VIP access for Closing set'),
 (47, 299.99, 123, 'Premium', 'Debit', '2026-08-13 14:22:11', '3414567890427', 0, 'https://example.com/tickets/47-15.jpg', 'Premium experience for Closing set'),
 (47, 499.99, 124, 'Backstage', 'Cash', '2026-08-14 17:45:33', '4514567890427', 1, 'https://example.com/tickets/47-16.jpg', 'Backstage pass for Closing set'),
 
 -- Event 48
 (48, 89.99, 125, 'General', 'Credit', '2026-08-12 08:22:10', '5614567890428', 1, 'https://example.com/tickets/48-13.jpg', 'General admission for Special performances'),
-(48, 199.99, 126, 'VIP', 'Debit', '2026-08-13 11:15:33', '6714567890428', 1, 'https://example.com/tickets/48-14.jpg', 'VIP access for Special performances'),
+(48, 199.99, 126, 'General', 'Debit', '2026-08-13 11:15:33', '6714567890428', 1, 'https://example.com/tickets/48-14.jpg', 'VIP access for Special performances'),
 (48, 299.99, 127, 'Premium', 'Paypal', '2026-08-14 13:45:22', '7814567890428', 0, 'https://example.com/tickets/48-15.jpg', 'Premium experience for Special performances'),
 (48, 499.99, 128, 'Backstage', 'Cash', '2026-08-15 18:30:44', '8914567890428', 1, 'https://example.com/tickets/48-16.jpg', 'Backstage pass for Special performances'),
 
@@ -1323,11 +1323,11 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 46
 (46, 299.99, 139, 'Premium', 'Debit', '2026-08-18 08:18:33', '9024567890426', 0, 'https://example.com/tickets/46-17.jpg', 'Premium experience for Orchestral music'),
-(46, 499.99, 140, 'Backstage', 'Cash', '2026-08-19 14:42:11', '0134567890426', 1, 'https://example.com/tickets/46-18.jpg', 'Backstage pass for Orchestral music'),
+(46, 499.99, 140, 'General', 'Cash', '2026-08-19 14:42:11', '0134567890426', 1, 'https://example.com/tickets/46-18.jpg', 'Backstage pass for Orchestral music'),
 
 -- Event 47
 (47, 89.99, 141, 'General', 'Credit', '2026-08-19 08:22:10', '1234567890427', 1, 'https://example.com/tickets/47-17.jpg', 'General admission for Closing set'),
-(47, 199.99, 142, 'VIP', 'Debit', '2026-08-20 11:15:33', '2334567890427', 1, 'https://example.com/tickets/47-18.jpg', 'VIP access for Closing set'),
+(47, 199.99, 142, 'General', 'Debit', '2026-08-20 11:15:33', '2334567890427', 1, 'https://example.com/tickets/47-18.jpg', 'VIP access for Closing set'),
 
 -- Event 48
 (48, 299.99, 143, 'Premium', 'Paypal', '2026-08-20 13:45:22', '3434567890428', 0, 'https://example.com/tickets/48-17.jpg', 'Premium experience for Special performances'),
@@ -1356,7 +1356,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 46
 (46, 89.99, 155, 'General', 'Credit', '2026-08-26 08:22:10', '5644567890426', 1, 'https://example.com/tickets/46-19.jpg', 'General admission for Orchestral music'),
-(46, 199.99, 156, 'VIP', 'Debit', '2026-08-27 11:15:33', '6744567890426', 1, 'https://example.com/tickets/46-20.jpg', 'VIP access for Orchestral music'),
+(46, 199.99, 156, 'General', 'Debit', '2026-08-27 11:15:33', '6744567890426', 1, 'https://example.com/tickets/46-20.jpg', 'VIP access for Orchestral music'),
 
 -- Event 47
 (47, 299.99, 157, 'Premium', 'Paypal', '2026-08-27 13:45:22', '7844567890427', 0, 'https://example.com/tickets/47-19.jpg', 'Premium experience for Closing set'),
@@ -1364,7 +1364,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 48
 (48, 89.99, 159, 'General', 'Debit', '2026-08-28 09:12:19', '9044567890428', 1, 'https://example.com/tickets/48-19.jpg', 'General admission for Special performances'),
-(48, 199.99, 160, 'VIP', 'Credit', '2026-08-29 12:27:45', '0154567890428', 1, 'https://example.com/tickets/48-20.jpg', 'VIP access for Special performances'),
+(48, 199.99, 160, 'General', 'Credit', '2026-08-29 12:27:45', '0154567890428', 1, 'https://example.com/tickets/48-20.jpg', 'VIP access for Special performances'),
 
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
