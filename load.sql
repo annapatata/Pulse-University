@@ -2031,3 +2031,10 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (498, 49, 5);
 INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (499, 46, 18);
 INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (500, 38, 14);
 
+INSERT INTO PerformanceTypes (type_id) VALUES
+('warm-up'),
+('acoustic set'),
+('main act'),
+('opening act'),
+('release party'),
+('tribute performance');
