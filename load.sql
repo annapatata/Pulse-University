@@ -1,4 +1,4 @@
---Continents
+-- Continents
 INSERT INTO Continent (continent_name, image, image_caption) VALUES
 ('Europe', 'https://example.com/images/europe.jpg', 'Ancient cities, diverse cultures, and music heritage'),
 ('Asia', 'https://example.com/images/asia.jpg', 'Vibrant landscapes and rhythmic traditions'),
@@ -8,7 +8,7 @@ INSERT INTO Continent (continent_name, image, image_caption) VALUES
 ('Australia', 'https://example.com/images/australia.jpg', 'Island continent with open-air festivals'),
 ('Antarctica', 'https://example.com/images/antarctica.jpg', 'The coolest stage on Earth – literally!');
 
---9 Festival
+-- 9 Festival
 INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_caption) VALUES
 (2018, '2018-06-10', '2018-06-14', 5, 'https://example.com/img1.jpg', 'The summer heat began here'),
 (2019, '2019-07-05', '2019-07-07', 3, 'https://example.com/img2.jpg', 'Jazz vibes under the stars'),
@@ -20,7 +20,7 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2025, '2025-07-08', '2025-07-13', 6, 'https://example.com/img9.jpg', 'Future fest is here'),
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
---10 descriptions
+-- 10 descriptions
 INSERT INTO Description (descript, image, image_caption) VALUES
 ('Open-Air', 'https://example.com/images/open-air.jpg', 'Fresh air and open skies set the mood'),
 ('Indoor', 'https://example.com/images/indoor.jpg', 'Enclosed space with controlled acoustics'),
@@ -33,7 +33,7 @@ INSERT INTO Description (descript, image, image_caption) VALUES
 ('Panoramic', 'https://example.com/images/panoramic.jpg', '360-degree experience with sweeping views'),
 ('Intimate', 'https://example.com/images/intimate.jpg', 'Close connections with performers and crowd');
 
---9 locations
+-- 9 locations
 INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, country, continent_id,image, image_caption) VALUES
 (1, 2018, 2.3522, 48.8566, '12 Rue de la Musique', 'Paris', 'France', 4,'https://example.com/img1.jpg', 'The summer heat began here'),
 (2, 2019, -0.1276, 51.5074, '221B Baker Street', 'London', 'United Kingdom', 4,'https://example.com/img1.jpg', 'The summer heat began here'),
@@ -45,7 +45,7 @@ INSERT INTO Location (loc_id, festival_id, coor_long, coor_lat, address, city, c
 (8, 2022, 103.8198, 1.3521, 'Marina Bay Sands', 'Singapore', 'Singapore', 3,'https://example.com/img1.jpg', 'The summer heat began here'),
 (9, 2024, 11.5810, 48.1351, 'Königsplatz', 'Munich', 'Germany', 4,'https://example.com/img1.jpg', 'The summer heat began here');
 
---30 stages
+-- 30 stages
 INSERT INTO Stage (stage_id, stage_name, desc_id, capacity, image, image_caption) VALUES 
 (1, 'Echo Arena', 1, 100, 'https://example.com/echo.jpg', 'Massive indoor stage with powerful acoustics'),
 (2, 'Sunset Stage', 2, 150, 'https://example.com/sunset.jpg', 'Open-air stage ideal for golden hour performances'),
@@ -78,7 +78,7 @@ INSERT INTO Stage (stage_id, stage_name, desc_id, capacity, image, image_caption
 (29, 'Cloud Nine', 9, 100, 'https://example.com/cloud.jpg', 'Dreamy acts with aerial views'),
 (30, 'The Spark', 10, 140, 'https://example.com/spark.jpg', 'Small stage for breakout artists');
 
---10 equipment
+-- 10 equipment
 INSERT INTO Equipment (equip_name, image, image_caption) VALUES 
 ('Audio Mixer X32', 'https://example.com/images/audio-mixer.jpg', '32-channel digital audio mixer for live sound'),
 ('Stage Light Beam 200', 'https://example.com/images/stage-light.jpg', 'High-intensity moving head beam light'),
@@ -91,7 +91,7 @@ INSERT INTO Equipment (equip_name, image, image_caption) VALUES
 ('Power Generator 30kW', 'https://example.com/images/power-generator.jpg', 'Backup power generator for uninterrupted performance'),
 ('Cable Snake 32-Channel', 'https://example.com/images/cable-snake.jpg', 'Audio multicore cable for connecting stage gear');
  
---50 events
+-- 50 events
 INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, festival_day, image, image_caption) VALUES
 (1, 2018, 1, '2018-06-10 12:00:00', '2018-06-10 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (2, 2018, 2, '2018-06-10 13:30:00', '2018-06-10 17:30:00', 1, 'https://example.com/event2.jpg', 'Jazz rhythms on the second stage'),
@@ -159,7 +159,7 @@ INSERT INTO Experience (experience_level, xp, image, image_caption) VALUES
 ('Veteran', 5, 'https://example.com/img5.jpg', 'Years of experience');
 
 
----50 staff
+-- 50 staff
 INSERT INTO Staff (first_name, last_name, age, experience_level, role_id, image, image_caption) VALUES
 ('John', 'Doe', 25, 'Beginner', 1, 'https://example.com/john_doe.jpg', 'A dedicated auxiliary staff member'),
 ('Jane', 'Smith', 30, 'Intermediate', 2, 'https://example.com/jane_smith.jpg', 'A skilled technician with years of experience'),
@@ -218,7 +218,7 @@ INSERT INTO Staff (first_name, last_name, age, experience_level, role_id, image,
 ('Grayson', 'Chavez', 33, 'Expert', 1, 'https://example.com/grayson_chavez.jpg', 'Experienced auxiliary staff with top-notch organizational skills');
 
 
---150 event equipments
+-- 150 event equipments
 INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 (1, 1, 2), (2, 1, 1), (3, 1, 3),
 (4, 2, 1), (5, 2, 2), (6, 2, 1),
