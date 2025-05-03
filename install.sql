@@ -315,63 +315,63 @@ CREATE TABLE Review (
 	
 	
 -- Location indexes
-CREATE INDEX idx_location_festival_id ON Location(festival_id); --q13
-CREATE INDEX idx_location_continent_id ON Location(continent_id); --q13
+CREATE INDEX idx_location_festival_id ON Location(festival_id); -- q13
+CREATE INDEX idx_location_continent_id ON Location(continent_id); -- q13
 
 -- Stage indexes
 -- CREATE INDEX idx_stage_desc_id ON Stage(desc_id);
 
 -- Staff indexes
-CREATE INDEX idx_staff_role_id ON Staff(role_id); --q07/q08
+CREATE INDEX idx_staff_role_id ON Staff(role_id); -- q07/q08
 -- CREATE INDEX idx_staff_experience_level ON Staff(experience_level);
 
 -- Event_P indexes
-CREATE INDEX idx_event_festival_id ON Event_P(festival_id); --q07/q13
+CREATE INDEX idx_event_festival_id ON Event_P(festival_id); -- q07/q13
 -- CREATE INDEX idx_event_stage_id ON Event_P(stage_id);
-CREATE INDEX idx_event_start_time ON Event_P(start_time); --q09
+CREATE INDEX idx_event_start_time ON Event_P(start_time); -- q09
 
 -- EventEquip indexes
 -- CREATE INDEX idx_eventequip_event_id ON EventEquip(event_id);
 -- CREATE INDEX idx_eventequip_equip_id ON EventEquip(equip_id);
 
 -- Employment indexes
-CREATE INDEX idx_employment_staff_id ON Employment(staff_id); --q07/q12
-CREATE INDEX idx_employment_event_id ON Employment(event_id); --q07/q08/12
+CREATE INDEX idx_employment_staff_id ON Employment(staff_id); -- q07/q12
+CREATE INDEX idx_employment_event_id ON Employment(event_id); -- q07/q08/12
 
 -- Artist indexes
-CREATE INDEX idx_artist_participations ON Artist(participations); --q05/q11
-CREATE INDEX idx_artist_birthDate ON Artist(birthDate); --q05
+CREATE INDEX idx_artist_participations ON Artist(participations); -- q05/q11
+CREATE INDEX idx_artist_birthDate ON Artist(birthDate); -- q05
 
 -- BandMembers indexes
-CREATE INDEX idx_bandmembers_band_id ON BandMembers(band_id); --used in triggers
-CREATE INDEX idx_bandmembers_artist_id ON BandMembers(artist_id); --used in trigger
+CREATE INDEX idx_bandmembers_band_id ON BandMembers(band_id); -- used in triggers
+CREATE INDEX idx_bandmembers_artist_id ON BandMembers(artist_id); -- used in trigger
 
 -- Subgenre indexes
-CREATE INDEX idx_subgenre_genre_id ON Subgenre(genre_id); --q02
+CREATE INDEX idx_subgenre_genre_id ON Subgenre(genre_id); -- q02
 
 -- Performer indexes
-CREATE INDEX idx_performer_artist_id ON Performer(artist_id); --used in triggers
-CREATE INDEX idx_performer_band_id ON Performer(band_id); --used in triggers
+CREATE INDEX idx_performer_artist_id ON Performer(artist_id); -- used in triggers
+CREATE INDEX idx_performer_band_id ON Performer(band_id); -- used in triggers
 
 -- PerformerYears indexes
-CREATE INDEX idx_py_performer_id ON PerformerYears(performer_id); --q02
-CREATE INDEX idx_py_year_id ON PerformerYears(year_id); --q02
+CREATE INDEX idx_py_performer_id ON PerformerYears(performer_id); -- q02
+CREATE INDEX idx_py_year_id ON PerformerYears(year_id); -- q02
 
 -- PerformerSubgenre indexes
-CREATE INDEX idx_performersubgenre_performer_id ON PerformerSubgenre(performer_id); --q02
+CREATE INDEX idx_performersubgenre_performer_id ON PerformerSubgenre(performer_id); -- q02
 CREATE INDEX idx_performersubgenre_subgenre_id ON PerformerSubgenre(subgenre_id); --q02/q10
 
 -- Performance indexes
-CREATE INDEX idx_performance_event_id ON Performance(event_id); --q03/q04/q13
-CREATE INDEX idx_performance_performer_id ON Performance(performer_id); --q03/q04/q13/q15
+CREATE INDEX idx_performance_event_id ON Performance(event_id); -- q03/q04/q13
+CREATE INDEX idx_performance_performer_id ON Performance(performer_id); -- q03/q04/q13/q15
 CREATE INDEX idx_performance_start_end_time ON Performance(start_time, end_time); -- used in triggers
 
 -- Ticket indexes
-CREATE INDEX idx_ticket_event_id ON Ticket(event_id); --q04/q09
-CREATE INDEX idx_ticket_visitor_id ON Ticket(visitor_id); --q06/q09
+CREATE INDEX idx_ticket_event_id ON Ticket(event_id); -- q04/q09
+CREATE INDEX idx_ticket_visitor_id ON Ticket(visitor_id); -- q06/q09
 -- CREATE INDEX idx_ticket_ticket_type ON Ticket(ticket_type);
-CREATE INDEX idx_ticket_pay_method ON Ticket(pay_method); --q01
-CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); --q01
+CREATE INDEX idx_ticket_pay_method ON Ticket(pay_method); -- q01
+CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); -- q01
 
 -- Buyer indexes
 -- CREATE INDEX idx_buyer_event_id ON Buyer(event_id);
@@ -379,5 +379,5 @@ CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); --q01
 -- CREATE INDEX idx_buyer_ticket_type ON Buyer(ticket_type);
 
 -- Review indexes
-CREATE INDEX idx_review_performance_id ON Review(performance_id); --q15
-CREATE INDEX idx_review_EAN ON Review(EAN); --q04/q06/q15
+CREATE INDEX idx_review_performance_id ON Review(performance_id); -- q15
+CREATE INDEX idx_review_EAN ON Review(EAN); -- q04/q06/q15
