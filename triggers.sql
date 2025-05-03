@@ -111,9 +111,9 @@ BEGIN
     JOIN Event_P ev ON em.event_id = ev.event_id
     JOIN Event_P ev2 ON NEW.event_id = ev2.event_id
     WHERE staff_id = NEW.staff_id 
-    AND DATE(ev.start_time) = DATE(ev2.start_time)
+    AND DATE(ev.start_time) = DATE(ev2.start_time);
 
-    IF count_staff>1 THEN
+    IF (count_staff>1) THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Overlapping Staff';
     END IF;
