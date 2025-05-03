@@ -58,7 +58,7 @@ DELIMITER ;
 DROP TRIGGER IF EXISTS check_sec_aux_staff;
 DELIMITER $$ 
 CREATE TRIGGER check_sec_aux_staff
-BEFORE INSERT ON Employment
+BEFORE INSERT ON Performance
 FOR EACH ROW
 BEGIN
     DECLARE sec_staff_count INT;
