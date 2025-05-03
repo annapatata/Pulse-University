@@ -18,15 +18,15 @@ CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
 FOR EACH ROW
 BEGIN
- 	DECLARE start_event DATETIME;
-	DECLARE end_event DATETIME;
+ 	DECLARE start_event TIME;
+	DECLARE end_event TIME;
 
-	SELECT start_time, end_time
+	SELECT TIME(start_time),TIME(end_time)
 	INTO start_event, end_event
 	FROM Event_P
 	WHERE event_id=NEW.event_id;
 
-	IF (NEW.start_time <= end_event OR NEW.end_time >= start_event) THEN
+	IF (NEW.start_time < start_event OR NEW.end_time > end_event) THEN
         	SIGNAL SQLSTATE '45000'
         	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
     	END IF;
