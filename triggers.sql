@@ -170,7 +170,7 @@ BEGIN
     FROM Ticket t
     WHERE t.event_id=NEW.event_id;
 
-    SELECT capacity INTO event_capacity
+    SELECT capacity INTO cap
     FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
     WHERE event_id = NEW.event_id;
 
