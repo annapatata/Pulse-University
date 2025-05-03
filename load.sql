@@ -2058,3 +2058,254 @@ INSERT INTO Resale_queue (EAN, sale_interest) VALUES
 -- Premium ticket for Closing set (Event 47, EAN: 5544567890427)
 INSERT INTO Resale_queue (EAN, sale_interest) VALUES
 ('5544567890427', '2026-07-25 08:10:00');
+
+INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_time, end_time, image, image_caption) VALUES
+-- Event 1 (2018-06-10)
+(1, 1, 1, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance1.jpg', 'The Killers opening the festival'),
+(2, 18, 1, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'),
+(3, 38, 1, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'),
+
+-- Event 2 (2018-06-10)
+(4, 2, 2, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance4.jpg', 'Arctic Monkeys warming up'),
+(5, 19, 2, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance5.jpg', 'Alex Turner acoustic set'),
+(6, 5, 2, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance6.jpg', 'Tame Impala closing the stage'),
+
+-- Event 3 (2018-06-11)
+(7, 3, 3, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance7.jpg', 'Foo Fighters opening'),
+(8, 20, 3, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance8.jpg', 'Dave Grohl rocking the stage'),
+(9, 7, 3, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance9.jpg', 'RHCP closing the show'),
+
+-- Event 4 (2018-06-11)
+(10, 4, 4, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance10.jpg', 'Florence + Machine warming up'),
+(11, 21, 4, 'acoustic set', '16:00:00', '17:00:00', 'https://example.com/performance11.jpg', 'Florence Welch acoustic performance'),
+(12, 9, 4, 'main act', '17:30:00', '19:00:00', 'https://example.com/performance12.jpg', 'LCD Soundsystem closing'),
+
+-- Event 5 (2018-06-12)
+(13, 5, 5, 'opening act', '12:30:00', '13:15:00', 'https://example.com/performance13.jpg', 'Tame Impala opening'),
+(14, 22, 5, 'main act', '13:30:00', '15:00:00', 'https://example.com/performance14.jpg', 'Kevin Parker live set'),
+(15, 10, 5, 'main act', '15:30:00', '16:30:00', 'https://example.com/performance15.jpg', 'The National performing'),
+
+-- Event 6 (2018-06-12)
+(16, 6, 6, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance16.jpg', 'The Strokes warming up'),
+(17, 23, 6, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance17.jpg', 'Julian Casablancas acoustic'),
+(18, 11, 6, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance18.jpg', 'Vampire Weekend closing'),
+
+-- Event 7 (2018-06-13)
+(19, 7, 7, 'opening act', '13:30:00', '14:15:00', 'https://example.com/performance19.jpg', 'RHCP opening'),
+(20, 24, 7, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance20.jpg', 'Anthony Kiedis performing'),
+(21, 8, 7, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance21.jpg', 'Muse closing the show'),
+
+-- Event 8 (2018-06-13)
+(22, 8, 8, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance22.jpg', 'Muse warming up'),
+(23, 25, 8, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance23.jpg', 'Matt Bellamy solo performance'),
+(24, 12, 8, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance24.jpg', 'Arcade Fire closing'),
+
+-- Event 9 (2018-06-14)
+(25, 9, 9, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance25.jpg', 'LCD Soundsystem opening'),
+(26, 26, 9, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance26.jpg', 'James Murphy DJ set'),
+(27, 13, 9, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance27.jpg', 'The Black Keys performing'),
+
+-- Event 10 (2018-06-14)
+(28, 10, 10, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance28.jpg', 'The National warming up'),
+(29, 27, 10, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance29.jpg', 'Matt Berninger acoustic'),
+(30, 14, 10, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance30.jpg', 'Phoenix closing the festival'),
+
+-- Event 11 (2019-07-05)
+(31, 11, 11, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance31.jpg', 'Vampire Weekend opening'),
+(32, 28, 11, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance32.jpg', 'Ezra Koenig solo performance'),
+(33, 15, 11, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance33.jpg', 'Interpol performing'),
+
+-- Event 12 (2019-07-05)
+(34, 12, 12, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance34.jpg', 'Arcade Fire warming up'),
+(35, 29, 12, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance35.jpg', 'Win Butler acoustic set'),
+(36, 16, 12, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance36.jpg', 'The 1975 closing'),
+
+-- Event 13 (2019-07-06)
+(37, 13, 13, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance37.jpg', 'The Black Keys opening'),
+(38, 30, 13, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance38.jpg', 'Dan Auerbach performing'),
+(39, 17, 13, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance39.jpg', 'Queens of the Stone Age closing'),
+
+-- Event 14 (2019-07-06)
+(40, 14, 14, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance40.jpg', 'Phoenix warming up'),
+(41, 31, 14, 'acoustic set', '16:00:00', '17:00:00', 'https://example.com/performance41.jpg', 'Thomas Mars acoustic'),
+(42, 35, 14, 'main act', '17:30:00', '19:00:00', 'https://example.com/performance42.jpg', 'Jack White closing'),
+
+-- Event 15 (2019-07-07)
+(43, 15, 15, 'opening act', '12:30:00', '13:15:00', 'https://example.com/performance43.jpg', 'Interpol opening'),
+(44, 32, 15, 'main act', '13:30:00', '15:00:00', 'https://example.com/performance44.jpg', 'Paul Banks performing'),
+(45, 36, 15, 'main act', '15:30:00', '16:30:00', 'https://example.com/performance45.jpg', 'St. Vincent closing'),
+
+-- Event 16 (2019-07-07)
+(46, 16, 16, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance46.jpg', 'The 1975 warming up'),
+(47, 33, 16, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'),
+(48, 37, 16, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'),
+
+-- Event 17 (2020-08-01)
+(49, 17, 17, 'opening act', '13:00:00', '13:45:00', 'https://example.com/performance49.jpg', 'Queens of the Stone Age opening'),
+(50, 34, 17, 'main act', '14:00:00', '15:30:00', 'https://example.com/performance50.jpg', 'Josh Homme performing'),
+(51, 38, 17, 'main act', '16:00:00', '17:00:00', 'https://example.com/performance51.jpg', 'Taylor Swift virtual performance'),
+
+-- Event 18 (2020-08-01)
+(52, 38, 18, 'warm-up', '14:30:00', '15:15:00', 'https://example.com/performance52.jpg', 'Taylor Swift warming up'),
+(53, 39, 18, 'main act', '15:30:00', '17:00:00', 'https://example.com/performance53.jpg', 'Ariana Grande live'),
+(54, 40, 18, 'main act', '17:30:00', '18:30:00', 'https://example.com/performance54.jpg', 'Billie Eilish closing'),
+
+-- Event 19 (2020-08-02)
+(55, 39, 19, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance55.jpg', 'Ariana Grande opening'),
+(56, 40, 19, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance56.jpg', 'Billie Eilish performing'),
+(57, 41, 19, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance57.jpg', 'Dua Lipa closing'),
+
+-- Event 20 (2020-08-02)
+(58, 40, 20, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance58.jpg', 'Billie Eilish warming up'),
+(59, 41, 20, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance59.jpg', 'Dua Lipa acoustic'),
+(60, 42, 20, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance60.jpg', 'Harry Styles closing'),
+
+-- Event 21 (2020-08-03)
+(61, 41, 21, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance61.jpg', 'Dua Lipa opening'),
+(62, 42, 21, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance62.jpg', 'Harry Styles performing'),
+(63, 43, 21, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance63.jpg', 'Olivia Rodrigo closing'),
+
+-- Event 22 (2020-08-03)
+(64, 42, 22, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance64.jpg', 'Harry Styles warming up'),
+(65, 43, 22, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance65.jpg', 'Olivia Rodrigo acoustic'),
+(66, 44, 22, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance66.jpg', 'Doja Cat closing'),
+
+-- Event 23 (2021-06-20)
+(67, 43, 23, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance67.jpg', 'Olivia Rodrigo opening'),
+(68, 44, 23, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance68.jpg', 'Doja Cat performing'),
+(69, 45, 23, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance69.jpg', 'The Weeknd closing'),
+
+-- Event 24 (2021-06-20)
+(70, 44, 24, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance70.jpg', 'Doja Cat warming up'),
+(71, 45, 24, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance71.jpg', 'The Weeknd live'),
+(72, 46, 24, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance72.jpg', 'Post Malone closing'),
+
+-- Event 25 (2021-06-21)
+(73, 45, 25, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance73.jpg', 'The Weeknd opening'),
+(74, 46, 25, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance74.jpg', 'Post Malone performing'),
+(75, 47, 25, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance75.jpg', 'Camila Cabello closing'),
+
+-- Event 26 (2021-06-21)
+(76, 46, 26, 'warm-up', '14:30:00', '15:15:00', 'https://example.com/performance76.jpg', 'Post Malone warming up'),
+(77, 47, 26, 'acoustic set', '15:30:00', '16:30:00', 'https://example.com/performance77.jpg', 'Camila Cabello acoustic'),
+(78, 48, 26, 'main act', '17:00:00', '18:30:00', 'https://example.com/performance78.jpg', 'Shawn Mendes closing'),
+
+-- Event 27 (2022-07-11)
+(79, 47, 27, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance79.jpg', 'Camila Cabello opening'),
+(80, 48, 27, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance80.jpg', 'Shawn Mendes performing'),
+(81, 49, 27, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance81.jpg', 'Selena Gomez closing'),
+
+-- Event 28 (2022-07-11)
+(82, 48, 28, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance82.jpg', 'Shawn Mendes warming up'),
+(83, 49, 28, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance83.jpg', 'Selena Gomez live'),
+(84, 50, 28, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance84.jpg', 'Justin Bieber closing'),
+
+-- Event 29 (2022-07-12)
+(85, 49, 29, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance85.jpg', 'Selena Gomez opening'),
+(86, 50, 29, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance86.jpg', 'Justin Bieber performing'),
+(87, 51, 29, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance87.jpg', 'Lady Gaga closing'),
+
+-- Event 30 (2022-07-12)
+(88, 50, 30, 'warm-up', '15:30:00', '16:15:00', 'https://example.com/performance88.jpg', 'Justin Bieber warming up'),
+(89, 51, 30, 'acoustic set', '16:30:00', '17:30:00', 'https://example.com/performance89.jpg', 'Lady Gaga acoustic'),
+(90, 52, 30, 'main act', '18:00:00', '19:30:00', 'https://example.com/performance90.jpg', 'Bruno Mars closing'),
+
+-- Event 31 (2022-07-13)
+(91, 51, 31, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance91.jpg', 'Lady Gaga opening'),
+(92, 52, 31, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance92.jpg', 'Bruno Mars performing'),
+(93, 53, 31, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance93.jpg', 'Ed Sheeran closing'),
+
+-- Event 32 (2022-07-13)
+(94, 52, 32, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance94.jpg', 'Bruno Mars warming up'),
+(95, 53, 32, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance95.jpg', 'Ed Sheeran live'),
+(96, 54, 32, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance96.jpg', 'Rihanna closing'),
+
+-- Event 33 (2023-05-15)
+(97, 53, 33, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance97.jpg', 'Ed Sheeran opening'),
+(98, 54, 33, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance98.jpg', 'Rihanna performing'),
+(99, 55, 33, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance99.jpg', 'Beyoncé closing'),
+
+-- Event 34 (2023-05-15)
+(100, 54, 34, 'warm-up', '13:00:00', '13:45:00', 'https://example.com/performance100.jpg', 'Rihanna warming up'),
+(101, 55, 34, 'acoustic set', '14:00:00', '15:00:00', 'https://example.com/performance101.jpg', 'Beyoncé acoustic'),
+(102, 56, 34, 'main act', '15:30:00', '17:00:00', 'https://example.com/performance102.jpg', 'Katy Perry closing'),
+
+-- Event 35 (2023-05-16)
+(103, 55, 35, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance103.jpg', 'Beyoncé opening'),
+(104, 56, 35, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance104.jpg', 'Katy Perry performing'),
+(105, 57, 35, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance105.jpg', 'Adele closing'),
+
+-- Event 36 (2023-05-16)
+(106, 56, 36, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance106.jpg', 'Katy Perry warming up'),
+(107, 57, 36, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance107.jpg', 'Adele live'),
+(108, 58, 36, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance108.jpg', 'Miley Cyrus closing'),
+
+-- Event 37 (2024-06-12)
+(109, 57, 37, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance109.jpg', 'Adele opening'),
+(110, 58, 37, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance110.jpg', 'Miley Cyrus performing'),
+(111, 59, 37, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance111.jpg', 'Nicki Minaj closing'),
+
+-- Event 38 (2024-06-12)
+(112, 58, 38, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance112.jpg', 'Miley Cyrus warming up'),
+(113, 59, 38, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance113.jpg', 'Nicki Minaj live'),
+(114, 60, 38, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'),
+
+-- Event 39 (2025-07-08)
+(115, 59, 39, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
+(116, 60, 39, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance116.jpg', 'Drake performing'),
+(117, 61, 39, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance117.jpg', 'Lizzo closing'),
+
+-- Event 40 (2025-07-08)
+(118, 60, 40, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance118.jpg', 'Drake warming up'),
+(119, 61, 40, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance119.jpg', 'Lizzo acoustic'),
+(120, 62, 40, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance120.jpg', 'Charlie Puth closing'),
+
+-- Event 41 (2026-08-20)
+(121, 61, 41, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance121.jpg', 'Lizzo opening'),
+(122, 62, 41, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance122.jpg', 'Charlie Puth performing'),
+(123, 63, 41, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance123.jpg', 'Halsey closing'),
+
+-- Event 42 (2026-08-20)
+(124, 62, 42, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance124.jpg', 'Charlie Puth warming up'),
+(125, 63, 42, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance125.jpg', 'Halsey live'),
+(126, 64, 42, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance126.jpg', 'Zayn closing'),
+
+-- Event 43 (2026-08-21)
+(127, 63, 43, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance127.jpg', 'Halsey opening'),
+(128, 64, 43, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance128.jpg', 'Zayn performing'),
+(129, 65, 43, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance129.jpg', 'Lil Nas X closing'),
+
+-- Event 44 (2026-08-21)
+(130, 64, 44, 'warm-up', '15:30:00', '16:15:00', 'https://example.com/performance130.jpg', 'Zayn warming up'),
+(131, 65, 44, 'acoustic set', '16:30:00', '17:30:00', 'https://example.com/performance131.jpg', 'Lil Nas X acoustic'),
+(132, 66, 44, 'main act', '18:00:00', '19:30:00', 'https://example.com/performance132.jpg', 'Sam Smith closing'),
+
+-- Event 45 (2026-08-22)
+(133, 65, 45, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance133.jpg', 'Lil Nas X opening'),
+(134, 66, 45, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance134.jpg', 'Sam Smith performing'),
+(135, 67, 45, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance135.jpg', 'SZA closing'),
+
+-- Event 46 (2026-08-22)
+(136, 66, 46, 'warm-up', '13:00:00', '13:45:00', 'https://example.com/performance136.jpg', 'Sam Smith warming up'),
+(137, 67, 46, 'main act', '14:00:00', '15:30:00', 'https://example.com/performance137.jpg', 'SZA live'),
+(138, 1, 46, 'main act', '16:00:00', '17:00:00', 'https://example.com/performance138.jpg', 'The Killers closing'),
+
+-- Event 47 (2026-08-23)
+(139, 67, 47, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance139.jpg', 'SZA opening'),
+(140, 1, 47, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance140.jpg', 'The Killers performing'),
+(141, 2, 47, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance141.jpg', 'Arctic Monkeys closing'),
+
+-- Event 48 (2026-08-23)
+(142, 2, 48, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance142.jpg', 'Arctic Monkeys warming up'),
+(143, 3, 48, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance143.jpg', 'Foo Fighters performing'),
+(144, 4, 48, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance144.jpg', 'Florence + Machine closing'),
+
+-- Event 49 (2026-08-24)
+(145, 3, 49, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance145.jpg', 'Foo Fighters opening'),
+(146, 4, 49, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance146.jpg', 'Florence + Machine performing'),
+(147, 5, 49, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance147.jpg', 'Tame Impala closing'),
+
+-- Event 50 (2026-08-24)
+(148, 4, 50, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance148.jpg', 'Florence + Machine warming up'),
+(149, 5, 50, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance149.jpg', 'Tame Impala acoustic'),
+(150, 6, 50, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance150.jpg', 'The Strokes closing the festival');
