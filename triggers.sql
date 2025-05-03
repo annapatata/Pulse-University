@@ -1,5 +1,5 @@
+DROP TRIGGER IF EXISTS performer_before_insert;
 DELIMITER //
-
 CREATE TRIGGER performer_before_insert
 BEFORE INSERT ON Performer FOR EACH ROW
 BEGIN
