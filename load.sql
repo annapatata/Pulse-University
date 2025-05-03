@@ -1530,506 +1530,104 @@ INSERT INTO Genre (genre_id, image, image_caption) VALUES
 
 -- Employment table population script
 
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (1, 15, 30);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (2, 26, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (3, 27, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (4, 19, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (5, 8, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (6, 6, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (7, 41, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (8, 44, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (9, 33, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (10, 44, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (11, 45, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (12, 34, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (13, 2, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (14, 14, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (15, 3, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (16, 46, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (17, 22, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (18, 14, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (19, 3, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (20, 15, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (21, 49, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (22, 36, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (23, 7, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (24, 15, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (25, 40, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (26, 29, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (27, 30, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (28, 11, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (29, 40, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (30, 44, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (31, 44, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (32, 34, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (33, 2, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (34, 3, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (35, 25, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (36, 22, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (37, 37, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (38, 14, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (39, 15, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (40, 38, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (41, 36, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (42, 18, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (43, 48, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (44, 5, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (45, 29, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (46, 29, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (47, 21, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (48, 44, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (49, 21, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (50, 44, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (51, 25, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (52, 25, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (53, 3, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (54, 43, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (55, 2, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (56, 2, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (57, 24, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (58, 7, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (59, 48, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (60, 28, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (61, 29, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (62, 21, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (63, 21, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (64, 21, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (65, 45, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (66, 2, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (67, 32, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (68, 1, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (69, 17, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (70, 36, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (71, 47, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (72, 47, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (73, 28, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (74, 40, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (75, 28, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (76, 48, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (77, 21, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (78, 33, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (79, 10, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (80, 25, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (81, 33, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (82, 20, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (83, 2, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (84, 13, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (85, 36, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (86, 35, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (87, 47, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (88, 36, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (89, 17, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (90, 21, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (91, 29, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (92, 29, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (93, 39, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (94, 2, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (95, 2, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (96, 32, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (97, 43, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (98, 35, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (99, 1, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (100, 36, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (101, 16, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (102, 36, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (103, 28, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (104, 48, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (105, 6, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (106, 30, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (107, 42, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (108, 39, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (109, 39, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (110, 31, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (111, 32, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (112, 20, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (113, 23, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (114, 31, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (115, 4, 30);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (116, 4, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (117, 1, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (118, 4, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (119, 16, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (120, 13, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (121, 16, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (122, 47, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (123, 36, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (124, 16, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (125, 5, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (126, 5, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (127, 9, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (128, 5, 30);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (129, 50, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (130, 6, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (131, 42, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (132, 42, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (133, 39, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (134, 19, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (135, 31, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (136, 20, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (137, 20, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (138, 32, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (139, 12, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (140, 24, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (141, 32, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (142, 4, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (143, 1, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (144, 46, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (145, 16, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (146, 36, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (147, 46, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (148, 38, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (149, 9, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (150, 50, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (151, 8, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (152, 42, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (153, 30, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (154, 42, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (155, 8, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (156, 20, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (157, 27, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (158, 19, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (159, 12, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (160, 39, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (161, 12, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (162, 31, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (163, 4, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (164, 35, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (165, 13, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (166, 13, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (167, 1, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (168, 37, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (169, 28, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (170, 5, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (171, 49, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (172, 38, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (173, 7, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (174, 50, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (175, 7, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (176, 42, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (177, 19, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (178, 11, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (179, 8, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (180, 31, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (181, 8, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (182, 20, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (183, 4, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (184, 23, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (185, 24, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (186, 35, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (187, 34, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (188, 46, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (189, 3, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (190, 49, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (191, 46, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (192, 50, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (193, 38, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (194, 18, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (195, 19, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (196, 42, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (197, 30, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (198, 8, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (199, 30, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (200, 31, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (201, 11, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (202, 12, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (203, 32, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (204, 4, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (205, 45, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (206, 37, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (207, 45, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (208, 46, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (209, 37, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (210, 45, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (211, 46, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (212, 14, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (213, 49, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (214, 38, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (215, 15, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (216, 26, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (217, 15, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (218, 18, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (219, 7, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (220, 11, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (221, 8, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (222, 39, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (223, 20, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (224, 31, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (225, 20, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (226, 44, 32);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (227, 12, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (228, 10, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (229, 2, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (230, 34, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (231, 3, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (232, 45, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (233, 3, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (234, 46, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (235, 3, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (236, 37, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (237, 26, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (238, 18, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (239, 7, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (240, 15, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (241, 26, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (242, 27, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (243, 11, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (244, 41, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (245, 12, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (246, 23, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (247, 41, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (248, 25, 32);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (249, 45, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (250, 2, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (251, 25, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (252, 34, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (253, 3, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (254, 22, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (255, 46, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (256, 3, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (257, 15, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (258, 38, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (259, 46, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (260, 18, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (261, 15, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (262, 7, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (263, 49, 25);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (264, 7, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (265, 18, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (266, 7, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (267, 8, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (268, 11, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (269, 10, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (270, 33, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (271, 25, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (272, 37, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (273, 2, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (274, 45, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (275, 34, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (276, 37, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (277, 22, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (278, 47, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (279, 28, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (280, 18, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (281, 6, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (282, 40, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (283, 6, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (284, 29, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (285, 44, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (286, 33, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (287, 10, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (288, 34, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (289, 14, 30);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (290, 26, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (291, 48, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (292, 5, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (293, 40, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (294, 29, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (295, 29, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (296, 21, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (297, 6, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (298, 2, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (299, 2, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (300, 10, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (301, 13, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (302, 13, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (303, 24, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (304, 36, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (305, 36, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (306, 9, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (307, 40, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (308, 6, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (309, 40, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (310, 6, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (311, 6, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (312, 10, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (313, 2, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (314, 25, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (315, 33, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (316, 25, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (317, 10, 32);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (318, 2, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (319, 43, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (320, 2, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (321, 24, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (322, 3, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (323, 1, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (324, 36, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (325, 47, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (326, 9, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (327, 47, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (328, 48, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (329, 36, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (330, 21, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (331, 6, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (332, 21, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (333, 6, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (334, 44, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (335, 39, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (336, 39, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (337, 20, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (338, 31, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (339, 43, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (340, 22, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (341, 24, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (342, 13, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (343, 24, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (344, 32, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (345, 35, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (346, 36, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (347, 24, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (348, 47, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (349, 9, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (350, 5, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (351, 28, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (352, 36, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (353, 47, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (354, 28, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (355, 9, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (356, 6, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (357, 42, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (358, 21, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (359, 20, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (360, 20, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (361, 25, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (362, 10, 13);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (363, 23, 32);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (364, 32, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (365, 23, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (366, 4, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (367, 13, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (368, 32, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (369, 4, 46);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (370, 16, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (371, 24, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (372, 1, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (373, 16, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (374, 35, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (375, 36, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (376, 13, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (377, 17, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (378, 28, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (379, 5, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (380, 40, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (381, 6, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (382, 21, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (383, 30, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (384, 31, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (385, 32, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (386, 12, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (387, 16, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (388, 24, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (389, 46, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (390, 47, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (391, 46, 43);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (392, 17, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (393, 47, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (394, 28, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (395, 49, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (396, 38, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (397, 50, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (398, 27, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (399, 50, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (400, 27, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (401, 39, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (402, 31, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (403, 39, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (404, 11, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (405, 39, 39);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (406, 4, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (407, 35, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (408, 4, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (409, 23, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (410, 24, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (411, 12, 49);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (412, 24, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (413, 17, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (414, 46, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (415, 49, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (416, 5, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (417, 28, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (418, 26, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (419, 15, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (420, 27, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (421, 6, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (422, 50, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (423, 19, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (424, 8, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (425, 8, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (426, 12, 8);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (427, 39, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (428, 20, 30);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (429, 23, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (430, 12, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (431, 4, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (432, 45, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (433, 49, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (434, 38, 38);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (435, 49, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (436, 50, 12);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (437, 26, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (438, 19, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (439, 42, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (440, 11, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (441, 19, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (442, 39, 2);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (443, 20, 16);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (444, 11, 47);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (445, 23, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (446, 4, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (447, 35, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (448, 34, 36);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (449, 49, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (450, 37, 50);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (451, 49, 24);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (452, 15, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (453, 26, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (454, 49, 33);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (455, 18, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (456, 7, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (457, 49, 42);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (458, 19, 1);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (459, 42, 3);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (460, 27, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (461, 8, 10);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (462, 8, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (463, 42, 21);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (464, 19, 19);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (465, 11, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (466, 8, 28);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (467, 30, 37);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (468, 39, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (469, 33, 48);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (470, 22, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (471, 16, 4);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (472, 45, 40);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (473, 3, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (474, 46, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (475, 37, 45);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (476, 46, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (477, 15, 17);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (478, 7, 22);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (479, 15, 35);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (480, 7, 31);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (481, 15, 44);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (482, 27, 9);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (483, 19, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (484, 42, 7);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (485, 27, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (486, 8, 14);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (487, 27, 27);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (488, 19, 23);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (489, 31, 6);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (490, 44, 34);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (491, 12, 11);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (492, 10, 41);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (493, 22, 15);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (494, 34, 26);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (495, 3, 20);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (496, 3, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (497, 14, 29);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (498, 49, 5);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (499, 46, 18);
-INSERT INTO Employment (contract_id, staff_id, event_id) VALUES (500, 38, 14);
+INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
+-- Event 1 (Capacity 100) - Need at least 2 auxiliary (2%) and 5 security (5%)
+(1, 1, 1), (2, 4, 1), (3, 3, 1), (4, 6, 1), (5, 7, 1), (6, 9, 1), (7, 15, 1),
+
+-- Event 2 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(8, 8, 2), (9, 11, 2), (10, 14, 2), (11, 16, 2), (12, 17, 2), (13, 19, 2), (14, 20, 2), (15, 22, 2), (16, 25, 2), (17, 30, 2), (18, 33, 2),
+
+-- Event 3 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(19, 21, 3), (20, 24, 3), (21, 27, 3), (22, 29, 3), (23, 31, 3), (24, 34, 3), (25, 36, 3), (26, 38, 3), (27, 40, 3), (28, 42, 3), (29, 44, 3),
+
+-- Event 4 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(30, 5, 4), (31, 10, 4), (32, 12, 4), (33, 18, 4), (34, 23, 4), (35, 26, 4), (36, 28, 4), (37, 32, 4), (38, 35, 4), (39, 37, 4), (40, 39, 4),
+
+-- Event 5 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(41, 41, 5), (42, 43, 5), (43, 45, 5), (44, 46, 5), (45, 47, 5), (46, 48, 5), (47, 49, 5), (48, 50, 5), (49, 51, 5), (50, 52, 5), (51, 53, 5),
+
+-- Event 6 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(52, 54, 6), (53, 55, 6), (54, 56, 6), (55, 57, 6), (56, 58, 6), (57, 59, 6), (58, 60, 6), (59, 61, 6), (60, 62, 6), (61, 63, 6), (62, 64, 6),
+
+-- Event 7 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(63, 65, 7), (64, 66, 7), (65, 67, 7), (66, 68, 7), (67, 69, 7), (68, 70, 7), (69, 71, 7), (70, 72, 7), (71, 73, 7), (72, 74, 7), (73, 75, 7),
+
+-- Event 8 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(74, 76, 8), (75, 77, 8), (76, 78, 8), (77, 79, 8), (78, 80, 8), (79, 81, 8), (80, 82, 8), (81, 83, 8), (82, 84, 8), (83, 85, 8), (84, 86, 8),
+
+-- Event 9 (Capacity 120) - Need at least 3 auxiliary and 7 security
+(85, 87, 9), (86, 88, 9), (87, 89, 9), (88, 90, 9), (89, 91, 9), (90, 92, 9), (91, 93, 9), (92, 94, 9), (93, 95, 9), (94, 96, 9),
+
+-- Event 10 (Capacity 150) - Need at least 3 auxiliary and 8 security
+(95, 97, 10), (96, 98, 10), (97, 99, 10), (98, 100, 10), (99, 1, 10), (100, 2, 10), (101, 3, 10), (102, 4, 10), (103, 5, 10), (104, 6, 10), (105, 7, 10),
+
+-- Continuing this pattern for all 50 events with appropriate staff allocations
+-- Event 11 (Capacity 150)
+(106, 8, 11), (107, 9, 11), (108, 10, 11), (109, 11, 11), (110, 12, 11), (111, 13, 11), (112, 14, 11), (113, 15, 11), (114, 16, 11), (115, 17, 11), (116, 18, 11),
+
+-- Event 12 (Capacity 150)
+(117, 19, 12), (118, 20, 12), (119, 21, 12), (120, 22, 12), (121, 23, 12), (122, 24, 12), (123, 25, 12), (124, 26, 12), (125, 27, 12), (126, 28, 12), (127, 29, 12),
+
+-- Event 13 (Capacity 150)
+(128, 30, 13), (129, 31, 13), (130, 32, 13), (131, 33, 13), (132, 34, 13), (133, 35, 13), (134, 36, 13), (135, 37, 13), (136, 38, 13), (137, 39, 13), (138, 40, 13),
+
+-- Event 14 (Capacity 150)
+(139, 41, 14), (140, 42, 14), (141, 43, 14), (142, 44, 14), (143, 45, 14), (144, 46, 14), (145, 47, 14), (146, 48, 14), (147, 49, 14), (148, 50, 14), (149, 51, 14),
+
+-- Event 15 (Capacity 150)
+(150, 52, 15), (151, 53, 15), (152, 54, 15), (153, 55, 15), (154, 56, 15), (155, 57, 15), (156, 58, 15), (157, 59, 15), (158, 60, 15), (159, 61, 15), (160, 62, 15),
+
+-- Event 16 (Capacity 150)
+(161, 63, 16), (162, 64, 16), (163, 65, 16), (164, 66, 16), (165, 67, 16), (166, 68, 16), (167, 69, 16), (168, 70, 16), (169, 71, 16), (170, 72, 16), (171, 73, 16),
+
+-- Event 17 (Capacity 150)
+(172, 74, 17), (173, 75, 17), (174, 76, 17), (175, 77, 17), (176, 78, 17), (177, 79, 17), (178, 80, 17), (179, 81, 17), (180, 82, 17), (181, 83, 17), (182, 84, 17),
+
+-- Event 18 (Capacity 150)
+(183, 85, 18), (184, 86, 18), (185, 87, 18), (186, 88, 18), (187, 89, 18), (188, 90, 18), (189, 91, 18), (190, 92, 18), (191, 93, 18), (192, 94, 18), (193, 95, 18),
+
+-- Event 19 (Capacity 100)
+(194, 96, 19), (195, 97, 19), (196, 98, 19), (197, 99, 19), (198, 100, 19), (199, 1, 19), (200, 2, 19), (201, 3, 19), (202, 4, 19), (203, 5, 19),
+
+-- Event 20 (Capacity 150)
+(204, 6, 20), (205, 7, 20), (206, 8, 20), (207, 9, 20), (208, 10, 20), (209, 11, 20), (210, 12, 20), (211, 13, 20), (212, 14, 20), (213, 15, 20), (214, 16, 20),
+
+-- Continuing this pattern up to Event 50 with similar allocations
+-- Event 21-30
+(215, 17, 21), (216, 18, 21), (217, 19, 21), (218, 20, 21), (219, 21, 21), (220, 22, 21), (221, 23, 21), (222, 24, 21), (223, 25, 21), (224, 26, 21), (225, 27, 21),
+(226, 28, 22), (227, 29, 22), (228, 30, 22), (229, 31, 22), (230, 32, 22), (231, 33, 22), (232, 34, 22), (233, 35, 22), (234, 36, 22), (235, 37, 22), (236, 38, 22),
+(237, 39, 23), (238, 40, 23), (239, 41, 23), (240, 42, 23), (241, 43, 23), (242, 44, 23), (243, 45, 23), (244, 46, 23), (245, 47, 23), (246, 48, 23), (247, 49, 23),
+(248, 50, 24), (249, 51, 24), (250, 52, 24), (251, 53, 24), (252, 54, 24), (253, 55, 24), (254, 56, 24), (255, 57, 24), (256, 58, 24), (257, 59, 24), (258, 60, 24),
+(259, 61, 25), (260, 62, 25), (261, 63, 25), (262, 64, 25), (263, 65, 25), (264, 66, 25), (265, 67, 25), (266, 68, 25), (267, 69, 25), (268, 70, 25), (269, 71, 25),
+(270, 72, 26), (271, 73, 26), (272, 74, 26), (273, 75, 26), (274, 76, 26), (275, 77, 26), (276, 78, 26), (277, 79, 26), (278, 80, 26), (279, 81, 26), (280, 82, 26),
+(281, 83, 27), (282, 84, 27), (283, 85, 27), (284, 86, 27), (285, 87, 27), (286, 88, 27), (287, 89, 27), (288, 90, 27), (289, 91, 27), (290, 92, 27), (291, 93, 27),
+(292, 94, 28), (293, 95, 28), (294, 96, 28), (295, 97, 28), (296, 98, 28), (297, 99, 28), (298, 100, 28), (299, 1, 28), (300, 2, 28), (301, 3, 28), (302, 4, 28),
+(303, 5, 29), (304, 6, 29), (305, 7, 29), (306, 8, 29), (307, 9, 29), (308, 10, 29), (309, 11, 29), (310, 12, 29), (311, 13, 29), (312, 14, 29), (313, 15, 29),
+(314, 16, 30), (315, 17, 30), (316, 18, 30), (317, 19, 30), (318, 20, 30), (319, 21, 30), (320, 22, 30), (321, 23, 30), (322, 24, 30), (323, 25, 30), (324, 26, 30),
+
+-- Event 31-40
+(325, 27, 31), (326, 28, 31), (327, 29, 31), (328, 30, 31), (329, 31, 31), (330, 32, 31), (331, 33, 31), (332, 34, 31), (333, 35, 31), (334, 36, 31), (335, 37, 31),
+(336, 38, 32), (337, 39, 32), (338, 40, 32), (339, 41, 32), (340, 42, 32), (341, 43, 32), (342, 44, 32), (343, 45, 32), (344, 46, 32), (345, 47, 32), (346, 48, 32),
+(347, 49, 33), (348, 50, 33), (349, 51, 33), (350, 52, 33), (351, 53, 33), (352, 54, 33), (353, 55, 33), (354, 56, 33), (355, 57, 33), (356, 58, 33), (357, 59, 33),
+(358, 60, 34), (359, 61, 34), (360, 62, 34), (361, 63, 34), (362, 64, 34), (363, 65, 34), (364, 66, 34), (365, 67, 34), (366, 68, 34), (367, 69, 34), (368, 70, 34),
+(369, 71, 35), (370, 72, 35), (371, 73, 35), (372, 74, 35), (373, 75, 35), (374, 76, 35), (375, 77, 35), (376, 78, 35), (377, 79, 35), (378, 80, 35), (379, 81, 35),
+(380, 82, 36), (381, 83, 36), (382, 84, 36), (383, 85, 36), (384, 86, 36), (385, 87, 36), (386, 88, 36), (387, 89, 36), (388, 90, 36), (389, 91, 36), (390, 92, 36),
+(391, 93, 37), (392, 94, 37), (393, 95, 37), (394, 96, 37), (395, 97, 37), (396, 98, 37), (397, 99, 37), (398, 100, 37), (399, 1, 37), (400, 2, 37), (401, 3, 37),
+(402, 4, 38), (403, 5, 38), (404, 6, 38), (405, 7, 38), (406, 8, 38), (407, 9, 38), (408, 10, 38), (409, 11, 38), (410, 12, 38), (411, 13, 38), (412, 14, 38),
+(413, 15, 39), (414, 16, 39), (415, 17, 39), (416, 18, 39), (417, 19, 39), (418, 20, 39), (419, 21, 39), (420, 22, 39), (421, 23, 39), (422, 24, 39), (423, 25, 39),
+(424, 26, 40), (425, 27, 40), (426, 28, 40), (427, 29, 40), (428, 30, 40), (429, 31, 40), (430, 32, 40), (431, 33, 40), (432, 34, 40), (433, 35, 40), (434, 36, 40),
+
+-- Event 41-50
+(435, 37, 41), (436, 38, 41), (437, 39, 41), (438, 40, 41), (439, 41, 41), (440, 42, 41), (441, 43, 41), (442, 44, 41), (443, 45, 41), (444, 46, 41), (445, 47, 41),
+(446, 48, 42), (447, 49, 42), (448, 50, 42), (449, 51, 42), (450, 52, 42), (451, 53, 42), (452, 54, 42), (453, 55, 42), (454, 56, 42), (455, 57, 42), (456, 58, 42),
+(457, 59, 43), (458, 60, 43), (459, 61, 43), (460, 62, 43), (461, 63, 43), (462, 64, 43), (463, 65, 43), (464, 66, 43), (465, 67, 43), (466, 68, 43), (467, 69, 43),
+(468, 70, 44), (469, 71, 44), (470, 72, 44), (471, 73, 44), (472, 74, 44), (473, 75, 44), (474, 76, 44), (475, 77, 44), (476, 78, 44), (477, 79, 44), (478, 80, 44),
+(479, 81, 45), (480, 82, 45), (481, 83, 45), (482, 84, 45), (483, 85, 45), (484, 86, 45), (485, 87, 45), (486, 88, 45), (487, 89, 45), (488, 90, 45), (489, 91, 45),
+(490, 92, 46), (491, 93, 46), (492, 94, 46), (493, 95, 46), (494, 96, 46), (495, 97, 46), (496, 98, 46), (497, 99, 46), (498, 100, 46), (499, 1, 46), (500, 2, 46),
+(501, 3, 47), (502, 4, 47), (503, 5, 47), (504, 6, 47), (505, 7, 47), (506, 8, 47), (507, 9, 47), (508, 10, 47), (509, 11, 47), (510, 12, 47), (511, 13, 47),
+(512, 14, 48), (513, 15, 48), (514, 16, 48), (515, 17, 48), (516, 18, 48), (517, 19, 48), (518, 20, 48), (519, 21, 48), (520, 22, 48), (521, 23, 48), (522, 24, 48),
+(523, 25, 49), (524, 26, 49), (525, 27, 49), (526, 28, 49), (527, 29, 49), (528, 30, 49), (529, 31, 49), (530, 32, 49), (531, 33, 49), (532, 34, 49), (533, 35, 49),
+(534, 36, 50), (535, 37, 50), (536, 38, 50), (537, 39, 50), (538, 40, 50), (539, 41, 50), (540, 42, 50), (541, 43, 50), (542, 44, 50), (543, 45, 50), (544, 46, 50);
 
 INSERT INTO PerformanceTypes (type_id) VALUES
 ('warm-up'),
