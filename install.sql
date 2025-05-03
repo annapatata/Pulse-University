@@ -319,20 +319,20 @@ CREATE INDEX idx_location_festival_id ON Location(festival_id); --q13
 CREATE INDEX idx_location_continent_id ON Location(continent_id); --q13
 
 -- Stage indexes
---CREATE INDEX idx_stage_desc_id ON Stage(desc_id);
+-- CREATE INDEX idx_stage_desc_id ON Stage(desc_id);
 
 -- Staff indexes
 CREATE INDEX idx_staff_role_id ON Staff(role_id); --q07/q08
---CREATE INDEX idx_staff_experience_level ON Staff(experience_level);
+-- CREATE INDEX idx_staff_experience_level ON Staff(experience_level);
 
 -- Event_P indexes
 CREATE INDEX idx_event_festival_id ON Event_P(festival_id); --q07/q13
---CREATE INDEX idx_event_stage_id ON Event_P(stage_id);
+-- CREATE INDEX idx_event_stage_id ON Event_P(stage_id);
 CREATE INDEX idx_event_start_time ON Event_P(start_time); --q09
 
 -- EventEquip indexes
---CREATE INDEX idx_eventequip_event_id ON EventEquip(event_id);
---CREATE INDEX idx_eventequip_equip_id ON EventEquip(equip_id);
+-- CREATE INDEX idx_eventequip_event_id ON EventEquip(event_id);
+-- CREATE INDEX idx_eventequip_equip_id ON EventEquip(equip_id);
 
 -- Employment indexes
 CREATE INDEX idx_employment_staff_id ON Employment(staff_id); --q07/q12
@@ -369,14 +369,14 @@ CREATE INDEX idx_performance_start_end_time ON Performance(start_time, end_time)
 -- Ticket indexes
 CREATE INDEX idx_ticket_event_id ON Ticket(event_id); --q04/q09
 CREATE INDEX idx_ticket_visitor_id ON Ticket(visitor_id); --q06/q09
---CREATE INDEX idx_ticket_ticket_type ON Ticket(ticket_type);
+-- CREATE INDEX idx_ticket_ticket_type ON Ticket(ticket_type);
 CREATE INDEX idx_ticket_pay_method ON Ticket(pay_method); --q01
 CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); --q01
 
 -- Buyer indexes
---CREATE INDEX idx_buyer_event_id ON Buyer(event_id);
---CREATE INDEX idx_buyer_visitor_id ON Buyer(visitor_id);
---CREATE INDEX idx_buyer_ticket_type ON Buyer(ticket_type);
+-- CREATE INDEX idx_buyer_event_id ON Buyer(event_id);
+-- CREATE INDEX idx_buyer_visitor_id ON Buyer(visitor_id);
+-- CREATE INDEX idx_buyer_ticket_type ON Buyer(ticket_type);
 
 -- Review indexes
 CREATE INDEX idx_review_performance_id ON Review(performance_id); --q15
