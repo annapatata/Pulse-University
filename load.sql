@@ -1020,7 +1020,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (30, 89.99, 9, 'General', 'Debit', '2022-06-18 09:12:19', '9915567890124', 1, 'https://example.com/tickets/30-5.jpg', 'General admission for Main stage acts'),
 (30, 199.99, 10, 'VIP', 'Credit', '2022-06-19 12:27:45', '0025567890124', 1, 'https://example.com/tickets/30-6.jpg', 'VIP access for Main stage acts'),
 (30, 299.99, 11, 'Premium', 'Cash', '2022-06-20 08:18:33', '1125567890124', 0, 'https://example.com/tickets/30-7.jpg', 'Premium experience for Main stage acts'),
-(30, 499.99, 12, 'Backstage', 'Paypal', '2022-06-21 14:42:11', '2225567890124', 1, 'https://example.com/tickets/30-8.jpg', 'Backstage pass for Main stage acts')
+(30, 499.99, 12, 'Backstage', 'Paypal', '2022-06-21 14:42:11', '2225567890124', 1, 'https://example.com/tickets/30-8.jpg', 'Backstage pass for Main stage acts'),
 
  -- Event 31: Rock band kicks off the final day (2022-07-13)
 (31, 89.99, 13, 'General', 'Cash', '2022-06-15 10:22:10', '3325567890124', 1, 'https://example.com/tickets/31-1.jpg', 'General admission for Rock band final day'),
@@ -1120,7 +1120,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (40, 89.99, 89, 'General', 'Debit', '2025-06-13 09:12:19', '9995567890124', 1, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
 (40, 199.99, 90, 'VIP', 'Credit', '2025-06-14 12:27:45', '0105567890124', 1, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
 (40, 299.99, 91, 'Premium', 'Cash', '2025-06-15 08:18:33', '1205567890124', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
-(40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 1, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix'),
+(40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 1, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
 
  INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
 -- Event 41: The final day begins (2026-08-20)
@@ -1369,14 +1369,14 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
-(49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890123', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
+(49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890125', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
 (49, 299.99, 151, 'Premium', 'Paypal', '2026-07-22 11:45:22', '0034567890123', 0, 'https://example.com/tickets/49-3.jpg', 'Premium experience for Final celebration day'),
 (49, 499.99, 152, 'Backstage', 'Cash', '2026-07-23 16:30:44', '1134567890123', 1, 'https://example.com/tickets/49-4.jpg', 'Backstage pass for Final celebration day'),
 
 -- Event 50 (8 tickets)
-(50, 89.99, 153, 'General', 'Paypal', '2026-07-25 12:15:22', '2234567890123', 1, 'https://example.com/tickets/50-1.jpg', 'General admission for Farewell to wonderful year'),
+(50, 89.99, 153, 'General', 'Paypal', '2026-07-25 12:15:22', '2234567890125', 1, 'https://example.com/tickets/50-1.jpg', 'General admission for Farewell to wonderful year'),
 (50, 199.99, 154, 'VIP', 'Credit', '2026-07-26 09:33:44', '3334567890123', 1, 'https://example.com/tickets/50-2.jpg', 'VIP access for Farewell to wonderful year'),
-(50, 299.99, 155, 'Premium', 'Debit', '2026-07-27 14:22:11', '4434567890123', 0, 'https://example.com/tickets/50-3.jpg', 'Premium experience for Farewell to wonderful year'),
+(50, 299.99, 155, 'Premium', 'Debit', '2026-07-27 14:22:11', '4434567890125', 0, 'https://example.com/tickets/50-3.jpg', 'Premium experience for Farewell to wonderful year'),
 (50, 499.99, 156, 'Backstage', 'Cash', '2026-07-28 17:45:33', '5534567890123', 1, 'https://example.com/tickets/50-4.jpg', 'Backstage pass for Farewell to wonderful year');
 
 -- Populating the PerformerSubgenre table with performers and their respective subgenres
