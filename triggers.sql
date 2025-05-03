@@ -254,7 +254,7 @@ BEFORE INSERT ON Performance
 FOR EACH ROW
 BEGIN
     DECLARE cnt INT ;
-    DECLARE solo BOOL;
+    DECLARE solo TINYINT;
     DECLARE artist VARCHAR(30);
 
     SELECT artist_nband INTO solo
