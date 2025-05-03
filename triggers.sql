@@ -192,7 +192,7 @@ BEGIN
     FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
     WHERE event_id = NEW.event_id;
 
-    IF vip_count >= 0.1*event_capacity THEN
+    IF vip_count > 0.1*event_capacity THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'VIP section is sold out';
     END IF;
