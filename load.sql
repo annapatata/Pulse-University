@@ -848,7 +848,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (10, 89.99, 37, 'General', 'Cash', '2018-05-27 10:22:10', '2254567890123', 1, 'https://example.com/tickets/10-1.jpg', 'General admission for The grand finale of the festival'),
 (10, 199.99, 38, 'VIP', 'Paypal', '2018-05-28 11:15:33', '3354567890123', 1, 'https://example.com/tickets/10-2.jpg', 'VIP access for The grand finale of the festival'),
 (10, 299.99, 39, 'Premium', 'Credit', '2018-05-29 14:45:22', '4454567890123', 0, 'https://example.com/tickets/10-3.jpg', 'Premium experience for The grand finale of the festival'),
-(10, 499.99, 40, 'Backstage', 'Debit', '2018-05-30 17:30:44', '5554567890123', 1, 'https://example.com/tickets/10-4.jpg', 'Backstage pass for The grand finale of the festival')
+(10, 499.99, 40, 'Backstage', 'Debit', '2018-05-30 17:30:44', '5554567890123', 1, 'https://example.com/tickets/10-4.jpg', 'Backstage pass for The grand finale of the festival'),
  
 -- Event 11: Opening day of the 2019 festival (2019-07-05)
 (11, 89.99, 41, 'General', 'Credit', '2019-06-05 14:22:10', '1234567890124', 1, 'https://example.com/tickets/11-1.jpg', 'General admission for 2019 opening day'),
