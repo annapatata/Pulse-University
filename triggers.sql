@@ -94,9 +94,7 @@ BEGIN
         	SET MESSAGE_TEXT = 'Too few help staff in this event';
     	END IF;
     END IF;
-    
-END
-
+END$$
 DELIMITER ;
 
 
