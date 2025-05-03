@@ -2038,3 +2038,23 @@ INSERT INTO PerformanceTypes (type_id) VALUES
 ('opening act'),
 ('release party'),
 ('tribute performance');
+
+-- Premium ticket for Orchestral music (Event 46, EAN: 3934567890426)
+INSERT INTO Resale_queue (EAN, sale_interest) VALUES
+('3934567890426', '2026-07-10 09:15:00');
+
+-- Premium ticket for Closing set (Event 47, EAN: 1144567890427)
+INSERT INTO Resale_queue (EAN, sale_interest) VALUES
+('1144567890427', '2026-07-15 11:30:00');
+
+-- Premium ticket for Special performances (Event 48, EAN: 9944567890428)
+INSERT INTO Resale_queue (EAN, sale_interest) VALUES
+('9944567890428', '2026-07-18 14:45:00');
+
+-- Premium ticket for Orchestral music (Event 46, EAN: 7934567890426)
+INSERT INTO Resale_queue (EAN, sale_interest) VALUES
+('7934567890426', '2026-07-20 10:20:00');
+
+-- Premium ticket for Closing set (Event 47, EAN: 5544567890427)
+INSERT INTO Resale_queue (EAN, sale_interest) VALUES
+('5544567890427', '2026-07-25 08:10:00');
