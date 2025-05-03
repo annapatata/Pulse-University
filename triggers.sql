@@ -373,46 +373,46 @@ BEGIN
 	
     SELECT COUNT(py.years_id) INTO cnt
     FROM PerformerYears py
-    WHERE py.performer_id = performer_id
+    WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 3 AND this_year;
 	
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 
     SELECT COUNT(py.years_id) INTO cnt
     FROM PerformerYears py
-    WHERE py.performer_id = performer_id
+    WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 2 AND this_year + 1;
 	
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 	
     SELECT COUNT(py.years_id) INTO cnt
     FROM PerformerYears py
-    WHERE py.performer_id = performer_id
+    WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 1 AND this_year + 2;
 	
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 	
     SELECT COUNT(py.years_id) INTO cnt
     FROM PerformerYears py
-    WHERE py.performer_id = performer_id
+    WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year AND this_year + 3;
 	
 	IF cnt = 3 
 	THEN
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'Performer cannot perform four years in a row.';
+		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 END//
 DELIMITER ;
