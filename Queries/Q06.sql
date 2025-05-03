@@ -5,8 +5,6 @@ FROM
 	Ticket t 
 LEFT JOIN 
 	Review r ON r.EAN = t.EAN 
-JOIN
-	Performance p on p.performance_id = t.performance_id
+WHERE t.visitor_id = ?
 GROUP BY
-	t.event_id
-WHERE t.visitor_id = ? ;
+	t.event_id ;
