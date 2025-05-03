@@ -85,7 +85,7 @@ CREATE TABLE Staff (
 
 CREATE TABLE Equipment (
   equip_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  equip_name varchar(20) NOT NULL UNIQUE,
+  equip_name varchar(50) NOT NULL UNIQUE,
   image varchar(100) NOT NULL CHECK (image like 'https://%'),
   image_caption varchar(100) NOT NULL
 );
