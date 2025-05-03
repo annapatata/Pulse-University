@@ -180,8 +180,7 @@ CREATE TABLE Performer (
   performer_name varchar(30) NOT NULL, 
   artist_nband tinyint NOT NULL,
   artist_id INT UNIQUE,
-  band_id INT UNIQUE CHECK ((artist_nband = TRUE AND artist_id IS NOT NULL AND band_id IS NULL) OR
-       (artist_nband = FALSE AND band_id IS NOT NULL AND artist_id IS NULL)),
+  band_id INT UNIQUE,
   FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
   ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (band_id) REFERENCES Band(band_id)
