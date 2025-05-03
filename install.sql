@@ -359,7 +359,7 @@ CREATE INDEX idx_py_year_id ON PerformerYears(year_id); -- q02
 
 -- PerformerSubgenre indexes
 CREATE INDEX idx_performersubgenre_performer_id ON PerformerSubgenre(performer_id); -- q02
-CREATE INDEX idx_performersubgenre_subgenre_id ON PerformerSubgenre(subgenre_id); --q02/q10
+CREATE INDEX idx_performersubgenre_subgenre_id ON PerformerSubgenre(subgenre_id); -- q02/q10
 
 -- Performance indexes
 CREATE INDEX idx_performance_event_id ON Performance(event_id); -- q03/q04/q13
