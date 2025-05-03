@@ -436,7 +436,7 @@ BEGIN
 	DECLARE this_year YEAR;
 	
 	SELECT f.festival_id INTO this_year
-	FROM Event e
+	FROM Event_P e
 	JOIN Festival f ON e.festival_id = f.festival_id
 	WHERE e.event_id = NEW.event_id;
 	
