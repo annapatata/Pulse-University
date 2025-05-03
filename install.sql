@@ -237,7 +237,7 @@ CREATE TABLE Visitor (
    first_name VARCHAR(20) NOT NULL,
    last_name VARCHAR(30) NOT NULL,
    age INT NOT NULL,
-   phone VARCHAR(15) NOT NULL UNIQUE
+   phone VARCHAR(30) NOT NULL UNIQUE
 );
 
 CREATE TABLE Ticket_Class (
