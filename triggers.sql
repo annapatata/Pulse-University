@@ -98,22 +98,22 @@ END
 DELIMITER ;
 
 DELIMITER $$ 
-
-
-CREATE TRIGGER staff_overlap
-BEFORE INSERT ON Employment
-FOR EACH ROW
 BEGIN
     DECLARE count_staff INT;
-
+	DECLARE new_start DATETIME;
+    DECLARE new_end DATETIME;
+    
+    SELECT start_time, end_time INTO new_start,new_end
+    FROM Event_P
+    WHERE event_id = NEW.event_id;
+    
     SELECT COUNT(*) INTO count_staff
     FROM Employment em
     JOIN Event_P ev ON em.event_id = ev.event_id
-    JOIN Event_P ev2 ON NEW.event_id = ev2.event_id
-    WHERE staff_id = NEW.staff_id 
-    AND DATE(ev.start_time) = DATE(ev2.start_time);
+    WHERE em.staff_id = NEW.staff_id 
+    AND (new_end > ev.start_time OR new_start <ev.end_time);
 
-    IF (count_staff>1) THEN
+    IF (count_staff>0) THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Overlapping Staff';
     END IF;
