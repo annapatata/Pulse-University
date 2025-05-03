@@ -472,7 +472,7 @@ BEGIN
 		FROM Performer 
 		WHERE performer_id = NEW.performer_id;
 		
-		UPDATE Artist 
+		UPDATE Artist a
 		JOIN BandMembers bm ON a.artist_id = bm.artist_id 
 		SET a.participations = a.participations + 1
 		WHERE bm.band_id = id;
