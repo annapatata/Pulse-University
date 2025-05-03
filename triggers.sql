@@ -197,7 +197,7 @@ BEGIN
     WHERE event_id = NEW.event_id AND ticket_type = 'VIP';
 
     SELECT capacity INTO event_capacity
-    FROM Event_P
+    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
     WHERE event_id = NEW.event_id;
 
     IF vip_count >= 0.1*event_capacity THEN
