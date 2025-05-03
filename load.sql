@@ -1529,6 +1529,118 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (46, 89.99, 19, 'General', 'Credit', '2026-07-26 18:25:05', '3434567890426-125', 1, 'https://example.com/tickets/46-139.jpg', 'General admission for Orchestral music'),
 (46, 89.99, 20, 'General', 'Debit', '2026-07-26 18:30:06', '3434567890426-126', 1, 'https://example.com/tickets/46-140.jpg', 'General admission for Orchestral music');
 
+-- Event 47 originally has 8 tickets (from your initial data), so we need to add 95 more
+-- Original 8 tickets had 2 VIP, so we need to add 8 more VIP tickets (total 10)
+-- And add 87 General Admission tickets (95 total additions - 8 VIP)
+
+-- First, add the additional 8 VIP tickets (to reach 10 total)
+INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
+(47, 199.99, 57, 'VIP', 'Credit', '2026-07-27 09:15:33', '0044567890427-1', 1, 'https://example.com/tickets/47-9.jpg', 'VIP access for Closing set'),
+(47, 199.99, 58, 'VIP', 'Debit', '2026-07-27 09:20:44', '0044567890427-2', 1, 'https://example.com/tickets/47-10.jpg', 'VIP access for Closing set'),
+(47, 199.99, 59, 'VIP', 'Paypal', '2026-07-27 09:25:55', '0044567890427-3', 1, 'https://example.com/tickets/47-11.jpg', 'VIP access for Closing set'),
+(47, 199.99, 60, 'VIP', 'Cash', '2026-07-27 09:30:11', '0044567890427-4', 1, 'https://example.com/tickets/47-12.jpg', 'VIP access for Closing set'),
+(47, 199.99, 61, 'VIP', 'Credit', '2026-07-27 09:35:22', '0044567890427-5', 1, 'https://example.com/tickets/47-13.jpg', 'VIP access for Closing set'),
+(47, 199.99, 62, 'VIP', 'Debit', '2026-07-27 09:40:33', '0044567890427-6', 1, 'https://example.com/tickets/47-14.jpg', 'VIP access for Closing set'),
+(47, 199.99, 63, 'VIP', 'Paypal', '2026-07-27 09:45:44', '0044567890427-7', 1, 'https://example.com/tickets/47-15.jpg', 'VIP access for Closing set'),
+(47, 199.99, 64, 'VIP', 'Cash', '2026-07-27 09:50:55', '0044567890427-8', 1, 'https://example.com/tickets/47-16.jpg', 'VIP access for Closing set'),
+
+-- Now add 87 General Admission tickets (in batches for readability)
+-- Batch 1 (20 tickets)
+(47, 89.99, 65, 'General', 'Credit', '2026-07-27 10:00:01', '3434567890427-1', 1, 'https://example.com/tickets/47-17.jpg', 'General admission for Closing set'),
+(47, 89.99, 66, 'General', 'Debit', '2026-07-27 10:05:02', '3434567890427-2', 1, 'https://example.com/tickets/47-18.jpg', 'General admission for Closing set'),
+(47, 89.99, 67, 'General', 'Paypal', '2026-07-27 10:10:03', '3434567890427-3', 1, 'https://example.com/tickets/47-19.jpg', 'General admission for Closing set'),
+(47, 89.99, 68, 'General', 'Cash', '2026-07-27 10:15:04', '3434567890427-4', 1, 'https://example.com/tickets/47-20.jpg', 'General admission for Closing set'),
+(47, 89.99, 69, 'General', 'Credit', '2026-07-27 10:20:05', '3434567890427-5', 1, 'https://example.com/tickets/47-21.jpg', 'General admission for Closing set'),
+(47, 89.99, 70, 'General', 'Debit', '2026-07-27 10:25:06', '3434567890427-6', 1, 'https://example.com/tickets/47-22.jpg', 'General admission for Closing set'),
+(47, 89.99, 71, 'General', 'Paypal', '2026-07-27 10:30:07', '3434567890427-7', 1, 'https://example.com/tickets/47-23.jpg', 'General admission for Closing set'),
+(47, 89.99, 72, 'General', 'Cash', '2026-07-27 10:35:08', '3434567890427-8', 1, 'https://example.com/tickets/47-24.jpg', 'General admission for Closing set'),
+(47, 89.99, 73, 'General', 'Credit', '2026-07-27 10:40:09', '3434567890427-9', 1, 'https://example.com/tickets/47-25.jpg', 'General admission for Closing set'),
+(47, 89.99, 74, 'General', 'Debit', '2026-07-27 10:45:10', '3434567890427-10', 1, 'https://example.com/tickets/47-26.jpg', 'General admission for Closing set'),
+(47, 89.99, 75, 'General', 'Paypal', '2026-07-27 10:50:11', '3434567890427-11', 1, 'https://example.com/tickets/47-27.jpg', 'General admission for Closing set'),
+(47, 89.99, 76, 'General', 'Cash', '2026-07-27 10:55:12', '3434567890427-12', 1, 'https://example.com/tickets/47-28.jpg', 'General admission for Closing set'),
+(47, 89.99, 77, 'General', 'Credit', '2026-07-27 11:00:13', '3434567890427-13', 1, 'https://example.com/tickets/47-29.jpg', 'General admission for Closing set'),
+(47, 89.99, 78, 'General', 'Debit', '2026-07-27 11:05:14', '3434567890427-14', 1, 'https://example.com/tickets/47-30.jpg', 'General admission for Closing set'),
+(47, 89.99, 79, 'General', 'Paypal', '2026-07-27 11:10:15', '3434567890427-15', 1, 'https://example.com/tickets/47-31.jpg', 'General admission for Closing set'),
+(47, 89.99, 80, 'General', 'Cash', '2026-07-27 11:15:16', '3434567890427-16', 1, 'https://example.com/tickets/47-32.jpg', 'General admission for Closing set'),
+(47, 89.99, 81, 'General', 'Credit', '2026-07-27 11:20:17', '3434567890427-17', 1, 'https://example.com/tickets/47-33.jpg', 'General admission for Closing set'),
+(47, 89.99, 82, 'General', 'Debit', '2026-07-27 11:25:18', '3434567890427-18', 1, 'https://example.com/tickets/47-34.jpg', 'General admission for Closing set'),
+(47, 89.99, 83, 'General', 'Paypal', '2026-07-27 11:30:19', '3434567890427-19', 1, 'https://example.com/tickets/47-35.jpg', 'General admission for Closing set'),
+(47, 89.99, 84, 'General', 'Cash', '2026-07-27 11:35:20', '3434567890427-20', 1, 'https://example.com/tickets/47-36.jpg', 'General admission for Closing set'),
+
+-- Batch 2 (20 tickets)
+(47, 89.99, 85, 'General', 'Credit', '2026-07-27 11:40:21', '3434567890427-21', 1, 'https://example.com/tickets/47-37.jpg', 'General admission for Closing set'),
+(47, 89.99, 86, 'General', 'Debit', '2026-07-27 11:45:22', '3434567890427-22', 1, 'https://example.com/tickets/47-38.jpg', 'General admission for Closing set'),
+(47, 89.99, 87, 'General', 'Paypal', '2026-07-27 11:50:23', '3434567890427-23', 1, 'https://example.com/tickets/47-39.jpg', 'General admission for Closing set'),
+(47, 89.99, 88, 'General', 'Cash', '2026-07-27 11:55:24', '3434567890427-24', 1, 'https://example.com/tickets/47-40.jpg', 'General admission for Closing set'),
+(47, 89.99, 89, 'General', 'Credit', '2026-07-27 12:00:25', '3434567890427-25', 1, 'https://example.com/tickets/47-41.jpg', 'General admission for Closing set'),
+(47, 89.99, 90, 'General', 'Debit', '2026-07-27 12:05:26', '3434567890427-26', 1, 'https://example.com/tickets/47-42.jpg', 'General admission for Closing set'),
+(47, 89.99, 91, 'General', 'Paypal', '2026-07-27 12:10:27', '3434567890427-27', 1, 'https://example.com/tickets/47-43.jpg', 'General admission for Closing set'),
+(47, 89.99, 92, 'General', 'Cash', '2026-07-27 12:15:28', '3434567890427-28', 1, 'https://example.com/tickets/47-44.jpg', 'General admission for Closing set'),
+(47, 89.99, 93, 'General', 'Credit', '2026-07-27 12:20:29', '3434567890427-29', 1, 'https://example.com/tickets/47-45.jpg', 'General admission for Closing set'),
+(47, 89.99, 94, 'General', 'Debit', '2026-07-27 12:25:30', '3434567890427-30', 1, 'https://example.com/tickets/47-46.jpg', 'General admission for Closing set'),
+(47, 89.99, 95, 'General', 'Paypal', '2026-07-27 12:30:31', '3434567890427-31', 1, 'https://example.com/tickets/47-47.jpg', 'General admission for Closing set'),
+(47, 89.99, 96, 'General', 'Cash', '2026-07-27 12:35:32', '3434567890427-32', 1, 'https://example.com/tickets/47-48.jpg', 'General admission for Closing set'),
+(47, 89.99, 97, 'General', 'Credit', '2026-07-27 12:40:33', '3434567890427-33', 1, 'https://example.com/tickets/47-49.jpg', 'General admission for Closing set'),
+(47, 89.99, 98, 'General', 'Debit', '2026-07-27 12:45:34', '3434567890427-34', 1, 'https://example.com/tickets/47-50.jpg', 'General admission for Closing set'),
+(47, 89.99, 99, 'General', 'Paypal', '2026-07-27 12:50:35', '3434567890427-35', 1, 'https://example.com/tickets/47-51.jpg', 'General admission for Closing set'),
+(47, 89.99, 100, 'General', 'Cash', '2026-07-27 12:55:36', '3434567890427-36', 1, 'https://example.com/tickets/47-52.jpg', 'General admission for Closing set'),
+(47, 89.99, 101, 'General', 'Credit', '2026-07-27 13:00:37', '3434567890427-37', 1, 'https://example.com/tickets/47-53.jpg', 'General admission for Closing set'),
+(47, 89.99, 102, 'General', 'Debit', '2026-07-27 13:05:38', '3434567890427-38', 1, 'https://example.com/tickets/47-54.jpg', 'General admission for Closing set'),
+(47, 89.99, 103, 'General', 'Paypal', '2026-07-27 13:10:39', '3434567890427-39', 1, 'https://example.com/tickets/47-55.jpg', 'General admission for Closing set'),
+(47, 89.99, 104, 'General', 'Cash', '2026-07-27 13:15:40', '3434567890427-40', 1, 'https://example.com/tickets/47-56.jpg', 'General admission for Closing set'),
+
+-- Batch 3 (20 tickets)
+(47, 89.99, 105, 'General', 'Credit', '2026-07-27 13:20:41', '3434567890427-41', 1, 'https://example.com/tickets/47-57.jpg', 'General admission for Closing set'),
+(47, 89.99, 106, 'General', 'Debit', '2026-07-27 13:25:42', '3434567890427-42', 1, 'https://example.com/tickets/47-58.jpg', 'General admission for Closing set'),
+(47, 89.99, 107, 'General', 'Paypal', '2026-07-27 13:30:43', '3434567890427-43', 1, 'https://example.com/tickets/47-59.jpg', 'General admission for Closing set'),
+(47, 89.99, 108, 'General', 'Cash', '2026-07-27 13:35:44', '3434567890427-44', 1, 'https://example.com/tickets/47-60.jpg', 'General admission for Closing set'),
+(47, 89.99, 109, 'General', 'Credit', '2026-07-27 13:40:45', '3434567890427-45', 1, 'https://example.com/tickets/47-61.jpg', 'General admission for Closing set'),
+(47, 89.99, 110, 'General', 'Debit', '2026-07-27 13:45:46', '3434567890427-46', 1, 'https://example.com/tickets/47-62.jpg', 'General admission for Closing set'),
+(47, 89.99, 111, 'General', 'Paypal', '2026-07-27 13:50:47', '3434567890427-47', 1, 'https://example.com/tickets/47-63.jpg', 'General admission for Closing set'),
+(47, 89.99, 112, 'General', 'Cash', '2026-07-27 13:55:48', '3434567890427-48', 1, 'https://example.com/tickets/47-64.jpg', 'General admission for Closing set'),
+(47, 89.99, 113, 'General', 'Credit', '2026-07-27 14:00:49', '3434567890427-49', 1, 'https://example.com/tickets/47-65.jpg', 'General admission for Closing set'),
+(47, 89.99, 114, 'General', 'Debit', '2026-07-27 14:05:50', '3434567890427-50', 1, 'https://example.com/tickets/47-66.jpg', 'General admission for Closing set'),
+(47, 89.99, 115, 'General', 'Paypal', '2026-07-27 14:10:51', '3434567890427-51', 1, 'https://example.com/tickets/47-67.jpg', 'General admission for Closing set'),
+(47, 89.99, 116, 'General', 'Cash', '2026-07-27 14:15:52', '3434567890427-52', 1, 'https://example.com/tickets/47-68.jpg', 'General admission for Closing set'),
+(47, 89.99, 117, 'General', 'Credit', '2026-07-27 14:20:53', '3434567890427-53', 1, 'https://example.com/tickets/47-69.jpg', 'General admission for Closing set'),
+(47, 89.99, 118, 'General', 'Debit', '2026-07-27 14:25:54', '3434567890427-54', 1, 'https://example.com/tickets/47-70.jpg', 'General admission for Closing set'),
+(47, 89.99, 119, 'General', 'Paypal', '2026-07-27 14:30:55', '3434567890427-55', 1, 'https://example.com/tickets/47-71.jpg', 'General admission for Closing set'),
+(47, 89.99, 120, 'General', 'Cash', '2026-07-27 14:35:56', '3434567890427-56', 1, 'https://example.com/tickets/47-72.jpg', 'General admission for Closing set'),
+(47, 89.99, 121, 'General', 'Credit', '2026-07-27 14:40:57', '3434567890427-57', 1, 'https://example.com/tickets/47-73.jpg', 'General admission for Closing set'),
+(47, 89.99, 122, 'General', 'Debit', '2026-07-27 14:45:58', '3434567890427-58', 1, 'https://example.com/tickets/47-74.jpg', 'General admission for Closing set'),
+(47, 89.99, 123, 'General', 'Paypal', '2026-07-27 14:50:59', '3434567890427-59', 1, 'https://example.com/tickets/47-75.jpg', 'General admission for Closing set'),
+(47, 89.99, 124, 'General', 'Cash', '2026-07-27 14:55:00', '3434567890427-60', 1, 'https://example.com/tickets/47-76.jpg', 'General admission for Closing set'),
+
+-- Batch 4 (20 tickets)
+(47, 89.99, 125, 'General', 'Credit', '2026-07-27 15:00:01', '3434567890427-61', 1, 'https://example.com/tickets/47-77.jpg', 'General admission for Closing set'),
+(47, 89.99, 126, 'General', 'Debit', '2026-07-27 15:05:02', '3434567890427-62', 1, 'https://example.com/tickets/47-78.jpg', 'General admission for Closing set'),
+(47, 89.99, 127, 'General', 'Paypal', '2026-07-27 15:10:03', '3434567890427-63', 1, 'https://example.com/tickets/47-79.jpg', 'General admission for Closing set'),
+(47, 89.99, 128, 'General', 'Cash', '2026-07-27 15:15:04', '3434567890427-64', 1, 'https://example.com/tickets/47-80.jpg', 'General admission for Closing set'),
+(47, 89.99, 129, 'General', 'Credit', '2026-07-27 15:20:05', '3434567890427-65', 1, 'https://example.com/tickets/47-81.jpg', 'General admission for Closing set'),
+(47, 89.99, 130, 'General', 'Debit', '2026-07-27 15:25:06', '3434567890427-66', 1, 'https://example.com/tickets/47-82.jpg', 'General admission for Closing set'),
+(47, 89.99, 131, 'General', 'Paypal', '2026-07-27 15:30:07', '3434567890427-67', 1, 'https://example.com/tickets/47-83.jpg', 'General admission for Closing set'),
+(47, 89.99, 132, 'General', 'Cash', '2026-07-27 15:35:08', '3434567890427-68', 1, 'https://example.com/tickets/47-84.jpg', 'General admission for Closing set'),
+(47, 89.99, 133, 'General', 'Credit', '2026-07-27 15:40:09', '3434567890427-69', 1, 'https://example.com/tickets/47-85.jpg', 'General admission for Closing set'),
+(47, 89.99, 134, 'General', 'Debit', '2026-07-27 15:45:10', '3434567890427-70', 1, 'https://example.com/tickets/47-86.jpg', 'General admission for Closing set'),
+(47, 89.99, 135, 'General', 'Paypal', '2026-07-27 15:50:11', '3434567890427-71', 1, 'https://example.com/tickets/47-87.jpg', 'General admission for Closing set'),
+(47, 89.99, 136, 'General', 'Cash', '2026-07-27 15:55:12', '3434567890427-72', 1, 'https://example.com/tickets/47-88.jpg', 'General admission for Closing set'),
+(47, 89.99, 137, 'General', 'Credit', '2026-07-27 16:00:13', '3434567890427-73', 1, 'https://example.com/tickets/47-89.jpg', 'General admission for Closing set'),
+(47, 89.99, 138, 'General', 'Debit', '2026-07-27 16:05:14', '3434567890427-74', 1, 'https://example.com/tickets/47-90.jpg', 'General admission for Closing set'),
+(47, 89.99, 139, 'General', 'Paypal', '2026-07-27 16:10:15', '3434567890427-75', 1, 'https://example.com/tickets/47-91.jpg', 'General admission for Closing set'),
+(47, 89.99, 140, 'General', 'Cash', '2026-07-27 16:15:16', '3434567890427-76', 1, 'https://example.com/tickets/47-92.jpg', 'General admission for Closing set'),
+(47, 89.99, 141, 'General', 'Credit', '2026-07-27 16:20:17', '3434567890427-77', 1, 'https://example.com/tickets/47-93.jpg', 'General admission for Closing set'),
+(47, 89.99, 142, 'General', 'Debit', '2026-07-27 16:25:18', '3434567890427-78', 1, 'https://example.com/tickets/47-94.jpg', 'General admission for Closing set'),
+(47, 89.99, 143, 'General', 'Paypal', '2026-07-27 16:30:19', '3434567890427-79', 1, 'https://example.com/tickets/47-95.jpg', 'General admission for Closing set'),
+(47, 89.99, 144, 'General', 'Cash', '2026-07-27 16:35:20', '3434567890427-80', 1, 'https://example.com/tickets/47-96.jpg', 'General admission for Closing set'),
+
+-- Final batch (7 tickets to reach total 103)
+(47, 89.99, 145, 'General', 'Credit', '2026-07-27 16:40:21', '3434567890427-81', 1, 'https://example.com/tickets/47-97.jpg', 'General admission for Closing set'),
+(47, 89.99, 146, 'General', 'Debit', '2026-07-27 16:45:22', '3434567890427-82', 1, 'https://example.com/tickets/47-98.jpg', 'General admission for Closing set'),
+(47, 89.99, 147, 'General', 'Paypal', '2026-07-27 16:50:23', '3434567890427-83', 1, 'https://example.com/tickets/47-99.jpg', 'General admission for Closing set'),
+(47, 89.99, 148, 'General', 'Cash', '2026-07-27 16:55:24', '3434567890427-84', 1, 'https://example.com/tickets/47-100.jpg', 'General admission for Closing set'),
+(47, 89.99, 149, 'General', 'Credit', '2026-07-27 17:00:25', '3434567890427-85', 1, 'https://example.com/tickets/47-101.jpg', 'General admission for Closing set'),
+(47, 89.99, 150, 'General', 'Debit', '2026-07-27 17:05:26', '3434567890427-86', 1, 'https://example.com/tickets/47-102.jpg', 'General admission for Closing set'),
+(47, 89.99, 151, 'General', 'Paypal', '2026-07-27 17:10:27', '3434567890427-87', 1, 'https://example.com/tickets/47-103.jpg', 'General admission for Closing set');
 
 INSERT INTO Genre (genre_id, image, image_caption) VALUES
 ('Pop', 'https://example.com/pop.jpg', 'Popular mainstream sound'),
