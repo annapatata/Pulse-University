@@ -363,7 +363,7 @@ BEGIN
 	JOIN Festival f ON e.festival_id = f.festival_id
 	WHERE e.event_id = NEW.event_id;
 	
-    SELECT COUNT(py.years_id) INTO cnt
+    SELECT COUNT(DISTINCT py.years_id) INTO cnt
     FROM PerformerYears py
     WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 3 AND this_year;
@@ -374,7 +374,7 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 
-    SELECT COUNT(py.years_id) INTO cnt
+    SELECT COUNT(DISTINCT py.years_id) INTO cnt
     FROM PerformerYears py
     WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 2 AND this_year + 1;
@@ -385,7 +385,7 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 	
-    SELECT COUNT(py.years_id) INTO cnt
+    SELECT COUNT(DISTINCT py.years_id) INTO cnt
     FROM PerformerYears py
     WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year - 1 AND this_year + 2;
@@ -396,7 +396,7 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 	
-    SELECT COUNT(py.years_id) INTO cnt
+    SELECT COUNT(DISTINCT py.years_id) INTO cnt
     FROM PerformerYears py
     WHERE py.performer_id = NEW.performer_id
       AND py.years_id BETWEEN this_year AND this_year + 3;
