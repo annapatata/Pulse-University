@@ -1,3 +1,4 @@
+-- CHECKED 
 SELECT DISTINCT p.performer_name,
 	 IF(py.years_id IS NOT NULL, 'YES', 'NO') AS Participated
 FROM Performer p 
