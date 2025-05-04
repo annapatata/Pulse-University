@@ -1321,51 +1321,6 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (45, 89.99, 137, 'General', 'Paypal', '2026-08-17 09:12:19', '7824567890425', 1, 'https://example.com/tickets/45-17.jpg', 'General admission for Classical symphony'),
 (45, 199.99, 138, 'VIP', 'Credit', '2026-08-18 12:27:45', '8924567890425', 1, 'https://example.com/tickets/45-18.jpg', 'VIP access for Classical symphony'),
 
--- Event 46
-(46, 299.99, 139, 'Premium', 'Debit', '2026-08-18 08:18:33', '9024567890426', 0, 'https://example.com/tickets/46-17.jpg', 'Premium experience for Orchestral music'),
-(46, 499.99, 140, 'General', 'Cash', '2026-08-19 14:42:11', '0134567890426', 1, 'https://example.com/tickets/46-18.jpg', 'Backstage pass for Orchestral music'),
-
--- Event 47
-(47, 89.99, 141, 'General', 'Credit', '2026-08-19 08:22:10', '1234567890427', 1, 'https://example.com/tickets/47-17.jpg', 'General admission for Closing set'),
-(47, 199.99, 142, 'General', 'Debit', '2026-08-20 11:15:33', '2334567890427', 1, 'https://example.com/tickets/47-18.jpg', 'VIP access for Closing set'),
-
--- Event 48
-(48, 299.99, 143, 'Premium', 'Paypal', '2026-08-20 13:45:22', '3434567890428', 0, 'https://example.com/tickets/48-17.jpg', 'Premium experience for Special performances'),
-(48, 499.99, 144, 'Backstage', 'Cash', '2026-08-21 18:30:44', '4534567890428', 1, 'https://example.com/tickets/48-18.jpg', 'Backstage pass for Special performances'),
-
--- Final 16 tickets to reach exactly 400
--- Event 41
-(41, 299.99, 145, 'Premium', 'Cash', '2026-08-21 08:18:33', '5634567890421', 0, 'https://example.com/tickets/41-19.jpg', 'Premium experience for The final day begins'),
-(41, 499.99, 146, 'Backstage', 'Paypal', '2026-08-22 14:42:11', '6734567890421', 1, 'https://example.com/tickets/41-20.jpg', 'Backstage pass for The final day begins'),
-
--- Event 42
-(42, 89.99, 147, 'General', 'Debit', '2026-08-22 09:12:19', '7834567890422', 1, 'https://example.com/tickets/42-19.jpg', 'General admission for Time to celebrate'),
-(42, 199.99, 148, 'VIP', 'Credit', '2026-08-23 12:27:45', '8934567890422', 1, 'https://example.com/tickets/42-20.jpg', 'VIP access for Time to celebrate'),
-
--- Event 43
-(43, 299.99, 149, 'Premium', 'Debit', '2026-08-23 08:18:33', '9034567890423', 0, 'https://example.com/tickets/43-19.jpg', 'Premium experience for Jazz tunes'),
-(43, 499.99, 150, 'Backstage', 'Cash', '2026-08-24 14:42:11', '0144567890423', 1, 'https://example.com/tickets/43-20.jpg', 'Backstage pass for Jazz tunes'),
-
--- Event 44
-(44, 89.99, 151, 'General', 'Paypal', '2026-08-24 09:12:19', '1244567890424', 1, 'https://example.com/tickets/44-19.jpg', 'General admission for Indie bands'),
-(44, 199.99, 152, 'VIP', 'Credit', '2026-08-25 12:27:45', '2344567890424', 1, 'https://example.com/tickets/44-20.jpg', 'VIP access for Indie bands'),
-
--- Event 45
-(45, 299.99, 153, 'Premium', 'Cash', '2026-08-25 08:18:33', '3444567890425', 0, 'https://example.com/tickets/45-19.jpg', 'Premium experience for Classical symphony'),
-(45, 499.99, 154, 'Backstage', 'Paypal', '2026-08-26 14:42:11', '4544567890425', 1, 'https://example.com/tickets/45-20.jpg', 'Backstage pass for Classical symphony'),
-
--- Event 46
-(46, 89.99, 155, 'General', 'Credit', '2026-08-26 08:22:10', '5644567890426', 1, 'https://example.com/tickets/46-19.jpg', 'General admission for Orchestral music'),
-(46, 199.99, 156, 'General', 'Debit', '2026-08-27 11:15:33', '6744567890426', 1, 'https://example.com/tickets/46-20.jpg', 'VIP access for Orchestral music'),
-
--- Event 47
-(47, 299.99, 157, 'Premium', 'Paypal', '2026-08-27 13:45:22', '7844567890427', 0, 'https://example.com/tickets/47-19.jpg', 'Premium experience for Closing set'),
-(47, 499.99, 158, 'Backstage', 'Cash', '2026-08-28 18:30:44', '8944567890427', 1, 'https://example.com/tickets/47-20.jpg', 'Backstage pass for Closing set'),
-
--- Event 48
-(48, 89.99, 159, 'General', 'Debit', '2026-08-28 09:12:19', '9044567890428', 1, 'https://example.com/tickets/48-19.jpg', 'General admission for Special performances'),
-(48, 199.99, 160, 'General', 'Credit', '2026-08-29 12:27:45', '0154567890428', 1, 'https://example.com/tickets/48-20.jpg', 'VIP access for Special performances'),
-
 -- Event 49 (8 tickets)
 (49, 89.99, 149, 'General', 'Credit', '2026-07-20 14:22:10', '9834567890123', 1, 'https://example.com/tickets/49-1.jpg', 'General admission for Final celebration day'),
 (49, 199.99, 150, 'VIP', 'Debit', '2026-07-21 09:15:33', '9934567890125', 1, 'https://example.com/tickets/49-2.jpg', 'VIP access for Final celebration day'),
