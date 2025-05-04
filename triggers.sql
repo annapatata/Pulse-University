@@ -544,7 +544,7 @@ BEGIN
 	WHERE EAN = NEW.EAN;
 	
 	SELECT start_time INTO r_time
-	FROM Event 
+	FROM Event_P
 	WHERE event_id = resale_event;
 	
 	SELECT buyer_id, visitor_id INTO cur_b_id, cur_v_id
