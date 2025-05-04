@@ -1,3 +1,4 @@
+-- CHECKED
 
 SELECT 
 	pf.performer_name AS Performer,
