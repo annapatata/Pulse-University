@@ -181,10 +181,9 @@ CREATE TRIGGER check_vip_tickets
 BEFORE INSERT ON Ticket
 FOR EACH ROW
 BEGIN
-	IF New.ticket_type = 'VIP' THEN 	
-	    DECLARE vip_count INT;
-	    DECLARE event_capacity INT;
-	    
+	DECLARE vip_count INT;
+        DECLARE event_capacity INT;
+	IF New.ticket_type = 'VIP' THEN 
 	    SELECT COUNT(*) INTO vip_count
 	    FROM Ticket t 
 	    WHERE event_id = NEW.event_id AND ticket_type = 'VIP';
