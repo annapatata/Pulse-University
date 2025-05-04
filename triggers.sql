@@ -30,7 +30,7 @@ BEGIN
         	SIGNAL SQLSTATE '45000'
         	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
     	END IF;
-END $$
+END$$
 DELIMITER ;
 
 
