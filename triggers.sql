@@ -580,7 +580,7 @@ BEGIN
 	
 	IF NEW.EAN IS NOT NULL THEN	
 		SELECT event_id INTO d_event FROM Ticket WHERE EAN = NEW.EAN;
-		SELECT start_time INTO d_time FROM Event WHERE event_id = d_event;
+		SELECT start_time INTO d_time FROM Event_P WHERE event_id = d_event;
 		IF d_time > NOW() THEN
 		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
 		END IF;
