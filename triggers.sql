@@ -599,7 +599,7 @@ BEGIN
 		IF d_time < NOW() THEN
 			DELETE FROM Buyer WHERE event_id = NEW.event_id;
 			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = d_event
+				SELECT EAN FROM Ticket WHERE event_id = NEW.event_id
 			);
 		END IF;
 		
