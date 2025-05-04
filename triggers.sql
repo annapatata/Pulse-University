@@ -51,7 +51,7 @@ BEGIN
     	SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = "Stage is used at that time";
     END IF;
-END $$
+END$$
 DELIMITER ;
 
 
