@@ -181,21 +181,23 @@ CREATE TRIGGER check_vip_tickets
 BEFORE INSERT ON Ticket
 FOR EACH ROW
 BEGIN
-    DECLARE vip_count INT;
-    DECLARE event_capacity INT;
-    
-    SELECT COUNT(*) INTO vip_count
-    FROM Ticket t 
-    WHERE event_id = NEW.event_id AND ticket_type = 'VIP';
-
-    SELECT capacity INTO event_capacity
-    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
-    WHERE event_id = NEW.event_id;
-
-    IF (vip_count + 1) > 0.1*event_capacity THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'VIP section is sold out';
-    END IF;
+	IF New.ticket_type = 'VIP' THEN 	
+	    DECLARE vip_count INT;
+	    DECLARE event_capacity INT;
+	    
+	    SELECT COUNT(*) INTO vip_count
+	    FROM Ticket t 
+	    WHERE event_id = NEW.event_id AND ticket_type = 'VIP';
+	
+	    SELECT capacity INTO event_capacity
+	    FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
+	    WHERE event_id = NEW.event_id;
+	
+	    IF (vip_count + 1) > 0.1*event_capacity  THEN
+	        SIGNAL SQLSTATE '45000'
+	        SET MESSAGE_TEXT = 'VIP section is sold out';
+	    END IF;
+	END IF;   
 END$$
 DELIMITER ;
 
