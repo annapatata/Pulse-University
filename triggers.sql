@@ -166,7 +166,7 @@ BEGIN
     FROM Stage s JOIN Event_P e ON s.stage_id = e.stage_id
     WHERE event_id = NEW.event_id;
 
-    IF (ticket_count>=cap) THEN 
+    IF (ticket_count + 1 >=cap) THEN 
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Tickets are sold out';
     END IF;
