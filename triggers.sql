@@ -612,8 +612,8 @@ BEGIN
 		LIMIT 1;
 		
 		IF d_EAN IS NOT NULL THEN
-			UPDATE Ticket t SET t.visitor_id = NEW.visitor_id WHERE t.EAN = d_EAN;
-			DELETE FROM Resale_queue rq WHERE rq.EAN = d_EAN;
+			UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
+			DELETE FROM Resale_queue WHERE EAN = d_EAN;
 		END IF;
 	END IF;
 	
