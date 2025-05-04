@@ -594,7 +594,7 @@ BEGIN
 
 	
 	ELSE
-		SELECT start_time INTO d_time FROM Event WHERE event_id = NEW.event_id;
+		SELECT start_time INTO d_time FROM Event_P WHERE event_id = NEW.event_id;
 		
 		IF d_time < NOW() THEN
 			DELETE FROM Buyer WHERE event_id = NEW.event_id;
