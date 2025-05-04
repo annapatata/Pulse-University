@@ -203,6 +203,7 @@ CREATE TABLE Years (
 CREATE TABLE PerformerYears (
 	performer_id INT NOT NULL,
 	years_id YEAR NOT NULL,
+	PRIMARY KEY(performer_id, years_id),
 	FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
 	ON DELETE CASCADE ON UPDATE RESTRICT,
 	FOREIGN KEY (years_id) REFERENCES Years(years_id)
