@@ -2045,7 +2045,7 @@ INSERT INTO Review (EAN, performance_id, voice, light_sound, stage_presence, org
 ('4514567890427', 139, 4, 4, 4, 5, 4),
 ('4514567890427', 140, 3, 3, 3, 3, 3);  
 
-INSERT INTO PerformerYears (performer_id, year_id) VALUES
+INSERT INTO PerformerYears (performer_id, years_id) VALUES
 -- 2018 performers
 (1, 2018), (18, 2018), (38, 2018),
 (2, 2018), (19, 2018), (5, 2018),
@@ -2113,7 +2113,7 @@ INSERT INTO PerformerYears (performer_id, year_id) VALUES
 (2, 2026), (3, 2026), (4, 2026),
 (3, 2026), (4, 2026), (5, 2026);
 
-INSERT INTO Years (year_id) VALUES
+INSERT INTO Years (years_id) VALUES
 (2018),
 (2019),
 (2020),
