@@ -218,8 +218,8 @@ CREATE TABLE Performance(
   performer_id int NOT NULL,
   event_id int NOT NULL,
   type_id varchar(40) NOT NULL,
-  start_time time NOT NULL,
-  end_time time NOT NULL,
+  start_time datetime NOT NULL,
+  end_time datetime NOT NULL,
   duration int GENERATED ALWAYS AS (TIMESTAMPDIFF(MINUTE,start_time,end_time)) STORED
   CHECK (duration <=180),
   image varchar(100) not null check (image like 'https://%'),
