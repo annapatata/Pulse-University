@@ -598,12 +598,12 @@ BEGIN
 		
 		IF d_time < NOW() THEN
 			DELETE FROM Buyer WHERE event_id = NEW.event_id;
-			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = d_event
+			DELETE FROM Resale_queue rq WHERE rq.EAN IN (
+				SELECT t.EAN FROM Ticket t WHERE t.event_id = d_event
 			);
 		END IF;
 		
-	    SELECT EAN INTO d_EAN
+	    SELECT rq.EAN INTO d_EAN
 		FROM Resale_queue rq
 		JOIN Ticket t ON rq.EAN = t.EAN 
 		WHERE t.event_id = NEW.event_id
@@ -612,8 +612,8 @@ BEGIN
 		LIMIT 1;
 		
 		IF d_EAN IS NOT NULL THEN
-			UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
-			DELETE FROM Resale_queue WHERE EAN = d_EAN;
+			UPDATE Ticket t SET t.visitor_id = NEW.visitor_id WHERE t.EAN = d_EAN;
+			DELETE FROM Resale_queue rq WHERE rq.EAN = d_EAN;
 		END IF;
 	END IF	;
 	
