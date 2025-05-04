@@ -59,7 +59,7 @@ INSERT INTO Stage (stage_id, stage_name, desc_id, capacity, image, image_caption
 (10, 'Zenith Plaza', 10, 150, 'https://example.com/zenith.jpg', 'Wide open space for dancing'),
 (11, 'Aurora Grounds', 1, 150, 'https://example.com/aurora.jpg', 'Northern lights-inspired visuals'),
 (12, 'Electric Forest', 2, 150, 'https://example.com/electricforest.jpg', 'Surreal woods with LED trees'),
-(13, 'Radiance Square', 3, 150, 'https://example.com/radiance.jpg', 'Luminous atmosphere for pop acts'),
+(13, 'Radiance Square', 3, 100, 'https://example.com/radiance.jpg', 'Luminous atmosphere for pop acts'),
 (14, 'Fusion Bay', 4, 150, 'https://example.com/fusion.jpg', 'Mix of genres by the water'),
 (15, 'Cosmic Cove', 5, 120, 'https://example.com/cosmic.jpg', 'Galactic theme and laser shows'),
 (16, 'Neon Nest', 6, 130, 'https://example.com/neon.jpg', 'Bright lights and synth-heavy acts'),
