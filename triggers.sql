@@ -18,10 +18,10 @@ CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
 FOR EACH ROW
 BEGIN
- 	DECLARE start_event TIME;
-	DECLARE end_event TIME;
+ 	DECLARE start_event DATETIME;
+	DECLARE end_event DATETIME;
 
-	SELECT TIME(start_time),TIME(end_time)
+	SELECT start_time, end_time
 	INTO start_event, end_event
 	FROM Event_P
 	WHERE event_id=NEW.event_id;
@@ -282,10 +282,11 @@ BEGIN
     SELECT COUNT(*) INTO cnt
     FROM Performance p
     JOIN Performer perf ON p.performer_id = perf.performer_id
-    JOIN BandMembers bm1 ON perf.artist_nband = TRUE AND perf.artist_id = bm1.artist_id
-        OR (perf.artist_nband = FALSE AND perf.band_id = bm1.band_id)
-    JOIN BandMembers bm2 ON bm1.artist_id = bm2.artist_id
-    WHERE bm2.band_id = (SELECT band_id FROM Performer WHERE performer_id = NEW.performer_id)
+    JOIN BandMembers bm ON (
+	(perf.artist_nband = TRUE AND perf.artist_id = bm.artist_id)
+        OR (perf.artist_nband = FALSE AND perf.band_id = bm.band_id)
+        )
+    WHERE bm.band_id = (SELECT band_id FROM Performer WHERE performer_id = NEW.performer_id)
     AND (
         (NEW.start_time BETWEEN p.start_time AND p.end_time) OR
         (NEW.end_time BETWEEN p.start_time AND p.end_time) OR
@@ -299,6 +300,7 @@ BEGIN
     END IF;
 END//
 DELIMITER ;
+
 
 
 
