@@ -210,7 +210,7 @@ BEGIN
     DECLARE active BOOL;
 
     SELECT activated INTO active 
-    FROM Tickets 
+    FROM Ticket 
     WHERE EAN = NEW.EAN;
 
     IF active=FALSE THEN 
