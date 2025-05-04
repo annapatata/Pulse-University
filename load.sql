@@ -1817,254 +1817,254 @@ INSERT INTO Resale_queue (EAN, sale_interest) VALUES
 
 INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_time, end_time, image, image_caption) VALUES
 -- Event 1 (2018-06-10)
-(1, 1, 1, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance1.jpg', 'The Killers opening the festival'),
-(2, 18, 1, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'), -- 15 min break
-(3, 38, 1, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'), -- 30 min break
+(1, 1, 1, 'opening act', '2018-06-10 12:00:00', '2018-06-10 12:45:00', 'https://example.com/performance1.jpg', 'The Killers opening the festival'),
+(2, 18, 1, 'main act', '2018-06-10 13:00:00', '2018-06-10 14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'), -- 15 min break
+(3, 38, 1, 'main act', '2018-06-10 15:00:00', '2018-06-10 16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'), -- 30 min break
 
 -- Event 2 (2018-06-10)
-(4, 2, 2, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance4.jpg', 'Arctic Monkeys warming up'),
-(5, 19, 2, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance5.jpg', 'Alex Turner acoustic set'), -- 15 min break
-(6, 5, 2, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance6.jpg', 'Tame Impala closing the stage'), -- 30 min break
+(4, 2, 2, 'warm-up', '2018-06-10 13:30:00', '2018-06-10 14:15:00', 'https://example.com/performance4.jpg', 'Arctic Monkeys warming up'),
+(5, 19, 2, 'main act', '2018-06-10 14:30:00', '2018-06-10 16:00:00', 'https://example.com/performance5.jpg', 'Alex Turner acoustic set'), -- 15 min break
+(6, 5, 2, 'main act', '2018-06-10 16:30:00', '2018-06-10 17:30:00', 'https://example.com/performance6.jpg', 'Tame Impala closing the stage'), -- 30 min break
 
 -- Event 3 (2018-06-11)
-(7, 3, 3, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance7.jpg', 'Foo Fighters opening'),
-(8, 20, 3, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance8.jpg', 'Dave Grohl rocking the stage'), -- 15 min break
-(9, 7, 3, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance9.jpg', 'RHCP closing the show'), -- 30 min break
+(7, 3, 3, 'opening act', '2018-06-11 14:00:00', '2018-06-11 14:45:00', 'https://example.com/performance7.jpg', 'Foo Fighters opening'),
+(8, 20, 3, 'main act', '2018-06-11 15:00:00', '2018-06-11 16:30:00', 'https://example.com/performance8.jpg', 'Dave Grohl rocking the stage'), -- 15 min break
+(9, 7, 3, 'main act', '2018-06-11 17:00:00', '2018-06-11 18:00:00', 'https://example.com/performance9.jpg', 'RHCP closing the show'), -- 30 min break
 
 -- Event 4 (2018-06-11)
-(10, 4, 4, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance10.jpg', 'Florence + Machine warming up'),
-(11, 21, 4, 'acoustic set', '16:00:00', '17:00:00', 'https://example.com/performance11.jpg', 'Florence Welch acoustic performance'), -- 15 min break
-(12, 9, 4, 'main act', '17:30:00', '19:00:00', 'https://example.com/performance12.jpg', 'LCD Soundsystem closing'), -- 30 min break
+(10, 4, 4, 'warm-up', '2018-06-11 15:00:00', '2018-06-11 15:45:00', 'https://example.com/performance10.jpg', 'Florence + Machine warming up'),
+(11, 21, 4, 'acoustic set', '2018-06-11 16:00:00', '2018-06-11 17:00:00', 'https://example.com/performance11.jpg', 'Florence Welch acoustic performance'), -- 15 min break
+(12, 9, 4, 'main act', '2018-06-11 17:30:00', '2018-06-11 19:00:00', 'https://example.com/performance12.jpg', 'LCD Soundsystem closing'), -- 30 min break
 
 -- Event 5 (2018-06-12)
-(13, 5, 5, 'opening act', '12:30:00', '13:15:00', 'https://example.com/performance13.jpg', 'Tame Impala opening'),
-(14, 22, 5, 'main act', '13:30:00', '15:00:00', 'https://example.com/performance14.jpg', 'Kevin Parker live set'), -- 15 min break
-(15, 10, 5, 'main act', '15:30:00', '16:30:00', 'https://example.com/performance15.jpg', 'The National performing'), -- 30 min break
+(13, 5, 5, 'opening act', '2018-06-12 12:30:00', '2018-06-12 13:15:00', 'https://example.com/performance13.jpg', 'Tame Impala opening'),
+(14, 22, 5, 'main act', '2018-06-12 13:30:00', '2018-06-12 15:00:00', 'https://example.com/performance14.jpg', 'Kevin Parker live set'), -- 15 min break
+(15, 10, 5, 'main act', '2018-06-12 15:30:00', '2018-06-12 16:30:00', 'https://example.com/performance15.jpg', 'The National performing'), -- 30 min break
 
 -- Event 6 (2018-06-12)
-(16, 6, 6, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance16.jpg', 'The Strokes warming up'),
-(17, 23, 6, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance17.jpg', 'Julian Casablancas acoustic'), -- 15 min break
-(18, 11, 6, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance18.jpg', 'Vampire Weekend closing'), -- 30 min break
+(16, 6, 6, 'warm-up', '2018-06-12 14:00:00', '2018-06-12 14:45:00', 'https://example.com/performance16.jpg', 'The Strokes warming up'),
+(17, 23, 6, 'acoustic set', '2018-06-12 15:00:00', '2018-06-12 16:00:00', 'https://example.com/performance17.jpg', 'Julian Casablancas acoustic'), -- 15 min break
+(18, 11, 6, 'main act', '2018-06-12 16:30:00', '2018-06-12 18:00:00', 'https://example.com/performance18.jpg', 'Vampire Weekend closing'), -- 30 min break
 
 -- Event 7 (2018-06-13)
-(19, 7, 7, 'opening act', '13:30:00', '14:15:00', 'https://example.com/performance19.jpg', 'RHCP opening'),
-(20, 24, 7, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance20.jpg', 'Anthony Kiedis performing'), -- 15 min break
-(21, 8, 7, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance21.jpg', 'Muse closing the show'), -- 30 min break
+(19, 7, 7, 'opening act', '2018-06-13 13:30:00', '2018-06-13 14:15:00', 'https://example.com/performance19.jpg', 'RHCP opening'),
+(20, 24, 7, 'main act', '2018-06-13 14:30:00', '2018-06-13 16:00:00', 'https://example.com/performance20.jpg', 'Anthony Kiedis performing'), -- 15 min break
+(21, 8, 7, 'main act', '2018-06-13 16:30:00', '2018-06-13 17:30:00', 'https://example.com/performance21.jpg', 'Muse closing the show'), -- 30 min break
 
 -- Event 8 (2018-06-13)
-(22, 8, 8, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance22.jpg', 'Muse warming up'),
-(23, 25, 8, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance23.jpg', 'Matt Bellamy solo performance'), -- 15 min break
-(24, 12, 8, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance24.jpg', 'Arcade Fire closing'), -- 30 min break
+(22, 8, 8, 'warm-up', '2018-06-13 15:00:00', '2018-06-13 15:45:00', 'https://example.com/performance22.jpg', 'Muse warming up'),
+(23, 23, 8, 'main act', '2018-06-13 16:00:00', '2018-06-13 17:30:00', 'https://example.com/performance23.jpg', 'Julian Casablancas solo performance'), -- 15 min break
+(24, 12, 8, 'main act', '2018-06-13 18:00:00', '2018-06-13 19:00:00', 'https://example.com/performance24.jpg', 'Arcade Fire closing'), -- 30 min break
 
 -- Event 9 (2018-06-14)
-(25, 9, 9, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance25.jpg', 'LCD Soundsystem opening'),
-(26, 26, 9, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance26.jpg', 'James Murphy DJ set'), -- 15 min break
-(27, 13, 9, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance27.jpg', 'The Black Keys performing'), -- 30 min break
+(25, 9, 9, 'opening act', '2018-06-14 12:00:00', '2018-06-14 12:45:00', 'https://example.com/performance25.jpg', 'LCD Soundsystem opening'),
+(26, 26, 9, 'main act', '2018-06-14 13:00:00', '2018-06-14 14:30:00', 'https://example.com/performance26.jpg', 'James Murphy DJ set'), -- 15 min break
+(27, 13, 9, 'main act', '2018-06-14 15:00:00', '2018-06-14 16:00:00', 'https://example.com/performance27.jpg', 'The Black Keys performing'), -- 30 min break
 
 -- Event 10 (2018-06-14)
-(28, 10, 10, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance28.jpg', 'The National warming up'),
-(29, 27, 10, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance29.jpg', 'Matt Berninger acoustic'), -- 15 min break
-(30, 14, 10, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance30.jpg', 'Phoenix closing the festival'), -- 30 min break
+(28, 10, 10, 'warm-up', '2018-06-14 14:00:00', '2018-06-14 14:45:00', 'https://example.com/performance28.jpg', 'The National warming up'),
+(29, 27, 10, 'acoustic set', '2018-06-14 15:00:00', '2018-06-14 16:00:00', 'https://example.com/performance29.jpg', 'Matt Berninger acoustic'), -- 15 min break
+(30, 14, 10, 'main act', '2018-06-14 16:30:00', '2018-06-14 18:00:00', 'https://example.com/performance30.jpg', 'Phoenix closing the festival'), -- 30 min break
 
 -- Event 11 (2019-07-05)
-(31, 11, 11, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance31.jpg', 'Vampire Weekend opening'),
-(32, 28, 11, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance32.jpg', 'Ezra Koenig solo performance'), -- 15 min break
-(33, 15, 11, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance33.jpg', 'Interpol performing'), -- 30 min break
+(31, 11, 11, 'opening act', '2019-07-05 12:00:00', '2019-07-05 12:45:00', 'https://example.com/performance31.jpg', 'Vampire Weekend opening'),
+(32, 28, 11, 'main act', '2019-07-05 13:00:00', '2019-07-05 14:30:00', 'https://example.com/performance32.jpg', 'Ezra Koenig solo performance'), -- 15 min break
+(33, 15, 11, 'main act', '2019-07-05 15:00:00', '2019-07-05 16:00:00', 'https://example.com/performance33.jpg', 'Interpol performing'), -- 30 min break
 
 -- Event 12 (2019-07-05)
-(34, 12, 12, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance34.jpg', 'Arcade Fire warming up'),
-(35, 29, 12, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance35.jpg', 'Win Butler acoustic set'), -- 15 min break
-(36, 16, 12, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance36.jpg', 'The 1975 closing'), -- 30 min break
+(34, 12, 12, 'warm-up', '2019-07-05 13:30:00', '2019-07-05 14:15:00', 'https://example.com/performance34.jpg', 'Arcade Fire warming up'),
+(35, 29, 12, 'main act', '2019-07-05 14:30:00', '2019-07-05 16:00:00', 'https://example.com/performance35.jpg', 'Win Butler acoustic set'), -- 15 min break
+(36, 16, 12, 'main act', '2019-07-05 16:30:00', '2019-07-05 17:30:00', 'https://example.com/performance36.jpg', 'The 1975 closing'), -- 30 min break
 
 -- Event 13 (2019-07-06)
-(37, 13, 13, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance37.jpg', 'The Black Keys opening'),
-(38, 30, 13, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance38.jpg', 'Dan Auerbach performing'), -- 15 min break
-(39, 17, 13, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance39.jpg', 'Queens of the Stone Age closing'), -- 30 min break
+(37, 13, 13, 'opening act', '2019-07-06 14:00:00', '2019-07-06 14:45:00', 'https://example.com/performance37.jpg', 'The Black Keys opening'),
+(38, 30, 13, 'main act', '2019-07-06 15:00:00', '2019-07-06 16:30:00', 'https://example.com/performance38.jpg', 'Dan Auerbach performing'), -- 15 min break
+(39, 17, 13, 'main act', '2019-07-06 17:00:00', '2019-07-06 18:00:00', 'https://example.com/performance39.jpg', 'Queens of the Stone Age closing'), -- 30 min break
 
 -- Event 14 (2019-07-06)
-(40, 14, 14, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance40.jpg', 'Phoenix warming up'),
-(41, 31, 14, 'acoustic set', '16:00:00', '17:00:00', 'https://example.com/performance41.jpg', 'Thomas Mars acoustic'), -- 15 min break
-(42, 35, 14, 'main act', '17:30:00', '19:00:00', 'https://example.com/performance42.jpg', 'Jack White closing'), -- 30 min break
+(40, 14, 14, 'warm-up', '2019-07-06 15:00:00', '2019-07-06 15:45:00', 'https://example.com/performance40.jpg', 'Phoenix warming up'),
+(41, 31, 14, 'acoustic set', '2019-07-06 16:00:00', '2019-07-06 17:00:00', 'https://example.com/performance41.jpg', 'Thomas Mars acoustic'), -- 15 min break
+(42, 35, 14, 'main act', '2019-07-06 17:30:00', '2019-07-06 19:00:00', 'https://example.com/performance42.jpg', 'Jack White closing'), -- 30 min break
 
 -- Event 15 (2019-07-07)
-(43, 15, 15, 'opening act', '12:30:00', '13:15:00', 'https://example.com/performance43.jpg', 'Interpol opening'),
-(44, 32, 15, 'main act', '13:30:00', '15:00:00', 'https://example.com/performance44.jpg', 'Paul Banks performing'), -- 15 min break
-(45, 36, 15, 'main act', '15:30:00', '16:30:00', 'https://example.com/performance45.jpg', 'St. Vincent closing'), -- 30 min break
+(43, 15, 15, 'opening act', '2019-07-07 12:30:00', '2019-07-07 13:15:00', 'https://example.com/performance43.jpg', 'Interpol opening'),
+(44, 32, 15, 'main act', '2019-07-07 13:30:00', '2019-07-07 15:00:00', 'https://example.com/performance44.jpg', 'Paul Banks performing'), -- 15 min break
+(45, 36, 15, 'main act', '2019-07-07 15:30:00', '2019-07-07 16:30:00', 'https://example.com/performance45.jpg', 'St. Vincent closing'), -- 30 min break
 
 -- Event 16 (2019-07-07)
-(46, 16, 16, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance46.jpg', 'The 1975 warming up'),
-(47, 33, 16, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'), -- 15 min break
-(48, 37, 16, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'), -- 30 min break
+(46, 16, 16, 'warm-up', '2019-07-07 14:00:00', '2019-07-07 14:45:00', 'https://example.com/performance46.jpg', 'The 1975 warming up'),
+(47, 33, 16, 'acoustic set', '2019-07-07 15:00:00', '2019-07-07 16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'), -- 15 min break
+(48, 37, 16, 'main act', '2019-07-07 16:30:00', '2019-07-07 18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'), -- 30 min break
 
 -- Event 17 (2020-08-01)
-(49, 17, 17, 'opening act', '13:00:00', '13:45:00', 'https://example.com/performance49.jpg', 'Queens of the Stone Age opening'),
-(50, 34, 17, 'main act', '14:00:00', '15:30:00', 'https://example.com/performance50.jpg', 'Josh Homme performing'), -- 15 min break
-(51, 38, 17, 'main act', '16:00:00', '17:00:00', 'https://example.com/performance51.jpg', 'Taylor Swift virtual performance'), -- 30 min break
+(49, 17, 17, 'opening act', '2020-08-01 13:00:00', '2020-08-01 13:45:00', 'https://example.com/performance49.jpg', 'Queens of the Stone Age opening'),
+(50, 34, 17, 'main act', '2020-08-01 14:00:00', '2020-08-01 15:30:00', 'https://example.com/performance50.jpg', 'Josh Homme performing'), -- 15 min break
+(51, 38, 17, 'main act', '2020-08-01 16:00:00', '2020-08-01 17:00:00', 'https://example.com/performance51.jpg', 'Taylor Swift virtual performance'), -- 30 min break
 
 -- Event 18 (2020-08-01)
-(52, 38, 18, 'warm-up', '14:30:00', '15:15:00', 'https://example.com/performance52.jpg', 'Taylor Swift warming up'),
-(53, 39, 18, 'main act', '15:30:00', '17:00:00', 'https://example.com/performance53.jpg', 'Ariana Grande live'), -- 15 min break
-(54, 40, 18, 'main act', '17:30:00', '18:30:00', 'https://example.com/performance54.jpg', 'Billie Eilish closing'), -- 30 min break
+(52, 38, 18, 'warm-up', '2020-08-01 14:30:00', '2020-08-01 15:15:00', 'https://example.com/performance52.jpg', 'Taylor Swift warming up'),
+(53, 39, 18, 'main act', '2020-08-01 15:30:00', '2020-08-01 17:00:00', 'https://example.com/performance53.jpg', 'Ariana Grande live'), -- 15 min break
+(54, 40, 18, 'main act', '2020-08-01 17:30:00', '2020-08-01 18:30:00', 'https://example.com/performance54.jpg', 'Billie Eilish closing'), -- 30 min break
 
 -- Event 19 (2020-08-02)
-(55, 39, 19, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance55.jpg', 'Ariana Grande opening'),
-(56, 40, 19, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance56.jpg', 'Billie Eilish performing'), -- 15 min break
-(57, 41, 19, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance57.jpg', 'Dua Lipa closing'), -- 30 min break
+(55, 39, 19, 'opening act', '2020-08-02 12:00:00', '2020-08-02 12:45:00', 'https://example.com/performance55.jpg', 'Ariana Grande opening'),
+(56, 40, 19, 'main act', '2020-08-02 13:00:00', '2020-08-02 14:30:00', 'https://example.com/performance56.jpg', 'Billie Eilish performing'), -- 15 min break
+(57, 41, 19, 'main act', '2020-08-02 15:00:00', '2020-08-02 16:00:00', 'https://example.com/performance57.jpg', 'Dua Lipa closing'), -- 30 min break
 
 -- Event 20 (2020-08-02)
-(58, 40, 20, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance58.jpg', 'Billie Eilish warming up'),
-(59, 41, 20, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance59.jpg', 'Dua Lipa acoustic'), -- 15 min break
-(60, 42, 20, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance60.jpg', 'Harry Styles closing'), -- 30 min break
+(58, 42, 20, 'warm-up', '2020-08-02 13:30:00', '2020-08-02 14:15:00', 'https://example.com/performance58.jpg', 'Harry Styles warming up'),
+(59, 38, 20, 'acoustic set', '2020-08-02 14:30:00', '2020-08-02 15:30:00', 'https://example.com/performance59.jpg', 'Taylor Swift acoustic'), -- 15 min break
+(60, 40, 20, 'main act', '2020-08-02 16:00:00', '2020-08-02 17:30:00', 'https://example.com/performance60.jpg', 'Billie Eilish closing'), -- 30 min break
 
 -- Event 21 (2020-08-03)
-(61, 41, 21, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance61.jpg', 'Dua Lipa opening'),
-(62, 42, 21, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance62.jpg', 'Harry Styles performing'), -- 15 min break
-(63, 43, 21, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance63.jpg', 'Olivia Rodrigo closing'), -- 30 min break
+(61, 41, 21, 'opening act', '2020-08-03 12:00:00', '2020-08-03 12:45:00', 'https://example.com/performance61.jpg', 'Dua Lipa opening'),
+(62, 42, 21, 'main act', '2020-08-03 13:00:00', '2020-08-03 14:30:00', 'https://example.com/performance62.jpg', 'Harry Styles performing'), -- 15 min break
+(63, 43, 21, 'main act', '2020-08-03 15:00:00', '2020-08-03 16:00:00', 'https://example.com/performance63.jpg', 'Olivia Rodrigo closing'), -- 30 min break
 
 -- Event 22 (2020-08-03)
-(64, 42, 22, 'warm-up', '14:00:00', '14:45:00', 'https://example.com/performance64.jpg', 'Harry Styles warming up'),
-(65, 43, 22, 'acoustic set', '15:00:00', '16:00:00', 'https://example.com/performance65.jpg', 'Olivia Rodrigo acoustic'), -- 15 min break
-(66, 44, 22, 'main act', '16:30:00', '18:00:00', 'https://example.com/performance66.jpg', 'Doja Cat closing'), -- 30 min break
+(64, 19, 22, 'warm-up', '2020-08-03 14:00:00', '2020-08-03 14:45:00', 'https://example.com/performance64.jpg', 'Alex Turner warming up'),
+(65, 26, 22, 'acoustic set', '2020-08-03 15:00:00', '2020-08-03 16:00:00', 'https://example.com/performance65.jpg', 'James Murphy acoustic'), -- 15 min break
+(66, 44, 22, 'main act', '2020-08-03 16:30:00', '2020-08-03 18:00:00', 'https://example.com/performance66.jpg', 'Doja Cat closing'),-- 30 min break
 
 -- Event 23 (2021-06-20)
-(67, 43, 23, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance67.jpg', 'Olivia Rodrigo opening'),
-(68, 44, 23, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance68.jpg', 'Doja Cat performing'), -- 15 min break
-(69, 45, 23, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance69.jpg', 'The Weeknd closing'), -- 30 min break
+(67, 43, 23, 'opening act', '2021-06-20 12:00:00', '2021-06-20 12:45:00', 'https://example.com/performance67.jpg', 'Olivia Rodrigo opening'),
+(68, 44, 23, 'main act', '2021-06-20 13:00:00', '2021-06-20 14:30:00', 'https://example.com/performance68.jpg', 'Doja Cat performing'), -- 15 min break
+(69, 45, 23, 'main act', '2021-06-20 15:00:00', '2021-06-20 16:00:00', 'https://example.com/performance69.jpg', 'The Weeknd closing'), -- 30 min break
 
 -- Event 24 (2021-06-20)
-(70, 44, 24, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance70.jpg', 'Doja Cat warming up'),
-(71, 45, 24, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance71.jpg', 'The Weeknd live'), -- 15 min break
-(72, 46, 24, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance72.jpg', 'Post Malone closing'), -- 30 min break
+(70, 23, 24, 'warm-up', '2021-06-20 13:30:00', '2021-06-20 14:15:00', 'https://example.com/performance70.jpg', 'Julian Casablancas warming up'),
+(71, 24, 24, 'main act', '2021-06-20 14:30:00', '2021-06-20 16:00:00', 'https://example.com/performance71.jpg', 'Anthony Kiedis live'), -- 15 min break
+(72, 46, 24, 'main act', '2021-06-20 16:30:00', '2021-06-20 17:30:00', 'https://example.com/performance72.jpg', 'Post Malone closing'), -- 30 min break
 
 -- Event 25 (2021-06-21)
-(73, 45, 25, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance73.jpg', 'The Weeknd opening'),
-(74, 46, 25, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance74.jpg', 'Post Malone performing'), -- 15 min break
-(75, 47, 25, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance75.jpg', 'Camila Cabello closing'), -- 30 min break
+(73, 45, 25, 'opening act', '2021-06-21 12:00:00', '2021-06-21 12:45:00', 'https://example.com/performance73.jpg', 'The Weeknd opening'),
+(74, 46, 25, 'main act', '2021-06-21 13:00:00', '2021-06-21 14:30:00', 'https://example.com/performance74.jpg', 'Post Malone performing'), -- 15 min break
+(75, 47, 25, 'main act', '2021-06-21 15:00:00', '2021-06-21 16:00:00', 'https://example.com/performance75.jpg', 'Camila Cabello closing'), -- 30 min break
 
 -- Event 26 (2021-06-21)
-(76, 46, 26, 'warm-up', '14:30:00', '15:15:00', 'https://example.com/performance76.jpg', 'Post Malone warming up'),
-(77, 47, 26, 'acoustic set', '15:30:00', '16:30:00', 'https://example.com/performance77.jpg', 'Camila Cabello acoustic'), -- 15 min break
-(78, 48, 26, 'main act', '17:00:00', '18:30:00', 'https://example.com/performance78.jpg', 'Shawn Mendes closing'), -- 30 min break
+(76, 8, 26, 'warm-up', '2021-06-21 14:30:00', '2021-06-21 15:15:00', 'https://example.com/performance76.jpg', 'Muse warming up'),
+(77, 5, 26, 'acoustic set', '2021-06-21 15:30:00', '2021-06-21 16:30:00', 'https://example.com/performance77.jpg', 'Tame Impala acoustic'), -- 15 min break
+(78, 48, 26, 'main act', '2021-06-21 17:00:00', '2021-06-21 18:30:00', 'https://example.com/performance78.jpg', 'Shawn Mendes closing'), -- 30 min break
 
 -- Event 27 (2022-07-11)
-(79, 47, 27, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance79.jpg', 'Camila Cabello opening'),
-(80, 48, 27, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance80.jpg', 'Shawn Mendes performing'), -- 15 min break
-(81, 49, 27, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance81.jpg', 'Selena Gomez closing'), -- 30 min break
+(79, 47, 27, 'opening act', '2022-07-11 12:00:00', '2022-07-11 12:45:00', 'https://example.com/performance79.jpg', 'Camila Cabello opening'),
+(80, 48, 27, 'main act', '2022-07-11 13:00:00', '2022-07-11 14:30:00', 'https://example.com/performance80.jpg', 'Shawn Mendes performing'), -- 15 min break
+(81, 49, 27, 'main act', '2022-07-11 15:00:00', '2022-07-11 16:00:00', 'https://example.com/performance81.jpg', 'Selena Gomez closing'), -- 30 min break
 
 -- Event 28 (2022-07-11)
-(82, 48, 28, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance82.jpg', 'Shawn Mendes warming up'),
-(83, 49, 28, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance83.jpg', 'Selena Gomez live'), -- 15 min break
-(84, 50, 28, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance84.jpg', 'Justin Bieber closing'), -- 30 min break
+(82, 14, 28, 'warm-up', '2022-07-11 13:30:00', '2022-07-11 14:15:00', 'https://example.com/performance82.jpg', 'Phoinix warming up'),
+(83, 15, 28, 'main act', '2022-07-11 14:30:00', '2022-07-11 16:00:00', 'https://example.com/performance83.jpg', 'Interpol live'), -- 15 min break
+(84, 50, 28, 'main act', '2022-07-11 16:30:00', '2022-07-11 17:30:00', 'https://example.com/performance84.jpg', 'Justin Bieber closing'), -- 30 min break
 
 -- Event 29 (2022-07-12)
-(85, 49, 29, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance85.jpg', 'Selena Gomez opening'),
-(86, 50, 29, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance86.jpg', 'Justin Bieber performing'), -- 15 min break
-(87, 51, 29, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance87.jpg', 'Lady Gaga closing'), -- 30 min break
+(85, 49, 29, 'opening act', '2022-07-12 14:00:00', '2022-07-12 14:45:00', 'https://example.com/performance85.jpg', 'Selena Gomez opening'),
+(86, 50, 29, 'main act', '2022-07-12 15:00:00', '2022-07-12 16:30:00', 'https://example.com/performance86.jpg', 'Justin Bieber performing'), -- 15 min break
+(87, 51, 29, 'main act', '2022-07-12 17:00:00', '2022-07-12 18:00:00', 'https://example.com/performance87.jpg', 'Lady Gaga closing'), -- 30 min break
 
 -- Event 30 (2022-07-12)
-(88, 50, 30, 'warm-up', '15:30:00', '16:15:00', 'https://example.com/performance88.jpg', 'Justin Bieber warming up'),
-(89, 51, 30, 'acoustic set', '16:30:00', '17:30:00', 'https://example.com/performance89.jpg', 'Lady Gaga acoustic'), -- 15 min break
-(90, 52, 30, 'main act', '18:00:00', '19:30:00', 'https://example.com/performance90.jpg', 'Bruno Mars closing'), -- 30 min break
+(88, 1, 30, 'warm-up', '2022-07-12 15:30:00', '2022-07-12 16:15:00', 'https://example.com/performance88.jpg', 'The Killers warming up'),
+(89, 3, 30, 'acoustic set', '2022-07-12 16:30:00', '2022-07-12 17:30:00', 'https://example.com/performance89.jpg', 'Foo FIghters acoustic'), -- 15 min break
+(90, 52, 30, 'main act', '2022-07-12 18:00:00', '2022-07-12 19:30:00', 'https://example.com/performance90.jpg', 'Bruno Mars closing'), -- 30 min break
 
 -- Event 31 (2022-07-13)
-(91, 51, 31, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance91.jpg', 'Lady Gaga opening'),
-(92, 52, 31, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance92.jpg', 'Bruno Mars performing'), -- 15 min break
-(93, 53, 31, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance93.jpg', 'Ed Sheeran closing'), -- 30 min break
+(91, 51, 31, 'opening act', '2022-07-13 12:00:00', '2022-07-13 12:45:00', 'https://example.com/performance91.jpg', 'Lady Gaga opening'),
+(92, 52, 31, 'main act', '2022-07-13 13:00:00', '2022-07-13 14:30:00', 'https://example.com/performance92.jpg', 'Bruno Mars performing'), -- 15 min break
+(93, 53, 31, 'main act', '2022-07-13 15:00:00', '2022-07-13 16:00:00', 'https://example.com/performance93.jpg', 'Ed Sheeran closing'), -- 30 min break
 
 -- Event 32 (2022-07-13)
-(94, 52, 32, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance94.jpg', 'Bruno Mars warming up'),
-(95, 53, 32, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance95.jpg', 'Ed Sheeran live'), -- 15 min break
-(96, 54, 32, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance96.jpg', 'Rihanna closing'), -- 30 min break
+(94, 31, 32, 'warm-up', '2022-07-13 13:30:00', '2022-07-13 14:15:00', 'https://example.com/performance94.jpg', 'Thomas Mars warming up'),
+(95, 32, 32, 'main act', '2022-07-13 14:30:00', '2022-07-13 16:00:00', 'https://example.com/performance95.jpg', 'Paul Banks live'), -- 15 min break
+(96, 54, 32, 'main act', '2022-07-13 16:30:00', '2022-07-13 17:30:00', 'https://example.com/performance96.jpg', 'Rihanna closing'), -- 30 min break
 
 -- Event 33 (2023-05-15)
-(97, 53, 33, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance97.jpg', 'Ed Sheeran opening'),
-(98, 54, 33, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance98.jpg', 'Rihanna performing'), -- 15 min break
-(99, 55, 33, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance99.jpg', 'Beyoncé closing'), -- 30 min break
+(97, 53, 33, 'opening act', '2023-05-15 12:00:00', '2023-05-15 12:45:00', 'https://example.com/performance97.jpg', 'Ed Sheeran opening'),
+(98, 54, 33, 'main act', '2023-05-15 13:00:00', '2023-05-15 14:30:00', 'https://example.com/performance98.jpg', 'Rihanna performing'), -- 15 min break
+(99, 55, 33, 'main act', '2023-05-15 15:00:00', '2023-05-15 16:00:00', 'https://example.com/performance99.jpg', 'Beyoncé closing'), -- 30 min break
 
 -- Event 34 (2023-05-15)
-(100, 54, 34, 'warm-up', '13:00:00', '13:45:00', 'https://example.com/performance100.jpg', 'Rihanna warming up'),
-(101, 55, 34, 'acoustic set', '14:00:00', '15:00:00', 'https://example.com/performance101.jpg', 'Beyoncé acoustic'), -- 15 min break
-(102, 56, 34, 'main act', '15:30:00', '17:00:00', 'https://example.com/performance102.jpg', 'Katy Perry closing'), -- 30 min break
+(100, 35, 34, 'warm-up', '2023-05-15 13:00:00', '2023-05-15 13:45:00', 'https://example.com/performance100.jpg', 'Jack White warming up'),
+(101, 37, 34, 'acoustic set', '2023-05-15 14:00:00', '2023-05-15 15:00:00', 'https://example.com/performance101.jpg', 'Thom York acoustic'), -- 15 min break
+(102, 56, 34, 'main act', '2023-05-15 15:30:00', '2023-05-15 17:00:00', 'https://example.com/performance102.jpg', 'Katy Perry closing'), -- 30 min break
 
 -- Event 35 (2023-05-16)
-(103, 55, 35, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance103.jpg', 'Beyoncé opening'),
-(104, 56, 35, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance104.jpg', 'Katy Perry performing'), -- 15 min break
-(105, 57, 35, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance105.jpg', 'Adele closing'), -- 30 min break
+(103, 55, 35, 'opening act', '2023-05-16 14:00:00', '2023-05-16 14:45:00', 'https://example.com/performance103.jpg', 'Beyoncé opening'),
+(104, 56, 35, 'main act', '2023-05-16 15:00:00', '2023-05-16 16:30:00', 'https://example.com/performance104.jpg', 'Katy Perry performing'), -- 15 min break
+(105, 57, 35, 'main act', '2023-05-16 17:00:00', '2023-05-16 18:00:00', 'https://example.com/performance105.jpg', 'Adele closing'), -- 30 min break
 
 -- Event 36 (2023-05-16)
-(106, 56, 36, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance106.jpg', 'Katy Perry warming up'),
-(107, 57, 36, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance107.jpg', 'Adele live'), -- 15 min break
-(108, 58, 36, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance108.jpg', 'Miley Cyrus closing'), -- 30 min break
+(106, 11, 36, 'warm-up', '2023-05-16 15:00:00', '2023-05-16 15:45:00', 'https://example.com/performance106.jpg', 'Vampire Weekend warming up'),
+(107, 12, 36, 'main act', '2023-05-16 16:00:00', '2023-05-16 17:30:00', 'https://example.com/performance107.jpg', 'Arcade Fire live'), -- 15 min break
+(108, 58, 36, 'main act', '2023-05-16 18:00:00', '2023-05-16 19:00:00', 'https://example.com/performance108.jpg', 'Miley Cyrus closing'), -- 30 min break
 
 -- Event 37 (2024-06-12)
-(109, 57, 37, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance109.jpg', 'Adele opening'),
-(110, 58, 37, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance110.jpg', 'Miley Cyrus performing'), -- 15 min break
-(111, 59, 37, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance111.jpg', 'Nicki Minaj closing'), -- 30 min break
+(109, 57, 37, 'opening act', '2024-06-12 12:00:00', '2024-06-12 12:45:00', 'https://example.com/performance109.jpg', 'Adele opening'),
+(110, 58, 37, 'main act', '2024-06-12 13:00:00', '2024-06-12 14:30:00', 'https://example.com/performance110.jpg', 'Miley Cyrus performing'), -- 15 min break
+(111, 59, 37, 'main act', '2024-06-12 15:00:00', '2024-06-12 16:00:00', 'https://example.com/performance111.jpg', 'Nicki Minaj closing'), -- 30 min break
 
 -- Event 38 (2024-06-12)
-(112, 58, 38, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance112.jpg', 'Miley Cyrus warming up'),
-(113, 59, 38, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance113.jpg', 'Nicki Minaj live'), -- 15 min break
-(114, 60, 38, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'), -- 30 min break
+(112, 1, 38, 'warm-up', '2024-06-12 13:30:00', '2024-06-12 14:15:00', 'https://example.com/performance112.jpg', 'The Killers warming up'),
+(113, 2, 38, 'main act', '2024-06-12 14:30:00', '2024-06-12 16:00:00', 'https://example.com/performance113.jpg', 'Artic Monkeys live'), -- 15 min break
+(114, 60, 38, 'main act', '2024-06-12 16:30:00', '2024-06-12 17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'), -- 30 min break
 
 -- Event 39 (2025-07-08)
-(115, 59, 39, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
-(116, 60, 39, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance116.jpg', 'Drake performing'), -- 15 min break
-(117, 61, 39, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance117.jpg', 'Lizzo closing'), -- 30 min break
+(115, 59, 39, 'opening act', '2025-07-08 12:00:00', '2025-07-08 12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
+(116, 60, 39, 'main act', '2025-07-08 13:00:00', '2025-07-08 14:30:00', 'https://example.com/performance116.jpg', 'Drake performing'), -- 15 min break
+(117, 61, 39, 'main act', '2025-07-08 15:00:00', '2025-07-08 16:00:00', 'https://example.com/performance117.jpg', 'Lizzo closing'), -- 30 min break
 
 -- Event 40 (2025-07-08)
-(118, 60, 40, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance118.jpg', 'Drake warming up'),
-(119, 61, 40, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance119.jpg', 'Lizzo acoustic'), -- 15 min break
-(120, 62, 40, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance120.jpg', 'Charlie Puth closing'), -- 30 min break
+(118, 47, 40, 'warm-up', '2025-07-08 13:30:00', '2025-07-08 14:15:00', 'https://example.com/performance118.jpg', 'Camila Cabello warming up'),
+(119, 48, 40, 'acoustic set', '2025-07-08 14:30:00', '2025-07-08 15:30:00', 'https://example.com/performance119.jpg', 'Shawn Mendes acoustic'), -- 15 min break
+(120, 62, 40, 'main act', '2025-07-08 16:00:00', '2025-07-08 17:30:00', 'https://example.com/performance120.jpg', 'Charlie Puth closing'), -- 30 min break
 
 -- Event 41 (2026-08-20)
-(121, 61, 41, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance121.jpg', 'Lizzo opening'),
-(122, 62, 41, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance122.jpg', 'Charlie Puth performing'), -- 15 min break
-(123, 63, 41, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance123.jpg', 'Halsey closing'), -- 30 min break
+(121, 61, 41, 'opening act', '2026-08-20 12:00:00', '2026-08-20 12:45:00', 'https://example.com/performance121.jpg', 'Lizzo opening'),
+(122, 62, 41, 'main act', '2026-08-20 13:00:00', '2026-08-20 14:30:00', 'https://example.com/performance122.jpg', 'Charlie Puth performing'), -- 15 min break
+(123, 63, 41, 'main act', '2026-08-20 15:00:00', '2026-08-20 16:00:00', 'https://example.com/performance123.jpg', 'Halsey closing'), -- 30 min break
 
 -- Event 42 (2026-08-20)
-(124, 62, 42, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance124.jpg', 'Charlie Puth warming up'),
-(125, 63, 42, 'main act', '14:30:00', '16:00:00', 'https://example.com/performance125.jpg', 'Halsey live'), -- 15 min break
-(126, 64, 42, 'main act', '16:30:00', '17:30:00', 'https://example.com/performance126.jpg', 'Zayn closing'), -- 30 min break
+(124, 40, 42, 'warm-up', '2026-08-20 13:30:00', '2026-08-20 14:15:00', 'https://example.com/performance124.jpg', 'Billie Eilish warming up'),
+(125, 43, 42, 'main act', '2026-08-20 14:30:00', '2026-08-20 16:00:00', 'https://example.com/performance125.jpg', 'Olivia Rodrigo live'), -- 15 min break
+(126, 64, 42, 'main act', '2026-08-20 16:30:00', '2026-08-20 17:30:00', 'https://example.com/performance126.jpg', 'Zayn closing'), -- 30 min break
 
 -- Event 43 (2026-08-21)
-(127, 63, 43, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance127.jpg', 'Halsey opening'),
-(128, 64, 43, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance128.jpg', 'Zayn performing'), -- 15 min break
-(129, 65, 43, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance129.jpg', 'Lil Nas X closing'), -- 30 min break
+(127, 63, 43, 'opening act', '2026-08-21 14:00:00', '2026-08-21 14:45:00', 'https://example.com/performance127.jpg', 'Halsey opening'),
+(128, 64, 43, 'main act', '2026-08-21 15:00:00', '2026-08-21 16:30:00', 'https://example.com/performance128.jpg', 'Zayn performing'), -- 15 min break
+(129, 65, 43, 'main act', '2026-08-21 17:00:00', '2026-08-21 18:00:00', 'https://example.com/performance129.jpg', 'Lil Nas X closing'), -- 30 min break
 
 -- Event 44 (2026-08-21)
-(130, 64, 44, 'warm-up', '15:30:00', '16:15:00', 'https://example.com/performance130.jpg', 'Zayn warming up'),
-(131, 65, 44, 'acoustic set', '16:30:00', '17:30:00', 'https://example.com/performance131.jpg', 'Lil Nas X acoustic'), -- 15 min break
-(132, 66, 44, 'main act', '18:00:00', '19:30:00', 'https://example.com/performance132.jpg', 'Sam Smith closing'), -- 30 min break
+(130, 65, 44, 'warm-up', '2026-08-21 15:30:00', '2026-08-21 16:15:00', 'https://example.com/performance130.jpg', 'Lil Nas X warming up'),
+(131, 47, 44, 'acoustic set', '2026-08-21 16:30:00', '2026-08-21 17:30:00', 'https://example.com/performance131.jpg', 'Camila Cabello acoustic'), -- 15 min break
+(132, 66, 44, 'main act', '2026-08-21 18:00:00', '2026-08-21 19:30:00', 'https://example.com/performance132.jpg', 'Sam Smith closing'), -- 30 min break
 
 -- Event 45 (2026-08-22)
-(133, 65, 45, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance133.jpg', 'Lil Nas X opening'),
-(134, 66, 45, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance134.jpg', 'Sam Smith performing'), -- 15 min break
-(135, 67, 45, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance135.jpg', 'SZA closing'), -- 30 min break
+(133, 65, 45, 'opening act', '2026-08-22 12:00:00', '2026-08-22 12:45:00', 'https://example.com/performance133.jpg', 'Lil Nas X opening'),
+(134, 66, 45, 'main act', '2026-08-22 13:00:00', '2026-08-22 14:30:00', 'https://example.com/performance134.jpg', 'Sam Smith performing'), -- 15 min break
+(135, 67, 45, 'main act', '2026-08-22 15:00:00', '2026-08-22 16:00:00', 'https://example.com/performance135.jpg', 'SZA closing'), -- 30 min break
 
 -- Event 46 (2026-08-22)
-(136, 66, 46, 'warm-up', '13:00:00', '13:45:00', 'https://example.com/performance136.jpg', 'Sam Smith warming up'),
-(137, 67, 46, 'main act', '14:00:00', '15:30:00', 'https://example.com/performance137.jpg', 'SZA live'), -- 15 min break
-(138, 1, 46, 'main act', '16:00:00', '17:00:00', 'https://example.com/performance138.jpg', 'The Killers closing'), -- 30 min break
+(136, 48, 46, 'warm-up', '2026-08-22 13:00:00', '2026-08-22 13:45:00', 'https://example.com/performance136.jpg', 'Shawn Mendes warming up'),
+(137, 43, 46, 'main act', '2026-08-22 14:00:00', '2026-08-22 15:30:00', 'https://example.com/performance137.jpg', 'Olivia Rodrigo live'), -- 15 min break
+(138, 1, 46, 'main act', '2026-08-22 16:00:00', '2026-08-22 17:00:00', 'https://example.com/performance138.jpg', 'The Killers closing'), -- 30 min break
 
 -- Event 47 (2026-08-23)
-(139, 67, 47, 'opening act', '14:00:00', '14:45:00', 'https://example.com/performance139.jpg', 'SZA opening'),
-(140, 1, 47, 'main act', '15:00:00', '16:30:00', 'https://example.com/performance140.jpg', 'The Killers performing'), -- 15 min break
-(141, 2, 47, 'main act', '17:00:00', '18:00:00', 'https://example.com/performance141.jpg', 'Arctic Monkeys closing'), -- 30 min break
+(139, 67, 47, 'opening act', '2026-08-23 14:00:00', '2026-08-23 14:45:00', 'https://example.com/performance139.jpg', 'SZA opening'),
+(140, 1, 47, 'main act', '2026-08-23 15:00:00', '2026-08-23 16:30:00', 'https://example.com/performance140.jpg', 'The Killers performing'), -- 15 min break
+(141, 2, 47, 'main act', '2026-08-23 17:00:00', '2026-08-23 18:00:00', 'https://example.com/performance141.jpg', 'Arctic Monkeys closing'), -- 30 min break
 
 -- Event 48 (2026-08-23)
-(142, 2, 48, 'warm-up', '15:00:00', '15:45:00', 'https://example.com/performance142.jpg', 'Arctic Monkeys warming up'),
-(143, 3, 48, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance143.jpg', 'Foo Fighters performing'), -- 15 min break
-(144, 4, 48, 'main act', '18:00:00', '19:00:00', 'https://example.com/performance144.jpg', 'Florence + Machine closing'), -- 30 min break
+(142, 40, 48, 'warm-up', '2026-08-23 15:00:00', '2026-08-23 15:45:00', 'https://example.com/performance142.jpg', 'Billie Eilish warming up'),
+(143, 65, 48, 'main act', '2026-08-23 16:00:00', '2026-08-23 17:30:00', 'https://example.com/performance143.jpg', 'Lil Nas X performing'), -- 15 min break
+(144, 4, 48, 'main act', '2026-08-23 18:00:00', '2026-08-23 19:00:00', 'https://example.com/performance144.jpg', 'Florence + Machine closing'), -- 30 min break
 
 -- Event 49 (2026-08-24)
-(145, 3, 49, 'opening act', '12:00:00', '12:45:00', 'https://example.com/performance145.jpg', 'Foo Fighters opening'),
-(146, 4, 49, 'main act', '13:00:00', '14:30:00', 'https://example.com/performance146.jpg', 'Florence + Machine performing'), -- 15 min break
-(147, 5, 49, 'main act', '15:00:00', '16:00:00', 'https://example.com/performance147.jpg', 'Tame Impala closing'), -- 30 min break
+(145, 3, 49, 'opening act', '2026-08-24 12:00:00', '2026-08-24 12:45:00', 'https://example.com/performance145.jpg', 'Foo Fighters opening'),
+(146, 4, 49, 'main act', '2026-08-24 13:00:00', '2026-08-24 14:30:00', 'https://example.com/performance146.jpg', 'Florence + Machine performing'), -- 15 min break
+(147, 5, 49, 'main act', '2026-08-24 15:00:00', '2026-08-24 16:00:00', 'https://example.com/performance147.jpg', 'Tame Impala closing'), -- 30 min break
 
 -- Event 50 (2026-08-24)
-(148, 4, 50, 'warm-up', '13:30:00', '14:15:00', 'https://example.com/performance148.jpg', 'Florence + Machine warming up'),
-(149, 5, 50, 'acoustic set', '14:30:00', '15:30:00', 'https://example.com/performance149.jpg', 'Tame Impala acoustic'), -- 15 min break
-(150, 6, 50, 'main act', '16:00:00', '17:30:00', 'https://example.com/performance150.jpg', 'The Strokes closing the festival'); -- 30 min break
+(148, 47, 50, 'warm-up', '2026-08-24 13:30:00', '2026-08-24 14:15:00', 'https://example.com/performance148.jpg', 'Camila Cabello warming up'),
+(149, 48, 50, 'acoustic set', '2026-08-24 14:30:00', '2026-08-24 15:30:00', 'https://example.com/performance149.jpg', 'Shawn Mendes acoustic'), -- 15 min break
+(150, 6, 50, 'main act', '2026-08-24 16:00:00', '2026-08-24 17:30:00', 'https://example.com/performance150.jpg', 'The Strokes closing the festival'); -- 30 min break
 
 INSERT INTO Buyer (visitor_id, EAN, event_id, ticket_type, purchase_interest) VALUES
 (1, '3934567890426', NULL, NULL, '2026-07-11 10:00:00'),
