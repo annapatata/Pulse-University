@@ -2032,7 +2032,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (129, 65, 43, 'main act', '2026-08-21 17:00:00', '2026-08-21 18:00:00', 'https://example.com/performance129.jpg', 'Lil Nas X closing'), -- 30 min break
 
 -- Event 44 (2026-08-21)
-(130, 65, 44, 'warm-up', '2026-08-21 15:30:00', '2026-08-21 16:15:00', 'https://example.com/performance130.jpg', 'Lil Nas X warming up'),
+(130, 40, 44, 'warm-up', '2026-08-21 15:30:00', '2026-08-21 16:15:00', 'https://example.com/performance130.jpg', 'Billie Eilish warming up'),
 (131, 47, 44, 'acoustic set', '2026-08-21 16:30:00', '2026-08-21 17:30:00', 'https://example.com/performance131.jpg', 'Camila Cabello acoustic'), -- 15 min break
 (132, 66, 44, 'main act', '2026-08-21 18:00:00', '2026-08-21 19:30:00', 'https://example.com/performance132.jpg', 'Sam Smith closing'), -- 30 min break
 
