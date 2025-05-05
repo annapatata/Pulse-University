@@ -2035,8 +2035,8 @@ INSERT INTO Buyer (visitor_id, EAN, event_id, ticket_type, purchase_interest) VA
 INSERT INTO Review (EAN, performance_id, voice, light_sound, stage_presence, organisation, overall) VALUES
 ('1234567890123', 3, 3, 3, 4, 3, 2),
 ('4234567890123', 3, 3, 4, 5, 2, 5),
-('7834567890124', 51, 5, 5, 5, 5, 5),
-('0934567890124', 51, 3, 3, 3, 4, 3),
+('7834567890124', 51, 4, 5, 5, 5, 5),
+('0934567890124', 51, 2, 3, 3, 4, 3),
 ('2934567890124', 52, 1, 1, 2, 3, 1),
 ('2244567890124', 59, 3, 4, 5, 3, 3),
 ('3404567890425', 134, 4, 4, 5, 4, 4),
