@@ -1,6 +1,5 @@
 --For an artist/band, find the average of voice and overall reviews
 
-
 SELECT performer_name,AVG(voice) as avg_voice , AVG(overall) as avg_overall 
 FROM REVIEW r
 JOIN Ticket t ON r.EAN = t.EAN 
