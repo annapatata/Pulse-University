@@ -1,11 +1,6 @@
---For an artist/band, find the average of voice and overall reviews
-
+-- CHECKED
 SELECT performer_name,AVG(voice) as avg_voice , AVG(overall) as avg_overall 
-FROM REVIEW r
-JOIN Ticket t ON r.EAN = t.EAN 
-JOIN Performance p ON p.event_id = t.event_id
+FROM REVIEW r 
+JOIN Performance p ON p.performance_id = r.performance_id
 JOIN Performer per ON per.performer_id = p.performer_id
-WHERE per.performer_name='Sabrina Carpenter'
-
-
-
+WHERE per.performer_name='Taylor Swift';
