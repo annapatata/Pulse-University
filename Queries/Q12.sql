@@ -1,9 +1,9 @@
 
 SELECT
 	e.festival_day AS Festival_day,
-	COUNT(CASE WHEN s.role_name = 'technician' THEN 1 END) AS Technician,
-	COUNT(CASE WHEN s.role_name = 'security' THEN 1 END) AS Security,
-	COUNT(CASE WHEN s.role_name = 'auxiliary' THEN 1 END) AS Auxiliary
+	COUNT(CASE WHEN s.role_id = 2 THEN 1 END) AS Technician,
+	COUNT(CASE WHEN s.role_name = 3 THEN 1 END) AS Security,
+	COUNT(CASE WHEN s.role_name = 1 THEN 1 END) AS Auxiliary
 FROM 
 	Event_P e
 JOIN 
