@@ -1331,7 +1331,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (50, 89.99, 153, 'General', 'Paypal', '2026-07-25 12:15:22', '2234567890125', 0, 'https://example.com/tickets/50-1.jpg', 'General admission for Farewell to wonderful year'),
 (50, 199.99, 154, 'VIP', 'Credit', '2026-07-26 09:33:44', '3334567890123', 0, 'https://example.com/tickets/50-2.jpg', 'VIP access for Farewell to wonderful year'),
 (50, 299.99, 155, 'Premium', 'Debit', '2026-07-27 14:22:11', '4434567890125', 0, 'https://example.com/tickets/50-3.jpg', 'Premium experience for Farewell to wonderful year'),
-(50, 499.99, 156, 'Backstage', 'Cash', '2026-07-28 17:45:33', '5534567890123', 1, 'https://example.com/tickets/50-4.jpg', 'Backstage pass for Farewell to wonderful year');
+(50, 499.99, 156, 'Backstage', 'Cash', '2026-07-28 17:45:33', '5534567890123', 0, 'https://example.com/tickets/50-4.jpg', 'Backstage pass for Farewell to wonderful year');
 -- events 46,47 and 48 are sold out
 
 INSERT INTO Genre (genre_id, image, image_caption) VALUES
