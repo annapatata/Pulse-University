@@ -1,6 +1,7 @@
 -- CHECKED
 
-SELECT artist_id, stage_name, participations
+SELECT *
 FROM Artist
 WHERE participations < (
-	SELECT MAX(participations) FROM Artist ) - 5;
+	SELECT MAX(participations) FROM Artist ) - 5
+ORDER BY participations;
