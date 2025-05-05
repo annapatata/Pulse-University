@@ -2033,11 +2033,13 @@ INSERT INTO Buyer (visitor_id, EAN, event_id, ticket_type, purchase_interest) VA
 (6, NULL, 48, 'General', '2026-07-08 14:00:00');
 
 INSERT INTO Review (EAN, performance_id, voice, light_sound, stage_presence, organisation, overall) VALUES
-('1234567890123', 3, 3, 3, 4, 3, 2),
+('1234567890123', 3, 3, 3, 4, 3, 2), -- VISITOR_ID = 1
 ('4234567890123', 3, 3, 4, 5, 2, 5),
 ('7834567890124', 51, 4, 5, 5, 5, 5),
 ('0934567890124', 51, 2, 3, 3, 4, 3),
 ('2934567890124', 52, 1, 1, 2, 3, 1),
-('2244567890124', 59, 3, 4, 5, 3, 3);
+('2244567890124', 59, 3, 4, 5, 3, 3),
+('1115567890124', 85, 4, 5, 2, 3, 4), -- VISITOR_ID = 1
+('1115567890124', 86, 3, 4, 5, 2, 3); -- VISITOR_ID = 1
 
 
