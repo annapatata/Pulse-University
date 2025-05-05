@@ -647,5 +647,42 @@ END $$
 DELIMITER ;
 	
 
+DROP TRIGGER IF EXISTS future_activated;
+DELIMITER $$
 
+CREATE TRIGGER future_activated
+BEFORE INSERT ON Ticket FOR EACH ROW
+BEGIN
+	DECLARE event_date DATETIME;
+	
+	SELECT start_time INTO event_date
+	FROM Event_P 
+	WHERE event_id = NEW.event_id;
+	
+	IF(NEW.activated = TRUE AND event_date > CURDATE()) THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'activated ticket for future event';
+	END IF;
+END$$
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS activation_of_future;
+DELIMITER $$
+
+CREATE TRIGGER activation_of_future
+BEFORE UPDATE ON Ticket
+FOR EACH ROW
+BEGIN 
+	DECLARE event_date DATETIME;
+	
+	SELECT start_time INTO event_date
+	FROM Event_P 
+	WHERE event_id = NEW.event_id;
+
+	IF (NEW.activated = TRUE AND event_date > CURDATE()) THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'activated ticket for future event';
+	END IF;
+END$$
+DELIMITER ;		
 
