@@ -1827,7 +1827,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (33, 15, 11, 'main act', '2019-07-05 15:00:00', '2019-07-05 16:00:00', 'https://example.com/performance33.jpg', 'Interpol performing'), -- 30 min break
 
 -- Event 12 (2019-07-05)
-(34, 12, 12, 'warm-up', '2019-07-05 13:30:00', '2019-07-05 14:15:00', 'https://example.com/performance34.jpg', 'Arcade Fire warming up'),
+(34, 40, 12, 'warm-up', '2019-07-05 13:30:00', '2019-07-05 14:15:00', 'https://example.com/performance34.jpg', 'Billie Eilish warming up'),
 (35, 29, 12, 'main act', '2019-07-05 14:30:00', '2019-07-05 16:00:00', 'https://example.com/performance35.jpg', 'Win Butler acoustic set'), -- 15 min break
 (36, 16, 12, 'main act', '2019-07-05 16:30:00', '2019-07-05 17:30:00', 'https://example.com/performance36.jpg', 'The 1975 closing'), -- 30 min break
 
@@ -1847,7 +1847,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (45, 36, 15, 'main act', '2019-07-07 15:30:00', '2019-07-07 16:30:00', 'https://example.com/performance45.jpg', 'St. Vincent closing'), -- 30 min break
 
 -- Event 16 (2019-07-07)
-(46, 16, 16, 'warm-up', '2019-07-07 14:00:00', '2019-07-07 14:45:00', 'https://example.com/performance46.jpg', 'The 1975 warming up'),
+(46, 40, 16, 'warm-up', '2019-07-07 14:00:00', '2019-07-07 14:45:00', 'https://example.com/performance46.jpg', 'Billie Eilish warming up'),
 (47, 33, 16, 'acoustic set', '2019-07-07 15:00:00', '2019-07-07 16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'), -- 15 min break
 (48, 37, 16, 'main act', '2019-07-07 16:30:00', '2019-07-07 18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'), -- 30 min break
 
