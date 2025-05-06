@@ -1,5 +1,5 @@
 --Find the performers that have participated in 3 different continents
-
+--CHECKED
 SELECT performer_name 
 FROM Performer per
 JOIN Performance p ON per.performer_id = p.performer_id
