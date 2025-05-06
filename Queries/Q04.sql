@@ -8,5 +8,5 @@ WHERE per.performer_name='Taylor Swift';
 -- VIEW
 SELECT performer_name, AVG(voice) as avg_voice , AVG(overall) as avg_overall 
 FROM REVIEW r 
-JOIN PerformerPerformance p ON p.performance_id = r.performance_id
+JOIN PerformerPerformance p ON p.performance = r.performance_id
 WHERE p.performer='Taylor Swift';
