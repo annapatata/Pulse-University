@@ -1,6 +1,6 @@
 -- VIEWS
 CREATE VIEW PerformerGenre AS 
-SELECT ps.performer_id AS performer_id, s.genre_id AS genre
+SELECT DISTINCT ps.performer_id AS performer_id, s.genre_id AS genre
 FROM PerformerSubgenre ps 
 JOIN Subgenre s ON s.subgenre_id = ps.subgenre_id;
 
