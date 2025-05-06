@@ -1,5 +1,6 @@
+--CHECKED
 SELECT 
-	t.visitor_id AS Visitor
+	EventCounts.visitor_id AS Visitor
 FROM(
 	SELECT
 		t.visitor_id,
@@ -14,4 +15,4 @@ FROM(
 		t.visitor_id
 )AS EventCounts
 WHERE
-	EventCounts.Event_number = ?;
+	EventCounts.Event_number = 3;
