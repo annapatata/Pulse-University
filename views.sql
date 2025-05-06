@@ -17,6 +17,6 @@ JOIN
 
 DROP VIEW IF EXISTS PerformerPerformance;
 CREATE VIEW PerformerPerformance AS
-SELECT pf.performer_name AS Performer, pf.performer_id AS Performer_id, p.event_id AS Event, p.type_id AS Type 
+SELECT pf.performer_name AS Performer, pf.performer_id AS Performer_id, p.event_id AS Event, p.performance_id AS performance, p.type_id AS Type 
 FROM Performance p 
 JOIN Performer pf ON pf.performer_id = p.performer_id;
