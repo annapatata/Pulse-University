@@ -1083,12 +1083,12 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 37: Electronic set to start the fest (2024-06-12)
 (37, 89.99, 61, 'General', 'Cash', '2024-05-13 10:22:10', '1175567890124', 1, 'https://example.com/tickets/37-1.jpg', 'General admission for Electronic set'),
-(37, 199.99, 62, 'VIP', 'Paypal', '2024-05-14 11:15:33', '2275567890124', 1, 'https://example.com/tickets/37-2.jpg', 'VIP access for Electronic set'),
-(37, 299.99, 63, 'Premium', 'Credit', '2024-05-15 14:45:22', '3375567890124', 0, 'https://example.com/tickets/37-3.jpg', 'Premium experience for Electronic set'),
+(37, 199.99, 64, 'VIP', 'Paypal', '2024-05-14 11:15:33', '2275567890124', 1, 'https://example.com/tickets/37-2.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 64, 'Premium', 'Credit', '2024-05-15 14:45:22', '3375567890124', 1, 'https://example.com/tickets/37-3.jpg', 'Premium experience for Electronic set'),
 (37, 499.99, 64, 'Backstage', 'Debit', '2024-05-16 17:30:44', '4475567890124', 1, 'https://example.com/tickets/37-4.jpg', 'Backstage pass for Electronic set'),
 (37, 89.99, 65, 'General', 'Paypal', '2024-05-17 09:12:19', '5575567890124', 1, 'https://example.com/tickets/37-5.jpg', 'General admission for Electronic set'),
-(37, 199.99, 66, 'VIP', 'Credit', '2024-05-18 12:27:45', '6675567890124', 1, 'https://example.com/tickets/37-6.jpg', 'VIP access for Electronic set'),
-(37, 299.99, 67, 'Premium', 'Debit', '2024-05-19 08:18:33', '7775567890124', 0, 'https://example.com/tickets/37-7.jpg', 'Premium experience for Electronic set'),
+(37, 199.99, 68, 'VIP', 'Credit', '2024-05-18 12:27:45', '6675567890124', 1, 'https://example.com/tickets/37-6.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 68, 'Premium', 'Debit', '2024-05-19 08:18:33', '7775567890124', 1, 'https://example.com/tickets/37-7.jpg', 'Premium experience for Electronic set'),
 (37, 499.99, 68, 'Backstage', 'Cash', '2024-05-20 14:42:11', '8875567890124', 1, 'https://example.com/tickets/37-8.jpg', 'Backstage pass for Electronic set'),
 
 -- Event 38: Pop music with a twist (2024-06-12)
