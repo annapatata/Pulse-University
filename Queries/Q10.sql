@@ -1,3 +1,6 @@
+
+-- CHECKED
+
 WITH s1 AS (
 	SELECT DISTINCT
 		ps.performer_id,
