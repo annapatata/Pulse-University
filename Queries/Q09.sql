@@ -1,4 +1,4 @@
---CHECKED
+-- CHECKED
 SELECT 
 	EventCounts.visitor_id AS Visitor
 FROM(
