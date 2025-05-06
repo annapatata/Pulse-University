@@ -1,4 +1,6 @@
-WITH fpg1 AS (
+-- CHECKED 
+
+WITH fgp1 AS (
 	SELECT
 		festival,
 		genre,
@@ -9,31 +11,23 @@ WITH fpg1 AS (
 			e.festival_id AS festival,
 			s.genre_id AS genre
 		FROM
-			Event e 
+			Event_P e 
 		JOIN Performance p ON e.event_id = p.event_id
 		JOIN PerformerSubgenre ps ON p.performer_id = ps.performer_id
 		JOIN Subgenre s ON s.subgenre_id = ps.subgenre_id
-		)AS pfg 
+		)AS fgp
 	GROUP BY 
 		festival,genre
 	HAVING COUNT(*) >=3
 )
 
 SELECT DISTINCT 
-	fgp1.genre,
-	fpg1.festival,
-	fpg2.festival,
-	fpg1.performances
-FROM fpg1 	
-JOIN fgp1 AS fgp2 ON
-	fgp2.festival = fgp1.festival + 1 	AND
-	fgp1.genre = fgp2.genre AND
-	fgp1.performances = fgp2.performances;
-
-
-
-	
-
-
-
-	
+	f1.genre,
+	f1.festival,
+	f2.festival,
+	f1.performances
+FROM fgp1 as f1
+JOIN fgp1 AS f2 ON
+	f2.festival = f1.festival + 1 	AND
+	f1.genre = f2.genre AND
+	f1.performances = f2.performances;
