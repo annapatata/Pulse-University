@@ -2,7 +2,7 @@
 CREATE VIEW PerformerGenre AS 
 SELECT ps.performer_id AS performer_id, s.genre_id AS genre
 FROM PerformerSubgenre ps 
-JOIN Subgenre s ΟΝ s.subgenre_id = ps.subgenre_id;
+JOIN Subgenre s ON s.subgenre_id = ps.subgenre_id;
 
 CREATE VIEW EventStaff AS
 SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, s.role_id AS Role, s.xp AS xp
