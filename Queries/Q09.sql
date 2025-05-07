@@ -1,6 +1,9 @@
 -- CHECKED
 SELECT 
+	e.festival_id AS Festival
 	EventCounts.visitor_id AS Visitor
+	EventCounts.Event_number AS Events
+	
 FROM(
 	SELECT
 		t.visitor_id,
@@ -9,8 +12,6 @@ FROM(
 		Ticket t
 	JOIN
 		Event_P e ON t.event_id = e.event_id
-	WHERE 
-		e.start_time BETWEEN DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND CURDATE()
 	GROUP BY
 		t.visitor_id
 )AS EventCounts
