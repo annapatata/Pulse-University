@@ -15,4 +15,4 @@ FROM(
 		t.visitor_id
 )AS EventCounts
 WHERE
-	EventCounts.Event_number = 3;
+	EventCounts.Event_number > 3;
