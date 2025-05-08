@@ -93,7 +93,6 @@ INSERT INTO Equipment (equip_name, image, image_caption) VALUES
  
 -- 50 events
 INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, festival_day, image, image_caption) VALUES
-(1, 2024, 1, '2024-06-12 12:00:00', '2018-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (2, 2018, 2, '2018-06-10 13:30:00', '2018-06-10 17:30:00', 1, 'https://example.com/event2.jpg', 'Jazz rhythms on the second stage'),
 (3, 2018, 3, '2018-06-11 14:00:00', '2018-06-11 18:00:00', 2, 'https://example.com/event3.jpg', 'Rock hits in the afternoon'),
 (4, 2018, 1, '2018-06-11 15:00:00', '2018-06-11 19:00:00', 2, 'https://example.com/event4.jpg', 'Chill vibes by the main stage'),
@@ -108,7 +107,6 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (13, 2019, 4, '2019-07-06 14:00:00', '2019-07-06 18:00:00', 2, 'https://example.com/event13.jpg', 'Rock bands heating up the night'),
 (14, 2019, 5, '2019-07-06 15:00:00', '2019-07-06 19:00:00', 2, 'https://example.com/event14.jpg', 'Alternative hits and epic vibes'),
 (15, 2019, 6, '2019-07-07 12:30:00', '2019-07-07 16:30:00', 3, 'https://example.com/event15.jpg', 'Dance music and fun with friends'),
-(16, 2019, 4, '2019-07-07 14:00:00', '2019-07-07 18:00:00', 3, 'https://example.com/event16.jpg', 'Funky beats to end the day'),
 (17, 2020, 7, '2020-08-01 13:00:00', '2020-08-01 17:00:00', 1, 'https://example.com/event17.jpg', 'Virtual festival set with a twist'),
 (18, 2020, 8, '2020-08-01 14:30:00', '2020-08-01 18:30:00', 1, 'https://example.com/event18.jpg', 'Live set from the outdoor stage'),
 (19, 2020, 29, '2020-08-02 12:00:00', '2020-08-02 16:00:00', 2, 'https://example.com/event19.jpg', 'Punk rock and raw energy'),
@@ -129,13 +127,14 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (34, 2023, 14, '2023-05-15 13:00:00', '2023-05-15 17:00:00', 1, 'https://example.com/event34.jpg', 'Indie beats and cozy moments'),
 (35, 2023, 12, '2023-05-16 14:00:00', '2023-05-16 18:00:00', 2, 'https://example.com/event35.jpg', 'Dance music all night long'),
 (36, 2023, 14, '2023-05-16 15:00:00', '2023-05-16 19:00:00', 2, 'https://example.com/event36.jpg', 'Rock anthems playing into the night'),
-(1, 2024, 1, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
+(1, 2024, 30, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (37, 2024, 15, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event37.jpg', 'Electronic set to start the fest'),
 (38, 2024, 30, '2024-06-13 13:30:00', '2024-06-13 17:30:00', 2, 'https://example.com/event38.jpg', 'Pop music with a twist'),
 (51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night');
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
 (52, 2025, 28, '2025-07-09 13:30:00', '2025-07-09 17:30:00', 2, 'https://example.com/event52.jpg', 'Amazing closing night'),
+(16, 2025, , '2019-07-07 14:00:00', '2019-07-07 18:00:00', 3, 'https://example.com/event16.jpg', 'Funky beats to end the day'),
 (41, 2026, 17, '2026-08-20 12:00:00', '2026-08-20 16:00:00', 1, 'https://example.com/event41.jpg', 'The final day begins'),
 (42, 2026, 18, '2026-08-20 13:30:00', '2026-08-20 17:30:00', 1, 'https://example.com/event42.jpg', 'Time to celebrate with music'),
 (43, 2026, 19, '2026-08-21 14:00:00', '2026-08-21 18:00:00', 2, 'https://example.com/event43.jpg', 'Jazz tunes under the open sky'),
@@ -1697,9 +1696,9 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 (497, 36, 36), (498, 39, 36), (499, 42, 36), (500, 45, 36), (501, 48, 36), (502, 50, 36), (503, 53, 36), (504, 34, 36), -- Security (8)
 (505, 29, 36), (506, 31, 36), (507, 33, 36), (508, 38, 36), -- Technicians
 
- -- Event 1 (Stage 1 - Capacity 100)  **
-(1, 1, 1), (2, 4, 1), -- Auxiliary (2% = 2)
-(3, 36, 1), (4, 39, 1), (5, 42, 1), (6, 45, 1), (7, 48, 1), -- Security (5% = 5)
+ -- Event 1 (Stage 30 - Capacity 140)  **
+(1, 1, 1), (2, 4, 1), (707, 49, 1) -- Auxiliary (2% = 3)
+(3, 36, 1), (4, 39, 1), (5, 42, 1), (6, 45, 1), (7, 48, 1), (708, 50, 1), (709, 53, 1), (710, 34, 1),-- Security (5% = 8)
 (8, 29, 1), (9, 31, 1), (10, 33, 1), -- Technicians
 
 
