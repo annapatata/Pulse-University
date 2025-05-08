@@ -93,7 +93,7 @@ INSERT INTO Equipment (equip_name, image, image_caption) VALUES
  
 -- 50 events
 INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, festival_day, image, image_caption) VALUES
-(1, 2018, 1, '2018-06-10 12:00:00', '2018-06-10 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
+(1, 2024, 1, '2024-06-12 12:00:00', '2018-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (2, 2018, 2, '2018-06-10 13:30:00', '2018-06-10 17:30:00', 1, 'https://example.com/event2.jpg', 'Jazz rhythms on the second stage'),
 (3, 2018, 3, '2018-06-11 14:00:00', '2018-06-11 18:00:00', 2, 'https://example.com/event3.jpg', 'Rock hits in the afternoon'),
 (4, 2018, 1, '2018-06-11 15:00:00', '2018-06-11 19:00:00', 2, 'https://example.com/event4.jpg', 'Chill vibes by the main stage'),
@@ -129,6 +129,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (34, 2023, 14, '2023-05-15 13:00:00', '2023-05-15 17:00:00', 1, 'https://example.com/event34.jpg', 'Indie beats and cozy moments'),
 (35, 2023, 12, '2023-05-16 14:00:00', '2023-05-16 18:00:00', 2, 'https://example.com/event35.jpg', 'Dance music all night long'),
 (36, 2023, 14, '2023-05-16 15:00:00', '2023-05-16 19:00:00', 2, 'https://example.com/event36.jpg', 'Rock anthems playing into the night'),
+(1, 2024, 1, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (37, 2024, 15, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event37.jpg', 'Electronic set to start the fest'),
 (38, 2024, 30, '2024-06-13 13:30:00', '2024-06-13 17:30:00', 2, 'https://example.com/event38.jpg', 'Pop music with a twist'),
 (51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night');
@@ -796,11 +797,7 @@ INSERT INTO Likert (scale) VALUES
 
 -- Now insert all 400 tickets for all 50 events
 INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
--- Event 1 (8 tickets)
-(1, 89.99, 1, 'General', 'Credit', '2018-05-11 14:22:10', '1234567890123', 1, 'https://example.com/tickets/1-1.jpg', 'General admission for First event of summer festival'),
-(1, 199.99, 2, 'VIP', 'Debit', '2018-05-12 09:15:33', '2234567890123', 1, 'https://example.com/tickets/1-2.jpg', 'VIP access for First event of summer festival'),
-(1, 299.99, 3, 'Premium', 'Paypal', '2018-05-13 11:45:22', '3234567890123', 0, 'https://example.com/tickets/1-3.jpg', 'Premium experience for First event of summer festival'),
-(1, 499.99, 4, 'Backstage', 'Cash', '2018-05-14 16:30:44', '4234567890123', 1, 'https://example.com/tickets/1-4.jpg', 'Backstage pass for First event of summer festival'),
+
 
 -- Event 2 (8 tickets)
 (2, 89.99, 5, 'General', 'Debit', '2018-05-10 10:12:19', '5234567890123', 1, 'https://example.com/tickets/2-1.jpg', 'General admission for Jazz rhythms on second stage'),
@@ -1087,6 +1084,12 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (36, 199.99, 58, 'VIP', 'Credit', '2023-04-23 12:27:45', '8865567890124', 1, 'https://example.com/tickets/36-6.jpg', 'VIP access for Rock anthems night'),
 (36, 299.99, 59, 'Premium', 'Cash', '2023-04-24 08:18:33', '9965567890124', 0, 'https://example.com/tickets/36-7.jpg', 'Premium experience for Rock anthems night'),
 (36, 499.99, 60, 'Backstage', 'Paypal', '2023-04-25 14:42:11', '0075567890124', 1, 'https://example.com/tickets/36-8.jpg', 'Backstage pass for Rock anthems night'),
+ 
+ -- Event 1 (8 tickets)
+(1, 89.99, 71, 'General', 'Credit', '2024-05-11 14:22:10', '1234567890123', 1, 'https://example.com/tickets/1-1.jpg', 'General admission for First event of summer festival'),
+(1, 199.99, 72, 'VIP', 'Debit', '2024-05-12 09:15:33', '2234567890123', 1, 'https://example.com/tickets/1-2.jpg', 'VIP access for First event of summer festival'),
+(1, 299.99, 68, 'Premium', 'Paypal', '2024-05-13 11:45:22', '3234567890123', 0, 'https://example.com/tickets/1-3.jpg', 'Premium experience for First event of summer festival'),
+(1, 499.99, 64, 'Backstage', 'Cash', '2024-05-14 16:30:44', '4234567890123', 1, 'https://example.com/tickets/1-4.jpg', 'Backstage pass for First event of summer festival'),
 
 -- Event 37: Electronic set to start the fest (2024-06-12)
 (37, 89.99, 61, 'General', 'Cash', '2024-05-13 10:22:10', '1175567890124', 1, 'https://example.com/tickets/37-1.jpg', 'General admission for Electronic set'),
@@ -1514,10 +1517,6 @@ INSERT INTO PerformerSubgenre (performer_id, subgenre_id) VALUES
 -- Employment table population script
 
 INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
--- Event 1 (Stage 1 - Capacity 100)  **
-(1, 1, 1), (2, 4, 1), -- Auxiliary (2% = 2)
-(3, 3, 1), (4, 6, 1), (5, 9, 1), (6, 15, 1), (7, 19, 1), -- Security (5% = 5)
-(8, 2, 1), (9, 5, 1), (10, 7, 1), -- Technicians
 
 -- Event 2 (Stage 2 - Capacity 150) **
 (11, 17, 2), (12, 20, 2), (13, 23, 2), -- Auxiliary (2% = 3)
@@ -1698,6 +1697,12 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 (497, 36, 36), (498, 39, 36), (499, 42, 36), (500, 45, 36), (501, 48, 36), (502, 50, 36), (503, 53, 36), (504, 34, 36), -- Security (8)
 (505, 29, 36), (506, 31, 36), (507, 33, 36), (508, 38, 36), -- Technicians
 
+ -- Event 1 (Stage 1 - Capacity 100)  **
+(1, 1, 1), (2, 4, 1), -- Auxiliary (2% = 2)
+(3, 36, 1), (4, 39, 1), (5, 42, 1), (6, 45, 1), (7, 48, 1), -- Security (5% = 5)
+(8, 29, 1), (9, 31, 1), (10, 33, 1), -- Technicians
+
+
 -- Event 37 (Stage 15 - Capacity 120) ***
 (509, 11, 37), (510, 14, 37), (511, 17, 37), -- Auxiliary (3 - 2% of 120 = 2.4 → 3)
 (512, 3, 37), (513, 6, 37), (514, 9, 37), (515, 15, 37), (516, 19, 37), (517, 21, 37), (518, 25, 37), -- Security (7 - 5% of 120 = 6 → 7)
@@ -1807,10 +1812,7 @@ INSERT INTO Resale_queue (EAN, sale_interest) VALUES
 ('5544567890427', '2026-07-25 08:10:00');
 
 INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_time, end_time, image, image_caption) VALUES
--- Event 1 (2018-06-10)
-(1, 5, 1, 'opening act', '2018-06-10 12:00:00', '2018-06-10 12:45:00', 'https://example.com/performance1.jpg', 'Tame Impala opening the festival'),
-(2, 18, 1, 'main act', '2018-06-10 13:00:00', '2018-06-10 14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'), -- 15 min break
-(3, 38, 1, 'main act', '2018-06-10 15:00:00', '2018-06-10 16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'), -- 30 min break
+
 
 -- Event 2 (2018-06-10)
 (4, 2, 2, 'warm-up', '2018-06-10 13:30:00', '2018-06-10 14:15:00', 'https://example.com/performance4.jpg', 'Arctic Monkeys warming up'),
@@ -1986,6 +1988,11 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (106, 11, 36, 'warm-up', '2023-05-16 15:00:00', '2023-05-16 15:45:00', 'https://example.com/performance106.jpg', 'Vampire Weekend warming up'),
 (107, 12, 36, 'main act', '2023-05-16 16:00:00', '2023-05-16 17:30:00', 'https://example.com/performance107.jpg', 'Arcade Fire live'), -- 15 min break
 (108, 58, 36, 'main act', '2023-05-16 18:00:00', '2023-05-16 19:00:00', 'https://example.com/performance108.jpg', 'Miley Cyrus closing'), -- 30 min break
+
+-- Event 1 (2024-06-12)
+(1, 5, 1, 'opening act', '2024-06-12 12:00:00', '2024-06-12 12:45:00', 'https://example.com/performance1.jpg', 'Tame Impala opening the festival'),
+(2, 18, 1, 'main act', '2024-06-12 13:00:00', '2024-06-12 14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'), -- 15 min break
+(3, 38, 1, 'main act', '2024-06-12 15:00:00', '2024-06-12 16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'), -- 30 min break
 
 -- Event 37 (2024-06-12)
 (109, 57, 37, 'opening act', '2024-06-12 12:00:00', '2024-06-12 12:45:00', 'https://example.com/performance109.jpg', 'Adele opening'),
