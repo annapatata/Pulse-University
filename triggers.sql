@@ -1,6 +1,6 @@
-DROP TRIGGER IF EXISTS performer_before_insert;
+DROP TRIGGER IF EXISTS artist_or_band;
 DELIMITER //
-CREATE TRIGGER performer_before_insert
+CREATE TRIGGER artist_or_band
 BEFORE INSERT ON Performer FOR EACH ROW
 BEGIN
   	IF (NEW.artist_nband = 1 AND (NEW.artist_id IS NULL OR NEW.band_id IS NOT NULL)) OR
