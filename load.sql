@@ -1797,7 +1797,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (15, 10, 5, 'main act', '2018-06-12 15:30:00', '2018-06-12 16:30:00', 'https://example.com/performance15.jpg', 'The National performing'), -- 30 min break
 
 -- Event 6 (2018-06-12)
-(16, 6, 6, 'warm-up', '2018-06-12 14:00:00', '2018-06-12 14:45:00', 'https://example.com/performance16.jpg', 'The Strokes warming up'),
+(16, 2, 6, 'warm-up', '2018-06-12 14:00:00', '2018-06-12 14:45:00', 'https://example.com/performance16.jpg', 'Arctic Monkeys warming up'),
 (17, 23, 6, 'acoustic set', '2018-06-12 15:00:00', '2018-06-12 16:00:00', 'https://example.com/performance17.jpg', 'Julian Casablancas acoustic'), -- 15 min break
 (18, 11, 6, 'main act', '2018-06-12 16:30:00', '2018-06-12 18:00:00', 'https://example.com/performance18.jpg', 'Vampire Weekend closing'), -- 30 min break
 
@@ -1817,7 +1817,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (27, 13, 9, 'main act', '2018-06-14 15:00:00', '2018-06-14 16:00:00', 'https://example.com/performance27.jpg', 'The Black Keys performing'), -- 30 min break
 
 -- Event 10 (2018-06-14)
-(28, 10, 10, 'warm-up', '2018-06-14 14:00:00', '2018-06-14 14:45:00', 'https://example.com/performance28.jpg', 'The National warming up'),
+(28, 2, 10, 'warm-up', '2018-06-14 14:00:00', '2018-06-14 14:45:00', 'https://example.com/performance28.jpg', 'Arctic Monkeys warming up'),
 (29, 27, 10, 'acoustic set', '2018-06-14 15:00:00', '2018-06-14 16:00:00', 'https://example.com/performance29.jpg', 'Matt Berninger acoustic'), -- 15 min break
 (30, 14, 10, 'main act', '2018-06-14 16:30:00', '2018-06-14 18:00:00', 'https://example.com/performance30.jpg', 'Phoenix closing the festival'), -- 30 min break
 
