@@ -17,7 +17,7 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2022, '2022-07-11', '2022-07-13', 3, 'https://example.com/img5.jpg', 'Four days of rock'),
 (2023, '2023-05-15', '2023-05-16', 2, 'https://example.com/img6.jpg', 'Spring sounds bloom'),
 (2024, '2024-06-12', '2024-06-13', 2, 'https://example.com/img8.jpg', 'Golden summer rhythms'),
-(2025, '2025-07-08', '2025-07-13', 6, 'https://example.com/img9.jpg', 'Future fest is here'),
+(2025, '2025-07-08', '2025-07-13', 2, 'https://example.com/img9.jpg', 'Future fest is here'),
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
 -- 10 descriptions
@@ -134,6 +134,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night');
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
+(52, 2025, 28, '2025-07-09 13:30:00', '2025-07-09 17:30:00', 2, 'https://example.com/event52.jpg', 'Amazing closing night'),
 (41, 2026, 17, '2026-08-20 12:00:00', '2026-08-20 16:00:00', 1, 'https://example.com/event41.jpg', 'The final day begins'),
 (42, 2026, 18, '2026-08-20 13:30:00', '2026-08-20 17:30:00', 1, 'https://example.com/event42.jpg', 'Time to celebrate with music'),
 (43, 2026, 19, '2026-08-21 14:00:00', '2026-08-21 18:00:00', 2, 'https://example.com/event43.jpg', 'Jazz tunes under the open sky'),
@@ -278,6 +279,7 @@ INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 -- Equipment for Events 39-50 (2025-2026 festivals)
 (9, 39, 1), (10, 39, 1), (1, 39, 2),
 (2, 40, 1), (3, 40, 2), (4, 40, 1),
+(6, 52, 1), (7, 52, 1), (10, 52, 1),
 (5, 41, 2), (6, 41, 1), (7, 41, 2),
 (8, 42, 1), (9, 42, 1), (10, 42, 1),
 (1, 43, 3), (2, 43, 2), (3, 43, 4),
@@ -1122,13 +1124,13 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (39, 299.99, 79, 'Premium', 'Credit', '2025-06-10 14:45:22', '9985567890124', 0, 'https://example.com/tickets/39-3.jpg', 'Premium experience for Alt rock vibe'),
 (39, 499.99, 80, 'Backstage', 'Debit', '2025-06-11 17:30:44', '0095567890124', 0, 'https://example.com/tickets/39-4.jpg', 'Backstage pass for Alt rock vibe'),
 (39, 89.99, 81, 'General', 'Paypal', '2025-06-12 09:12:19', '1195567890124', 0, 'https://example.com/tickets/39-5.jpg', 'General admission for Alt rock vibe'),
-(39, 199.99, 82, 'VIP', 'Credit', '2025-06-13 12:27:45', '2295567890124', 0, 'https://example.com/tickets/39-6.jpg', 'VIP access for Alt rock vibe'),
+(39, 199.99, 85, 'VIP', 'Credit', '2025-06-13 12:27:45', '2295567890124', 0, 'https://example.com/tickets/39-6.jpg', 'VIP access for Alt rock vibe'),
 (39, 299.99, 83, 'Premium', 'Debit', '2025-06-14 08:18:33', '3395567890124', 0, 'https://example.com/tickets/39-7.jpg', 'Premium experience for Alt rock vibe'),
 (39, 499.99, 84, 'Backstage', 'Cash', '2025-06-15 14:42:11', '4495567890124', 0, 'https://example.com/tickets/39-8.jpg', 'Backstage pass for Alt rock vibe'),
 
 -- Event 40: Indie and electro mix for an amazing night (2025-07-08)
 (40, 89.99, 85, 'General', 'Credit', '2025-06-09 08:22:10', '5595567890124', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
-(40, 199.99, 86, 'VIP', 'Debit', '2025-06-10 11:15:33', '6695567890124', 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
+(40, 199.99, 83, 'VIP', 'Debit', '2025-06-10 11:15:33', '6695567890124', 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
 (40, 299.99, 87, 'Premium', 'Paypal', '2025-06-11 13:45:22', '7795567890124', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
 (40, 499.99, 88, 'Backstage', 'Cash', '2025-06-12 18:30:44', '8895567890124', 0, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
 (40, 89.99, 89, 'General', 'Debit', '2025-06-13 09:12:19', '9995567890124', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
@@ -1136,6 +1138,15 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (40, 299.99, 91, 'Premium', 'Cash', '2025-06-15 08:18:33', '1205567890124', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
 (40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
 
+-- Event 52: Indie and electro mix for an amazing night (2025-07-08)
+(52, 89.99, 85, 'General', 'Credit', '2025-05-09 08:22:10', '000000000009', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
+(52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '000000000010, 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
+(52, 299.99, 97, 'Premium', 'Paypal', '2025-05-11 13:45:22', '000000000011', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
+(52, 499.99, 98, 'Backstage', 'Cash', '2025-05-12 18:30:44', '000000000012', 0, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
+(52, 89.99, 99, 'General', 'Debit', '2025-05-13 09:12:19', '000000000013', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
+(52, 199.99, 93, 'VIP', 'Credit', '2025-05-14 12:27:45', '000000000014', 0, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
+(52, 299.99, 91, 'Premium', 'Cash', '2025-05-15 08:18:33', '000000000015', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
+(52, 499.99, 92, 'Backstage', 'Paypal', '2025-05-16 14:42:11', '000000000016', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
  INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
 -- Event 41: The final day begins (2026-08-20)
 (41, 89.99, 1, 'General', 'Credit', '2026-07-20 14:22:10', '1234567890421', 0, 'https://example.com/tickets/41-1.jpg', 'General admission for The final day begins'),
@@ -1712,6 +1723,11 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 (551, 34, 40), (552, 36, 40), (553, 39, 40), (554, 42, 40), (555, 45, 40), (556, 48, 40), (557, 50, 40), -- Security (7 - 5% of 130 = 6.5 → 7)
 (558, 38, 40), (559, 41, 40), (560, 44, 40), (561, 46, 40), -- Technicians
 
+ -- Event 52 (Stage 19 - Capacity 100) **
+(697, 11, 52), (698, 14, 52), -- Auxiliary (2)
+(699, 3, 52), (700, 6, 52), (701, 9, 52), (702, 15, 52), (703, 19, 522), -- Security (5)
+(704, 2, 52), (705, 5, 52), (706, 7, 52), -- Technicians
+
 -- Event 41 (Stage 17 - Capacity 105) ***
 (562, 11, 41), (563, 14, 41), (564, 17, 41), -- Auxiliary (3 - 2% of 105 = 2.1 → 3)
 (565, 3, 41), (566, 6, 41), (567, 9, 41), (568, 15, 41), (569, 19, 41), (570, 21, 41), -- Security (6 - 5% of 105 = 5.25 → 6)
@@ -1995,6 +2011,11 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (118, 47, 40, 'warm-up', '2025-07-08 13:30:00', '2025-07-08 14:15:00', 'https://example.com/performance118.jpg', 'Camila Cabello warming up'),
 (119, 48, 40, 'acoustic set', '2025-07-08 14:30:00', '2025-07-08 15:30:00', 'https://example.com/performance119.jpg', 'Shawn Mendes acoustic'), -- 15 min break
 (120, 62, 40, 'main act', '2025-07-08 16:00:00', '2025-07-08 17:30:00', 'https://example.com/performance120.jpg', 'Charlie Puth closing'), -- 30 min break
+
+ -- Event 52 (2025-07-09)
+(154, 65, 52, 'warm-up', '2025-07-09 13:30:00', '2025-07-09 14:15:00', 'https://example.com/performance154.jpg', 'Lil Nas X warming up'),
+(155, 66, 52, 'acoustic set', '2025-07-09 14:30:00', '2025-07-09 15:30:00', 'https://example.com/performance155.jpg', 'Sam Smith acoustic'), -- 15 min break
+(156, 67, 52, 'main act', '2025-07-09 16:00:00', '2025-07-09 17:30:00', 'https://example.com/performance156.jpg', 'SZA closing'), -- 30 min break
 
 -- Event 41 (2026-08-20)
 (121, 61, 41, 'opening act', '2026-08-20 12:00:00', '2026-08-20 12:45:00', 'https://example.com/performance121.jpg', 'Lizzo opening'),
