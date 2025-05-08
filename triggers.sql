@@ -224,7 +224,7 @@ DELIMITER ;
 DROP TRIGGER IF EXISTS delete_future_performances;
 DELIMITER //
 CREATE TRIGGER delete_future_performances
-BEFORE DELETE ON Performer
+BEFORE DELETE ON Performance
 FOR EACH ROW
 BEGIN
     DECLARE cnt INT;
