@@ -604,6 +604,7 @@ BEGIN
 		IF d_EAN IS NOT NULL THEN
 			UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
 			DELETE FROM Resale_queue WHERE EAN = d_EAN;
+			DELETE FROM Buyer WHERE buyer_id = NEW.buyer_id;
 		END IF;
 	END IF;
 	
