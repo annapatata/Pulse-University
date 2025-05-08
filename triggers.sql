@@ -225,18 +225,8 @@ DROP TRIGGER IF EXISTS delete_future_performances;
 DELIMITER //
 CREATE TRIGGER delete_future_performances
 BEFORE DELETE ON Performance
-FOR EACH ROW
-BEGIN
-    DECLARE cnt INT;
-
-    SELECT COUNT(*) INTO cnt FROM Performance
-    WHERE performer_id = OLD.performer_id
-    AND start_time > CURRENT_TIME;
-
-    IF cnt>0 THEN 
     SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform";
-    END IF;
+    SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform";
 END//
 DELIMITER ;
 
