@@ -134,7 +134,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
 (52, 2025, 28, '2025-07-09 13:30:00', '2025-07-09 17:30:00', 2, 'https://example.com/event52.jpg', 'Amazing closing night'),
-(16, 2025, , '2019-07-07 14:00:00', '2019-07-07 18:00:00', 3, 'https://example.com/event16.jpg', 'Funky beats to end the day'),
+(16, 2025, 16, '2025-07-09 14:00:00', '2025-07-09 18:00:00', 2, 'https://example.com/event16.jpg', 'Funky beats to end the day'),
 (41, 2026, 17, '2026-08-20 12:00:00', '2026-08-20 16:00:00', 1, 'https://example.com/event41.jpg', 'The final day begins'),
 (42, 2026, 18, '2026-08-20 13:30:00', '2026-08-20 17:30:00', 1, 'https://example.com/event42.jpg', 'Time to celebrate with music'),
 (43, 2026, 19, '2026-08-21 14:00:00', '2026-08-21 18:00:00', 2, 'https://example.com/event43.jpg', 'Jazz tunes under the open sky'),
@@ -895,12 +895,6 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (15, 299.99, 71, 'Premium', 'Paypal', '2019-06-21 13:45:22', '1834567890124', 0, 'https://example.com/tickets/15-3.jpg', 'Premium experience for Dance music'),
 (15, 499.99, 72, 'Backstage', 'Cash', '2019-06-22 18:30:44', '2834567890124', 1, 'https://example.com/tickets/15-4.jpg', 'Backstage pass for Dance music'),
 
--- Event 16: Funky beats to end the day (2019-07-07)
-(16, 89.99, 73, 'General', 'Debit', '2019-06-23 09:12:19', '3834567890124', 1, 'https://example.com/tickets/16-1.jpg', 'General admission for Funky beats'),
-(16, 199.99, 74, 'VIP', 'Credit', '2019-06-24 12:27:45', '4834567890124', 1, 'https://example.com/tickets/16-2.jpg', 'VIP access for Funky beats'),
-(16, 299.99, 75, 'Premium', 'Cash', '2019-06-25 08:18:33', '5834567890124', 0, 'https://example.com/tickets/16-3.jpg', 'Premium experience for Funky beats'),
-(16, 499.99, 76, 'Backstage', 'Paypal', '2019-06-26 14:42:11', '6834567890124', 1, 'https://example.com/tickets/16-4.jpg', 'Backstage pass for Funky beats'),
-
 -- Event 17: Virtual festival set with a twist (2020-08-01)
 (17, 89.99, 77, 'General', 'Cash', '2020-07-02 10:22:10', '7834567890124', 1, 'https://example.com/tickets/17-1.jpg', 'General admission for Virtual festival'),
 (17, 199.99, 78, 'VIP', 'Paypal', '2020-07-03 11:15:33', '8834567890124', 1, 'https://example.com/tickets/17-2.jpg', 'VIP access for Virtual festival'),
@@ -1140,7 +1134,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (40, 299.99, 91, 'Premium', 'Cash', '2025-06-15 08:18:33', '1205567890124', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
 (40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
 
--- Event 52: Indie and electro mix for an amazing night (2025-07-08)
+-- Event 52: Indie and electro mix for an amazing night (2025-07-09)
 (52, 89.99, 85, 'General', 'Credit', '2025-05-09 08:22:10', '000000000009', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
 (52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '000000000010, 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
 (52, 299.99, 97, 'Premium', 'Paypal', '2025-05-11 13:45:22', '000000000011', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
@@ -1148,7 +1142,14 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (52, 89.99, 99, 'General', 'Debit', '2025-05-13 09:12:19', '000000000013', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
 (52, 199.99, 93, 'VIP', 'Credit', '2025-05-14 12:27:45', '000000000014', 0, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
 (52, 299.99, 91, 'Premium', 'Cash', '2025-05-15 08:18:33', '000000000015', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
-(52, 499.99, 92, 'Backstage', 'Paypal', '2025-05-16 14:42:11', '000000000016', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
+(52, 499.99, 92, 'Backstage', 'Paypal', '2025-05-16 14:42:11', '000000000016', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix'),
+
+ -- Event 16: Funky beats to end the day (2025-07-09)
+(16, 89.99, 85, 'General', 'Debit', '2025-06-23 09:12:19', '3834567890124', 0, 'https://example.com/tickets/16-1.jpg', 'General admission for Funky beats'),
+(16, 199.99, 83, 'VIP', 'Credit', '2025-06-24 12:27:45', '4834567890124', 0, 'https://example.com/tickets/16-2.jpg', 'VIP access for Funky beats'),
+(16, 299.99, 75, 'Premium', 'Cash', '2025-06-25 08:18:33', '5834567890124', 0, 'https://example.com/tickets/16-3.jpg', 'Premium experience for Funky beats'),
+(16, 499.99, 76, 'Backstage', 'Paypal', '2025-06-26 14:42:11', '6834567890124', 0, 'https://example.com/tickets/16-4.jpg', 'Backstage pass for Funky beats');
+ 
  INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purchase_date, EAN, activated, image, image_caption) VALUES
 -- Event 41: The final day begins (2026-08-20)
 (41, 89.99, 1, 'General', 'Credit', '2026-07-20 14:22:10', '1234567890421', 0, 'https://example.com/tickets/41-1.jpg', 'General admission for The final day begins'),
@@ -1591,11 +1592,6 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 -- Previous events (1-15) omitted for brevity, following same pattern...
 
--- Event 16 (Stage 4 - Capacity 150) **
-(206, 17, 16), (207, 20, 16), (208, 23, 16), -- Auxiliary (3)
-(209, 36, 16), (210, 39, 16), (211, 42, 16), (212, 45, 16), (213, 50, 16), (214, 48, 16), (215, 53, 16), (216, 34, 16), -- Security (8)
-(217, 12, 16), (218, 16, 16), (219, 18, 16), (220, 22, 16), -- Technicians
-
 -- Event 17 (Stage 7 - Capacity 150) ***
 (221, 11, 17), (222, 14, 17), (223, 17, 17), -- Auxiliary (3)
 (224, 3, 17), (225, 6, 17), (226, 9, 17), (227, 15, 17), (228, 19, 17), (229, 21, 17), (230, 25, 17), (231, 30, 17), -- Security (8)
@@ -1731,6 +1727,11 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 (697, 11, 52), (698, 14, 52), -- Auxiliary (2)
 (699, 3, 52), (700, 6, 52), (701, 9, 52), (702, 15, 52), (703, 19, 522), -- Security (5)
 (704, 2, 52), (705, 5, 52), (706, 7, 52), -- Technicians
+
+-- Event 16 (Stage 4 - Capacity 130) **
+(206, 17, 16), (207, 20, 16), (208, 23, 16), -- Auxiliary (3)
+(209, 36, 16), (210, 39, 16), (211, 42, 16), (212, 45, 16), (213, 50, 16), (214, 48, 16), (215, 53, 16), (216, 34, 16), -- Security (8)
+(217, 12, 16), (218, 16, 16), (219, 18, 16), (220, 22, 16), -- Technicians
 
 -- Event 41 (Stage 17 - Capacity 105) ***
 (562, 11, 41), (563, 14, 41), (564, 17, 41), -- Auxiliary (3 - 2% of 105 = 2.1 → 3)
@@ -1883,11 +1884,6 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (44, 32, 15, 'main act', '2019-07-07 13:30:00', '2019-07-07 15:00:00', 'https://example.com/performance44.jpg', 'Paul Banks performing'), -- 15 min break
 (45, 36, 15, 'main act', '2019-07-07 15:30:00', '2019-07-07 16:30:00', 'https://example.com/performance45.jpg', 'St. Vincent closing'), -- 30 min break
 
--- Event 16 (2019-07-07)
-(46, 40, 16, 'warm-up', '2019-07-07 14:00:00', '2019-07-07 14:45:00', 'https://example.com/performance46.jpg', 'Billie Eilish warming up'),
-(47, 33, 16, 'acoustic set', '2019-07-07 15:00:00', '2019-07-07 16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'), -- 15 min break
-(48, 37, 16, 'main act', '2019-07-07 16:30:00', '2019-07-07 18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'), -- 30 min break
-
 -- Event 17 (2020-08-01)
 (49, 17, 17, 'opening act', '2020-08-01 13:00:00', '2020-08-01 13:45:00', 'https://example.com/performance49.jpg', 'Queens of the Stone Age opening'),
 (50, 34, 17, 'main act', '2020-08-01 14:00:00', '2020-08-01 15:30:00', 'https://example.com/performance50.jpg', 'Josh Homme performing'), -- 15 min break
@@ -2022,6 +2018,11 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (154, 65, 52, 'warm-up', '2025-07-09 13:30:00', '2025-07-09 14:15:00', 'https://example.com/performance154.jpg', 'Lil Nas X warming up'),
 (155, 66, 52, 'acoustic set', '2025-07-09 14:30:00', '2025-07-09 15:30:00', 'https://example.com/performance155.jpg', 'Sam Smith acoustic'), -- 15 min break
 (156, 67, 52, 'main act', '2025-07-09 16:00:00', '2025-07-09 17:30:00', 'https://example.com/performance156.jpg', 'SZA closing'), -- 30 min break
+
+ -- Event 16 (2025-07-09)
+(46, 40, 16, 'warm-up', '2025-07-09 14:00:00', '2025-07-09 14:45:00', 'https://example.com/performance46.jpg', 'Billie Eilish warming up'),
+(47, 33, 16, 'acoustic set', '2025-07-09 15:00:00', '2025-07-09 16:00:00', 'https://example.com/performance47.jpg', 'Matty Healy acoustic'), -- 15 min break
+(48, 37, 16, 'main act', '2025-07-09 16:30:00', '2025-07-09 18:00:00', 'https://example.com/performance48.jpg', 'Thom Yorke closing'), -- 30 min break
 
 -- Event 41 (2026-08-20)
 (121, 61, 41, 'opening act', '2026-08-20 12:00:00', '2026-08-20 12:45:00', 'https://example.com/performance121.jpg', 'Lizzo opening'),
