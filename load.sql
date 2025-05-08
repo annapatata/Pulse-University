@@ -1725,7 +1725,7 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 
  -- Event 52 (Stage 19 - Capacity 100) **
 (697, 11, 52), (698, 14, 52), -- Auxiliary (2)
-(699, 3, 52), (700, 6, 52), (701, 9, 52), (702, 15, 52), (703, 19, 522), -- Security (5)
+(699, 3, 52), (700, 6, 52), (701, 9, 52), (702, 15, 52), (703, 19, 52), -- Security (5)
 (704, 2, 52), (705, 5, 52), (706, 7, 52), -- Technicians
 
 -- Event 16 (Stage 4 - Capacity 130) **
