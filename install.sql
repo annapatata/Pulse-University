@@ -225,7 +225,7 @@ CREATE TABLE Performance(
   image varchar(100) not null check (image like 'https://%'),
   image_caption varchar(100) not null,
   FOREIGN KEY (performer_id) REFERENCES Performer(performer_id)
-  ON UPDATE CASCADE,
+  ON UPDATE CASCADE ON DELETE RESTRICT,
   FOREIGN KEY (event_id) REFERENCES Event_P(event_id)
   ON DELETE RESTRICT ON UPDATE CASCADE,
   FOREIGN KEY (type_id) REFERENCES PerformanceTypes(type_id)
