@@ -131,6 +131,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (36, 2023, 14, '2023-05-16 15:00:00', '2023-05-16 19:00:00', 2, 'https://example.com/event36.jpg', 'Rock anthems playing into the night'),
 (37, 2024, 15, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event37.jpg', 'Electronic set to start the fest'),
 (38, 2024, 30, '2024-06-13 13:30:00', '2024-06-13 17:30:00', 2, 'https://example.com/event38.jpg', 'Pop music with a twist'),
+(51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night');
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
 (41, 2026, 17, '2026-08-20 12:00:00', '2026-08-20 16:00:00', 1, 'https://example.com/event41.jpg', 'The final day begins'),
@@ -143,6 +144,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (48, 2026, 24, '2026-08-23 15:00:00', '2026-08-23 19:00:00', 4, 'https://example.com/event48.jpg', 'Special performances to end the fest'),
 (49, 2026, 25, '2026-08-24 12:00:00', '2026-08-24 16:00:00', 5, 'https://example.com/event49.jpg', 'Final celebration day of the festival'),
 (50, 2026, 26, '2026-08-24 13:30:00', '2026-08-24 17:30:00', 5, 'https://example.com/event50.jpg', 'Farewell to a wonderful year!');
+
 
 -- 3 roles
 INSERT INTO Role (role_name, image, image_caption) VALUES
@@ -270,6 +272,9 @@ INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 (3, 37, 2), (4, 37, 1), (5, 37, 1),
 (6, 38, 2), (7, 38, 2), (8, 38, 1),
 
+ -- Equipment for Event 51 (2024 festival)
+(9, 51, 2), (10, 51, 1), (8, 51, 2)
+ 
 -- Equipment for Events 39-50 (2025-2026 festivals)
 (9, 39, 1), (10, 39, 1), (1, 39, 2),
 (2, 40, 1), (3, 40, 2), (4, 40, 1),
@@ -1083,23 +1088,33 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 37: Electronic set to start the fest (2024-06-12)
 (37, 89.99, 61, 'General', 'Cash', '2024-05-13 10:22:10', '1175567890124', 1, 'https://example.com/tickets/37-1.jpg', 'General admission for Electronic set'),
-(37, 199.99, 64, 'VIP', 'Paypal', '2024-05-14 11:15:33', '2275567890124', 1, 'https://example.com/tickets/37-2.jpg', 'VIP access for Electronic set'),
-(37, 299.99, 64, 'Premium', 'Credit', '2024-05-15 14:45:22', '3375567890124', 1, 'https://example.com/tickets/37-3.jpg', 'Premium experience for Electronic set'),
+(37, 199.99, 62, 'VIP', 'Paypal', '2024-05-14 11:15:33', '2275567890124', 1, 'https://example.com/tickets/37-2.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 63, 'Premium', 'Credit', '2024-05-15 14:45:22', '3375567890124', 1, 'https://example.com/tickets/37-3.jpg', 'Premium experience for Electronic set'),
 (37, 499.99, 64, 'Backstage', 'Debit', '2024-05-16 17:30:44', '4475567890124', 1, 'https://example.com/tickets/37-4.jpg', 'Backstage pass for Electronic set'),
 (37, 89.99, 65, 'General', 'Paypal', '2024-05-17 09:12:19', '5575567890124', 1, 'https://example.com/tickets/37-5.jpg', 'General admission for Electronic set'),
-(37, 199.99, 68, 'VIP', 'Credit', '2024-05-18 12:27:45', '6675567890124', 1, 'https://example.com/tickets/37-6.jpg', 'VIP access for Electronic set'),
-(37, 299.99, 68, 'Premium', 'Debit', '2024-05-19 08:18:33', '7775567890124', 1, 'https://example.com/tickets/37-7.jpg', 'Premium experience for Electronic set'),
+(37, 199.99, 66, 'VIP', 'Credit', '2024-05-18 12:27:45', '6675567890124', 1, 'https://example.com/tickets/37-6.jpg', 'VIP access for Electronic set'),
+(37, 299.99, 67, 'Premium', 'Debit', '2024-05-19 08:18:33', '7775567890124', 1, 'https://example.com/tickets/37-7.jpg', 'Premium experience for Electronic set'),
 (37, 499.99, 68, 'Backstage', 'Cash', '2024-05-20 14:42:11', '8875567890124', 1, 'https://example.com/tickets/37-8.jpg', 'Backstage pass for Electronic set'),
 
--- Event 38: Pop music with a twist (2024-06-12)
-(38, 89.99, 69, 'General', 'Credit', '2024-05-14 08:22:10', '9975567890124', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
+-- Event 38: Pop music with a twist (2024-06-13)
+(38, 89.99, 68, 'General', 'Credit', '2024-05-14 08:22:10', '9975567890124', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
 (38, 199.99, 70, 'VIP', 'Debit', '2024-05-15 11:15:33', '0085567890124', 1, 'https://example.com/tickets/38-2.jpg', 'VIP access for Pop music twist'),
 (38, 299.99, 71, 'Premium', 'Paypal', '2024-05-16 13:45:22', '1185567890124', 0, 'https://example.com/tickets/38-3.jpg', 'Premium experience for Pop music twist'),
-(38, 499.99, 72, 'Backstage', 'Cash', '2024-05-17 18:30:44', '2285567890124', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
-(38, 89.99, 73, 'General', 'Debit', '2024-05-18 09:12:19', '3385567890124', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
-(38, 199.99, 74, 'VIP', 'Credit', '2024-05-19 12:27:45', '4485567890124', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
-(38, 299.99, 75, 'Premium', 'Cash', '2024-05-20 08:18:33', '5585567890124', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
-(38, 499.99, 76, 'Backstage', 'Paypal', '2024-05-21 14:42:11', '6685567890124', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
+(38, 499.99, 66, 'Backstage', 'Cash', '2024-05-17 18:30:44', '2285567890124', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
+(38, 89.99, 65, 'General', 'Debit', '2024-05-18 09:12:19', '3385567890124', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
+(38, 199.99, 64, 'VIP', 'Credit', '2024-05-19 12:27:45', '4485567890124', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
+(38, 299.99, 62, 'Premium', 'Cash', '2024-05-20 08:18:33', '5585567890124', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
+(38, 499.99, 61, 'Backstage', 'Paypal', '2024-05-21 14:42:11', '6685567890124', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
+
+ -- Event 51: Pop music with a twist (2024-06-13)
+(51, 89.99, 68, 'General', 'Credit', '2024-04-14 08:23:10', '000000000001', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
+(51, 199.99, 64, 'VIP', 'Debit', '2024-05-15 11:17:33', '000000000002', 1, 'https://example.com/tickets/38-2.jpg', 'VIP access for Pop music twist'),
+(51, 299.99, 55, 'Premium', 'Paypal', '2024-04-16 13:46:22', '000000000003', 0, 'https://example.com/tickets/38-3.jpg', 'Premium experience for Pop music twist'),
+(51, 499.99, 72, 'Backstage', 'Cash', '2024-04-17 18:31:44', '000000000004', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
+(51, 89.99, 73, 'General', 'Debit', '2024-04-18 09:15:19', '000000000005', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
+(51, 199.99, 74, 'VIP', 'Credit', '2024-04-19 12:29:45', '000000000006', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
+(51, 299.99, 75, 'Premium', 'Cash', '2024-04-20 08:11:33', '000000000007', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
+(51, 499.99, 76, 'Backstage', 'Paypal', '2024-04-21 11:42:11', '000000000008', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
 
 -- Event 39: Alt rock is the vibe (2025-07-08)
 (39, 89.99, 77, 'General', 'Cash', '2025-06-08 10:22:10', '7785567890124', 0, 'https://example.com/tickets/39-1.jpg', 'General admission for Alt rock vibe'),
@@ -1682,6 +1697,11 @@ INSERT INTO Employment (contract_id, staff_id, event_id) VALUES
 (526, 34, 38), (527, 36, 38), (528, 39, 38), (529, 42, 38), (530, 45, 38), (531, 48, 38), (532, 50, 38), (533, 53, 38), -- Security (8 - 5% of 140 = 7 → 8)
 (534, 27, 38), (535, 29, 38), (536, 31, 38), (537, 33, 38), -- Technicians
 
+ -- Event 51 (Stage 15 - Capacity 120) ***
+(684, 11, 51), (685, 14, 51), (686, 17, 51), -- Auxiliary (3 - 2% of 120 = 2.4 → 3)
+(687, 3, 51), (688, 6, 51), (689, 9, 51), (690, 15, 37), (691, 19, 37), (692, 21, 37), (693, 25, 37), -- Security (7 - 5% of 120 = 6 → 7)
+(694, 2, 51), (695, 5, 51), (696, 7, 51), (696, 10, 51), -- Technicians
+
 -- Event 39 (Stage 28 - Capacity 100) **
 (538, 11, 39), (539, 14, 39), -- Auxiliary (2)
 (540, 6, 39), (541, 9, 39), (542, 15, 39), (543, 19, 39), (544, 21, 39), -- Security (5)
@@ -1960,6 +1980,11 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (112, 1, 38, 'warm-up', '2024-06-13 13:30:00', '2024-06-13 14:15:00', 'https://example.com/performance112.jpg', 'The Killers warming up'),
 (113, 2, 38, 'main act', '2024-06-13 14:30:00', '2024-06-13 16:00:00', 'https://example.com/performance113.jpg', 'Artic Monkeys live'), -- 15 min break
 (114, 60, 38, 'main act', '2024-06-13 16:30:00', '2024-06-13 17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'), -- 30 min break
+
+ -- Event 51 (2024-06-12)
+(151, 43, 51, 'warm-up', '2024-06-13 15:00:00', '2024-06-13 16:30:00', 'https://example.com/performance151.jpg', 'Olivia Rodrigo warming up'),
+(152, 47, 51, 'main act', '2024-06-13 16:45:00', '2024-06-13 18:00:00', 'https://example.com/performance152.jpg', 'Camila Cabello live'), -- 15 min break
+(153, 40, 51, 'main act', '2024-06-13 18:30:00', '2024-06-13 19:30:00', 'https://example.com/performance153.jpg', 'Billie Eilish closing'), -- 30 min break
 
 -- Event 39 (2025-07-08)
 (115, 59, 39, 'opening act', '2025-07-08 12:00:00', '2025-07-08 12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
