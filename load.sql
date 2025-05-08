@@ -805,25 +805,25 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (2, 499.99, 8, 'Backstage', 'Paypal', '2018-05-13 15:42:11', '8234567890123', 1, 'https://example.com/tickets/2-4.jpg', 'Backstage pass for Jazz rhythms on second stage'),
 
 -- Event 3 (8 tickets)
-(3, 89.99, 9, 'General', 'Paypal', '2018-05-15 12:15:22', '9234567890123', 1, 'https://example.com/tickets/3-1.jpg', 'General admission for Rock hits in afternoon'),
-(3, 199.99, 10, 'VIP', 'Credit', '2018-05-16 09:33:44', '0234567890123', 1, 'https://example.com/tickets/3-2.jpg', 'VIP access for Rock hits in afternoon'),
+(3, 89.99, 5, 'General', 'Paypal', '2018-05-15 12:15:22', '9234567890123', 1, 'https://example.com/tickets/3-1.jpg', 'General admission for Rock hits in afternoon'),
+(3, 199.99, 6, 'VIP', 'Credit', '2018-05-16 09:33:44', '0234567890123', 1, 'https://example.com/tickets/3-2.jpg', 'VIP access for Rock hits in afternoon'),
 (3, 299.99, 11, 'Premium', 'Debit', '2018-05-17 14:22:11', '1334567890123', 0, 'https://example.com/tickets/3-3.jpg', 'Premium experience for Rock hits in afternoon'),
 (3, 499.99, 12, 'Backstage', 'Cash', '2018-05-18 17:45:33', '2434567890123', 1, 'https://example.com/tickets/3-4.jpg', 'Backstage pass for Rock hits in afternoon'),
 
 -- Event 4 (8 tickets)
-(4, 89.99, 13, 'General', 'Credit', '2018-05-10 08:22:10', '3434567890123', 1, 'https://example.com/tickets/4-1.jpg', 'General admission for Chill vibes by main stage'),
-(4, 199.99, 14, 'VIP', 'Debit', '2018-05-11 11:15:33', '4434567890123', 1, 'https://example.com/tickets/4-2.jpg', 'VIP access for Chill vibes by main stage'),
+(4, 89.99, 5, 'General', 'Credit', '2018-05-10 08:22:10', '3434567890123', 1, 'https://example.com/tickets/4-1.jpg', 'General admission for Chill vibes by main stage'),
+(4, 199.99, 6, 'VIP', 'Debit', '2018-05-11 11:15:33', '4434567890123', 1, 'https://example.com/tickets/4-2.jpg', 'VIP access for Chill vibes by main stage'),
 (4, 299.99, 15, 'Premium', 'Paypal', '2018-05-12 13:45:22', '5434567890123', 0, 'https://example.com/tickets/4-3.jpg', 'Premium experience for Chill vibes by main stage'),
 (4, 499.99, 16, 'Backstage', 'Cash', '2018-05-13 18:30:44', '6434567890123', 1, 'https://example.com/tickets/4-4.jpg', 'Backstage pass for Chill vibes by main stage'),
 
 -- Event 5 (8 tickets)
-(5, 89.99, 17, 'General', 'Debit', '2018-05-14 09:12:19', '7434567890123', 1, 'https://example.com/tickets/5-1.jpg', 'General admission for Electronic beats under sky'),
-(5, 199.99, 18, 'VIP', 'Credit', '2018-05-15 12:27:45', '8434567890123', 1, 'https://example.com/tickets/5-2.jpg', 'VIP access for Electronic beats under sky'),
+(5, 89.99, 5, 'General', 'Debit', '2018-05-14 09:12:19', '7434567890123', 1, 'https://example.com/tickets/5-1.jpg', 'General admission for Electronic beats under sky'),
+(5, 199.99, 6, 'VIP', 'Credit', '2018-05-15 12:27:45', '8434567890123', 1, 'https://example.com/tickets/5-2.jpg', 'VIP access for Electronic beats under sky'),
 (5, 299.99, 19, 'Premium', 'Cash', '2018-05-16 08:18:33', '9434567890123', 0, 'https://example.com/tickets/5-3.jpg', 'Premium experience for Electronic beats under sky'),
 (5, 499.99, 20, 'Backstage', 'Paypal', '2018-05-17 14:42:11', '0534567890123', 1, 'https://example.com/tickets/5-4.jpg', 'Backstage pass for Electronic beats under sky'),
 
 -- Event 6 (8 tickets)
-(6, 89.99, 21, 'General', 'Cash', '2018-05-18 10:22:10', '6634567890123', 1, 'https://example.com/tickets/6-1.jpg', 'General admission for Indie folk melodies at sunset'),
+(6, 89.99, 54, 'General', 'Cash', '2018-05-18 10:22:10', '6634567890123', 1, 'https://example.com/tickets/6-1.jpg', 'General admission for Indie folk melodies at sunset'),
 (6, 199.99, 22, 'VIP', 'Paypal', '2018-05-19 11:15:33', '7734567890123', 1, 'https://example.com/tickets/6-2.jpg', 'VIP access for Indie folk melodies at sunset'),
 (6, 299.99, 23, 'Premium', 'Credit', '2018-05-20 14:45:22', '8834567890123', 0, 'https://example.com/tickets/6-3.jpg', 'Premium experience for Indie folk melodies at sunset'),
 (6, 499.99, 24, 'Backstage', 'Debit', '2018-05-21 17:30:44', '9934567890123', 1, 'https://example.com/tickets/6-4.jpg', 'Backstage pass for Indie folk melodies at sunset'),
@@ -863,8 +863,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (11, 499.99, 48, 'Backstage', 'Paypal', '2019-06-12 15:42:11', '8234567890124', 1, 'https://example.com/tickets/11-8.jpg', 'Backstage pass for 2019 opening day'),
 
 -- Event 12: Smooth jazz under the stars (2019-07-05)
-(12, 89.99, 49, 'General', 'Paypal', '2019-06-06 12:15:22', '9234567890124', 1, 'https://example.com/tickets/12-1.jpg', 'General admission for Smooth jazz'),
-(12, 199.99, 50, 'VIP', 'Credit', '2019-06-07 09:33:44', '0234567890124', 1, 'https://example.com/tickets/12-2.jpg', 'VIP access for Smooth jazz'),
+(12, 89.99, 41, 'General', 'Paypal', '2019-06-06 12:15:22', '9234567890124', 1, 'https://example.com/tickets/12-1.jpg', 'General admission for Smooth jazz'),
+(12, 199.99, 48, 'VIP', 'Credit', '2019-06-07 09:33:44', '0234567890124', 1, 'https://example.com/tickets/12-2.jpg', 'VIP access for Smooth jazz'),
 (12, 299.99, 51, 'Premium', 'Debit', '2019-06-08 14:22:11', '1334567890124', 0, 'https://example.com/tickets/12-3.jpg', 'Premium experience for Smooth jazz'),
 (12, 499.99, 52, 'Backstage', 'Cash', '2019-06-09 17:45:33', '2434567890124', 1, 'https://example.com/tickets/12-4.jpg', 'Backstage pass for Smooth jazz'),
 (12, 89.99, 53, 'General', 'Credit', '2019-06-10 08:22:10', '3434567890124', 1, 'https://example.com/tickets/12-5.jpg', 'General admission for Smooth jazz'),
@@ -873,8 +873,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (12, 499.99, 56, 'Backstage', 'Cash', '2019-06-13 18:30:44', '6434567890124', 1, 'https://example.com/tickets/12-8.jpg', 'Backstage pass for Smooth jazz'),
 
 -- Event 13: Rock bands heating up the night (2019-07-06)
-(13, 89.99, 57, 'General', 'Debit', '2019-06-14 09:12:19', '7434567890124', 1, 'https://example.com/tickets/13-1.jpg', 'General admission for Rock bands night'),
-(13, 199.99, 58, 'VIP', 'Credit', '2019-06-15 12:27:45', '8434567890124', 1, 'https://example.com/tickets/13-2.jpg', 'VIP access for Rock bands night'),
+(13, 89.99, 41, 'General', 'Debit', '2019-06-14 09:12:19', '7434567890124', 1, 'https://example.com/tickets/13-1.jpg', 'General admission for Rock bands night'),
+(13, 199.99, 48, 'VIP', 'Credit', '2019-06-15 12:27:45', '8434567890124', 1, 'https://example.com/tickets/13-2.jpg', 'VIP access for Rock bands night'),
 (13, 299.99, 59, 'Premium', 'Cash', '2019-06-16 08:18:33', '9434567890124', 0, 'https://example.com/tickets/13-3.jpg', 'Premium experience for Rock bands night'),
 (13, 499.99, 60, 'Backstage', 'Paypal', '2019-06-17 14:42:11', '0534567890124', 1, 'https://example.com/tickets/13-4.jpg', 'Backstage pass for Rock bands night'),
 (13, 89.99, 61, 'General', 'Cash', '2019-06-18 10:22:10', '1634567890124', 1, 'https://example.com/tickets/13-5.jpg', 'General admission for Rock bands night'),
@@ -884,8 +884,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- [Continuing pattern through Event 20...]
 -- Event 14: Alternative hits and epic vibes (2019-07-06)
-(14, 89.99, 65, 'General', 'Paypal', '2019-06-15 12:15:22', '5634567890124', 1, 'https://example.com/tickets/14-1.jpg', 'General admission for Alternative hits'),
-(14, 199.99, 66, 'VIP', 'Credit', '2019-06-16 09:33:44', '6634567890124', 1, 'https://example.com/tickets/14-2.jpg', 'VIP access for Alternative hits'),
+(14, 89.99, 41, 'General', 'Paypal', '2019-06-15 12:15:22', '5634567890124', 1, 'https://example.com/tickets/14-1.jpg', 'General admission for Alternative hits'),
+(14, 199.99, 48, 'VIP', 'Credit', '2019-06-16 09:33:44', '6634567890124', 1, 'https://example.com/tickets/14-2.jpg', 'VIP access for Alternative hits'),
 (14, 299.99, 67, 'Premium', 'Debit', '2019-06-17 14:22:11', '7634567890124', 0, 'https://example.com/tickets/14-3.jpg', 'Premium experience for Alternative hits'),
 (14, 499.99, 68, 'Backstage', 'Cash', '2019-06-18 17:45:33', '8634567890124', 1, 'https://example.com/tickets/14-4.jpg', 'Backstage pass for Alternative hits'),
 
@@ -902,21 +902,21 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (17, 499.99, 80, 'Backstage', 'Debit', '2020-07-05 17:30:44', '0934567890124', 1, 'https://example.com/tickets/17-4.jpg', 'Backstage pass for Virtual festival'),
 
 -- Event 18: Live set from the outdoor stage (2020-08-01)
-(18, 89.99, 81, 'General', 'Paypal', '2020-07-06 12:15:22', '1934567890124', 1, 'https://example.com/tickets/18-1.jpg', 'General admission for Outdoor stage'),
-(18, 199.99, 82, 'VIP', 'Credit', '2020-07-07 09:33:44', '2934567890124', 1, 'https://example.com/tickets/18-2.jpg', 'VIP access for Outdoor stage'),
+(18, 89.99, 78, 'General', 'Paypal', '2020-07-06 12:15:22', '1934567890124', 1, 'https://example.com/tickets/18-1.jpg', 'General admission for Outdoor stage'),
+(18, 199.99, 77, 'VIP', 'Credit', '2020-07-07 09:33:44', '2934567890124', 1, 'https://example.com/tickets/18-2.jpg', 'VIP access for Outdoor stage'),
 (18, 299.99, 83, 'Premium', 'Debit', '2020-07-08 14:22:11', '3934567890124', 0, 'https://example.com/tickets/18-3.jpg', 'Premium experience for Outdoor stage'),
 (18, 499.99, 84, 'Backstage', 'Cash', '2020-07-09 17:45:33', '4934567890124', 1, 'https://example.com/tickets/18-4.jpg', 'Backstage pass for Outdoor stage'),
 
 -- Event 19: Punk rock and raw energy (2020-08-02)
-(19, 89.99, 85, 'General', 'Credit', '2020-07-10 08:22:10', '5934567890124', 1, 'https://example.com/tickets/19-1.jpg', 'General admission for Punk rock'),
+(19, 89.99, 78, 'General', 'Credit', '2020-07-10 08:22:10', '5934567890124', 1, 'https://example.com/tickets/19-1.jpg', 'General admission for Punk rock'),
 (19, 199.99, 86, 'VIP', 'Debit', '2020-07-11 11:15:33', '6934567890124', 1, 'https://example.com/tickets/19-2.jpg', 'VIP access for Punk rock'),
-(19, 299.99, 87, 'Premium', 'Paypal', '2020-07-12 13:45:22', '7934567890124', 0, 'https://example.com/tickets/19-3.jpg', 'Premium experience for Punk rock'),
+(19, 299.99, 77, 'Premium', 'Paypal', '2020-07-12 13:45:22', '7934567890124', 0, 'https://example.com/tickets/19-3.jpg', 'Premium experience for Punk rock'),
 (19, 499.99, 88, 'Backstage', 'Cash', '2020-07-13 18:30:44', '8934567890124', 1, 'https://example.com/tickets/19-4.jpg', 'Backstage pass for Punk rock'),
 
 -- Event 20: Indie vibes in a cozy space (2020-08-02)
-(20, 89.99, 89, 'General', 'Debit', '2020-07-14 09:12:19', '9934567890124', 1, 'https://example.com/tickets/20-1.jpg', 'General admission for Indie vibes'),
+(20, 89.99, 78, 'General', 'Debit', '2020-07-14 09:12:19', '9934567890124', 1, 'https://example.com/tickets/20-1.jpg', 'General admission for Indie vibes'),
 (20, 199.99, 90, 'VIP', 'Credit', '2020-07-15 12:27:45', '0044567890124', 1, 'https://example.com/tickets/20-2.jpg', 'VIP access for Indie vibes'),
-(20, 299.99, 91, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
+(20, 299.99, 77, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
 (20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes'),
  -- Event 21: Classical music fills the air (2020-08-03)
 (21, 89.99, 93, 'General', 'Cash', '2020-07-18 10:22:10', '3344567890124', 1, 'https://example.com/tickets/21-1.jpg', 'General admission for Classical music'),
@@ -952,8 +952,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (24, 89.99, 117, 'General', 'Credit', '2021-05-22 08:22:10', '7764567890124', 1, 'https://example.com/tickets/24-1.jpg', 'General admission for Live bands'),
 (24, 199.99, 118, 'VIP', 'Debit', '2021-05-23 11:15:33', '8864567890124', 1, 'https://example.com/tickets/24-2.jpg', 'VIP access for Live bands'),
 (24, 299.99, 119, 'Premium', 'Paypal', '2021-05-24 13:45:22', '9964567890124', 0, 'https://example.com/tickets/24-3.jpg', 'Premium experience for Live bands'),
-(24, 499.99, 120, 'Backstage', 'Cash', '2021-05-25 18:30:44', '0074567890124', 1, 'https://example.com/tickets/24-4.jpg', 'Backstage pass for Live bands'),
-(24, 89.99, 121, 'General', 'Debit', '2021-05-26 09:12:19', '1174567890124', 1, 'https://example.com/tickets/24-5.jpg', 'General admission for Live bands'),
+(24, 499.99, 112, 'Backstage', 'Cash', '2021-05-25 18:30:44', '0074567890124', 1, 'https://example.com/tickets/24-4.jpg', 'Backstage pass for Live bands'),
+(24, 89.99, 113, 'General', 'Debit', '2021-05-26 09:12:19', '1174567890124', 1, 'https://example.com/tickets/24-5.jpg', 'General admission for Live bands'),
 (24, 199.99, 122, 'VIP', 'Credit', '2021-05-27 12:27:45', '2274567890124', 1, 'https://example.com/tickets/24-6.jpg', 'VIP access for Live bands'),
 (24, 299.99, 123, 'Premium', 'Cash', '2021-05-28 08:18:33', '3374567890124', 0, 'https://example.com/tickets/24-7.jpg', 'Premium experience for Live bands'),
 (24, 499.99, 124, 'Backstage', 'Paypal', '2021-05-29 14:42:11', '4474567890124', 1, 'https://example.com/tickets/24-8.jpg', 'Backstage pass for Live bands'),
@@ -963,8 +963,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (25, 199.99, 126, 'VIP', 'Paypal', '2021-05-24 11:15:33', '6674567890124', 1, 'https://example.com/tickets/25-2.jpg', 'VIP access for Pop and rock'),
 (25, 299.99, 127, 'Premium', 'Credit', '2021-05-25 14:45:22', '7774567890124', 0, 'https://example.com/tickets/25-3.jpg', 'Premium experience for Pop and rock'),
 (25, 499.99, 128, 'Backstage', 'Debit', '2021-05-26 17:30:44', '8874567890124', 1, 'https://example.com/tickets/25-4.jpg', 'Backstage pass for Pop and rock'),
-(25, 89.99, 129, 'General', 'Paypal', '2021-05-27 09:12:19', '9974567890124', 1, 'https://example.com/tickets/25-5.jpg', 'General admission for Pop and rock'),
-(25, 199.99, 130, 'VIP', 'Credit', '2021-05-28 12:27:45', '0084567890124', 1, 'https://example.com/tickets/25-6.jpg', 'VIP access for Pop and rock'),
+(25, 89.99, 112, 'General', 'Paypal', '2021-05-27 09:12:19', '9974567890124', 1, 'https://example.com/tickets/25-5.jpg', 'General admission for Pop and rock'),
+(25, 199.99, 113, 'VIP', 'Credit', '2021-05-28 12:27:45', '0084567890124', 1, 'https://example.com/tickets/25-6.jpg', 'VIP access for Pop and rock'),
 (25, 299.99, 131, 'Premium', 'Debit', '2021-05-29 08:18:33', '1184567890124', 0, 'https://example.com/tickets/25-7.jpg', 'Premium experience for Pop and rock'),
 (25, 499.99, 132, 'Backstage', 'Cash', '2021-05-30 14:42:11', '2284567890124', 1, 'https://example.com/tickets/25-8.jpg', 'Backstage pass for Pop and rock'),
 
@@ -974,8 +974,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (26, 299.99, 135, 'Premium', 'Paypal', '2021-05-26 13:45:22', '5584567890124', 0, 'https://example.com/tickets/26-3.jpg', 'Premium experience for Electronic beats'),
 (26, 499.99, 136, 'Backstage', 'Cash', '2021-05-27 18:30:44', '6684567890124', 1, 'https://example.com/tickets/26-4.jpg', 'Backstage pass for Electronic beats'),
 (26, 89.99, 137, 'General', 'Debit', '2021-05-28 09:12:19', '7784567890124', 1, 'https://example.com/tickets/26-5.jpg', 'General admission for Electronic beats'),
-(26, 199.99, 138, 'VIP', 'Credit', '2021-05-29 12:27:45', '8884567890124', 1, 'https://example.com/tickets/26-6.jpg', 'VIP access for Electronic beats'),
-(26, 299.99, 139, 'Premium', 'Cash', '2021-05-30 08:18:33', '9984567890124', 0, 'https://example.com/tickets/26-7.jpg', 'Premium experience for Electronic beats'),
+(26, 199.99, 112, 'VIP', 'Credit', '2021-05-29 12:27:45', '8884567890124', 1, 'https://example.com/tickets/26-6.jpg', 'VIP access for Electronic beats'),
+(26, 299.99, 113, 'Premium', 'Cash', '2021-05-30 08:18:33', '9984567890124', 0, 'https://example.com/tickets/26-7.jpg', 'Premium experience for Electronic beats'),
 (26, 499.99, 140, 'Backstage', 'Paypal', '2021-05-31 14:42:11', '0094567890124', 1, 'https://example.com/tickets/26-8.jpg', 'Backstage pass for Electronic beats'),
 
 -- Event 27: High-energy day of performances (2022-07-11)
@@ -1051,8 +1051,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 -- Event 34: Indie beats and cozy moments (2023-05-15)
 (34, 89.99, 37, 'General', 'Credit', '2023-04-16 08:22:10', '7745567890124', 1, 'https://example.com/tickets/34-1.jpg', 'General admission for Indie beats'),
 (34, 199.99, 38, 'VIP', 'Debit', '2023-04-17 11:15:33', '8845567890124', 1, 'https://example.com/tickets/34-2.jpg', 'VIP access for Indie beats'),
-(34, 299.99, 39, 'Premium', 'Paypal', '2023-04-18 13:45:22', '9945567890124', 0, 'https://example.com/tickets/34-3.jpg', 'Premium experience for Indie beats'),
-(34, 499.99, 40, 'Backstage', 'Cash', '2023-04-19 18:30:44', '0055567890124', 1, 'https://example.com/tickets/34-4.jpg', 'Backstage pass for Indie beats'),
+(34, 299.99, 33, 'Premium', 'Paypal', '2023-04-18 13:45:22', '9945567890124', 0, 'https://example.com/tickets/34-3.jpg', 'Premium experience for Indie beats'),
+(34, 499.99, 34, 'Backstage', 'Cash', '2023-04-19 18:30:44', '0055567890124', 1, 'https://example.com/tickets/34-4.jpg', 'Backstage pass for Indie beats'),
 (34, 89.99, 41, 'General', 'Debit', '2023-04-20 09:12:19', '1155567890124', 1, 'https://example.com/tickets/34-5.jpg', 'General admission for Indie beats'),
 (34, 199.99, 42, 'VIP', 'Credit', '2023-04-21 12:27:45', '2255567890124', 1, 'https://example.com/tickets/34-6.jpg', 'VIP access for Indie beats'),
 (34, 299.99, 43, 'Premium', 'Cash', '2023-04-22 08:18:33', '3355567890124', 0, 'https://example.com/tickets/34-7.jpg', 'Premium experience for Indie beats'),
@@ -1062,15 +1062,15 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (35, 89.99, 45, 'General', 'Cash', '2023-04-17 10:22:10', '5555567890124', 1, 'https://example.com/tickets/35-1.jpg', 'General admission for Dance music night'),
 (35, 199.99, 46, 'VIP', 'Paypal', '2023-04-18 11:15:33', '6655567890124', 1, 'https://example.com/tickets/35-2.jpg', 'VIP access for Dance music night'),
 (35, 299.99, 47, 'Premium', 'Credit', '2023-04-19 14:45:22', '7755567890124', 0, 'https://example.com/tickets/35-3.jpg', 'Premium experience for Dance music night'),
-(35, 499.99, 48, 'Backstage', 'Debit', '2023-04-20 17:30:44', '8855567890124', 1, 'https://example.com/tickets/35-4.jpg', 'Backstage pass for Dance music night'),
-(35, 89.99, 49, 'General', 'Paypal', '2023-04-21 09:12:19', '9955567890124', 1, 'https://example.com/tickets/35-5.jpg', 'General admission for Dance music night'),
+(35, 499.99, 33, 'Backstage', 'Debit', '2023-04-20 17:30:44', '8855567890124', 1, 'https://example.com/tickets/35-4.jpg', 'Backstage pass for Dance music night'),
+(35, 89.99, 34, 'General', 'Paypal', '2023-04-21 09:12:19', '9955567890124', 1, 'https://example.com/tickets/35-5.jpg', 'General admission for Dance music night'),
 (35, 199.99, 50, 'VIP', 'Credit', '2023-04-22 12:27:45', '0065567890124', 1, 'https://example.com/tickets/35-6.jpg', 'VIP access for Dance music night'),
 (35, 299.99, 51, 'Premium', 'Debit', '2023-04-23 08:18:33', '1165567890124', 0, 'https://example.com/tickets/35-7.jpg', 'Premium experience for Dance music night'),
 (35, 499.99, 52, 'Backstage', 'Cash', '2023-04-24 14:42:11', '2265567890124', 1, 'https://example.com/tickets/35-8.jpg', 'Backstage pass for Dance music night'),
 
 -- Event 36: Rock anthems playing into the night (2023-05-16)
-(36, 89.99, 53, 'General', 'Credit', '2023-04-18 08:22:10', '3365567890124', 1, 'https://example.com/tickets/36-1.jpg', 'General admission for Rock anthems night'),
-(36, 199.99, 54, 'VIP', 'Debit', '2023-04-19 11:15:33', '4465567890124', 1, 'https://example.com/tickets/36-2.jpg', 'VIP access for Rock anthems night'),
+(36, 89.99, 33, 'General', 'Credit', '2023-04-18 08:22:10', '3365567890124', 1, 'https://example.com/tickets/36-1.jpg', 'General admission for Rock anthems night'),
+(36, 199.99, 34, 'VIP', 'Debit', '2023-04-19 11:15:33', '4465567890124', 1, 'https://example.com/tickets/36-2.jpg', 'VIP access for Rock anthems night'),
 (36, 299.99, 55, 'Premium', 'Paypal', '2023-04-20 13:45:22', '5565567890124', 0, 'https://example.com/tickets/36-3.jpg', 'Premium experience for Rock anthems night'),
 (36, 499.99, 56, 'Backstage', 'Cash', '2023-04-21 18:30:44', '6665567890124', 1, 'https://example.com/tickets/36-4.jpg', 'Backstage pass for Rock anthems night'),
 (36, 89.99, 57, 'General', 'Debit', '2023-04-22 09:12:19', '7765567890124', 1, 'https://example.com/tickets/36-5.jpg', 'General admission for Rock anthems night'),
@@ -1167,8 +1167,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (42, 299.99, 11, 'Premium', 'Debit', '2026-07-23 14:22:11', '1334567890422', 0, 'https://example.com/tickets/42-3.jpg', 'Premium experience for Time to celebrate'),
 (42, 499.99, 12, 'Backstage', 'Cash', '2026-07-24 17:45:33', '2434567890422', 0, 'https://example.com/tickets/42-4.jpg', 'Backstage pass for Time to celebrate'),
 (42, 89.99, 13, 'General', 'Credit', '2026-07-25 08:22:10', '3434567890422', 0, 'https://example.com/tickets/42-5.jpg', 'General admission for Time to celebrate'),
-(42, 199.99, 14, 'VIP', 'Debit', '2026-07-26 11:15:33', '4434567890422', 0, 'https://example.com/tickets/42-6.jpg', 'VIP access for Time to celebrate'),
-(42, 299.99, 15, 'Premium', 'Paypal', '2026-07-27 13:45:22', '5434567890422', 0, 'https://example.com/tickets/42-7.jpg', 'Premium experience for Time to celebrate'),
+(42, 199.99, 4, 'VIP', 'Debit', '2026-07-26 11:15:33', '4434567890422', 0, 'https://example.com/tickets/42-6.jpg', 'VIP access for Time to celebrate'),
+(42, 299.99, 5, 'Premium', 'Paypal', '2026-07-27 13:45:22', '5434567890422', 0, 'https://example.com/tickets/42-7.jpg', 'Premium experience for Time to celebrate'),
 (42, 499.99, 16, 'Backstage', 'Cash', '2026-07-28 18:30:44', '6434567890422', 0, 'https://example.com/tickets/42-8.jpg', 'Backstage pass for Time to celebrate'),
 
 -- Event 43: Jazz tunes under the open sky (2026-08-21)
@@ -1178,8 +1178,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (43, 499.99, 20, 'Backstage', 'Paypal', '2026-07-25 14:42:11', '0534567890423', 0, 'https://example.com/tickets/43-4.jpg', 'Backstage pass for Jazz tunes'),
 (43, 89.99, 21, 'General', 'Cash', '2026-07-26 10:22:10', '1634567890423', 0, 'https://example.com/tickets/43-5.jpg', 'General admission for Jazz tunes'),
 (43, 199.99, 22, 'VIP', 'Paypal', '2026-07-27 11:15:33', '2634567890423', 0, 'https://example.com/tickets/43-6.jpg', 'VIP access for Jazz tunes'),
-(43, 299.99, 23, 'Premium', 'Credit', '2026-07-28 14:45:22', '3634567890423', 0, 'https://example.com/tickets/43-7.jpg', 'Premium experience for Jazz tunes'),
-(43, 499.99, 24, 'Backstage', 'Debit', '2026-07-29 17:30:44', '4634567890423', 0, 'https://example.com/tickets/43-8.jpg', 'Backstage pass for Jazz tunes'),
+(43, 299.99, 5, 'Premium', 'Credit', '2026-07-28 14:45:22', '3634567890423', 0, 'https://example.com/tickets/43-7.jpg', 'Premium experience for Jazz tunes'),
+(43, 499.99, 4, 'Backstage', 'Debit', '2026-07-29 17:30:44', '4634567890423', 0, 'https://example.com/tickets/43-8.jpg', 'Backstage pass for Jazz tunes'),
 
 -- Event 44: Indie bands playing their best (2026-08-21)
 (44, 89.99, 25, 'General', 'Paypal', '2026-07-23 12:15:22', '5634567890424', 0, 'https://example.com/tickets/44-1.jpg', 'General admission for Indie bands'),
@@ -1205,8 +1205,8 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (46, 89.99, 41, 'General', 'Paypal', '2026-07-25 12:15:22', '1934567890426', 0, 'https://example.com/tickets/46-1.jpg', 'General admission for Orchestral music'),
 (46, 199.99, 42, 'VIP', 'Credit', '2026-07-26 09:33:44', '2934567890426', 0, 'https://example.com/tickets/46-2.jpg', 'VIP access for Orchestral music'),
 (46, 299.99, 43, 'Premium', 'Debit', '2026-07-27 14:22:11', '3934567890426', 0, 'https://example.com/tickets/46-3.jpg', 'Premium experience for Orchestral music'),
-(46, 499.99, 44, 'Backstage', 'Cash', '2026-07-28 17:45:33', '4934567890426', 0, 'https://example.com/tickets/46-4.jpg', 'Backstage pass for Orchestral music'),
-(46, 89.99, 45, 'General', 'Credit', '2026-07-29 08:22:10', '5934567890426', 0, 'https://example.com/tickets/46-5.jpg', 'General admission for Orchestral music'),
+(46, 499.99, 4, 'Backstage', 'Cash', '2026-07-28 17:45:33', '4934567890426', 0, 'https://example.com/tickets/46-4.jpg', 'Backstage pass for Orchestral music'),
+(46, 89.99, 5, 'General', 'Credit', '2026-07-29 08:22:10', '5934567890426', 0, 'https://example.com/tickets/46-5.jpg', 'General admission for Orchestral music'),
 (46, 199.99, 46, 'General', 'Debit', '2026-07-30 11:15:33', '6934567890426', 0, 'https://example.com/tickets/46-6.jpg', 'VIP access for Orchestral music'),
 (46, 299.99, 47, 'Premium', 'Paypal', '2026-07-31 13:45:22', '7934567890426', 0, 'https://example.com/tickets/46-7.jpg', 'Premium experience for Orchestral music'),
 (46, 499.99, 48, 'Backstage', 'Cash', '2026-08-01 18:30:44', '8934567890426', 0, 'https://example.com/tickets/46-8.jpg', 'Backstage pass for Orchestral music'),
