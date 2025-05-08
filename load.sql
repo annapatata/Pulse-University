@@ -2001,8 +2001,8 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 
  -- Event 51 (2024-06-12)
 (151, 43, 51, 'warm-up', '2024-06-13 15:00:00', '2024-06-13 16:30:00', 'https://example.com/performance151.jpg', 'Olivia Rodrigo warming up'),
-(152, 47, 51, 'main act', '2024-06-13 16:45:00', '2024-06-13 18:00:00', 'https://example.com/performance152.jpg', 'Camila Cabello live'), -- 15 min break
-(153, 40, 51, 'main act', '2024-06-13 18:30:00', '2024-06-13 19:30:00', 'https://example.com/performance153.jpg', 'Billie Eilish closing'), -- 30 min break
+(152, 39, 51, 'main act', '2024-06-13 16:45:00', '2024-06-13 18:00:00', 'https://example.com/performance152.jpg', 'Ariana Grande live'), -- 15 min break
+(153, 45, 51, 'main act', '2024-06-13 18:30:00', '2024-06-13 19:30:00', 'https://example.com/performance153.jpg', 'The Weeknd closing'), -- 30 min break
 
 -- Event 39 (2025-07-08)
 (115, 59, 39, 'opening act', '2025-07-08 12:00:00', '2025-07-08 12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
