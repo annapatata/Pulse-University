@@ -221,12 +221,14 @@ END$$
 DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS delete_future_performances;
+DROP TRIGGER IF EXISTS delete_performances;
 DELIMITER //
 CREATE TRIGGER delete_future_performances
 BEFORE DELETE ON Performance
+FOR EACH ROW
+BEGIN
     SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = "Cannot delete performer scheduled to perform";
+    SET MESSAGE_TEXT = 'Cannot delete performer scheduled to perform';
 END//
 DELIMITER ;
 
