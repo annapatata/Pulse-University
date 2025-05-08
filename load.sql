@@ -130,7 +130,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (1, 2024, 30, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event1.jpg', 'First event of the summer festival'),
 (37, 2024, 15, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event37.jpg', 'Electronic set to start the fest'),
 (38, 2024, 30, '2024-06-13 13:30:00', '2024-06-13 17:30:00', 2, 'https://example.com/event38.jpg', 'Pop music with a twist'),
-(51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night');
+(51, 2024, 15, '2024-06-13 15:00:00', '2024-06-13 19:30:00', 2, 'https://example.com/event51.jpg', 'Beautiful closing night'),
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
 (52, 2025, 28, '2025-07-09 13:30:00', '2025-07-09 17:30:00', 2, 'https://example.com/event52.jpg', 'Amazing closing night'),
