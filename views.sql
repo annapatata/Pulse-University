@@ -23,13 +23,13 @@ JOIN Performer pf ON pf.performer_id = p.performer_id;
 
 DROP VIEW IF EXISTS VisitorTicket;
 CREATE VIEW VisitorTicket AS
-SELECT v.first_name AS First_Name, v.last_name AS Last_Name, v.visitor_id AS Visitor_id, e.festival_id AS Festival e.festival_day AS Festival_day, t.EAN AS EAN
+SELECT v.first_name AS First_Name, v.last_name AS Last_Name, v.visitor_id AS Visitor_id, e.festival_id AS Festival, e.festival_day AS Festival_day, t.EAN AS EAN
 FROM Visitor v
 JOIN Ticket t ON t.visitor_id = v.visitor_id
-JOIN Event_P e ON t.event_id = e.event_id
+JOIN Event_P e ON t.event_id = e.event_id;
 
 DROP VIEW IF EXISTS EventPerformer;
 CREATE VIEW EventPerformer AS
-SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, p.performer
+SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, p.performer AS Performer
 FROM Event_P e
-JOIN PerformerPerformance p ON p.Event = e.event_id
+JOIN PerformerPerformance p ON p.Event = e.event_id;
