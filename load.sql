@@ -1136,7 +1136,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 
 -- Event 52: Indie and electro mix for an amazing night (2025-07-09)
 (52, 89.99, 85, 'General', 'Credit', '2025-05-09 08:22:10', '0000000000009', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
-(52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '0000000000010, 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
+(52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '0000000000010', 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
 (52, 299.99, 97, 'Premium', 'Paypal', '2025-05-11 13:45:22', '0000000000011', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
 (52, 499.99, 98, 'Backstage', 'Cash', '2025-05-12 18:30:44', '0000000000012', 0, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
 (52, 89.99, 99, 'General', 'Debit', '2025-05-13 09:12:19', '0000000000013', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
