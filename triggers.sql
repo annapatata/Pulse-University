@@ -603,7 +603,7 @@ BEGIN
 		ORDER BY rq.sale_interest ASC
 		LIMIT 1;
 	
-	   	IF d_EAN IS NOT NULL  AND d_time() >NOW() THEN
+	   	IF d_EAN IS NOT NULL  AND d_time >NOW() THEN
 		UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
 		DELETE FROM Resale_queue WHERE EAN = d_EAN;
 		DELETE FROM Buyer WHERE buyer_id = NEW.buyer_id;
