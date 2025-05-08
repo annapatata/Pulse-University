@@ -1105,14 +1105,14 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (38, 499.99, 61, 'Backstage', 'Paypal', '2024-05-21 14:42:11', '6685567890124', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
 
  -- Event 51: Pop music with a twist (2024-06-13)
-(51, 89.99, 68, 'General', 'Credit', '2024-04-14 08:23:10', '000000000001', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
-(51, 199.99, 64, 'VIP', 'Debit', '2024-05-15 11:17:33', '000000000002', 1, 'https://example.com/tickets/38-2.jpg', 'VIP access for Pop music twist'),
-(51, 299.99, 55, 'Premium', 'Paypal', '2024-04-16 13:46:22', '000000000003', 0, 'https://example.com/tickets/38-3.jpg', 'Premium experience for Pop music twist'),
-(51, 499.99, 72, 'Backstage', 'Cash', '2024-04-17 18:31:44', '000000000004', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
-(51, 89.99, 73, 'General', 'Debit', '2024-04-18 09:15:19', '000000000005', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
-(51, 199.99, 74, 'VIP', 'Credit', '2024-04-19 12:29:45', '000000000006', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
-(51, 299.99, 75, 'Premium', 'Cash', '2024-04-20 08:11:33', '000000000007', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
-(51, 499.99, 76, 'Backstage', 'Paypal', '2024-04-21 11:42:11', '000000000008', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
+(51, 89.99, 68, 'General', 'Credit', '2024-04-14 08:23:10', '0000000000001', 1, 'https://example.com/tickets/38-1.jpg', 'General admission for Pop music twist'),
+(51, 199.99, 64, 'VIP', 'Debit', '2024-05-15 11:17:33', '0000000000002', 1, 'https://example.com/tickets/38-2.jpg', 'VIP access for Pop music twist'),
+(51, 299.99, 55, 'Premium', 'Paypal', '2024-04-16 13:46:22', '0000000000003', 0, 'https://example.com/tickets/38-3.jpg', 'Premium experience for Pop music twist'),
+(51, 499.99, 72, 'Backstage', 'Cash', '2024-04-17 18:31:44', '0000000000004', 1, 'https://example.com/tickets/38-4.jpg', 'Backstage pass for Pop music twist'),
+(51, 89.99, 73, 'General', 'Debit', '2024-04-18 09:15:19', '0000000000005', 1, 'https://example.com/tickets/38-5.jpg', 'General admission for Pop music twist'),
+(51, 199.99, 74, 'VIP', 'Credit', '2024-04-19 12:29:45', '0000000000006', 1, 'https://example.com/tickets/38-6.jpg', 'VIP access for Pop music twist'),
+(51, 299.99, 75, 'Premium', 'Cash', '2024-04-20 08:11:33', '0000000000007', 0, 'https://example.com/tickets/38-7.jpg', 'Premium experience for Pop music twist'),
+(51, 499.99, 76, 'Backstage', 'Paypal', '2024-04-21 11:42:11', '0000000000008', 1, 'https://example.com/tickets/38-8.jpg', 'Backstage pass for Pop music twist'),
 
 -- Event 39: Alt rock is the vibe (2025-07-08)
 (39, 89.99, 77, 'General', 'Cash', '2025-06-08 10:22:10', '7785567890124', 0, 'https://example.com/tickets/39-1.jpg', 'General admission for Alt rock vibe'),
@@ -1135,14 +1135,14 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (40, 499.99, 92, 'Backstage', 'Paypal', '2025-06-16 14:42:11', '2305567890124', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix');
 
 -- Event 52: Indie and electro mix for an amazing night (2025-07-09)
-(52, 89.99, 85, 'General', 'Credit', '2025-05-09 08:22:10', '000000000009', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
-(52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '000000000010, 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
-(52, 299.99, 97, 'Premium', 'Paypal', '2025-05-11 13:45:22', '000000000011', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
-(52, 499.99, 98, 'Backstage', 'Cash', '2025-05-12 18:30:44', '000000000012', 0, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
-(52, 89.99, 99, 'General', 'Debit', '2025-05-13 09:12:19', '000000000013', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
-(52, 199.99, 93, 'VIP', 'Credit', '2025-05-14 12:27:45', '000000000014', 0, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
-(52, 299.99, 91, 'Premium', 'Cash', '2025-05-15 08:18:33', '000000000015', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
-(52, 499.99, 92, 'Backstage', 'Paypal', '2025-05-16 14:42:11', '000000000016', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix'),
+(52, 89.99, 85, 'General', 'Credit', '2025-05-09 08:22:10', '0000000000009', 0, 'https://example.com/tickets/40-1.jpg', 'General admission for Indie electro mix'),
+(52, 199.99, 83, 'VIP', 'Debit', '2025-05-10 11:15:33', '0000000000010, 0, 'https://example.com/tickets/40-2.jpg', 'VIP access for Indie electro mix'),
+(52, 299.99, 97, 'Premium', 'Paypal', '2025-05-11 13:45:22', '0000000000011', 0, 'https://example.com/tickets/40-3.jpg', 'Premium experience for Indie electro mix'),
+(52, 499.99, 98, 'Backstage', 'Cash', '2025-05-12 18:30:44', '0000000000012', 0, 'https://example.com/tickets/40-4.jpg', 'Backstage pass for Indie electro mix'),
+(52, 89.99, 99, 'General', 'Debit', '2025-05-13 09:12:19', '0000000000013', 0, 'https://example.com/tickets/40-5.jpg', 'General admission for Indie electro mix'),
+(52, 199.99, 93, 'VIP', 'Credit', '2025-05-14 12:27:45', '0000000000014', 0, 'https://example.com/tickets/40-6.jpg', 'VIP access for Indie electro mix'),
+(52, 299.99, 91, 'Premium', 'Cash', '2025-05-15 08:18:33', '0000000000015', 0, 'https://example.com/tickets/40-7.jpg', 'Premium experience for Indie electro mix'),
+(52, 499.99, 92, 'Backstage', 'Paypal', '2025-05-16 14:42:11', '0000000000016', 0, 'https://example.com/tickets/40-8.jpg', 'Backstage pass for Indie electro mix'),
 
  -- Event 16: Funky beats to end the day (2025-07-09)
 (16, 89.99, 85, 'General', 'Debit', '2025-06-23 09:12:19', '3834567890124', 0, 'https://example.com/tickets/16-1.jpg', 'General admission for Funky beats'),
