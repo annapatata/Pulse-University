@@ -595,19 +595,19 @@ BEGIN
 			);
 		END IF;
 		
-	    SELECT rq.EAN INTO d_EAN
+	   	SELECT rq.EAN INTO d_EAN
 		FROM Resale_queue rq
 		JOIN Ticket t ON rq.EAN = t.EAN 
 		WHERE t.event_id = NEW.event_id
 			AND t.ticket_type = NEW.ticket_type 
 		ORDER BY rq.sale_interest ASC
 		LIMIT 1;
-		
-		IF d_EAN IS NOT NULL THEN
-			UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
-			DELETE FROM Resale_queue WHERE EAN = d_EAN;
-			DELETE FROM Buyer WHERE buyer_id = NEW.buyer_id;
-		END IF;
+	
+	   	IF d_EAN IS NOT NULL  AND d_time() >NOW() THEN
+		UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
+		DELETE FROM Resale_queue WHERE EAN = d_EAN;
+		DELETE FROM Buyer WHERE buyer_id = NEW.buyer_id;
+	    END IF;
 	END IF;
 	
 	END$$
