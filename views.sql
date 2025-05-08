@@ -28,8 +28,8 @@ FROM Visitor v
 JOIN Ticket t ON t.visitor_id = v.visitor_id
 JOIN Event_P e ON t.event_id = e.event_id;
 
-DROP VIEW IF EXISTS EventPerformer;
-CREATE VIEW EventPerformer AS
+DROP VIEW IF EXISTS FestivalPerformer;
+CREATE VIEW FestivalPerformer AS
 SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, p.performer AS Performer
 FROM Event_P e
 JOIN PerformerPerformance p ON p.Event = e.event_id;
