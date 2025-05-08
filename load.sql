@@ -13,10 +13,10 @@ INSERT INTO Festival (festival_id, start_day, end_day, duration, image, image_ca
 (2018, '2018-06-10', '2018-06-14', 5, 'https://example.com/img1.jpg', 'The summer heat began here'),
 (2019, '2019-07-05', '2019-07-07', 3, 'https://example.com/img2.jpg', 'Jazz vibes under the stars'),
 (2020, '2020-08-01', '2020-08-03', 3, 'https://example.com/img3.jpg', 'Socially-distanced rhythms'),
-(2021, '2021-06-20', '2021-06-24', 5, 'https://example.com/img4.jpg', 'The comeback edition'),
-(2022, '2022-07-11', '2022-07-14', 4, 'https://example.com/img5.jpg', 'Four days of rock'),
-(2023, '2023-05-15', '2023-05-17', 3, 'https://example.com/img6.jpg', 'Spring sounds bloom'),
-(2024, '2024-06-12', '2024-06-15', 4, 'https://example.com/img8.jpg', 'Golden summer rhythms'),
+(2021, '2021-06-20', '2021-06-21', 2, 'https://example.com/img4.jpg', 'The comeback edition'),
+(2022, '2022-07-11', '2022-07-13', 3, 'https://example.com/img5.jpg', 'Four days of rock'),
+(2023, '2023-05-15', '2023-05-16', 2, 'https://example.com/img6.jpg', 'Spring sounds bloom'),
+(2024, '2024-06-12', '2024-06-13', 2, 'https://example.com/img8.jpg', 'Golden summer rhythms'),
 (2025, '2025-07-08', '2025-07-13', 6, 'https://example.com/img9.jpg', 'Future fest is here'),
 (2026, '2026-08-20', '2026-08-24', 5, 'https://example.com/img10.jpg', 'Next-gen musical revolution');
 
@@ -130,7 +130,7 @@ INSERT INTO Event_P (event_id, festival_id, stage_id, start_time, end_time, fest
 (35, 2023, 12, '2023-05-16 14:00:00', '2023-05-16 18:00:00', 2, 'https://example.com/event35.jpg', 'Dance music all night long'),
 (36, 2023, 14, '2023-05-16 15:00:00', '2023-05-16 19:00:00', 2, 'https://example.com/event36.jpg', 'Rock anthems playing into the night'),
 (37, 2024, 15, '2024-06-12 12:00:00', '2024-06-12 16:00:00', 1, 'https://example.com/event37.jpg', 'Electronic set to start the fest'),
-(38, 2024, 30, '2024-06-12 13:30:00', '2024-06-12 17:30:00', 1, 'https://example.com/event38.jpg', 'Pop music with a twist'),
+(38, 2024, 30, '2024-06-13 13:30:00', '2024-06-13 17:30:00', 2, 'https://example.com/event38.jpg', 'Pop music with a twist'),
 (39, 2025, 28, '2025-07-08 12:00:00', '2025-07-08 16:00:00', 1, 'https://example.com/event39.jpg', 'Alt rock is the vibe'),
 (40, 2025, 16, '2025-07-08 13:30:00', '2025-07-08 17:30:00', 1, 'https://example.com/event40.jpg', 'Indie and electro mix for an amazing night'),
 (41, 2026, 17, '2026-08-20 12:00:00', '2026-08-20 16:00:00', 1, 'https://example.com/event41.jpg', 'The final day begins'),
@@ -1957,9 +1957,9 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (111, 59, 37, 'main act', '2024-06-12 15:00:00', '2024-06-12 16:00:00', 'https://example.com/performance111.jpg', 'Nicki Minaj closing'), -- 30 min break
 
 -- Event 38 (2024-06-12)
-(112, 1, 38, 'warm-up', '2024-06-12 13:30:00', '2024-06-12 14:15:00', 'https://example.com/performance112.jpg', 'The Killers warming up'),
-(113, 2, 38, 'main act', '2024-06-12 14:30:00', '2024-06-12 16:00:00', 'https://example.com/performance113.jpg', 'Artic Monkeys live'), -- 15 min break
-(114, 60, 38, 'main act', '2024-06-12 16:30:00', '2024-06-12 17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'), -- 30 min break
+(112, 1, 38, 'warm-up', '2024-06-13 13:30:00', '2024-06-13 14:15:00', 'https://example.com/performance112.jpg', 'The Killers warming up'),
+(113, 2, 38, 'main act', '2024-06-13 14:30:00', '2024-06-13 16:00:00', 'https://example.com/performance113.jpg', 'Artic Monkeys live'), -- 15 min break
+(114, 60, 38, 'main act', '2024-06-13 16:30:00', '2024-06-13 17:30:00', 'https://example.com/performance114.jpg', 'Drake closing'), -- 30 min break
 
 -- Event 39 (2025-07-08)
 (115, 59, 39, 'opening act', '2025-07-08 12:00:00', '2025-07-08 12:45:00', 'https://example.com/performance115.jpg', 'Nicki Minaj opening'),
