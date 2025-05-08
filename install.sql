@@ -269,6 +269,7 @@ CREATE TABLE Ticket (
 CREATE TABLE Resale_queue (
    EAN VARCHAR(13) PRIMARY KEY,
    sale_interest TIMESTAMP NOT NULL,
+   fullfiled TINYINT NOT NULL
    FOREIGN KEY (EAN) REFERENCES Ticket(EAN)
 );
 
@@ -279,11 +280,12 @@ CREATE TABLE Buyer (
    EAN VARCHAR(13),
    event_id INT,
    purchase_interest TIMESTAMP NOT NULL,
+   fulfilled TINYINT NOT NULL
    CHECK (
 	(EAN IS NOT NULL AND event_id IS NULL AND ticket_type IS NULL) OR
 	(EAN IS NULL AND event_id IS NOT NULL AND ticket_type IS NOT NULL) 
    ),
-   FOREIGN KEY (EAN) REFERENCES Resale_queue(EAN) ON DELETE CASCADE,
+   FOREIGN KEY (EAN) REFERENCES Resale_queue(EAN),
    FOREIGN KEY (visitor_id) REFERENCES Visitor(visitor_id),
    FOREIGN KEY (event_id) REFERENCES Event_P(event_id),
    FOREIGN KEY (ticket_type) REFERENCES Ticket_Class(ticket_type)
