@@ -1772,7 +1772,7 @@ INSERT INTO Resale_queue (EAN, sale_interest) VALUES
 
 INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_time, end_time, image, image_caption) VALUES
 -- Event 1 (2018-06-10)
-(1, 1, 1, 'opening act', '2018-06-10 12:00:00', '2018-06-10 12:45:00', 'https://example.com/performance1.jpg', 'The Killers opening the festival'),
+(1, 5, 1, 'opening act', '2018-06-10 12:00:00', '2018-06-10 12:45:00', 'https://example.com/performance1.jpg', 'Tame Impala opening the festival'),
 (2, 18, 1, 'main act', '2018-06-10 13:00:00', '2018-06-10 14:30:00', 'https://example.com/performance2.jpg', 'Brandon Flowers solo performance'), -- 15 min break
 (3, 38, 1, 'main act', '2018-06-10 15:00:00', '2018-06-10 16:00:00', 'https://example.com/performance3.jpg', 'Taylor Swift closing the event'), -- 30 min break
 
@@ -1782,7 +1782,7 @@ INSERT INTO Performance (performance_id, performer_id, event_id, type_id, start_
 (6, 5, 2, 'main act', '2018-06-10 16:30:00', '2018-06-10 17:30:00', 'https://example.com/performance6.jpg', 'Tame Impala closing the stage'), -- 30 min break
 
 -- Event 3 (2018-06-11)
-(7, 3, 3, 'opening act', '2018-06-11 14:00:00', '2018-06-11 14:45:00', 'https://example.com/performance7.jpg', 'Foo Fighters opening'),
+(7, 5, 3, 'opening act', '2018-06-11 14:00:00', '2018-06-11 14:45:00', 'https://example.com/performance7.jpg', 'Tame Impala opening'),
 (8, 20, 3, 'main act', '2018-06-11 15:00:00', '2018-06-11 16:30:00', 'https://example.com/performance8.jpg', 'Dave Grohl rocking the stage'), -- 15 min break
 (9, 7, 3, 'main act', '2018-06-11 17:00:00', '2018-06-11 18:00:00', 'https://example.com/performance9.jpg', 'RHCP closing the show'), -- 30 min break
 
