@@ -274,7 +274,7 @@ INSERT INTO EventEquip (equip_id, event_id, quantity) VALUES
 (6, 38, 2), (7, 38, 2), (8, 38, 1),
 
  -- Equipment for Event 51 (2024 festival)
-(9, 51, 2), (10, 51, 1), (8, 51, 2)
+(9, 51, 2), (10, 51, 1), (8, 51, 2),
  
 -- Equipment for Events 39-50 (2025-2026 festivals)
 (9, 39, 1), (10, 39, 1), (1, 39, 2),
