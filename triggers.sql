@@ -686,3 +686,23 @@ BEGIN
 END$$
 DELIMITER ;		
 
+DROP TRIGGER IF EXISTS two_tickets;
+DELIMITER //
+CREATE TRIGGER two_tickets
+BEFORE INSERT ON Ticket FOR EACH ROW
+BEGIN
+	DECLARE cnt INT;
+    
+    SELECT COUNT(*) INTO cnt
+    FROM Ticket
+    WHERE visitor_id = NEW.visitor_id AND event_id = NEW.event_id;
+    
+    IF(cnt > 0)
+    THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "A visitor can't purchase two tickets for the same event.";
+	END IF;
+    
+END//
+DELIMITER ;
+
