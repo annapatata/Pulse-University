@@ -13,6 +13,17 @@ This project involves the design and implementation of a relational database for
 - Languages: SQL
 - Tools: phpMyAdmin,MySQLWorkbench
 
+## Testing
+- 9 Festivals
+- 90 Artists
+- 17 Bands
+- 683 Employments
+- 50 Events
+- 150 Performances
+- 67 Performers
+- 55 Staff Members
+- 398 Tickets
+- 160 Visitors
 
 
 
