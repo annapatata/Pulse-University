@@ -24,7 +24,7 @@ ORDER BY
 	COUNT(*) DESC
 LIMIT 3;
 
---WITH VIEW
+-- WITH VIEW
 	
 SELECT 
     @rownum := @rownum + 1 AS Row,
