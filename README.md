@@ -21,9 +21,11 @@ This project involves the design and implementation of a relational database for
     1. install.sql contains the creation of tables, the triggers, the constraints,the views and the indexes
     2. load.sql contains the data that populate our database
     3. queries.sql contains the queries Q01-Q15 and the corresponding output Q01_out-Q15_out
-- report : explains our train of thought and summarizes the key points of our implementation 
+- report : explains our train of thought and summarizes the key points of our implementation
+  
 ## Testing
-- 9 Festivals
+With the help of AI tools we created the data below to populate our database.
+- 9 Festivals (2 future)
 - 90 Artists
 - 17 Bands
 - 683 Employments
