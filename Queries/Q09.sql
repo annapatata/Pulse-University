@@ -9,7 +9,7 @@ FROM(
 	FROM
 		Ticket t
 	JOIN
-		Event_p e ON t.event_id = e.event_id
+		Event_p e ON t.event_id = e.event_id AND t.activated = 1
 	GROUP BY
 		e.festival_id, t.visitor_id
 	HAVING 
