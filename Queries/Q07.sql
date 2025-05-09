@@ -7,7 +7,7 @@ JOIN Staff s ON s.staff_id = em.staff_id
 where s.role_id = 2
 GROUP BY festival_id) AS avg_xp_per_festival
 ORDER BY average_xp ASC
--- LIMIT 1;
+LIMIT 1;
 
 
 -- OLDER VERSION
