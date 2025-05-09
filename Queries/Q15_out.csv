@@ -1,9 +1,6 @@
-"first_name","last_name","performer_name","total_score"
-"Jordan","Brown","Taylor Swift","9"
-"Jason","Richardson","Taylor Swift","8"
-"Jeffrey","Wilson","Selena Gomez","8"
-"Frank","Eaton","Taylor Swift","6"
-"Jeffrey","Wilson","Justin Bieber","6"
-"Renee","Patel","Taylor Swift","5"
-"Jeffrey","Wilson","Taylor Swift","5"
-"Rodney","Jackson","Taylor Swift","2"
+first_name,last_name,performer_name,total_score
+Paul,Campbell,"Ariana Grande",13
+Paul,Campbell,"Billie Eilish",13
+Jordan,Brown,"Taylor Swift",11
+Brandon,Sullivan,"Bruno Mars",10
+Christopher,Shaw,"Arctic Monkeys",10
