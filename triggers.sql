@@ -625,11 +625,11 @@ END $$
 DELIMITER ;
 	
 
-DROP TRIGGER IF EXISTS future_activated;
+DROP TRIGGER IF EXISTS future_activated_insert;
 DELIMITER $$
 
-CREATE TRIGGER future_activated
-BEFORE INSERT OR UPDATE ON Ticket FOR EACH ROW
+CREATE TRIGGER future_activated_insert 
+BEFORE INSERT ON Ticket FOR EACH ROW
 BEGIN
 	DECLARE event_date DATETIME;
 	
@@ -644,10 +644,49 @@ BEGIN
 END$$
 DELIMITER ;
 
-DROP TRIGGER IF EXISTS two_tickets;
+
+DROP TRIGGER IF EXISTS future_activated_update;
+DELIMITER $$
+CREATE TRIGGER future_activated_update
+BEFORE UPDATE ON Ticket FOR EACH ROW
+BEGIN
+	DECLARE event_date DATETIME;
+	
+	SELECT start_time INTO event_date
+	FROM Event_P 
+	WHERE event_id = NEW.event_id;
+	
+	IF(NEW.activated = TRUE AND event_date > CURDATE()) THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'activated ticket for future event';
+	END IF;
+END$$
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS two_tickets_update;
 DELIMITER //
-CREATE TRIGGER two_tickets
-BEFORE INSERT OR UPDATE ON Ticket FOR EACH ROW
+CREATE TRIGGER two_tickets_update
+BEFORE UPDATE ON Ticket FOR EACH ROW
+BEGIN
+	DECLARE cnt INT;
+    
+    SELECT COUNT(*) INTO cnt
+    FROM Ticket
+    WHERE visitor_id = NEW.visitor_id AND event_id = NEW.event_id;
+    
+    IF(cnt > 0)
+    THEN
+		SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "A visitor can't purchase two tickets for the same event.";
+	END IF;
+    
+END//
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS two_tickets_insert;
+DELIMITER //
+CREATE TRIGGER two_tickets_insert
+BEFORE INSERT ON Ticket FOR EACH ROW
 BEGIN
 	DECLARE cnt INT;
     
