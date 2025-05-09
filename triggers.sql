@@ -586,19 +586,6 @@ BEGIN
 	 END$$
 DELIMITER ;
 
-DROP TRIGGER IF EXISTS purchase;
-DELIMITER $$
-CREATE TRIGGER purchase
-AFTER UPDATE ON Ticket
-FOR EACH ROW
-BEGIN
-	IF OLD.visitor_id != NEW.visitor_id THEN
-		DELETE FROM Buyer WHERE (EAN = NEW.EAN OR (visitor_id = NEW.visitor_id AND event_id = NEW.event_id));
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-	END IF;
-        END$$
-DELIMITER;
-
 DROP TRIGGER IF EXISTS review_attended_performance;
 DELIMITER $$
 CREATE TRIGGER review_attended_performance
