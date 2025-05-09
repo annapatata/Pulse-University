@@ -352,6 +352,7 @@ CREATE INDEX idx_subgenre_genre_id ON Subgenre(genre_id); -- q02
 -- Performer indexes
 CREATE INDEX idx_performer_artist_id ON Performer(artist_id); -- used in triggers
 CREATE INDEX idx_performer_band_id ON Performer(band_id); -- used in triggers
+CREATE INDEX idx_performer_name  ON Performer(performer_name); --used in q04 for optimization
 
 -- PerformerYears indexes
 CREATE INDEX idx_py_performer_id ON PerformerYears(performer_id); -- q02
