@@ -223,7 +223,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS delete_performances;
 DELIMITER //
-CREATE TRIGGER delete_future_performances
+CREATE TRIGGER delete_performances
 BEFORE DELETE ON Performance
 FOR EACH ROW
 BEGIN
