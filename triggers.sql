@@ -547,14 +547,7 @@ BEGIN
 	
 	IF cur_b_id IS NOT NULL AND r_time > NOW() THEN
 		UPDATE Ticket SET visitor_id = cur_v_id WHERE EAN = NEW.EAN;
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-	END IF;
-	
-	IF r_time < NOW() THEN 
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-		DELETE FROM Buyer WHERE event_id = resale_event;
-	END IF;
-		
+	END IF;	
 	END$$
 DELIMITER ;
 
@@ -576,43 +569,35 @@ BEGIN
 		IF d_time > NOW() THEN
 		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
 		END IF;
-		IF d_time < NOW() THEN
-			DELETE FROM Buyer WHERE event_id = d_event;
-			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = d_event
-			);
-		END IF;
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-
-	
-	ELSE
+        ELSE
 		SELECT start_time INTO d_time FROM Event_P WHERE event_id = NEW.event_id;
-		
-		IF d_time < NOW() THEN
-			DELETE FROM Buyer WHERE event_id = NEW.event_id;
-			DELETE FROM Resale_queue WHERE EAN IN (
-				SELECT EAN FROM Ticket WHERE event_id = NEW.event_id
-			);
-		END IF;
-		
 	   	SELECT rq.EAN INTO d_EAN
 		FROM Resale_queue rq
 		JOIN Ticket t ON rq.EAN = t.EAN 
-		WHERE t.event_id = NEW.event_id
-			AND t.ticket_type = NEW.ticket_type 
+		WHERE t.event_id = NEW.event_id AND t.ticket_type = NEW.ticket_type 
 		ORDER BY rq.sale_interest ASC
 		LIMIT 1;
 	
 	   	IF d_EAN IS NOT NULL  AND d_time >NOW() THEN
 		UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
-		DELETE FROM Resale_queue WHERE EAN = d_EAN;
-		DELETE FROM Buyer WHERE buyer_id = NEW.buyer_id;
-	    END IF;
-	END IF;
+	        END IF;
+	 END IF;
 	
-	END$$
+	 END$$
 DELIMITER ;
 
+DROP TRIGGER IF EXISTS purchase;
+DELIMITER $$
+CREATE TRIGGER purchase
+AFTER UPDATE ON Ticket
+FOR EACH ROW
+BEGIN
+	IF OLD.visitor_id != NEW.visitor_id THEN
+		DELETE FROM Buyer WHERE (EAN = NEW.EAN OR (visitor_id = NEW.visitor_id AND event_id = NEW.event_id));
+		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
+	END IF;
+        END$$
+DELIMITER;
 
 DROP TRIGGER IF EXISTS review_attended_performance;
 DELIMITER $$
