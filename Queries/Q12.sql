@@ -1,5 +1,4 @@
 -- CHECKED
-
 SELECT
 	e.festival_id,
 	e.festival_day AS Festival_day,
@@ -12,7 +11,8 @@ JOIN
 	Employment es ON e.event_id = es.event_id
 JOIN 
 	Staff s ON s.staff_id = es.staff_id
-WHERE 
-	e.festival_id = 2018
+-- WHERE e.festival_id = 2018 -- for a specific year
 GROUP BY 
-	e.festival_day;
+	e.festival_id, e.festival_day
+ORDER BY 
+	e.festival_id, e.festival_day;
