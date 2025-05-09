@@ -518,24 +518,11 @@ BEGIN
 END$$
 DELIMITER ;
 
-DROP TRIGGER IF EXISTS purchase;
-DELIMITER $$
-CREATE TRIGGER purchase
-AFTER UPDATE ON Ticket
-FOR EACH ROW
-BEGIN
-	IF OLD.visitor_id != NEW.visitor_id THEN
-		DELETE FROM Buyer WHERE (EAN = NEW.EAN OR (visitor_id = NEW.visitor_id AND event_id = NEW.event_id));
-		DELETE FROM Resale_queue WHERE EAN = NEW.EAN;
-	END IF;
-        END$$
-DELIMITER ;
-
 
 DROP TRIGGER IF EXISTS match_on_resale;
 DELIMITER $$
 CREATE TRIGGER match_on_resale
-AFTER INSERT ON Resale_queue
+BEFORE INSERT ON Resale_queue
 FOR EACH ROW
 BEGIN
 	DECLARE cur_b_id INT;
@@ -543,6 +530,7 @@ BEGIN
 	DECLARE resale_type VARCHAR(10);
 	DECLARE resale_event INT;
 	DECLARE r_time DATETIME;
+    DECLARE valid TINYINT;
 	
 	SELECT event_id, ticket_type INTO resale_event, resale_type
 	FROM Ticket
@@ -552,51 +540,59 @@ BEGIN
 	FROM Event_P
 	WHERE event_id = resale_event;
 	
-	SELECT buyer_id, visitor_id INTO cur_b_id, cur_v_id
+	SELECT buyer_id, visitor_id INTO cur_b_id, cur_v_id 
 	FROM Buyer
-	WHERE ((EAN = NEW.EAN) OR (ticket_type = resale_type AND event_id = resale_event))
+	WHERE ((EAN = NEW.EAN) OR (ticket_type = resale_type AND event_id = resale_event)) AND satisfied = FALSE
 	ORDER BY purchase_interest ASC
 	LIMIT 1;
 	
 	IF cur_b_id IS NOT NULL AND r_time > NOW() THEN
 		UPDATE Ticket SET visitor_id = cur_v_id WHERE EAN = NEW.EAN;
+        SET NEW.sold = TRUE;
+        UPDATE Buyer SET satisfied = TRUE WHERE (visitor_id = cur_v_id AND event_id = resale_enent) OR (EAN = NEW.EAN);
 	END IF;	
-	END$$
+END$$
 DELIMITER ;
 
 
 DROP TRIGGER IF EXISTS match_on_buyer;
 DELIMITER $$
 CREATE TRIGGER match_on_buyer
-AFTER INSERT ON Buyer
+BEFORE INSERT ON Buyer
 FOR EACH ROW
 BEGIN
 	DECLARE d_time DATETIME;
 	DECLARE d_event INT;
 	DECLARE d_EAN VARCHAR(13);
-	
-	
+	DECLARE valid TINYINT;
+    
 	IF NEW.EAN IS NOT NULL THEN	
 		SELECT event_id INTO d_event FROM Ticket WHERE EAN = NEW.EAN;
 		SELECT start_time INTO d_time FROM Event_P WHERE event_id = d_event;
-		IF d_time > NOW() THEN
+        SELECT sold INTO valid FROM Resale_queue WHERE EAN = NEW.EAN;
+		IF d_time > NOW() AND valid = FALSE 
+        THEN
 		    UPDATE Ticket SET visitor_id = NEW.visitor_id WHERE EAN = NEW.EAN;
+			UPDATE Resale_Queue SET sold = TRUE WHERE EAN = NEW.EAN;
+            SET NEW.satisfied = TRUE;
 		END IF;
-        ELSE
+	ELSE
 		SELECT start_time INTO d_time FROM Event_P WHERE event_id = NEW.event_id;
 	   	SELECT rq.EAN INTO d_EAN
 		FROM Resale_queue rq
 		JOIN Ticket t ON rq.EAN = t.EAN 
-		WHERE t.event_id = NEW.event_id AND t.ticket_type = NEW.ticket_type 
+		WHERE t.event_id = NEW.event_id AND t.ticket_type = NEW.ticket_type AND sold = FALSE
 		ORDER BY rq.sale_interest ASC
 		LIMIT 1;
 	
-	   	IF d_EAN IS NOT NULL  AND d_time >NOW() THEN
-		UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
-	        END IF;
+	   	IF d_EAN IS NOT NULL AND d_time >NOW()
+        THEN
+			UPDATE Ticket  SET visitor_id = NEW.visitor_id WHERE EAN = d_EAN;
+            UPDATE Resale_Queue SET sold = TRUE WHERE EAN = d_EAN;
+            SET NEW.satisfied = TRUE;
+		END IF;
 	 END IF;
-	
-	 END$$
+END$$
 DELIMITER ;
 
 DROP TRIGGER IF EXISTS review_attended_performance;
@@ -627,7 +623,6 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS future_activated_insert;
 DELIMITER $$
-
 CREATE TRIGGER future_activated_insert 
 BEFORE INSERT ON Ticket FOR EACH ROW
 BEGIN
