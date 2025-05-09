@@ -27,7 +27,6 @@ LIMIT 3;
 -- WITH VIEW
 	
 SELECT 
-    @rownum := @rownum + 1 AS Row,
     Genre_1,
     Genre_2,
     Artists
