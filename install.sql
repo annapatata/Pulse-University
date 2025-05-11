@@ -375,6 +375,7 @@ CREATE INDEX idx_ticket_visitor_id ON Ticket(visitor_id); -- q06/q09
 -- CREATE INDEX idx_ticket_ticket_type ON Ticket(ticket_type);
 CREATE INDEX idx_ticket_pay_method ON Ticket(pay_method); -- q01
 CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); -- q01
+CREATE INDEX idx_ticket_opt ON Ticket(visitor_id, activated, event_id); --q06 optimization
 
 -- Buyer indexes
 -- CREATE INDEX idx_buyer_event_id ON Buyer(event_id);
