@@ -301,7 +301,7 @@ AFTER INSERT ON Performer FOR EACH ROW
 BEGIN 
 	DECLARE id INT DEFAULT -1;
 	
-    IF (NEW.performer_id = NULL)
+    IF (NEW.performer_id IS NULL)
     THEN
 		IF ( NEW.artist_nband = TRUE)
 		THEN
@@ -545,7 +545,7 @@ BEGIN
 	IF cur_b_id IS NOT NULL AND r_time > NOW() THEN
 		UPDATE Ticket SET visitor_id = cur_v_id WHERE EAN = NEW.EAN;
         SET NEW.sold = TRUE;
-        UPDATE Buyer SET satisfied = TRUE WHERE (visitor_id = cur_v_id AND event_id = resale_enent) OR (EAN = NEW.EAN);
+        UPDATE Buyer SET satisfied = TRUE WHERE (visitor_id = cur_v_id AND event_id = resale_event) OR (EAN = NEW.EAN);
 	END IF;	
 END$$
 DELIMITER ;
