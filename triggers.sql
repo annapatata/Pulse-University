@@ -12,6 +12,7 @@ BEGIN
 END//
 DELIMITER ;
 
+
 DROP TRIGGER IF EXISTS performance_in_event;
 DELIMITER $$	
 CREATE TRIGGER performance_in_event
@@ -78,7 +79,6 @@ BEGIN
 	SET MESSAGE_TEXT = 'Too few security staff in this event';
     END IF;
     
-
     SELECT COUNT(*) INTO help_staff_count
     FROM Employment e JOIN Staff s ON e.staff_id = s.staff_id
     WHERE s.role_id=1 AND e.event_id = NEW.event_id;
@@ -113,6 +113,7 @@ BEGIN
     END IF;
 END$$
 DELIMITER ;
+
 
 DROP TRIGGER IF EXISTS break;
 DELIMITER $$ 
@@ -174,7 +175,6 @@ END$$
 DELIMITER ;
 
 
-
 DROP TRIGGER IF EXISTS check_vip_tickets;
 DELIMITER $$ 
 CREATE TRIGGER check_vip_tickets
@@ -233,7 +233,6 @@ END//
 DELIMITER ;
 
 
--- prevent an artist from performing in two stages at once
 DROP TRIGGER IF EXISTS check_double_perform;
 DELIMITER //
 CREATE TRIGGER check_double_perform
@@ -295,9 +294,6 @@ END//
 DELIMITER ;
 
 
-
-
--- update the id on the Performer table when a performer is added by name
 DROP TRIGGER IF EXISTS update_ids;
 DELIMITER //
 CREATE TRIGGER update_ids
@@ -530,7 +526,7 @@ BEGIN
 	DECLARE resale_type VARCHAR(10);
 	DECLARE resale_event INT;
 	DECLARE r_time DATETIME;
-    DECLARE valid TINYINT;
+	DECLARE valid TINYINT;
 	
 	SELECT event_id, ticket_type INTO resale_event, resale_type
 	FROM Ticket
@@ -595,6 +591,7 @@ BEGIN
 END$$
 DELIMITER ;
 
+
 DROP TRIGGER IF EXISTS review_attended_performance;
 DELIMITER $$
 CREATE TRIGGER review_attended_performance
@@ -619,7 +616,7 @@ BEGIN
 
 END $$
 DELIMITER ;
-	
+
 
 DROP TRIGGER IF EXISTS future_activated_insert;
 DELIMITER $$
@@ -658,6 +655,7 @@ BEGIN
 END$$
 DELIMITER ;
 
+
 DROP TRIGGER IF EXISTS two_tickets_update;
 DELIMITER //
 CREATE TRIGGER two_tickets_update
@@ -678,6 +676,7 @@ BEGIN
 END//
 DELIMITER ;
 
+
 DROP TRIGGER IF EXISTS two_tickets_insert;
 DELIMITER //
 CREATE TRIGGER two_tickets_insert
@@ -697,4 +696,3 @@ BEGIN
     
 END//
 DELIMITER ;
-
