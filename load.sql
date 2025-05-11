@@ -808,7 +808,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (3, 89.99, 5, 'General', 'Paypal', '2018-05-15 12:15:22', '9234567890123', 1, 'https://example.com/tickets/3-1.jpg', 'General admission for Rock hits in afternoon'),
 (3, 199.99, 6, 'VIP', 'Credit', '2018-05-16 09:33:44', '0234567890123', 1, 'https://example.com/tickets/3-2.jpg', 'VIP access for Rock hits in afternoon'),
 (3, 299.99, 11, 'Premium', 'Debit', '2018-05-17 14:22:11', '1334567890123', 0, 'https://example.com/tickets/3-3.jpg', 'Premium experience for Rock hits in afternoon'),
-(3, 499.99, 12, 'Backstage', 'Cash', '2018-05-18 17:45:33', '2434567890123', 1, 'https://example.com/tickets/3-4.jpg', 'Backstage pass for Rock hits in afternoon'),
+(3, 499.99, 1, 'Backstage', 'Cash', '2018-05-18 17:45:33', '2434567890123', 1, 'https://example.com/tickets/3-4.jpg', 'Backstage pass for Rock hits in afternoon'),
 
 -- Event 4 (8 tickets)
 (4, 89.99, 5, 'General', 'Credit', '2018-05-10 08:22:10', '3434567890123', 1, 'https://example.com/tickets/4-1.jpg', 'General admission for Chill vibes by main stage'),
