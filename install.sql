@@ -324,8 +324,6 @@ CREATE TABLE Review (
 -- INDEXES
 -- ------------------------------------------------------------------------------------------------------------------
 
--- Event_P indexes
-CREATE INDEX idx_event_start_time ON Event_P(start_time); -- q09
 
 -- Artist indexes
 CREATE INDEX idx_artist_participations ON Artist(participations); -- q05/q11
