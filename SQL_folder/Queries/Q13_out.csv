@@ -1,7 +1,7 @@
-performer_name,num_continents
-"Billie Eilish",4
-"Camila Cabello",4
-"Olivia Rodrigo",4
-"Shawn Mendes",4
-"Tame Impala",3
-"The Killers",3
+Performer_id,Performer,num_continents
+40,"Billie Eilish",4
+43,"Olivia Rodrigo",4
+47,"Camila Cabello",4
+48,"Shawn Mendes",4
+1,"The Killers",3
+5,"Tame Impala",3
