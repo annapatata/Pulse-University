@@ -910,13 +910,13 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 -- Event 19: Punk rock and raw energy (2020-08-02)
 (19, 89.99, 78, 'General', 'Credit', '2020-07-10 08:22:10', '5934567890124', 1, 'https://example.com/tickets/19-1.jpg', 'General admission for Punk rock'),
 (19, 199.99, 86, 'VIP', 'Debit', '2020-07-11 11:15:33', '6934567890124', 1, 'https://example.com/tickets/19-2.jpg', 'VIP access for Punk rock'),
-(19, 299.99, 77, 'Premium', 'Paypal', '2020-07-12 13:45:22', '7934567890124', 0, 'https://example.com/tickets/19-3.jpg', 'Premium experience for Punk rock'),
+(19, 299.99, 77, 'Premium', 'Paypal', '2020-07-12 13:45:22', '7934567890124', 1, 'https://example.com/tickets/19-3.jpg', 'Premium experience for Punk rock'),
 (19, 499.99, 88, 'Backstage', 'Cash', '2020-07-13 18:30:44', '8934567890124', 1, 'https://example.com/tickets/19-4.jpg', 'Backstage pass for Punk rock'),
 
 -- Event 20: Indie vibes in a cozy space (2020-08-02)
 (20, 89.99, 78, 'General', 'Debit', '2020-07-14 09:12:19', '9934567890124', 1, 'https://example.com/tickets/20-1.jpg', 'General admission for Indie vibes'),
 (20, 199.99, 90, 'VIP', 'Credit', '2020-07-15 12:27:45', '0044567890124', 1, 'https://example.com/tickets/20-2.jpg', 'VIP access for Indie vibes'),
-(20, 299.99, 77, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 0, 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
+(20, 299.99, 77, 'Premium', 'Cash', '2020-07-16 08:18:33', '1144567890124', 1 'https://example.com/tickets/20-3.jpg', 'Premium experience for Indie vibes'),
 (20, 499.99, 92, 'Backstage', 'Paypal', '2020-07-17 14:42:11', '2244567890124', 1, 'https://example.com/tickets/20-4.jpg', 'Backstage pass for Indie vibes'),
  -- Event 21: Classical music fills the air (2020-08-03)
 (21, 89.99, 93, 'General', 'Cash', '2020-07-18 10:22:10', '3344567890124', 1, 'https://example.com/tickets/21-1.jpg', 'General admission for Classical music'),
@@ -975,7 +975,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 (26, 499.99, 136, 'Backstage', 'Cash', '2021-05-27 18:30:44', '6684567890124', 1, 'https://example.com/tickets/26-4.jpg', 'Backstage pass for Electronic beats'),
 (26, 89.99, 137, 'General', 'Debit', '2021-05-28 09:12:19', '7784567890124', 1, 'https://example.com/tickets/26-5.jpg', 'General admission for Electronic beats'),
 (26, 199.99, 112, 'VIP', 'Credit', '2021-05-29 12:27:45', '8884567890124', 1, 'https://example.com/tickets/26-6.jpg', 'VIP access for Electronic beats'),
-(26, 299.99, 113, 'Premium', 'Cash', '2021-05-30 08:18:33', '9984567890124', 0, 'https://example.com/tickets/26-7.jpg', 'Premium experience for Electronic beats'),
+(26, 299.99, 113, 'Premium', 'Cash', '2021-05-30 08:18:33', '9984567890124', 1, 'https://example.com/tickets/26-7.jpg', 'Premium experience for Electronic beats'),
 (26, 499.99, 140, 'Backstage', 'Paypal', '2021-05-31 14:42:11', '0094567890124', 1, 'https://example.com/tickets/26-8.jpg', 'Backstage pass for Electronic beats'),
 
 -- Event 27: High-energy day of performances (2022-07-11)
@@ -1051,7 +1051,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
 -- Event 34: Indie beats and cozy moments (2023-05-15)
 (34, 89.99, 37, 'General', 'Credit', '2023-04-16 08:22:10', '7745567890124', 1, 'https://example.com/tickets/34-1.jpg', 'General admission for Indie beats'),
 (34, 199.99, 38, 'VIP', 'Debit', '2023-04-17 11:15:33', '8845567890124', 1, 'https://example.com/tickets/34-2.jpg', 'VIP access for Indie beats'),
-(34, 299.99, 33, 'Premium', 'Paypal', '2023-04-18 13:45:22', '9945567890124', 0, 'https://example.com/tickets/34-3.jpg', 'Premium experience for Indie beats'),
+(34, 299.99, 33, 'Premium', 'Paypal', '2023-04-18 13:45:22', '9945567890124', 1, 'https://example.com/tickets/34-3.jpg', 'Premium experience for Indie beats'),
 (34, 499.99, 34, 'Backstage', 'Cash', '2023-04-19 18:30:44', '0055567890124', 1, 'https://example.com/tickets/34-4.jpg', 'Backstage pass for Indie beats'),
 (34, 89.99, 41, 'General', 'Debit', '2023-04-20 09:12:19', '1155567890124', 1, 'https://example.com/tickets/34-5.jpg', 'General admission for Indie beats'),
 (34, 199.99, 42, 'VIP', 'Credit', '2023-04-21 12:27:45', '2255567890124', 1, 'https://example.com/tickets/34-6.jpg', 'VIP access for Indie beats'),
