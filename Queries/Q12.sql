@@ -1,4 +1,3 @@
--- CHECKED
 SELECT
 	e.festival_id,
 	e.festival_day AS Festival_day,
