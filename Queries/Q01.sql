@@ -1,4 +1,3 @@
--- CHECKED
 SELECT 
     YEAR(t.purchase_date) AS year,
     SUM(t.price) AS Total,
