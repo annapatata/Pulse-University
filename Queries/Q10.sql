@@ -25,12 +25,6 @@ ORDER BY
 LIMIT 3;
 
 -- WITH VIEW
-	
-SELECT 
-    Genre_1,
-    Genre_2,
-    Artists
-FROM(
 SELECT 
 	p1.genre AS Genre_1,
 	p2.genre AS Genre_2,
@@ -46,8 +40,4 @@ GROUP BY
 	p1.genre, p2.genre 
 ORDER BY 
 	COUNT(*) DESC
-LIMIT 3) AS subquery,
-(SELECT @rownum := 0) AS init;
-
-
-
+LIMIT 3;
