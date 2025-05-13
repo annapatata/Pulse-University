@@ -1,4 +1,3 @@
--- CHECKED
 SELECT s.staff_id, s.first_name, s.last_name
 FROM Staff s 
 JOIN Role r ON s.role_id = r.role_id
