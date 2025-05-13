@@ -1,8 +1,7 @@
 
+
 -- CHECKED
-SELECT 
-	festival_id AS Festival_year, visitor_id AS Visitor, Event_number
-FROM(
+WITH Event_Counts AS (
 	SELECT
 		e.festival_id,
 		t.visitor_id,
@@ -10,10 +9,35 @@ FROM(
 	FROM
 		Ticket t
 	JOIN
-		Event_p e ON t.event_id = e.event_id AND t.activated = 1
+		Event_p e ON t.event_id = e.event_id
+	WHERE 
+		t.activated = 1
 	GROUP BY
 		e.festival_id, t.visitor_id
 	HAVING 
-		Event_number > 3
-)AS EventCounts
-ORDER BY Festival_year, Event_number
+		COUNT(*) > 3
+)
+
+SELECT 
+	ec.festival_id, 
+	ec.visitor_id, 
+	ec.Event_number 
+FROM 
+	Event_Counts ec
+JOIN (
+	SELECT 
+		festival_id, 
+		Event_number
+	FROM
+		Event_Counts
+	GROUP BY
+		festival_id, Event_number
+	HAVING COUNT(*)>1
+) Choices ON ec.festival_id = Choices.festival_id AND ec.Event_number =  Choices.Event_number
+	
+
+
+
+
+
+
