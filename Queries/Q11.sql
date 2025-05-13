@@ -1,5 +1,3 @@
--- CHECKED
-
 SELECT stage_name,participations
 FROM Artist
 WHERE participations <= (
