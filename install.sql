@@ -292,7 +292,7 @@ CREATE TABLE Buyer (
 );
 
 CREATE TABLE Likert (
-   scale INT PRIMARY KEY
+   scale INT PRIMARY KEY CHECK(scale > 0 AND scale < 6)
  );
 
 CREATE TABLE Review (
