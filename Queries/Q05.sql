@@ -1,4 +1,4 @@
-SELECT a.stage_name, a.participations
-FROM Artist a 
-WHERE a.birthDate >= DATE_SUB(CURDATE(), INTERVAL 30 YEAR)
-ORDER BY a.participations DESC;
+SELECT stage_name, participations
+FROM Artist  
+WHERE birthDate >= YEAR(CURDATE()) - 30
+ORDER BY participations DESC;
