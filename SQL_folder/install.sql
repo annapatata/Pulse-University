@@ -1056,7 +1056,7 @@ JOIN Subgenre s ON s.subgenre_id = ps.subgenre_id;
 
 DROP VIEW IF EXISTS EventStaff;
 CREATE VIEW EventStaff AS
-SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, s.role_id AS Role, s.xp AS xp
+SELECT e.festival_id AS Festival, e.festival_day AS Festival_day, e.start_time AS start_time, s.role_id AS Role, s.xp AS xp
 FROM 
 	Event_P e
 JOIN 
