@@ -4,7 +4,7 @@ WITH fgp1 AS (
 		genre,
 		COUNT(*) AS performances
 	FROM
-		(SELECT DISTINCT
+		(SELECT 
 			p.performance_id AS performance,
 			e.festival_id AS festival,
 			ps.genre AS genre
@@ -18,7 +18,7 @@ WITH fgp1 AS (
 	HAVING COUNT(*) >=3
 )
 
-SELECT DISTINCT 
+SELECT 
 	f1.genre,
 	f1.festival,
 	f2.festival,
