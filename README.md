@@ -15,13 +15,20 @@ This project involves the design and implementation of a relational database for
 - Tools: phpMyAdmin,MySQLWorkbench
 
 ## Project Components
-- ER Diagram : A diagram that highlights the logical relationships between the most important entities
-- Relational Diagram: Acquired by MySQLWorkbench, after the implementation of the schema and the ER Diagram
+- Diagrams:
+    1. ER Diagram : A diagram that highlights the logical relationships between the most important entities
+    2. Relational Diagram: Acquired by MySQLWorkbench, after the implementation of the schema and the ER Diagram
 - SQL Scripts:
     1. install.sql contains the creation of tables, the triggers, the constraints,the views and the indexes
     2. load.sql contains the data that populate our database
     3. queries.sql contains the queries Q01-Q15 and the corresponding output Q01_out-Q15_out
-- report : explains our train of thought and summarizes the key points of our implementation
+- report : explains our train of thought and summarizes the key points of our implementation (located in the docs_folder)
+- DB_parts: the building blocks for the instal.sql
+    1. schema.sql
+    2. indexes.sql
+    3. triggers.sql
+    4. views.sql
+- test: a folder dedicated to test our queries
   
 ## Testing
 With the help of AI tools we created the data below to populate our database.
