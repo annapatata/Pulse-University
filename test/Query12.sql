@@ -31,4 +31,4 @@ FROM
 GROUP BY 
 	festival, festival_day
 ORDER BY 
-	festival_id, festival_day;
+	festival, festival_day;
