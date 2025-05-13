@@ -1081,7 +1081,7 @@ INSERT INTO Ticket (event_id, price, visitor_id, ticket_type, pay_method, purcha
  -- Event 1 (8 tickets)
 (1, 89.99, 71, 'General', 'Credit', '2024-05-11 14:22:10', '1234567890123', 1, 'https://example.com/tickets/1-1.jpg', 'General admission for First event of summer festival'),
 (1, 199.99, 72, 'VIP', 'Debit', '2024-05-12 09:15:33', '2234567890123', 1, 'https://example.com/tickets/1-2.jpg', 'VIP access for First event of summer festival'),
-(1, 299.99, 68, 'Premium', 'Paypal', '2024-05-13 11:45:22', '3234567890123', 0, 'https://example.com/tickets/1-3.jpg', 'Premium experience for First event of summer festival'),
+(1, 299.99, 68, 'Premium', 'Paypal', '2024-05-13 11:45:22', '3234567890123', 1, 'https://example.com/tickets/1-3.jpg', 'Premium experience for First event of summer festival'),
 (1, 499.99, 64, 'Backstage', 'Cash', '2024-05-14 16:30:44', '4234567890123', 1, 'https://example.com/tickets/1-4.jpg', 'Backstage pass for First event of summer festival'),
 
 -- Event 37: Electronic set to start the fest (2024-06-12)
