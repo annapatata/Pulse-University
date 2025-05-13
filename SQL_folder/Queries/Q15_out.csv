@@ -1,6 +1,6 @@
-first_name,last_name,performer_name,total_score
-Paul,Campbell,"Ariana Grande",13
-Paul,Campbell,"Billie Eilish",13
-Jordan,Brown,"Taylor Swift",11
-Brandon,Sullivan,"Bruno Mars",10
-Christopher,Shaw,"Arctic Monkeys",10
+visitor_id,first_name,last_name,Performer,total_score
+78,Paul,Campbell,"Ariana Grande",13
+78,Paul,Campbell,"Billie Eilish",13
+77,Jordan,Brown,"Taylor Swift",11
+5,Brandon,Sullivan,"Bruno Mars",10
+65,Christopher,Shaw,"Arctic Monkeys",10
