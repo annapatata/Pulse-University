@@ -1,4 +1,3 @@
--- CHECKED
 SELECT 
 	festival_id AS Festival_year, visitor_id AS Visitor, Event_number
 FROM(
