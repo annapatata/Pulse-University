@@ -1,4 +1,3 @@
--- CHECKED
 SELECT performer_id, performer, COUNT(DISTINCT c.continent_id) AS num_continents
 FROM PerformerPerformance p
 JOIN Event_P e ON e.event_id = p.event
