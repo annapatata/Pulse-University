@@ -16,3 +16,19 @@ GROUP BY
 	e.festival_id, e.festival_day
 ORDER BY 
 	e.festival_id, e.festival_day;
+
+-- VIEW
+
+SELECT
+	festival,
+	festival_day,
+	COUNT(CASE WHEN role = 1 THEN 1 END) AS Auxiliary,
+	COUNT(CASE WHEN role= 3 THEN 1 END) AS Security,    
+	COUNT(CASE WHEN role = 2 THEN 1 END) AS Technician
+FROM 
+	EventStaff
+-- WHERE e.festival_id = 2018 -- for a specific year
+GROUP BY 
+	festival, festival_day
+ORDER BY 
+	festival_id, festival_day;
