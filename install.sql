@@ -321,7 +321,7 @@ CREATE TABLE Review (
 	
 	
 -- ------------------------------------------------------------------------------------------------------------------
--- INDEXES
+-- INDECS
 -- ------------------------------------------------------------------------------------------------------------------
 
 
@@ -336,7 +336,6 @@ CREATE INDEX idx_performer_name  ON Performer(performer_name); -- used in q04 fo
 CREATE INDEX idx_performance_start_end_time ON Performance(start_time, end_time); -- used in triggers
 
 -- Ticket indexes
-CREATE INDEX idx_ticket_purchase_date ON Ticket(purchase_date); -- q01
 CREATE INDEX idx_ticket_opt ON Ticket(visitor_id, activated, event_id); -- q06 optimization
 
 
