@@ -980,7 +980,7 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performance does not match ticket';
 	END IF;
 
-END $$
+END$$
 DELIMITER ;
 
 
