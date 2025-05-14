@@ -343,9 +343,9 @@ CREATE INDEX idx_ticket_opt ON Ticket(visitor_id, activated, event_id); -- q06 o
 -- ------------------------------------------------------------------------------------------------------------------
 -- TRIGGERS
 -- ------------------------------------------------------------------------------------------------------------------
-
-DROP TRIGGER IF EXISTS artist_or_band;
 DELIMITER //
+
+DROP TRIGGER IF EXISTS artist_or_band//
 	
 CREATE TRIGGER artist_or_band
 BEFORE INSERT ON Performer FOR EACH ROW
@@ -357,11 +357,9 @@ BEGIN
     		SET MESSAGE_TEXT = 'Invalid performer: must have either artist_id or band_id depending on artist_nband';
 	END IF;
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS performance_in_event;
-DELIMITER $$	
+DROP TRIGGER IF EXISTS performance_in_event//	
 	
 CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
@@ -379,12 +377,10 @@ BEGIN
         	SIGNAL SQLSTATE '45000'
         	SET MESSAGE_TEXT = "Performance start time or end time is out of bounds for the event.";
     	END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS check_stage_overlap;
-DELIMITER $$
+DROP TRIGGER IF EXISTS check_stage_overlap//
 
 CREATE TRIGGER check_stage_overlap
 BEFORE INSERT ON Event_P
@@ -401,12 +397,10 @@ BEGIN
     	SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = "Stage is used at that time";
     END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS check_sec_aux_staff;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS check_sec_aux_staff//
 	
 CREATE TRIGGER check_sec_aux_staff
 BEFORE INSERT ON Performance
@@ -438,12 +432,9 @@ BEGIN
         SET MESSAGE_TEXT = 'Too few help staff in this event';
     END IF;
   
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS staff_overlap;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS staff_overlap//
 	
 CREATE TRIGGER staff_overlap
 BEFORE INSERT ON Employment
@@ -462,12 +453,9 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Overlapping Staff';
     END IF;
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS break;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS break//
 	
 CREATE TRIGGER break
 BEFORE INSERT ON Performance
@@ -498,12 +486,9 @@ BEGIN
         END IF;
     END IF;
 
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS check_ticket_count;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS check_ticket_count//
 	
 CREATE TRIGGER check_ticket_count
 BEFORE INSERT ON Ticket
@@ -524,12 +509,9 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Tickets are sold out';
     END IF;
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS check_vip_tickets;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS check_vip_tickets//
 	
 CREATE TRIGGER check_vip_tickets
 BEFORE INSERT ON Ticket
@@ -551,12 +533,9 @@ BEGIN
 	        SET MESSAGE_TEXT = 'VIP section is sold out';
 	    END IF;
 	END IF;   
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS check_activated_review;
-DELIMITER $$ 
+DROP TRIGGER IF EXISTS check_activated_review//
 	
 CREATE TRIGGER check_activated_review
 BEFORE INSERT ON Review
@@ -572,25 +551,19 @@ BEGIN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Non-activated tickets are not eligible for reviews';
     END IF;
-END$$
-DELIMITER ;
+END//
 
-
-DROP TRIGGER IF EXISTS delete_performances;
-DELIMITER //
+DROP TRIGGER IF EXISTS delete_performances//
 	
 CREATE TRIGGER delete_performances
 BEFORE DELETE ON Performance
 FOR EACH ROW
 BEGIN
     SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'Cannot delete performer scheduled to perform';
+    SET MESSAGE_TEXT = 'Cannot delete performance scheduled to perform';
 END//
-DELIMITER ;
 
-
-DROP TRIGGER IF EXISTS check_double_perform;
-DELIMITER //
+DROP TRIGGER IF EXISTS check_double_perform//
 	
 CREATE TRIGGER check_double_perform
 BEFORE INSERT ON Performance
@@ -648,11 +621,8 @@ BEGIN
         SET MESSAGE_TEXT = 'An artist cannot be at two places at once.';
     END IF;
 END//
-DELIMITER ;
 
-
-DROP TRIGGER IF EXISTS update_ids;
-DELIMITER //
+DROP TRIGGER IF EXISTS update_ids//
 	
 CREATE TRIGGER update_ids
 AFTER INSERT ON Performer FOR EACH ROW 
@@ -694,11 +664,8 @@ BEGIN
 		END IF;
 	END IF;
 END//
-DELIMITER ;
 
-
-DROP TRIGGER IF EXISTS check_consecutive_years;
-DELIMITER //
+DROP TRIGGER IF EXISTS check_consecutive_years//
 	
 CREATE TRIGGER check_consecutive_years
 BEFORE INSERT ON Performance FOR EACH ROW
@@ -755,22 +722,18 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performer cannot perform three years in a row.';
 	END IF;
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS update_years;
-DELIMITER //
+DROP TRIGGER IF EXISTS update_years//
 	
 CREATE TRIGGER update_years
 AFTER INSERT ON Festival FOR EACH ROW 
 BEGIN
 	INSERT INTO Years (years_id) VALUES (NEW.festival_id);
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS update_perf_years;
-DELIMITER //
+DROP TRIGGER IF EXISTS update_perf_years//
 CREATE TRIGGER update_perf_years
 AFTER INSERT ON Performance FOR EACH ROW 
 BEGIN 
@@ -783,11 +746,9 @@ BEGIN
 	
 	INSERT INTO PerformerYears (performer_id, years_id) VALUES (NEW.performer_id, this_year);
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS update_part;
-DELIMITER //
+DROP TRIGGER IF EXISTS update_part//
 	
 CREATE TRIGGER update_part
 AFTER INSERT ON Performance FOR EACH ROW
@@ -820,11 +781,9 @@ BEGIN
 		WHERE bm.band_id = id;
 	END IF;
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS check_event_sold_out;
-DELIMITER $$
+DROP TRIGGER IF EXISTS check_event_sold_out//
 	
 CREATE TRIGGER check_event_sold_out
 BEFORE INSERT ON Resale_queue
@@ -859,12 +818,10 @@ BEGIN
 	   SIGNAL SQLSTATE '45000'
 	   SET MESSAGE_TEXT = 'Ticket cannot be resold.';
 	END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS remove_from_resale_if_activated;
-DELIMITER $$
+DROP TRIGGER IF EXISTS remove_from_resale_if_activated//
 	
 CREATE TRIGGER remove_from_resale_if_activated
 AFTER UPDATE ON Ticket
@@ -874,12 +831,10 @@ BEGIN
         DELETE FROM Resale_queue
         WHERE EAN = NEW.EAN;
     END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS match_on_resale;
-DELIMITER $$
+DROP TRIGGER IF EXISTS match_on_resale//
 	
 CREATE TRIGGER match_on_resale
 BEFORE INSERT ON Resale_queue
@@ -911,12 +866,11 @@ BEGIN
         SET NEW.sold = TRUE;
         UPDATE Buyer SET satisfied = TRUE WHERE (visitor_id = cur_v_id AND event_id = resale_event) OR (EAN = NEW.EAN);
 	END IF;	
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS match_on_buyer;
-DELIMITER $$
+DROP TRIGGER IF EXISTS match_on_buyer//
+
 	
 CREATE TRIGGER match_on_buyer
 BEFORE INSERT ON Buyer
@@ -953,12 +907,10 @@ BEGIN
             SET NEW.satisfied = TRUE;
 		END IF;
 	 END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS review_attended_performance;
-DELIMITER $$
+DROP TRIGGER IF EXISTS review_attended_performance//
 	
 CREATE TRIGGER review_attended_performance
 AFTER INSERT ON Review
@@ -980,12 +932,10 @@ BEGIN
 		SET MESSAGE_TEXT = 'Performance does not match ticket';
 	END IF;
 
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS future_activated_insert;
-DELIMITER $$
+DROP TRIGGER IF EXISTS future_activated_insert//
 	
 CREATE TRIGGER future_activated_insert 
 BEFORE INSERT ON Ticket FOR EACH ROW
@@ -1000,12 +950,10 @@ BEGIN
 		SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'activated ticket for future event';
 	END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS future_activated_update;
-DELIMITER $$
+DROP TRIGGER IF EXISTS future_activated_update//
 	
 CREATE TRIGGER future_activated_update
 BEFORE UPDATE ON Ticket FOR EACH ROW
@@ -1020,12 +968,10 @@ BEGIN
 		SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'activated ticket for future event';
 	END IF;
-END$$
-DELIMITER ;
+END//
 
 
-DROP TRIGGER IF EXISTS two_tickets_update;
-DELIMITER //
+DROP TRIGGER IF EXISTS two_tickets_update//
 	
 CREATE TRIGGER two_tickets_update
 BEFORE UPDATE ON Ticket FOR EACH ROW
@@ -1043,11 +989,9 @@ BEGIN
 	END IF;
     
 END//
-DELIMITER ;
 
 
-DROP TRIGGER IF EXISTS two_tickets_insert;
-DELIMITER //
+DROP TRIGGER IF EXISTS two_tickets_insert//
 	
 CREATE TRIGGER two_tickets_insert
 BEFORE INSERT ON Ticket FOR EACH ROW
@@ -1066,7 +1010,6 @@ BEGIN
     
 END//
 DELIMITER ;
-
 
 -- ------------------------------------------------------------------------------------------------------------------
 -- VIEWS 
