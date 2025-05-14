@@ -383,6 +383,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_stage_overlap;
 DELIMITER $$
+
 CREATE TRIGGER check_stage_overlap
 BEFORE INSERT ON Event_P
 FOR EACH ROW
