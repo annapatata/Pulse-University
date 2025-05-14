@@ -346,6 +346,7 @@ CREATE INDEX idx_ticket_opt ON Ticket(visitor_id, activated, event_id); -- q06 o
 
 DROP TRIGGER IF EXISTS artist_or_band;
 DELIMITER //
+	
 CREATE TRIGGER artist_or_band
 BEFORE INSERT ON Performer FOR EACH ROW
 BEGIN
@@ -361,6 +362,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS performance_in_event;
 DELIMITER $$	
+	
 CREATE TRIGGER performance_in_event
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -405,6 +407,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_sec_aux_staff;
 DELIMITER $$ 
+	
 CREATE TRIGGER check_sec_aux_staff
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -441,6 +444,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS staff_overlap;
 DELIMITER $$ 
+	
 CREATE TRIGGER staff_overlap
 BEFORE INSERT ON Employment
 FOR EACH ROW
@@ -464,6 +468,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS break;
 DELIMITER $$ 
+	
 CREATE TRIGGER break
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -499,6 +504,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_ticket_count;
 DELIMITER $$ 
+	
 CREATE TRIGGER check_ticket_count
 BEFORE INSERT ON Ticket
 FOR EACH ROW
@@ -524,6 +530,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_vip_tickets;
 DELIMITER $$ 
+	
 CREATE TRIGGER check_vip_tickets
 BEFORE INSERT ON Ticket
 FOR EACH ROW
@@ -550,6 +557,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_activated_review;
 DELIMITER $$ 
+	
 CREATE TRIGGER check_activated_review
 BEFORE INSERT ON Review
 FOR EACH ROW
@@ -570,6 +578,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS delete_performances;
 DELIMITER //
+	
 CREATE TRIGGER delete_performances
 BEFORE DELETE ON Performance
 FOR EACH ROW
@@ -582,6 +591,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_double_perform;
 DELIMITER //
+	
 CREATE TRIGGER check_double_perform
 BEFORE INSERT ON Performance
 FOR EACH ROW
@@ -643,6 +653,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS update_ids;
 DELIMITER //
+	
 CREATE TRIGGER update_ids
 AFTER INSERT ON Performer FOR EACH ROW 
 BEGIN 
@@ -688,6 +699,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_consecutive_years;
 DELIMITER //
+	
 CREATE TRIGGER check_consecutive_years
 BEFORE INSERT ON Performance FOR EACH ROW
 BEGIN
@@ -748,6 +760,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS update_years;
 DELIMITER //
+	
 CREATE TRIGGER update_years
 AFTER INSERT ON Festival FOR EACH ROW 
 BEGIN
@@ -775,6 +788,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS update_part;
 DELIMITER //
+	
 CREATE TRIGGER update_part
 AFTER INSERT ON Performance FOR EACH ROW
 BEGIN
@@ -811,6 +825,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS check_event_sold_out;
 DELIMITER $$
+	
 CREATE TRIGGER check_event_sold_out
 BEFORE INSERT ON Resale_queue
 FOR EACH ROW
@@ -850,6 +865,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS remove_from_resale_if_activated;
 DELIMITER $$
+	
 CREATE TRIGGER remove_from_resale_if_activated
 AFTER UPDATE ON Ticket
 FOR EACH ROW
@@ -864,6 +880,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS match_on_resale;
 DELIMITER $$
+	
 CREATE TRIGGER match_on_resale
 BEFORE INSERT ON Resale_queue
 FOR EACH ROW
@@ -900,6 +917,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS match_on_buyer;
 DELIMITER $$
+	
 CREATE TRIGGER match_on_buyer
 BEFORE INSERT ON Buyer
 FOR EACH ROW
@@ -941,6 +959,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS review_attended_performance;
 DELIMITER $$
+	
 CREATE TRIGGER review_attended_performance
 AFTER INSERT ON Review
 FOR EACH ROW
@@ -967,6 +986,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS future_activated_insert;
 DELIMITER $$
+	
 CREATE TRIGGER future_activated_insert 
 BEFORE INSERT ON Ticket FOR EACH ROW
 BEGIN
@@ -986,6 +1006,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS future_activated_update;
 DELIMITER $$
+	
 CREATE TRIGGER future_activated_update
 BEFORE UPDATE ON Ticket FOR EACH ROW
 BEGIN
@@ -1005,6 +1026,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS two_tickets_update;
 DELIMITER //
+	
 CREATE TRIGGER two_tickets_update
 BEFORE UPDATE ON Ticket FOR EACH ROW
 BEGIN
@@ -1026,6 +1048,7 @@ DELIMITER ;
 
 DROP TRIGGER IF EXISTS two_tickets_insert;
 DELIMITER //
+	
 CREATE TRIGGER two_tickets_insert
 BEFORE INSERT ON Ticket FOR EACH ROW
 BEGIN
